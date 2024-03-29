@@ -10,10 +10,10 @@
 }
 
 ::-webkit-scrollbar{
-    width: 5px;
+    width: 7px;
 }
 ::-webkit-scrollbar-track{
-    background-color: #adff2f;
+    background-color: lightgrey;
 }
 ::-webkit-scrollbar-thumb{
     background-color: gray;
