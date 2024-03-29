@@ -3,10 +3,8 @@
     width: 100%;
     min-height: 75px;
     height: auto;
-    background-image: url('header.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom: 5px solid black;
+    background-color: #adff2f;
+    border-bottom: 3px solid black;
     border-top: 1px solid black;
 }
 .font-24{
@@ -34,13 +32,13 @@
 }
 
 .border-bottom{
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid white;
 }
 
-.border-right{
-    border-right: 2px solid black;
+.border-left{
+    border-left: 2px solid white;
 }
 
-.border-radius-10{
-    border-radius: 10px;
+.bg-gradient {
+    background: linear-gradient(to right, #adff2f, white);
 }
