@@ -1,0 +1,46 @@
+
+.navbar{
+    width: 100%;
+    min-height: 75px;
+    height: auto;
+    background-image: url('header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 5px solid black;
+    border-top: 1px solid black;
+}
+.font-24{
+    font-size: 24px;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+.bg-white{
+    background-color: white;
+}
+.p-5{
+    padding: 5px;
+}
+.m-15{
+    margin: 15px;
+}
+.w-25{
+    width: 25%;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.border-bottom{
+    border-bottom: 2px solid black;
+}
+
+.border-right{
+    border-right: 2px solid black;
+}
+
+.border-radius-10{
+    border-radius: 10px;
+}
