@@ -6,3 +6,11 @@
     font-weight: 400;
     font-style: normal;
 }
+
+.flex{
+    display: flex;
+}
+
+.w-100{
+    width: 100%;
+}
