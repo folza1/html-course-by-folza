@@ -1,4 +1,8 @@
 .feed{
     flex: 7;
+    height: calc(100vh - 125px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 125px;
     background-color: rgba(173, 255, 47, 0.2); /* Az átlátszóság beállítása: 0.5 */
 }

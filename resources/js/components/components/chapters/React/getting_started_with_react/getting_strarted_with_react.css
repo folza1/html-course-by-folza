@@ -1,0 +1,29 @@
+.container{
+    margin: 15px;
+}
+
+.header_paragraph{
+    font-weight: bold;
+}
+
+.prerequisites{
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.article{
+    margin: 15px 0;
+}
+.paragraph{
+    margin: 15px 0;
+}
+.note{
+    background-color: lightblue;
+    padding: 15px;
+    border-radius: 5px;
+}
+.bold{
+    font-weight: bold;
+}
