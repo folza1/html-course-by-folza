@@ -11,6 +11,8 @@ import {
     code_7_npm_install,
     code_8_npm_run_dev,
 } from "./codes.js";
+import npm_run_dev from "./img/1.npm_run_dev.png";
+import app_structure from "./img/2.app_structure.png";
 
 export default function Getting_Started_With_React() {
     return (
@@ -294,6 +296,12 @@ export default function Getting_Started_With_React() {
                     Futtasd a következőt a terminal-ban:
                 </p>
                 <CodeDisplay code={code_8_npm_run_dev}/>
+                <p className="paragraph">
+                    Ha egyszer elindult a szerver, látnod kellene egy új fülön a böngésződben az alkalmzást.
+                </p>
+                <div className="image-container"><img src={npm_run_dev}/></div>
+                <h2>Alkalmazás struktúra</h2>
+                <div className="image-container"><img src={app_structure}/></div>
             </div>
         </div>
     );

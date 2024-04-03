@@ -31,3 +31,12 @@
     background-color: lightgray;
     padding: 3px;
 }
+.image-container{
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img{
+    max-width: 80%;
+}
