@@ -7,7 +7,9 @@ import {
     code_3_header,
     code_4_header,
     code_5_node_version,
-    code_6_create_app
+    code_6_create_app,
+    code_7_npm_install,
+    code_8_npm_run_dev,
 } from "./codes.js";
 
 export default function Getting_Started_With_React() {
@@ -124,7 +126,7 @@ export default function Getting_Started_With_React() {
                 <CodeDisplay code={code_2_header}/>
 
                 <div className="note">
-                    <p>
+                    <p className="paragraph">
                         <span className="bold">Megjegyzés:</span> A zárójelek az előző kódrészletben nem egyediek a
                         JSX-ben és nincsenek semmi
                         hatással a kódra.
@@ -133,7 +135,7 @@ export default function Getting_Started_With_React() {
                         Akár el is lehet hagyni.
                     </p>
                     <CodeDisplay code={code_3_header}/>
-                    <p>
+                    <p className="paragraph">
                         Viszont kicsit furcsán néz ki, mivel a kezdő <span
                         className="bg-lightgray">&lt;header&gt;</span> tag nincsen behúzva mint a záró tag.
                     </p>
@@ -259,9 +261,39 @@ export default function Getting_Started_With_React() {
                 </p>
                 <CodeDisplay code={code_6_create_app}/>
                 <p className="paragraph">
-                    Ez a parancs elkészíti a <span className="bg-lightgray">moz-todo-react</span> könyvtárat, ez lesz a projekt mappája, benne a
+                    Ez a parancs elkészíti a <span className="bg-lightgray">moz-todo-react</span> könyvtárat, ez lesz a
+                    projekt mappája, benne a
                     Vite <span className="bg-lightgray">react</span> sablonjával.
                 </p>
+                <div className="note">
+                    <p className="paragraph">
+                        <span className="bold">Megjegyzés:</span> A <span className="bg-lightgray">--</span> azért
+                        szükséges, hogy argumentumokat adhassunk a <span
+                        className="bg-lightgray">create</span> parancshoz és a <span
+                        className="bg-lightgray">--template react</span> argument azt mondja a Vite-nak hogy React
+                        sablon-t használjon.
+                    </p>
+                </div>
+                <p className="paragraph">
+                    A terminálodnak ki kell írnia néhány üzenetet ha a parancs sikeresen lefutott. Olyan üzenetet
+                    kellene
+                    látnod, hogy navigálj a <span className="bg-lightgray">cd</span> paranccsal a projekt könyvtárába,
+                    telepítsd a projekt függőségeit és
+                    futtasd az
+                    alkalmazást helyi szerveren, azaz localhost-on. Kezdjük két ilyen paranccsal! Futtasd a következő
+                    parancsot a terminálban:
+                </p>
+                <CodeDisplay code={code_7_npm_install}/>
+                <p className="paragraph">
+                    Miután a folyamat befejeződött, szükségünk van egy helyi fejlesztői kiszolgálóra, hogy futtassuk az
+                    alkalmazásunkat. Itt fogunk néhány parancs
+                    flag-et adni a Vite alapértelmezett ajánlásához, hogy megjelenítsük az alkalmazást a böngészőben,
+                    amint a szerver elindult, mégpedig a 3000-es porton.
+                </p>
+                <p className="paragraph">
+                    Futtasd a következőt a terminal-ban:
+                </p>
+                <CodeDisplay code={code_8_npm_run_dev}/>
             </div>
         </div>
     );
