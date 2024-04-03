@@ -136,9 +136,33 @@ export default function Getting_Started_With_React() {
                 </p>
                 <CodeDisplay code={code_4_header}/>
                 <p className="paragraph">
-                    Ki lehet hagyni a kompilációt és lehet használni a React.createElement()-et, ha önmagunk szeretnénk írni a UI-t, a
-                    "user-interface"-et, azaz a felhasználói felületet. Azonban, ha azon a módon írjuk a kódot, akkor elveszítjük a JSX
-                    előnyeit és nehezebb a kódot olvasni.
+                    Ki lehet hagyni a kompilációt és lehet használni a React.createElement()-et, ha önmagunk szeretnénk
+                    írni a UI-t, a
+                    "user-interface"-et, azaz a felhasználói felületet. Azonban, ha azon a módon írjuk a kódot, akkor
+                    elveszítjük a JSX
+                    előnyeit és nehezebb a kódot olvasni. A kompiláció az egy extra lépés a fejlesztés során, de sok
+                    fejlesztő a React
+                    közösségben azt gondolja, hogy ennyit megér a JSX olvashatósága. Plusz mindenesetre a modern
+                    front-end fejlesztés
+                    majdnem mindig magába foglalja a build folyamatot. A kódot le kell degradálni (downlevel)
+                    alacsonyabb szintre,
+                    hogy a régebbi böngészőkkel kompatibilis legyen. És az is lehet, hogy akarod a kódot minify-olni,
+                    azaz
+                    eltávolítja a kódból a fölösleges sortörést és szóközöket, hogy optimalizáljuk a betöltési
+                    teljesítményt,
+                    gyorsaságot. Népszerű eszközök, mint a Babel már alapból JSX támogatással jelennek meg, tehát neked
+                    nem kell
+                    konfigurálnod a kompilációt, kivéve, ha azt akarod kifejezetten.
+                </p>
+                <p className="paragraph">
+                    Mivel a JSX a HTML és a Javascript keveréke, néhány fejlesztő intuitívnek tartja. Mások azt mondják
+                    ez a kevert forma összezavaró. Azonban miután már kényelmesen használod, segít neked felhasználói
+                    felületet készíteni gyorsan és intuitív módon és segít másoknak jobban megérteni a kódbázist
+                    ránézésre. Csak rá kell érezned!
+                </p>
+                <p className="paragraph">
+                    Ha többet akarsz olvasni a JSX-ről nézd meg a React csapat cikkét
+                    <a href="https://react.dev/learn/writing-markup-with-jsx">JSX használata</a>
                 </p>
             </div>
         </div>
