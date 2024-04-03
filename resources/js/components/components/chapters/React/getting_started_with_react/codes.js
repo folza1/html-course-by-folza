@@ -15,5 +15,6 @@ export const code_4_header =  "const header = React.createElement(\n" +
     "  React.createElement('h1', null, 'Mozilla Developer Network'),\n" +
     ");";
 
+export const code_5_node_version =  "node -v\n"
 
 

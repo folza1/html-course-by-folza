@@ -1,7 +1,7 @@
 import React from 'react';
 import './getting_strarted_with_react.css';
 import CodeDisplay from "../components/CodeDisplay.jsx";
-import {code_1_heading, code_2_header, code_3_header, code_4_header} from "./codes.js";
+import {code_1_heading, code_2_header, code_3_header, code_4_header, code_5_node_version} from "./codes.js";
 
 export default function Getting_Started_With_React() {
     return (
@@ -161,8 +161,32 @@ export default function Getting_Started_With_React() {
                     ránézésre. Csak rá kell érezned!
                 </p>
                 <p className="paragraph">
-                    Ha többet akarsz olvasni a JSX-ről nézd meg a React csapat cikkét
-                    <a href="https://react.dev/learn/writing-markup-with-jsx">JSX használata</a>
+                    Ha többet akarsz olvasni a JSX-ről nézd meg a React csapat cikkét <a href="https://react.dev/learn/writing-markup-with-jsx">JSX használata</a>
+                </p>
+            </div>
+            <div className="article">
+                <h1>Az első React Alkalmazásod</h1>
+                <p className="paragraph">
+                    Sok módja van új React alkalmazást készíteni. Mi a Vite-ot fogjuk használni, hogy új React
+                    alkalmazást készítsünk a parancssor segítségével.
+                </p>
+                <p className="paragraph">
+                    Lehetséges egy már meglévő projekthez hozzáadni a React-et úgy hogy bemásoljuk a &lt;script&gt; elemeket
+                    a HTML fájl-ba, de a Vite-al több idő marad az applikáció elkészítéséhez és így kevesebb idő megy el a beállítással.
+                </p>
+                <h3>Követelmények</h3>
+                <p className="paragraph">
+                    Ahhoz, hogy a Vite-ot használhassuk szükségünk lesz a <a href="https://nodejs.org/en/">Node.js</a>-re. A Vite 5.0 verziójához legalább
+                    a Node.js 18-ra vagy újabbra van szükség és az egy jó ötlet ha a legújabb LTS (Long Term Supported) verziót használunk, amely hosszú
+                    ideig támogatott. Ha lehet tegyük ezt. 2023 Október 24-én a Node.js 20 a legújabb LTS változat. A Node.js tartalmazza az npm-et, a Node Package
+                    Manager-t, ami egy Node.js csomagkezelő. A Node.js-t gyakran csak Node-ként említjük.
+                </p>
+                <p className="paragraph">
+                    Ahhoz, hogy megnézzük milyen Node.js van telepítve a számítógépünkre a következő parancsot írjuk be a parancssorba:
+                </p>
+                <CodeDisplay code={code_5_node_version}/>
+                <p className="paragraph">
+                    Ha a Node.js telepítve van akkor egy verzió számot fogsz látni, ellenkező esetben pedig egy hibaüzenetet.
                 </p>
             </div>
         </div>
