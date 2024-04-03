@@ -136,12 +136,11 @@ export default function Getting_Started_With_React() {
                 </p>
                 <CodeDisplay code={code_4_header}/>
                 <p className="paragraph">
-                    Ki lehet hagyni a kompilációt és lehet használni a React.createElement()-et, ha önmagunk szeretnénk írni a UI-t
-                    "user-interface"-et, azaz felhasználói felületet. Azonban, ha azon a módon írjuk a kódot, akkor elveszítjük a JSX
+                    Ki lehet hagyni a kompilációt és lehet használni a React.createElement()-et, ha önmagunk szeretnénk írni a UI-t, a
+                    "user-interface"-et, azaz a felhasználói felületet. Azonban, ha azon a módon írjuk a kódot, akkor elveszítjük a JSX
                     előnyeit és nehezebb a kódot olvasni.
                 </p>
             </div>
-
         </div>
     );
 }
