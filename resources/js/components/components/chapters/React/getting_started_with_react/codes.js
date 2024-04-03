@@ -17,4 +17,4 @@ export const code_4_header =  "const header = React.createElement(\n" +
 
 export const code_5_node_version =  "node -v\n"
 
-
+export const code_6_create_app =  "npm create vite@latest moz-todo-react -- --template react\n"

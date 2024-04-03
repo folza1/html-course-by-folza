@@ -1,7 +1,14 @@
 import React from 'react';
 import './getting_strarted_with_react.css';
 import CodeDisplay from "../components/CodeDisplay.jsx";
-import {code_1_heading, code_2_header, code_3_header, code_4_header, code_5_node_version} from "./codes.js";
+import {
+    code_1_heading,
+    code_2_header,
+    code_3_header,
+    code_4_header,
+    code_5_node_version,
+    code_6_create_app
+} from "./codes.js";
 
 export default function Getting_Started_With_React() {
     return (
@@ -104,13 +111,14 @@ export default function Getting_Started_With_React() {
                 </p>
                 <CodeDisplay code={code_1_heading}/>
                 <p className="paragraph">
-                    Ez a heading konstans egy JSX kifejezés. A React használja ezt, hogy renderelje a &lt;h1&gt; tag-et
+                    Ez a heading konstans egy JSX kifejezés. A React használja ezt, hogy renderelje a <span
+                    className="bg-lightgray">&lt;h1&gt;</span> tag-et
                     az
                     alkalmazásunkba.
                 </p>
                 <p className="paragraph">
                     Tegyük fel hogy úgy akarjuk rendezni a kódunkat, hogy a heading-ünket bele akarjuk csomagolni
-                    egy &lt;header&gt;
+                    egy <span className="bg-lightgray">&lt;header&gt;</span>
                     tag-be.
                 </p>
                 <CodeDisplay code={code_2_header}/>
@@ -126,7 +134,8 @@ export default function Getting_Started_With_React() {
                     </p>
                     <CodeDisplay code={code_3_header}/>
                     <p>
-                        Viszont kicsit furcsán néz ki, mivel a kezdő &lt;header&gt; tag nincsen behúzva mint a záró tag.
+                        Viszont kicsit furcsán néz ki, mivel a kezdő <span
+                        className="bg-lightgray">&lt;header&gt;</span> tag nincsen behúzva mint a záró tag.
                     </p>
                 </div>
                 <p className="paragraph">
@@ -136,7 +145,8 @@ export default function Getting_Started_With_React() {
                 </p>
                 <CodeDisplay code={code_4_header}/>
                 <p className="paragraph">
-                    Ki lehet hagyni a kompilációt és lehet használni a React.createElement()-et, ha önmagunk szeretnénk
+                    Ki lehet hagyni a kompilációt és lehet használni a <span
+                    className="bg-lightgray">React.createElement()</span>-et, ha önmagunk szeretnénk
                     írni a UI-t, a
                     "user-interface"-et, azaz a felhasználói felületet. Azonban, ha azon a módon írjuk a kódot, akkor
                     elveszítjük a JSX
@@ -148,7 +158,7 @@ export default function Getting_Started_With_React() {
                     alacsonyabb szintre,
                     hogy a régebbi böngészőkkel kompatibilis legyen. És az is lehet, hogy akarod a kódot minify-olni,
                     azaz
-                    eltávolítja a kódból a fölösleges sortörést és szóközöket, hogy optimalizáljuk a betöltési
+                    eltávolítani a kódból a fölösleges sortörést és szóközöket, hogy optimalizáljuk a betöltési
                     teljesítményt,
                     gyorsaságot. Népszerű eszközök, mint a Babel már alapból JSX támogatással jelennek meg, tehát neked
                     nem kell
@@ -161,7 +171,9 @@ export default function Getting_Started_With_React() {
                     ránézésre. Csak rá kell érezned!
                 </p>
                 <p className="paragraph">
-                    Ha többet akarsz olvasni a JSX-ről nézd meg a React csapat cikkét <a href="https://react.dev/learn/writing-markup-with-jsx">JSX használata</a>
+                    Ha többet akarsz olvasni a JSX-ről nézd meg a React csapat cikkét <a target="_blank"
+                                                                                         href="https://react.dev/learn/writing-markup-with-jsx">JSX
+                    használata</a>
                 </p>
             </div>
             <div className="article">
@@ -171,22 +183,84 @@ export default function Getting_Started_With_React() {
                     alkalmazást készítsünk a parancssor segítségével.
                 </p>
                 <p className="paragraph">
-                    Lehetséges egy már meglévő projekthez hozzáadni a React-et úgy hogy bemásoljuk a &lt;script&gt; elemeket
-                    a HTML fájl-ba, de a Vite-al több idő marad az applikáció elkészítéséhez és így kevesebb idő megy el a beállítással.
+                    Lehetséges egy már meglévő projekthez hozzáadni a React-et úgy hogy bemásoljuk
+                    a <span className="bg-lightgray">&lt;script&gt;</span> elemeket
+                    a HTML fájl-ba, de a Vite-al több idő marad az applikáció elkészítéséhez és így kevesebb idő megy el
+                    a beállítással.
                 </p>
-                <h3>Követelmények</h3>
+                <h2>Követelmények</h2>
                 <p className="paragraph">
-                    Ahhoz, hogy a Vite-ot használhassuk szükségünk lesz a <a href="https://nodejs.org/en/">Node.js</a>-re. A Vite 5.0 verziójához legalább
-                    a Node.js 18-ra vagy újabbra van szükség és az egy jó ötlet ha a legújabb LTS (Long Term Supported) verziót használunk, amely hosszú
-                    ideig támogatott. Ha lehet tegyük ezt. 2023 Október 24-én a Node.js 20 a legújabb LTS változat. A Node.js tartalmazza az npm-et, a Node Package
+                    Ahhoz, hogy a Vite-ot használhassuk szükségünk lesz a <a target="_blank"
+                                                                             href="https://nodejs.org/en/">Node.js</a>-re.
+                    A Vite 5.0 verziójához legalább
+                    a Node.js 18-ra vagy újabbra van szükség és az egy jó ötlet ha a legújabb LTS (Long Term Supported)
+                    verziót használunk, amely hosszú
+                    ideig támogatott. Ha lehet tegyük ezt. 2023 Október 24-én a Node.js 20 a legújabb LTS változat. A
+                    Node.js tartalmazza az npm-et, a Node Package
                     Manager-t, ami egy Node.js csomagkezelő. A Node.js-t gyakran csak Node-ként említjük.
                 </p>
                 <p className="paragraph">
-                    Ahhoz, hogy megnézzük milyen Node.js van telepítve a számítógépünkre a következő parancsot írjuk be a parancssorba:
+                    Ahhoz, hogy megnézzük milyen Node.js van telepítve a számítógépünkre a következő parancsot írjuk be
+                    a parancssorba:
                 </p>
                 <CodeDisplay code={code_5_node_version}/>
                 <p className="paragraph">
-                    Ha a Node.js telepítve van akkor egy verzió számot fogsz látni, ellenkező esetben pedig egy hibaüzenetet.
+                    Ha a Node.js telepítve van akkor egy verzió számot fogsz látni, ellenkező esetben pedig egy
+                    hibaüzenetet. A Node telepítéséhez
+                    kövesd a <a target="_blank" href="https://nodejs.org/en/">Node.js</a> oldalon található
+                    instrukciókat.
+                </p>
+                <p className="paragraph">
+                    Lehet Yarn csomagkezelőt is használni az npm alternatívájaként, de azt feltételezzük, hogy npm-et
+                    használsz ehhez az oktatóanyaghoz.
+                    Nézd meg a <a target="_blank"
+                                  href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Csomagkezelő
+                    Alapozó</a>-t
+                    a yarn és az npm-hez további információkért.
+                </p>
+                <p className="paragraph">
+                    Ha Windows-ot használsz, akkor telepítened kell néhány szoftvert, hogy Unix/MacOS-el egyenértékű
+                    terminált kapj, hogy futtathasd az ebben
+                    az oktatóanyagban leírt terminál-os/parancssoros parancsokat. GitBash, (amely része a <a
+                    target="_blank" href="https://gitforwindows.org/">Git a Windows-hoz</a>),
+                    vagy a <a target="_blank" href="https://learn.microsoft.com/en-gb/windows/wsl/about">WSL (Windows
+                    Subsystem for Linux)</a> azaz Windows Alrendszer Linux-hoz. Mindkettő megfelelő a célra.
+                </p>
+                <p>
+                    Nézd meg a <a target="_blank"
+                                  href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">Parancssoros
+                    Gyorstalpalót</a> általánosan használt parancsokért és további információkért!
+                </p>
+                <p className="paragraph">
+                    Azt is észben kell tartani, hogy a React és a React DOM olyan alkalmazásokat készít, amelyek csak
+                    igazán modern böngészőkön működnek
+                    mint a Firefox, a Microsoft Edge, Safari vagy a Chrome. Ezt tartsuk észben az oktatóanyag
+                    tanulmányozása során.
+                </p>
+                <p className="paragraph">
+                    Nézd meg a következőket további információkért:
+                </p>
+                <p className="paragraph">
+                    <li><a target="_blank" href="https://docs.npmjs.com/about-npm">"Az NPM-ről" az npm blog-on</a></li>
+                    <li><a target="_blank"
+                           href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">"NPX
+                        bemutatása" az npm blog-on</a></li>
+                    <li><a target="_blank" href="https://vitejs.dev/guide/">Vite dokumentáció</a></li>
+                </p>
+                <h2>A React alkalmazásod elindítása</h2>
+                <p className="paragraph">
+                    Az npm csomagkezelőnek van egy <span className="bg-lightgray">create</span> parancsa, amellyel új
+                    react alkalmazásokat készíthetünk
+                    sablonokból. Egy új alkalmazást készíthetünk
+                    a Vite alapértelmezett React sablonjából. A <span className="bg-lightgray">cd</span> parancs
+                    segítségével navigáljunk a kívánt könyvtárba
+                    a terminál segítségével, ahová a React alkalmazásunkat szeretnénk telepíteni és ott futtassuk le a
+                    következő parancsot.
+                </p>
+                <CodeDisplay code={code_6_create_app}/>
+                <p className="paragraph">
+                    Ez a parancs elkészíti a <span className="bg-lightgray">moz-todo-react</span> könyvtárat, ez lesz a projekt mappája, benne a
+                    Vite <span className="bg-lightgray">react</span> sablonjával.
                 </p>
             </div>
         </div>

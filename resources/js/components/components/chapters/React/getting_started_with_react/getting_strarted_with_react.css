@@ -27,3 +27,7 @@
 .bold{
     font-weight: bold;
 }
+.bg-lightgray{
+    background-color: lightgray;
+    padding: 3px;
+}
