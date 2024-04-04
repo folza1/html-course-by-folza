@@ -10,7 +10,11 @@ import {
     code_6_create_app,
     code_7_npm_install,
     code_8_npm_run_dev,
-} from "./codes.js";
+    code_9_npm_run_dev2,
+    code_10_appjsx,
+    code_11_import,
+
+} from "./codes.jsx";
 import npm_run_dev from "./img/1.npm_run_dev.png";
 import app_structure from "./img/2.app_structure.png";
 
@@ -301,7 +305,101 @@ export default function Getting_Started_With_React() {
                 </p>
                 <div className="image-container"><img src={npm_run_dev}/></div>
                 <h2>Alkalmazás struktúra</h2>
+                <p className="paragraph">
+                    A Vite mindent megad amire szükségünk van egy React alkalmazás elkészítéséhez. A kezdeti
+                    fájlstruktúra a következőképpen néz ki:
+                </p>
                 <div className="image-container"><img src={app_structure}/></div>
+                <p className="paragraph">
+                    Az <span className="bg-lightgray">index.html</span> a legfontosabb legfelsőbb szintű fájl. A Vite
+                    ebbe a fájlba szúrja be a kódodat, amelyet a böngésző futtat majd. A tutorialunk során ezt a fájlt
+                    nem kell szerkesztened, de meg kellene változtatnod a szöveget a <span
+                    className="bg-lightgray">&lt;title&gt;</span> elemben, hogy megváltoztasd az alkalmazás nevét. A
+                    pontos oldalcímek fontosak az akadálymentes alkalmazásokban.
+                </p>
+                <p className="paragraph">
+                    A <span className="bg-lightgray">public</span> könyvtár statikus fájlokat tartalmaz, amelyek
+                    közvetlenül a böngészőhöz lesznek szolgáltatva, anélkül, hogy a Vite feldolgozná. Most egyedül egy
+                    Vite logót tartalmaz.
+                </p>
+                <p className="paragraph">
+                    Az<span className="bg-lightgray">src</span> mappa ahol az időnk nagy részét fogjuk tölteni, ez az a
+                    hely ahol az applikációnk forráskódja van. Észre fogod venni, hogy néhány Javascript fájl neve ebben
+                    a
+                    mappában <span className="bg-lightgray">.jsx</span> kitejesztésre végződik. Ez a kiterjesztés
+                    szükséges bármelyik fájlhoz amelyben JSX kód van. Ez azt mondja a Vite-nak hogy fordítsa le a JSX
+                    kódot Javascript-re, amit a böngésző értelmezni tud. Az <span
+                    className="bg-lightgray">src/assets</span> mappa tartalmazza a React logo-t, amelyet láttál a
+                    böngészőben.
+                </p>
+                <p className="paragraph">
+                    A <span className="bg-lightgray">package.json</span> és a <span
+                    className="bg-lightgray">package-lock.json</span> metaadatokat tartalmaznak a projektünkről. Ezek a
+                    fájlok nem csak React applikációban találhatóak meg. A Vite feltöltötte adatokkal a <span
+                    className="bg-lightgray">package.json</span> fájlt, az npm pedig elkészítette a <span
+                    className="bg-lightgray">package-lock.json</span> fájlt amikor telepítettük a függőségeket. Ehhez a
+                    tutorial-hoz nem kell megértened ezeket a fájlokat, most nem kell foglalkoznod velük. Azonban, ha
+                    szeretnél róluk többet megtudni, olvashatsz
+                    a <a target="_blank" href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json"><span
+                    className="bg-lightgray">package.json</span></a> és a <a target="_blank"
+                                                                             href="https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json"><span
+                    className="bg-lightgray">package-lock.json</span></a>-ról az npm dokumentumok között. Beszélünk még
+                    a <span className="bg-lightgray">package.json</span> fájlról a <a target="_blank"
+                                                                                      href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Csomagkezelés
+                    Alapozó</a> oktatóanyagban.
+                </p>
+                <h2>A dev script-ünk testreszabása</h2>
+                <p className="paragraph">
+                    Mielőtt továbbmennénk, lehet hogy meg akarod változtatni a <span
+                    className="bg-lightgray">package.json</span> fájlt egy kicsit hogy ne kelljen minden egyes <span
+                    className="bg-lightgray">npm run dev</span> indításnál a <span
+                    className="bg-lightgray">--open</span> és a <span
+                    className="bg-lightgray">--port</span> flag-eket beírogatni. Nyisd meg a <span
+                    className="bg-lightgray">package.json</span> fájlt a szövegszerkesztődben és keresd meg a <span
+                    className="bg-lightgray">scripts</span> objektumot. Változtasd meg a <span
+                    className="bg-lightgray">"dev"</span> kulcsot úgy, ahogy itt látod:
+                </p>
+                <CodeDisplay code={code_9_npm_run_dev2}/>
+                <p className="paragraph">
+                    Ha ez rendben van, akkor az alkalmazás minden egyes <span
+                    className="bg-lightgray">npm run dev</span> indításkor a <span
+                    className="bg-lightgray">http://localhost:3000</span> címen fog megnyílni a böngészőben.
+                </p>
+                <div className="note">
+                    <p className="paragraph">
+                        <span className="bold">Megjegyzés:</span> Nincsen szükséged az extra <span
+                        className="bg-lightgray">--</span>-re itt, mivel az argumentumok közvetlenül a <span
+                        className="bold">vite</span>-be mennek, nem egy előre definiált npm script-be.
+                    </p>
+                </div>
+            </div>
+            <div className="article">
+                <h1>Fedezzük fel az első React komponensünket: <span className="bg-lightgray">&lt;App /&gt;</span></h1>
+                <p className="paragraph">
+                    A React-ban a komponens egy újra felhasználható, kis darabja, része az egész applikációnak. Az
+                    alkalmazás egy részét rendereli.
+                    A komponens lehet kicsi vagy nagy, de általában világosan vannak meghatározva, egy nyilvánvaló célt
+                    szolgálnak.
+                </p>
+                <p className="paragraph">
+                    Most nyissuk meg az <span className="bold">src/App.jsx</span> fájlt, mivel a böngészőnk is arra
+                    bátorít, hogy szerkesszük a fájlt. Ez a fájl tartalmazza az első komponensünket az <span
+                    className="bold">&lt;App /&gt;</span>-ot
+                </p>
+                <CodeDisplay code={code_10_appjsx}/>
+                <p className="paragraph">
+                    Az <span className="bold">App.jsx</span> fájl három fő részből áll: néhány <span
+                    className="bold">import</span> ismertetés a tetején, az <span className="bold">App()</span> függvény
+                    a közepén és egy <span className="bold">export</span> állítás az alján. A legtöbb React komponens
+                    követi ezt a mintát.
+                </p>
+                <h2>Import állítások</h2>
+                <p className="paragraph">
+                    Az <span className="bold">import</span> állítások a fájl tetején megengedik az <span
+                    className="bold">App.jsx</span> fájlnak, hogy olyan fájlokat használjon, amelyek máshol vannak
+                    definiálva. Nézzük meg ezeket az állításokat közelebbről!
+                </p>
+                <CodeDisplay code={code_11_import}/>
             </div>
         </div>
     );

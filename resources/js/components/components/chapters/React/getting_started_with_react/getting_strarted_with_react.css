@@ -14,7 +14,7 @@
 }
 
 .article{
-    margin: 15px 0;
+    margin: 30px 0;
 }
 .paragraph{
     margin: 15px 0;
@@ -29,7 +29,8 @@
 }
 .bg-lightgray{
     background-color: lightgray;
-    padding: 3px;
+    border-radius: 3px;
+    margin: 3px;
 }
 .image-container{
     margin: 15px;
