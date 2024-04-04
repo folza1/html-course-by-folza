@@ -3,9 +3,9 @@ import React from 'react';
 const Note = ({children}) => {
 
     return (
-        <span className="note">
+        <div className="note">
             {children}
-        </span>
+        </div>
     );
 };
 export default Note;

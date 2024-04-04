@@ -22,6 +22,8 @@ import npm_run_dev from "./img/1.npm_run_dev.png";
 import app_structure from "./img/2.app_structure.png";
 import Paragraph from "./paragraph/Paragraph.jsx";
 import BgLightgray from "./bg-lightgray/BgLightgray.jsx";
+import Note from "./note/Note.jsx";
+import Article from "./article/Article.jsx";
 
 export default function Getting_Started_With_React() {
 
@@ -523,7 +525,26 @@ export default function Getting_Started_With_React() {
                     hívja meg az <BgLightgray>App()</BgLightgray> függvényt, amely rendereli
                     az <BgLightgray>App()</BgLightgray> komponenset a root node (csomópont) belsejébe.
                 </Paragraph>
-
+                <Note>
+                    <Paragraph>
+                        <span className="bold">Megjegyzés:</span> Az <BgLightgray>App()</BgLightgray> egy speciális
+                        komponens-be a <BgLightgray>&lt;React.Strict.Mode&gt;</BgLightgray>-be van renderelve. Ez a
+                        komponens segít a fejlesztőknek megérteni potenciális hibákat a kódjukban.
+                    </Paragraph>
+                </Note>
+                <Paragraph>
+                    Olvashatsz ezekről a React API-król itt:
+                    <Paragraph>
+                        <a target="_blank"
+                           href="https://react.dev/reference/react-dom/client/createRoot">ReactDOM.createRoot()</a>
+                    </Paragraph>
+                    <Paragraph>
+                        <a target="_blank" href="https://react.dev/reference/react/StrictMode">React.StrictMode</a>
+                    </Paragraph>
+                </Paragraph>
+                <Article>
+                    <h1>Kezdjünk egy friss app-al</h1>
+                </Article>
             </div>
             <div id="scrollTarget">Ide szeretnék görgetni</div>
         </div>
