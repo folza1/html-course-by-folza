@@ -17,9 +17,11 @@ import {
     code_13_export,
     code_14_main,
 
-} from "./codes.jsx";
+} from "./code_texts.jsx";
 import npm_run_dev from "./img/1.npm_run_dev.png";
 import app_structure from "./img/2.app_structure.png";
+import Paragraph from "./paragraph/Paragraph.jsx";
+import BgLightgray from "./bg-lightgray/BgLightgray.jsx";
 
 export default function Getting_Started_With_React() {
 
@@ -494,9 +496,34 @@ export default function Getting_Started_With_React() {
                 </p>
                 <CodeDisplay code={code_14_main}/>
                 <p className="paragraph">
-                    Mint az <span className="bg-lightgray">App.jsx</span>-el, a fájl azzal kezdődik, hogy importálja az összes JS modult és más eszközöket
+                    Mint az <span className="bg-lightgray">App.jsx</span>-el, a fájl azzal kezdődik, hogy importálja az
+                    összes JS modult és más eszközöket
                     amelyekre szüksége van a futáshoz.
                 </p>
+                <Paragraph>
+                    Az első két állítás importálja a <BgLightgray>React</BgLightgray> és
+                    a <BgLightgray>ReactDOM</BgLightgray> libraryt, mert később hivatkozva lesz rájuk a fájlban. Nem
+                    írunk útvonalat vagy kiterjesztést amikor ezeket a könyvtárakat importéljuk, mert nem helyi fájlok.
+                    Valójában függőségként vannak listázva a <BgLightgray>package.json</BgLightgray> fájlban. Ügyelj
+                    erre a különbségtételre, ahogy haladsz a lecke során.
+                </Paragraph>
+                <Paragraph>
+                    Aztán importáljuk az <BgLightgray>App()</BgLightgray> függvényt és
+                    az <BgLightgray>index.css</BgLightgray> fájlt, amely globális stílusokat tartalmaz és az egész
+                    applikációra kihat.
+                </Paragraph>
+                <Paragraph>
+                    Aztán meghívjuk a <BgLightgray>ReactDOM.createRoot()</BgLightgray> függvényt, amely definiálja az
+                    alkalmazásunk gyökér csomópontját (node-ját). Ez vár egy argumentumot a DOM elembe, amelybe akarjuk
+                    belerenderelni a React app-unkat. Ebben az esetben az a DOM elem
+                    egy <BgLightgray>root</BgLightgray> ID-vel. Végül hozzáfűzzük
+                    a <BgLightgray>render()</BgLightgray> metódust a <BgLightgray>createRoot()</BgLightgray> híváshoz,
+                    beletéve a JSX kifejezést, amit a root-ban akarunk renderelni. Azzal, hogy azt írjuk a kódunkba,
+                    hogy <BgLightgray>&lt;App /&gt;</BgLightgray>, mint JSX kifejezést, azt mondjuk a React-nak, hogy
+                    hívja meg az <BgLightgray>App()</BgLightgray> függvényt, amely rendereli
+                    az <BgLightgray>App()</BgLightgray> komponenset a root node (csomópont) belsejébe.
+                </Paragraph>
+
             </div>
             <div id="scrollTarget">Ide szeretnék görgetni</div>
         </div>
