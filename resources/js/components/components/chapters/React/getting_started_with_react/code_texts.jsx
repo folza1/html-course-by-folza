@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const code_1_heading = "const heading = <h1>Mozilla Developer Network</h1>;"
 export const code_2_header = "const header = (\n" +
     "  <header>\n" +
@@ -108,6 +106,19 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </React.StrictMode>,
 );`
 
+export const code_15_hello_world = `import "./App.css";
 
+function App() {
+  return (
+    <>
+      <header>
+        <h1>Hello, World!</h1>
+      </header>
+    </>
+  );
+}
 
-
+export default App;
+`
+export const code_16_jsx_practice = `<button type="button">Click me!</button>
+`

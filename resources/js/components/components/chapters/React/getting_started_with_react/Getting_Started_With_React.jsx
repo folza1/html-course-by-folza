@@ -16,6 +16,8 @@ import {
     code_12_app_closely,
     code_13_export,
     code_14_main,
+    code_15_hello_world,
+    code_16_jsx_practice,
 
 } from "./code_texts.jsx";
 import npm_run_dev from "./img/1.npm_run_dev.png";
@@ -318,13 +320,13 @@ export default function Getting_Started_With_React() {
                 <p className="paragraph">
                     Ha egyszer elindult a szerver, látnod kellene egy új fülön a böngésződben az alkalmzást.
                 </p>
-                <div className="image-container"><img src={npm_run_dev}/></div>
+                <div className="image-container"><img src={npm_run_dev} alt="React Vite Starting Page"/></div>
                 <h2>Alkalmazás struktúra</h2>
                 <p className="paragraph">
                     A Vite mindent megad amire szükségünk van egy React alkalmazás elkészítéséhez. A kezdeti
                     fájlstruktúra a következőképpen néz ki:
                 </p>
-                <div className="image-container"><img src={app_structure}/></div>
+                <div className="image-container"><img src={app_structure} alt="App Structure"/></div>
                 <p className="paragraph">
                     Az <span className="bg-lightgray">index.html</span> a legfontosabb legfelsőbb szintű fájl. A Vite
                     ebbe a fájlba szúrja be a kódodat, amelyet a böngésző futtat majd. A tutorialunk során ezt a fájlt
@@ -544,9 +546,42 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <Article>
                     <h1>Kezdjünk egy friss app-al</h1>
+                    <Paragraph>
+                        Mielőtt elkezdjük felépíteni az app-unkat, törölni fogunk a boilerplate kódból amit a
+                        Vite szolgáltatott nekünk.
+                    </Paragraph>
+                    <Paragraph>
+                        Először is egy kísérletet teszünk, megváltoztatjuk
+                        a <BgLightgray>&lt;h1&gt;</BgLightgray> elemet az <BgLightgray>App.jsx</BgLightgray> fájlban
+                        "Hello, World"-re, aztán mentsd el a fájlt. Észre fogod venni, hogy ez a változtatás azonnal
+                        renderelve lett a fejlesztői szerveren
+                        a <BgLightgray>http://localhost:3000</BgLightgray> oldalon a böngésződben. Ezt tartsd szem előtt
+                        amikor az alkalmazáson dolgozol.
+                    </Paragraph>
+                    <Paragraph>
+                        A maradék kódot nem fogjuk használni, szóval helyettesítsd az <BgLightgray>App.jsx</BgLightgray>-ben
+                        lévő tartalmat a következőre:
+                    </Paragraph>
+                    <CodeDisplay code={code_15_hello_world}/>
+                </Article>
+                <Article>
+                    <h1>Egy kis JSX gyakorlás</h1>
+                    <Paragraph>
+                        Következésképpen a Javascript képességeinket fogjuk használni, hogy egy kicsit kényelmesebben
+                        tudjuk írni a JSX-et és dolgozzunk adatokkal a React-ben. Fogunk beszélni arról, hogyan adhatunk
+                        attribútumokat a JSX elemekhez, hogyan írhatunk kommenteket, hogyan renderelhetünk tartalmat
+                        változókból és más kifejezésekből, és hogyan adhatunk adatokat a komponenseknek prop-okkal.
+                    </Paragraph>
+                    <h2>Attribútumok hozzáadása JSX elemekhez</h2>
+                    <Paragraph>
+                        A JSX elemeknek lehetnek attribútumai, mint a HTML elemeknek. Próbálj hozzáadni
+                        egy <BgLightgray>&lt;button&gt;</BgLightgray>-t a <BgLightgray>&lt;h1&gt;</BgLightgray>
+                        elem alá az <BgLightgray>App.jsx</BgLightgray> fájl-ban, mint itt:
+                    </Paragraph>
+                    <CodeDisplay code={code_16_jsx_practice}/>
                 </Article>
             </div>
             <div id="scrollTarget">Ide szeretnék görgetni</div>
         </div>
-    );
+);
 }
