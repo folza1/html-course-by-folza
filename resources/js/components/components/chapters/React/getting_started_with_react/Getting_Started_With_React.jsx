@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './getting_strarted_with_react.css';
 import CodeDisplay from "../components/CodeDisplay.jsx";
 import {
@@ -13,12 +13,23 @@ import {
     code_9_npm_run_dev2,
     code_10_appjsx,
     code_11_import,
+    code_12_app_closely,
+    code_13_export,
+    code_14_main,
 
 } from "./codes.jsx";
 import npm_run_dev from "./img/1.npm_run_dev.png";
 import app_structure from "./img/2.app_structure.png";
 
 export default function Getting_Started_With_React() {
+
+    useEffect(() => {
+        const scrollTargetElement = document.getElementById('scrollTarget');
+        if (scrollTargetElement) {
+            scrollTargetElement.scrollIntoView();
+        }
+    }, []);
+
     return (
         <div className="container">
             <p className="header_paragraph">
@@ -323,7 +334,7 @@ export default function Getting_Started_With_React() {
                     Vite logót tartalmaz.
                 </p>
                 <p className="paragraph">
-                    Az<span className="bg-lightgray">src</span> mappa ahol az időnk nagy részét fogjuk tölteni, ez az a
+                    Az <span className="bg-lightgray">src</span> mappa ahol az időnk nagy részét fogjuk tölteni, ez az a
                     hely ahol az applikációnk forráskódja van. Észre fogod venni, hogy néhány Javascript fájl neve ebben
                     a
                     mappában <span className="bg-lightgray">.jsx</span> kitejesztésre végződik. Ez a kiterjesztés
@@ -376,31 +387,118 @@ export default function Getting_Started_With_React() {
             <div className="article">
                 <h1>Fedezzük fel az első React komponensünket: <span className="bg-lightgray">&lt;App /&gt;</span></h1>
                 <p className="paragraph">
-                    A React-ban a komponens egy újra felhasználható, kis darabja, része az egész applikációnak. Az
+                    A React-ban a <span className="bold">komponens</span> egy újra felhasználható, kis darabja, része
+                    az egész applikációnak. Az
                     alkalmazás egy részét rendereli.
                     A komponens lehet kicsi vagy nagy, de általában világosan vannak meghatározva, egy nyilvánvaló célt
                     szolgálnak.
                 </p>
                 <p className="paragraph">
-                    Most nyissuk meg az <span className="bold">src/App.jsx</span> fájlt, mivel a böngészőnk is arra
+                    Most nyissuk meg az <span className="bg-lightgray">src/App.jsx</span> fájlt, mivel a böngészőnk is
+                    arra
                     bátorít, hogy szerkesszük a fájlt. Ez a fájl tartalmazza az első komponensünket az <span
-                    className="bold">&lt;App /&gt;</span>-ot
+                    className="bg-lightgray">&lt;App /&gt;</span>-ot
                 </p>
                 <CodeDisplay code={code_10_appjsx}/>
                 <p className="paragraph">
-                    Az <span className="bold">App.jsx</span> fájl három fő részből áll: néhány <span
-                    className="bold">import</span> ismertetés a tetején, az <span className="bold">App()</span> függvény
-                    a közepén és egy <span className="bold">export</span> állítás az alján. A legtöbb React komponens
+                    Az <span className="bg-lightgray">App.jsx</span> fájl három fő részből áll: néhány <span
+                    className="bg-lightgray">import</span> ismertetés a tetején, az <span
+                    className="bg-lightgray">App()</span> függvény
+                    a közepén és egy <span className="bg-lightgray">export</span> állítás az alján. A legtöbb React
+                    komponens
                     követi ezt a mintát.
                 </p>
                 <h2>Import állítások</h2>
                 <p className="paragraph">
-                    Az <span className="bold">import</span> állítások a fájl tetején megengedik az <span
+                    Az <span className="bg-lightgray">import</span> állítások a fájl tetején megengedik az <span
                     className="bold">App.jsx</span> fájlnak, hogy olyan fájlokat használjon, amelyek máshol vannak
                     definiálva. Nézzük meg ezeket az állításokat közelebbről!
                 </p>
                 <CodeDisplay code={code_11_import}/>
+                <p className="paragraph">
+                    Az első sor importálja a <span className="bg-lightgray">useState</span> horgot a <span
+                    className="bold">react</span> könyvtárból. A horgokkal React funkciókat használhatunk a komponensen
+                    belül. Később beszélni fogunk róluk ebben az oktatóanyagban.
+                </p>
+                <p className="paragraph">
+                    Azután importáljuk a <span className="bg-lightgray">reactLogo</span>-t és a <span
+                    className="bold">viteLogo</span>-t. Vedd figyelembe, hogy az útvonalak <span
+                    className="bold">./</span> és <span className="bg-lightgray">/</span>-el kezdődnek és azt hogy <span
+                    className="bold">.svg</span> kiterjesztéssel végződnek. Ezek azt jelentik, hogy ezek az importok
+                    lokálisak, azaz saját fájlokra hivatkoznak vagyis nem npm csomagokra.
+                </p>
+                <p className="paragraph">
+                    Az utolsó sor importálja a CSS-t amely az <span
+                    className="bold">&lt;App /&gt;</span> komponensünkhöz tartozik.
+                    Figyeld meg hogy nincsenek változó nevek és <span className="bg-lightgray">from</span> utasítás sem.
+                    Ezt <a
+                    target="_blank"
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only">mellékhatás-import</a>-nak
+                    is nevezzük - ez nem importál semmilyen értéket sem a Javascript fájlba, viszont azt mondja a
+                    Vite-nak, hogy adja hozzá a hivatkozott CSS fájlt a végső kód kimenethez, így az használható lesz a
+                    böngésző számára.
+                </p>
+                <h2>Az App() függvény</h2>
+                <p className="paragraph">
+                    Az importok után van egy olyan függvényed hogy <span className="bg-lightgray">App()</span>, amely
+                    definiálja az <span className="bg-lightgray">App</span> komponensünk felépítését. Mivel legtöbben a
+                    Javascript közösségben a <a target="_blank"
+                                                href="https://developer.mozilla.org/en-US/docs/Glossary/Camel_case">lower
+                    camel case</a>-t preferálják, mint például a <span
+                    className="bold">helloWorld</span>, a React komponensek Pascal case-t használnak a változónevekhez,
+                    amit upper-camel-case-nek is neveznek, mint a <span className="bg-lightgray">HelloWorld</span>, így
+                    világos,
+                    hogy az adott JSX elem egy React komponens
+                    és nem egy megszokott HTML tag. Ha átneveznéd a komponenset <span
+                    className="bold">App()</span>-ról <span className="bg-lightgray">app()</span>-ra, akkor a böngésző
+                    egy hibát
+                    dobna mivel nem nagybetűvel kedődik, azaz nem felel meg az upper-camel-case-nek.
+                </p>
+                <p className="paragraph">
+                    Nézzük meg az <span className="bg-lightgray">App()</span>-ot még közelebbről!
+                </p>
+                <CodeDisplay code={code_12_app_closely}/>
+                <p className="paragraph">
+                    Az <span className="bg-lightgray">App()</span> függvény egy JSX kifejezést ad vissza. Ez a kifejezés
+                    definiálja azt, amit végül a böngésző renderelni fog a DOM-ba.
+                </p>
+                <p className="paragraph">
+                    Közvetlenül a <span className="bg-lightgray">return</span> kulcsszó alatt található egy speciális
+                    szintaxis: <span className="bg-lightgray">&lt;&gt;</span>. Ez egy <a target="_blank"
+                                                                                         href="https://react.dev/reference/react/Fragment">fragment</a>.
+                    A React komponenseknek egyetlen JSX elemet kell visszaadniuk, és a fragment-ek megengedik nekünk,
+                    hogy ezt tegyük anélkül, hogy <span className="bg-lightgray">div</span>-ekbe kellene raknunk a
+                    kifejezést.
+                    Így a böngészőnek nem kell külön azért egy <span className="bg-lightgray">div</span>-et renderelnie.
+                    Látni
+                    fogod a fragmenteket sok React alkalmazásban.
+                </p>
+                <h2>Az <span className="bg-lightgray">export</span> állítás</h2>
+                <p className="paragraph">
+                    Van még egy sor kód az <span className="bg-lightgray">App()</span> funkció után.
+                </p>
+                <CodeDisplay code={code_13_export}/>
+                <p className="paragraph">
+                    Ez az export állítás az <span className="bg-lightgray">App()</span> függvényünket elérhetővé teszi
+                    más
+                    modulok számára. Később még beszélni fogunk róla.
+                </p>
             </div>
+            <div className="article">
+                <h1>Nézzük a <span className="bg-lightgray">main</span> fájlt</h1>
+                <p className="paragraph">
+                    Most akkor nyissuk meg a <span className="bg-lightgray">src/main.jsx</span> fájlt, mert ott van
+                    az <span
+                    className="bold">App()</span> komponensünk használva. Ez a fájl a belépési pont az alkalmazásunk
+                    számára és kezdetben így néz ki:
+                </p>
+                <CodeDisplay code={code_14_main}/>
+                <p className="paragraph">
+                    Mint az <span className="bg-lightgray">App.jsx</span>-el, a fájl azzal kezdődik, hogy importálja az összes JS modult és más eszközöket
+                    amelyekre szüksége van a futáshoz.
+                </p>
+            </div>
+            <div id="scrollTarget">Ide szeretnék görgetni</div>
         </div>
     );
 }
