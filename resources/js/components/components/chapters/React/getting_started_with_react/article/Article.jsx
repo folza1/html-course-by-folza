@@ -1,10 +1,10 @@
 import React from 'react';
 import './article.css';
 
-const Article = ({children}) => {
+const Article = ({children, className}) => {
 
     return (
-        <div className="article">
+        <div className={className+" article"}>
             {children}
         </div>
     );

@@ -50,7 +50,7 @@ export default function Getting_Started_With_React() {
                 és kipróbálunk egy egyszerű kezdő alkalmazást - szóval tanulunk egy kicsit a React működéséről.
             </div>
 
-            <div className="article prerequisites">
+            <Article className="article prerequisites">
                 <Paragraph>
                     Előfeltételek: A HTML, CSS és Javascript lényegét ismernie kell és legyenek ismeretek
                     a terminal/parancssor használatáról.
@@ -68,9 +68,9 @@ export default function Getting_Started_With_React() {
                     Célkitűzés: Beállítani egy helyi React fejlesztői környezetet, készíteni egy kezdő alkalmazást és
                     megérteni az alapjait hogyan is működik.
                 </Paragraph>
-            </div>
+            </Article>
 
-            <div className="article">
+            <Article>
                 <h1>Hello React</h1>
                 <Paragraph>
                     Ahogy a hivatalos szlogenje is mondja, a React egy könyvtár ahhoz, hogy felhasználói felületet
@@ -97,9 +97,9 @@ export default function Getting_Started_With_React() {
                     problémákat, hogy csak
                     a felhasználói felület kidolgozásával legyen dolgod.
                 </Paragraph>
-            </div>
+            </Article>
 
-            <div className="article">
+            <Article>
                 <h1>Milyen esetekben használjuk?</h1>
                 <Paragraph>
                     Nem úgy mint más keretrendszereknek, a React-nak nincsenek szigorú szabályai a kód és a fájlok
@@ -130,9 +130,9 @@ export default function Getting_Started_With_React() {
                     támogatásával,
                     amely egy modern front-end éptési ("build") eszköz.
                 </Paragraph>
-            </div>
+            </Article>
 
-            <div className="article">
+            <Article>
                 <h1>Hogyan használja a React a Javascriptet?</h1>
                 <Paragraph>
                     A React a modern Javascript jellemzőit használja. A JavaScripttől való legnagyobb eltérés a JSX
@@ -155,7 +155,8 @@ export default function Getting_Started_With_React() {
 
                 <Note>
                     <Paragraph>
-                        <div className="bold inline">Megjegyzés:</div> A zárójelek az előző kódrészletben nem egyediek a
+                        <div className="bold inline">Megjegyzés:</div>
+                        A zárójelek az előző kódrészletben nem egyediek a
                         JSX-ben és nincsenek semmi
                         hatással a kódra.
                         Csak azt jelzik neked és a számítógép számára, hogy a benne lévő több sor kód ugyanannak a
@@ -205,8 +206,9 @@ export default function Getting_Started_With_React() {
                                                                                          href="https://react.dev/learn/writing-markup-with-jsx">JSX
                     használata</a>
                 </Paragraph>
-            </div>
-            <div className="article">
+            </Article>
+
+            <Article>
                 <h1>Az első React Alkalmazásod</h1>
                 <Paragraph>
                     Sok módja van új React alkalmazást készíteni. Mi a Vite-ot fogjuk használni, hogy új React
@@ -295,7 +297,8 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <Note>
                     <Paragraph>
-                        <div className="bold inline">Megjegyzés:</div> A <BgLightgray>--</BgLightgray> azért
+                        <div className="bold inline">Megjegyzés:</div>
+                        A <BgLightgray>--</BgLightgray> azért
                         szükséges, hogy argumentumokat adhassunk a <BgLightgray>create</BgLightgray> parancshoz és
                         a <BgLightgray>--template react</BgLightgray> argument azt mondja a Vite-nak hogy React
                         sablon-t használjon.
@@ -386,15 +389,17 @@ export default function Getting_Started_With_React() {
                     dev</BgLightgray> indításkor a <BgLightgray>http://localhost:3000</BgLightgray> címen fog megnyílni
                     a böngészőben.
                 </Paragraph>
-                <Note
+                <Note>
                     <Paragraph>
-                        <div className="bold inline">Megjegyzés:</div> Nincsen szükséged az
-                        extra <BgLightgray>--</BgLightgray>-re itt, mivel az argumentumok közvetlenül a <span
-                        className="bold">vite</span>-be mennek, nem egy előre definiált npm script-be.
+                        <div className="bold inline">Megjegyzés:</div>
+                        Nincsen szükséged az
+                        extra <BgLightgray>--</BgLightgray>-re itt, mivel az argumentumok közvetlenül a <div
+                        className="bold inline">vite</div>-be mennek, nem egy előre definiált npm script-be.
                     </Paragraph>
                 </Note>
-            </div>
-            <div className="article">
+            </Article>
+
+            <Article>
                 <h1>Fedezzük fel az első React komponensünket: <BgLightgray>&lt;App /&gt;</BgLightgray></h1>
                 <Paragraph>
                     A React-ban a <span className="bold">komponens</span> egy újra felhasználható, kis darabja, része
@@ -493,8 +498,9 @@ export default function Getting_Started_With_React() {
                     más
                     modulok számára. Később még beszélni fogunk róla.
                 </Paragraph>
-            </div>
-            <div className="article">
+            </Article>
+
+            <Article>
                 <h1>Nézzük a <BgLightgray>main</BgLightgray> fájlt</h1>
                 <Paragraph>
                     Most akkor nyissuk meg a <BgLightgray>src/main.jsx</BgLightgray> fájlt, mert ott van
@@ -533,7 +539,8 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <Note>
                     <Paragraph>
-                        <div className="bold inline">Megjegyzés:</div> Az <BgLightgray>App()</BgLightgray> egy speciális
+                        <div className="bold inline">Megjegyzés:</div>
+                        Az <BgLightgray>App()</BgLightgray> egy speciális
                         komponens-be a <BgLightgray>&lt;React.Strict.Mode&gt;</BgLightgray>-be van renderelve. Ez a
                         komponens segít a fejlesztőknek megérteni potenciális hibákat a kódjukban.
                     </Paragraph>
@@ -548,131 +555,132 @@ export default function Getting_Started_With_React() {
                         <a target="_blank" href="https://react.dev/reference/react/StrictMode">React.StrictMode</a>
                     </Paragraph>
                 </Paragraph>
-                <Article>
-                    <h1>Kezdjünk egy friss app-al</h1>
-                    <Paragraph>
-                        Mielőtt elkezdjük felépíteni az app-unkat, törölni fogunk a boilerplate kódból amit a
-                        Vite szolgáltatott nekünk.
-                    </Paragraph>
-                    <Paragraph>
-                        Először is egy kísérletet teszünk, megváltoztatjuk
-                        a <BgLightgray>&lt;h1&gt;</BgLightgray> elemet az <BgLightgray>App.jsx</BgLightgray> fájlban
-                        "Hello, World"-re, aztán mentsd el a fájlt. Észre fogod venni, hogy ez a változtatás azonnal
-                        renderelve lett a fejlesztői szerveren
-                        a <BgLightgray>http://localhost:3000</BgLightgray> oldalon a böngésződben. Ezt tartsd szem előtt
-                        amikor az alkalmazáson dolgozol.
-                    </Paragraph>
-                    <Paragraph>
-                        A maradék kódot nem fogjuk használni, szóval helyettesítsd az <BgLightgray>App.jsx</BgLightgray>-ben
-                        lévő tartalmat a következőre:
-                    </Paragraph>
-                    <CodeDisplay code={code_15_hello_world}/>
-                </Article>
-                <Article>
-                    <h1>Egy kis JSX gyakorlás</h1>
-                    <Paragraph>
-                        Következésképpen a Javascript képességeinket fogjuk használni, hogy egy kicsit kényelmesebben
-                        tudjuk írni a JSX-et és dolgozzunk adatokkal a React-ben. Fogunk beszélni arról, hogyan adhatunk
-                        attribútumokat a JSX elemekhez, hogyan írhatunk kommenteket, hogyan renderelhetünk tartalmat
-                        változókból és más kifejezésekből, és hogyan adhatunk adatokat a komponenseknek prop-okkal.
-                    </Paragraph>
-                    <h2>Attribútumok hozzáadása JSX elemekhez</h2>
-                    <Paragraph>
-                        A JSX elemeknek lehetnek attribútumai, mint a HTML elemeknek. Próbálj hozzáadni
-                        egy <BgLightgray>&lt;button&gt;</BgLightgray>-t a <BgLightgray>&lt;h1&gt;</BgLightgray>
-                        elem alá az <BgLightgray>App.jsx</BgLightgray> fájl-ban, mint itt:
-                    </Paragraph>
-                    <CodeDisplay code={code_16_jsx_practice}/>
-                    <Paragraph>
-                        Miután elmentetted a fájlt, látni fogsz egy gomb-ot a <BgLightgray>Kattints
-                        rám!</BgLightgray> szöveggel. A gomb még nem
-                        csinál semmit, de hamarosan fogunk tanulni róla, hogyan adhatunk interaktivitást az app-unkhoz.
-                    </Paragraph>
-                    <Paragraph>
-                        Néhány attribútum különböző, mint a HTML megfelelője. Például,
-                        a <BgLightgray>class</BgLightgray> attribútum HTML-ben meg
-                        van változtatva <BgLightgray>className</BgLightgray>-re JSX-ben. Ez azért van mert
-                        a <BgLightgray>class</BgLightgray> szó
-                        egy fenntartott szó a Javascript-ben, és a JSX egy Javascript kiterjesztés. Ha szeretnél egy
-                        <BgLightgray>primary</BgLightgray> class-t adni a gombodhoz, akkor azt így kell tenned:
-                    </Paragraph>
-                    <CodeDisplay code={code_17_jsx_className}/>
-                    <h2>Javascript kifejezések mint tartalmak</h2>
-                    <Paragraph>
-                        Nem úgy mint a HTML, a JSX megengedi nekünk, hogy változókat és más Javascript kifejezéseket
-                        írjunk más tartalom mellé. Most deklaráljunk egy változót és
-                        nevezzük <BgLightgray>subject</BgLightgray>-nek az <BgLightgray>App()</BgLightgray> funkció
-                        felett:
-                    </Paragraph>
-                    <Paragraph>
-                        Utána helyettesítsük a "World" szót a <BgLightgray>&lt;h1&gt;</BgLightgray> elemben
-                        a <BgLightgray>{"{"}subject{"}"}</BgLightgray>-re:
-                    </Paragraph>
-                    <CodeDisplay code={code_18_jsx_subject}/>
-                    <Paragraph>
-                        Mentsd el a fájlt és nézd a böngészőt. Azt kellene látnod, hogy a <BgLightgray>"Hello,
-                        React!"</BgLightgray> renderelődött.
-                    </Paragraph>
-                    <Paragraph>
-                        A kapcsos zárójelek a <BgLightgray>subject</BgLightgray> körül egy másik funkciója a JSX
-                        szintaxisnak. A kapcsos zárójelek
-                        azt mondják a React-nek, hogy ki akarjuk olvasni az értéket
-                        a <BgLightgray>subject</BgLightgray> változóból, ahelyett hogy
-                        a <BgLightgray>"subject"</BgLightgray> szöveget szeretnénk renderelni. Bármilyen érvényes
-                        Javascript kifejezést beletehetünk a kapcsos zárójelekbe a JSX-ben. A React kiértékeli azt és
-                        rendereli a kifejezés eredményét mint végső tartalom. Most következik néhány példa, kommentekkel
-                        felette elmagyarázva, mit is renderel mindegyik kifejezés:
-                    </Paragraph>
-                    <CodeDisplay code={code_19_jsx_example}/>
-                    <Paragraph>
-                        Még a kommentek is kapcsos zárójelben jelennek meg a JSX-ben. Ez azért van, mert technikailag a
-                        kommentek is Javascript kifejezések. A <BgLightgray>/* block comment syntax
-                        */</BgLightgray> szükséges a programod számára, hogy tudja hol kezdődik és végződik a komment.
-                    </Paragraph>
-                    <h2>Komponens property-k</h2>
-                    <Paragraph>
-                        A <div className="bold inline">Prop</div>-ok jelentése, hogy adatokat rakunk a React
-                        komponens-be. Az
-                        szintaxisa azonos mint az attribútumoknak, lényegében: prop="value". A különbség az az, hogy az
-                        attribútumok sima elemekbe mennek, a prop-ok React komponensekbe.
-                    </Paragraph>
-                    <Paragraph>
-                        React-ban az adatáramlás egyirányú: a propok csak a szülő elemtől haladnak lefelé a gyermek
-                        komponens felé.
-                    </Paragraph>
-                    <Paragraph>
-                        Most nyissuk meg a <BgLightgray>main.jsx</BgLightgray> fájlt és adjuk hozzá az <BgLightgray>&lt;
-                        App/&gt;</BgLightgray> komponens első prop-ját.
-                    </Paragraph>
-                    <Paragraph>
-                        Adjuk a <BgLightgray>subject</BgLightgray> prop-ot az <BgLightgray>&lt;
-                        App/&gt;</BgLightgray> komponens híváshoz a <BgLightgray>Clarice</BgLightgray> értékkel. Amikor
-                        kész vagy valami
-                        ilyesminek kellene kinéznie:
-                    </Paragraph>
-                    <CodeDisplay code={code_20_prop}/>
-                    <Paragraph>
-                        Vissza az <BgLightgray>App.jsx</BgLightgray>-hez, látogassuk meg újra
-                        az <BgLightgray>App()</BgLightgray> függvényt. Változtassuk meg
-                        az <BgLightgray>App()</BgLightgray>-ot gy elfogadja a
-                        <BgLightgray>prop</BgLightgray>-okat paraméterként, aztán kilogoltatjuk
-                        a <BgLightgray>prop</BgLightgray>-okat a console-ra így megvizsgálhatjuk őket.
-                        Töröljük ki a <BgLightgray>subject</BgLightgray> konstansot is, mert nincs rá többé szükségünk.
-                        Az App.jsx-nek valahogy így kellene
-                        kinéznie:
-                    </Paragraph>
-                    <CodeDisplay code={code_21_prop_parameter}/>
-                    <Paragraph>
-                        Mentsd el a fájlt és ellenőrizd a böngészőt. Egy üres hátteret fogsz látni tartalom nélkül. Ez
-                        azért van mert próbáljuk beolvasni a subject változót ami nincsen többé definiálva. Hogy
-                        kijavítsuk ezt a hibát kommenteljük ki a <BgLightgray>&lt;h1&gt;Hello {"{"}subject{"}"}!&lt;/h1&gt;</BgLightgray> sort.
-                    </Paragraph>
-                    <Note>
+            </Article>
 
-                    </Note>
-                </Article>
-            </div>
+            <Article>
+                <h1>Kezdjünk egy friss app-al</h1>
+                <Paragraph>
+                    Mielőtt elkezdjük felépíteni az app-unkat, törölni fogunk a boilerplate kódból amit a
+                    Vite szolgáltatott nekünk.
+                </Paragraph>
+                <Paragraph>
+                    Először is egy kísérletet teszünk, megváltoztatjuk
+                    a <BgLightgray>&lt;h1&gt;</BgLightgray> elemet az <BgLightgray>App.jsx</BgLightgray> fájlban
+                    "Hello, World"-re, aztán mentsd el a fájlt. Észre fogod venni, hogy ez a változtatás azonnal
+                    renderelve lett a fejlesztői szerveren
+                    a <BgLightgray>http://localhost:3000</BgLightgray> oldalon a böngésződben. Ezt tartsd szem előtt
+                    amikor az alkalmazáson dolgozol.
+                </Paragraph>
+                <Paragraph>
+                    A maradék kódot nem fogjuk használni, szóval helyettesítsd az <BgLightgray>App.jsx</BgLightgray>-ben
+                    lévő tartalmat a következőre:
+                </Paragraph>
+                <CodeDisplay code={code_15_hello_world}/>
+            </Article>
+
+            <Article>
+                <h1>Egy kis JSX gyakorlás</h1>
+                <Paragraph>
+                    Következésképpen a Javascript képességeinket fogjuk használni, hogy egy kicsit kényelmesebben
+                    tudjuk írni a JSX-et és dolgozzunk adatokkal a React-ben. Fogunk beszélni arról, hogyan adhatunk
+                    attribútumokat a JSX elemekhez, hogyan írhatunk kommenteket, hogyan renderelhetünk tartalmat
+                    változókból és más kifejezésekből, és hogyan adhatunk adatokat a komponenseknek prop-okkal.
+                </Paragraph>
+                <h2>Attribútumok hozzáadása JSX elemekhez</h2>
+                <Paragraph>
+                    A JSX elemeknek lehetnek attribútumai, mint a HTML elemeknek. Próbálj hozzáadni
+                    egy <BgLightgray>&lt;button&gt;</BgLightgray>-t a <BgLightgray>&lt;h1&gt;</BgLightgray>
+                    elem alá az <BgLightgray>App.jsx</BgLightgray> fájl-ban, mint itt:
+                </Paragraph>
+                <CodeDisplay code={code_16_jsx_practice}/>
+                <Paragraph>
+                    Miután elmentetted a fájlt, látni fogsz egy gomb-ot a <BgLightgray>Kattints
+                    rám!</BgLightgray> szöveggel. A gomb még nem
+                    csinál semmit, de hamarosan fogunk tanulni róla, hogyan adhatunk interaktivitást az app-unkhoz.
+                </Paragraph>
+                <Paragraph>
+                    Néhány attribútum különböző, mint a HTML megfelelője. Például,
+                    a <BgLightgray>class</BgLightgray> attribútum HTML-ben meg
+                    van változtatva <BgLightgray>className</BgLightgray>-re JSX-ben. Ez azért van mert
+                    a <BgLightgray>class</BgLightgray> szó
+                    egy fenntartott szó a Javascript-ben, és a JSX egy Javascript kiterjesztés. Ha szeretnél egy
+                    <BgLightgray>primary</BgLightgray> class-t adni a gombodhoz, akkor azt így kell tenned:
+                </Paragraph>
+                <CodeDisplay code={code_17_jsx_className}/>
+                <h2>Javascript kifejezések mint tartalmak</h2>
+                <Paragraph>
+                    Nem úgy mint a HTML, a JSX megengedi nekünk, hogy változókat és más Javascript kifejezéseket
+                    írjunk más tartalom mellé. Most deklaráljunk egy változót és
+                    nevezzük <BgLightgray>subject</BgLightgray>-nek az <BgLightgray>App()</BgLightgray> funkció
+                    felett:
+                </Paragraph>
+                <Paragraph>
+                    Utána helyettesítsük a "World" szót a <BgLightgray>&lt;h1&gt;</BgLightgray> elemben
+                    a <BgLightgray>{"{"}subject{"}"}</BgLightgray>-re:
+                </Paragraph>
+                <CodeDisplay code={code_18_jsx_subject}/>
+                <Paragraph>
+                    Mentsd el a fájlt és nézd a böngészőt. Azt kellene látnod, hogy a <BgLightgray>"Hello,
+                    React!"</BgLightgray> renderelődött.
+                </Paragraph>
+                <Paragraph>
+                    A kapcsos zárójelek a <BgLightgray>subject</BgLightgray> körül egy másik funkciója a JSX
+                    szintaxisnak. A kapcsos zárójelek
+                    azt mondják a React-nek, hogy ki akarjuk olvasni az értéket
+                    a <BgLightgray>subject</BgLightgray> változóból, ahelyett hogy
+                    a <BgLightgray>"subject"</BgLightgray> szöveget szeretnénk renderelni. Bármilyen érvényes
+                    Javascript kifejezést beletehetünk a kapcsos zárójelekbe a JSX-ben. A React kiértékeli azt és
+                    rendereli a kifejezés eredményét mint végső tartalom. Most következik néhány példa, kommentekkel
+                    felette elmagyarázva, mit is renderel mindegyik kifejezés:
+                </Paragraph>
+                <CodeDisplay code={code_19_jsx_example}/>
+                <Paragraph>
+                    Még a kommentek is kapcsos zárójelben jelennek meg a JSX-ben. Ez azért van, mert technikailag a
+                    kommentek is Javascript kifejezések. A <BgLightgray>/* block comment syntax
+                    */</BgLightgray> szükséges a programod számára, hogy tudja hol kezdődik és végződik a komment.
+                </Paragraph>
+                <h2>Komponens property-k</h2>
+                <Paragraph>
+                    A <div className="bold inline">Prop</div>-ok jelentése, hogy adatokat rakunk a React
+                    komponens-be. Az
+                    szintaxisa azonos mint az attribútumoknak, lényegében: prop="value". A különbség az az, hogy az
+                    attribútumok sima elemekbe mennek, a prop-ok React komponensekbe.
+                </Paragraph>
+                <Paragraph>
+                    React-ban az adatáramlás egyirányú: a propok csak a szülő elemtől haladnak lefelé a gyermek
+                    komponens felé.
+                </Paragraph>
+                <Paragraph>
+                    Most nyissuk meg a <BgLightgray>main.jsx</BgLightgray> fájlt és adjuk hozzá az <BgLightgray>&lt;
+                    App/&gt;</BgLightgray> komponens első prop-ját.
+                </Paragraph>
+                <Paragraph>
+                    Adjuk a <BgLightgray>subject</BgLightgray> prop-ot az <BgLightgray>&lt;
+                    App/&gt;</BgLightgray> komponens híváshoz a <BgLightgray>Clarice</BgLightgray> értékkel. Amikor
+                    kész vagy valami
+                    ilyesminek kellene kinéznie:
+                </Paragraph>
+                <CodeDisplay code={code_20_prop}/>
+                <Paragraph>
+                    Vissza az <BgLightgray>App.jsx</BgLightgray>-hez, látogassuk meg újra
+                    az <BgLightgray>App()</BgLightgray> függvényt. Változtassuk meg
+                    az <BgLightgray>App()</BgLightgray>-ot gy elfogadja a
+                    <BgLightgray>prop</BgLightgray>-okat paraméterként, aztán kilogoltatjuk
+                    a <BgLightgray>prop</BgLightgray>-okat a console-ra így megvizsgálhatjuk őket.
+                    Töröljük ki a <BgLightgray>subject</BgLightgray> konstansot is, mert nincs rá többé szükségünk.
+                    Az App.jsx-nek valahogy így kellene
+                    kinéznie:
+                </Paragraph>
+                <CodeDisplay code={code_21_prop_parameter}/>
+                <Paragraph>
+                    Mentsd el a fájlt és ellenőrizd a böngészőt. Egy üres hátteret fogsz látni tartalom nélkül. Ez
+                    azért van mert próbáljuk beolvasni a subject változót ami nincsen többé definiálva. Hogy
+                    kijavítsuk ezt a hibát kommenteljük ki
+                    a <BgLightgray>&lt;h1&gt;Hello {"{"}subject{"}"}!&lt;/h1&gt;</BgLightgray> sort.
+                </Paragraph>
+            </Article>
             <div id="scrollTarget">Görgetés Ide</div>
         </div>
-    );
+    )
+        ;
 }
