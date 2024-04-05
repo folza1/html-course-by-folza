@@ -136,3 +136,9 @@ export const code_19_jsx_example =  `{/* Hello, React :)! */}
 <h1>Hello, {2 + 2}!</h1>
 `
 export const code_20_prop =  `<App subject="Clarice" />`
+export const code_21_prop_parameter =  `function App(props) {
+  console.log(props);
+  return (
+    // code omitted for brevity
+  );
+}`

@@ -22,6 +22,7 @@ import {
     code_18_jsx_subject,
     code_19_jsx_example,
     code_20_prop,
+    code_21_prop_parameter,
 
 } from "./code_texts.jsx";
 import npm_run_dev from "./img/1.npm_run_dev.png";
@@ -152,9 +153,9 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <CodeDisplay code={code_2_header}/>
 
-                <div className="note">
+                <Note>
                     <Paragraph>
-                        <span className="bold">Megjegyzés:</span> A zárójelek az előző kódrészletben nem egyediek a
+                        <div className="bold inline">Megjegyzés:</div> A zárójelek az előző kódrészletben nem egyediek a
                         JSX-ben és nincsenek semmi
                         hatással a kódra.
                         Csak azt jelzik neked és a számítógép számára, hogy a benne lévő több sor kód ugyanannak a
@@ -166,7 +167,7 @@ export default function Getting_Started_With_React() {
                         Viszont kicsit furcsán néz ki, mivel a kezdő <BgLightgray>&lt;header&gt;</BgLightgray> tag
                         nincsen behúzva mint a záró tag.
                     </Paragraph>
-                </div>
+                </Note>
                 <Paragraph>
                     Természetesen a böngészőnk nem tudja magától értelmezni a JSX-et segítség nélkül. Miután kompilálva
                     lett a kód,
@@ -292,14 +293,14 @@ export default function Getting_Started_With_React() {
                     projekt mappája, benne a
                     Vite <BgLightgray>react</BgLightgray> sablonjával.
                 </Paragraph>
-                <div className="note">
+                <Note>
                     <Paragraph>
-                        <span className="bold">Megjegyzés:</span> A <BgLightgray>--</BgLightgray> azért
+                        <div className="bold inline">Megjegyzés:</div> A <BgLightgray>--</BgLightgray> azért
                         szükséges, hogy argumentumokat adhassunk a <BgLightgray>create</BgLightgray> parancshoz és
                         a <BgLightgray>--template react</BgLightgray> argument azt mondja a Vite-nak hogy React
                         sablon-t használjon.
                     </Paragraph>
-                </div>
+                </Note>
                 <Paragraph>
                     A terminálodnak ki kell írnia néhány üzenetet ha a parancs sikeresen lefutott. Olyan üzenetet
                     kellene
@@ -385,13 +386,13 @@ export default function Getting_Started_With_React() {
                     dev</BgLightgray> indításkor a <BgLightgray>http://localhost:3000</BgLightgray> címen fog megnyílni
                     a böngészőben.
                 </Paragraph>
-                <div className="note">
+                <Note
                     <Paragraph>
-                        <span className="bold">Megjegyzés:</span> Nincsen szükséged az
+                        <div className="bold inline">Megjegyzés:</div> Nincsen szükséged az
                         extra <BgLightgray>--</BgLightgray>-re itt, mivel az argumentumok közvetlenül a <span
                         className="bold">vite</span>-be mennek, nem egy előre definiált npm script-be.
                     </Paragraph>
-                </div>
+                </Note>
             </div>
             <div className="article">
                 <h1>Fedezzük fel az első React komponensünket: <BgLightgray>&lt;App /&gt;</BgLightgray></h1>
@@ -532,7 +533,7 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <Note>
                     <Paragraph>
-                        <span className="bold">Megjegyzés:</span> Az <BgLightgray>App()</BgLightgray> egy speciális
+                        <div className="bold inline">Megjegyzés:</div> Az <BgLightgray>App()</BgLightgray> egy speciális
                         komponens-be a <BgLightgray>&lt;React.Strict.Mode&gt;</BgLightgray>-be van renderelve. Ez a
                         komponens segít a fejlesztőknek megérteni potenciális hibákat a kódjukban.
                     </Paragraph>
@@ -645,13 +646,33 @@ export default function Getting_Started_With_React() {
                     </Paragraph>
                     <Paragraph>
                         Adjuk a <BgLightgray>subject</BgLightgray> prop-ot az <BgLightgray>&lt;
-                        App/&gt;</BgLightgray> komponens híváshoz a <BgLightgray>Clarice</BgLightgray> értékkel. Amikor kész vagy valami
+                        App/&gt;</BgLightgray> komponens híváshoz a <BgLightgray>Clarice</BgLightgray> értékkel. Amikor
+                        kész vagy valami
                         ilyesminek kellene kinéznie:
                     </Paragraph>
                     <CodeDisplay code={code_20_prop}/>
+                    <Paragraph>
+                        Vissza az <BgLightgray>App.jsx</BgLightgray>-hez, látogassuk meg újra
+                        az <BgLightgray>App()</BgLightgray> függvényt. Változtassuk meg
+                        az <BgLightgray>App()</BgLightgray>-ot gy elfogadja a
+                        <BgLightgray>prop</BgLightgray>-okat paraméterként, aztán kilogoltatjuk
+                        a <BgLightgray>prop</BgLightgray>-okat a console-ra így megvizsgálhatjuk őket.
+                        Töröljük ki a <BgLightgray>subject</BgLightgray> konstansot is, mert nincs rá többé szükségünk.
+                        Az App.jsx-nek valahogy így kellene
+                        kinéznie:
+                    </Paragraph>
+                    <CodeDisplay code={code_21_prop_parameter}/>
+                    <Paragraph>
+                        Mentsd el a fájlt és ellenőrizd a böngészőt. Egy üres hátteret fogsz látni tartalom nélkül. Ez
+                        azért van mert próbáljuk beolvasni a subject változót ami nincsen többé definiálva. Hogy
+                        kijavítsuk ezt a hibát kommenteljük ki a <BgLightgray>&lt;h1&gt;Hello {"{"}subject{"}"}!&lt;/h1&gt;</BgLightgray> sort.
+                    </Paragraph>
+                    <Note>
+
+                    </Note>
                 </Article>
             </div>
-            <div id="scrollTarget">Ide szeretnék görgetni</div>
+            <div id="scrollTarget">Görgetés Ide</div>
         </div>
     );
 }
