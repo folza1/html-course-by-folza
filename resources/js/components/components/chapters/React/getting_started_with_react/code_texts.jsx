@@ -142,3 +142,18 @@ export const code_21_prop_parameter =  `function App(props) {
     // code omitted for brevity
   );
 }`
+
+export const code_22_button = `Object { subject: "Clarice" }`
+
+export const code_23_subject = `function App(props) {
+  return (
+    <>
+      <header>
+        <h1>Hello, {props.subject}!</h1>
+        <button type="button" className="primary">
+          Click me!
+        </button>
+      </header>
+    </>
+  );
+}`

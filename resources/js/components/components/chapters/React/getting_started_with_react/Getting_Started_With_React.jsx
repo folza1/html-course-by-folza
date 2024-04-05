@@ -23,6 +23,8 @@ import {
     code_19_jsx_example,
     code_20_prop,
     code_21_prop_parameter,
+    code_22_button,
+    code_23_subject,
 
 } from "./code_texts.jsx";
 import npm_run_dev from "./img/1.npm_run_dev.png";
@@ -686,6 +688,33 @@ export default function Getting_Started_With_React() {
                     /</BgLightgray>, macOS rendszeren pedig <BgLightgray>Cmd + /</BgLightgray>. Ezzel gyorsan
                     kommentelheted a kódodat.
                 </Note>
+                <Paragraph>
+                    Mentsd el a fájlt a sorral, amit kommenteltünk. Most a komponens egy "Click me!" gombot renderel. Ha
+                    megnyitod a böngésződ fejlesztői konzolát, egy üzenetet fogsz látni, mint ez:
+                </Paragraph>
+                <CodeDisplay code={code_22_button}/>
+                <Paragraph>
+                    Az objektum property-je a <BgLightgray>subject</BgLightgray> megfelel
+                    a <BgLightgray>subject</BgLightgray> prop-nak, amit hozzáadtunk a
+                    mi <BgLightgray>&lt;App/&gt;</BgLightgray> komponens
+                    hívásunkhoz, és a string <BgLightgray>Clarice</BgLightgray> megfelel annak az értékének. Komponens
+                    propok a React-ban minding
+                    objektumban vannak összegyűjtve ebben a formában.
+                </Paragraph>
+                <Paragraph>
+                    Most használjuk ezt a <BgLightgray>subject</BgLightgray> prop-ot, hogy kijavítsuk a hibát az
+                    app-unkban. Vissza kell kommentelnünk
+                    a <BgLightgray>&lt;h1&gt;Hello, {"{"}subject{"}"}!&lt;/h1&gt;</BgLightgray> sort és megváltoztatni
+                    azt <BgLightgray>
+                    &lt;h1&gt;Hello, {"{"}props.subject{"}"}!&lt;/h1&gt;</BgLightgray>-re, aztán
+                    töröljük a <BgLightgray>console.log()</BgLightgray> állítást. A kódodnak így kell kinéznie:
+                </Paragraph>
+                <CodeDisplay code={code_23_subject}/>
+                <Paragraph>
+                    Miután elmentetted, az applikációnak így kell köszöntenie téged: "Hello, Clarice!". Ha visszamész a
+                    <BgLightgray>main.jsx</BgLightgray>-hez, és szerkeszted a <BgLightgray>subject</BgLightgray> értékét
+                    és elmented a szöveged meg fog változni a böngészőben.
+                </Paragraph>
             </Article>
             <div id="scrollTarget">Görgetés Ide</div>
         </div>
