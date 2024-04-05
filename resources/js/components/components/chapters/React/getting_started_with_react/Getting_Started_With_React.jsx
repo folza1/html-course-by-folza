@@ -137,14 +137,13 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <CodeDisplay code={code_1_heading}/>
                 <Paragraph>
-                    Ez a heading konstans egy JSX kifejezés. A React használja ezt, hogy renderelje a <span
-                    className="bg-lightgray">&lt;h1&gt;</span> tag-et
+                    Ez a heading konstans egy JSX kifejezés. A React használja ezt, hogy renderelje a <BgLightgray>&lt;h1&gt;</BgLightgray> tag-et
                     az
                     alkalmazásunkba.
                 </Paragraph>
                 <Paragraph>
                     Tegyük fel hogy úgy akarjuk rendezni a kódunkat, hogy a heading-ünket bele akarjuk csomagolni
-                    egy <span className="bg-lightgray">&lt;header&gt;</span>
+                    egy <BgLightgray>&lt;header&gt;</BgLightgray>
                     tag-be.
                 </Paragraph>
                 <CodeDisplay code={code_2_header}/>
@@ -160,8 +159,7 @@ export default function Getting_Started_With_React() {
                     </Paragraph>
                     <CodeDisplay code={code_3_header}/>
                     <Paragraph>
-                        Viszont kicsit furcsán néz ki, mivel a kezdő <span
-                        className="bg-lightgray">&lt;header&gt;</span> tag nincsen behúzva mint a záró tag.
+                        Viszont kicsit furcsán néz ki, mivel a kezdő <BgLightgray>&lt;header&gt;</BgLightgray> tag nincsen behúzva mint a záró tag.
                     </Paragraph>
                 </div>
                 <Paragraph>
@@ -171,8 +169,7 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <CodeDisplay code={code_4_header}/>
                 <Paragraph>
-                    Ki lehet hagyni a kompilációt és lehet használni a <span
-                    className="bg-lightgray">React.createElement()</span>-et, ha önmagunk szeretnénk
+                    Ki lehet hagyni a kompilációt és lehet használni a <BgLightgray>React.createElement()</BgLightgray>-et, ha önmagunk szeretnénk
                     írni a UI-t, a
                     "user-interface"-et, azaz a felhasználói felületet. Azonban, ha azon a módon írjuk a kódot, akkor
                     elveszítjük a JSX
@@ -210,7 +207,7 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <Paragraph>
                     Lehetséges egy már meglévő projekthez hozzáadni a React-et úgy hogy bemásoljuk
-                    a <span className="bg-lightgray">&lt;script&gt;</span> elemeket
+                    a <BgLightgray>&lt;script&gt;</BgLightgray> elemeket
                     a HTML fájl-ba, de a Vite-al több idő marad az applikáció elkészítéséhez és így kevesebb idő megy el
                     a beállítással.
                 </Paragraph>
@@ -275,33 +272,31 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <h2>A React alkalmazásod elindítása</h2>
                 <Paragraph>
-                    Az npm csomagkezelőnek van egy <span className="bg-lightgray">create</span> parancsa, amellyel új
+                    Az npm csomagkezelőnek van egy <BgLightgray>create</BgLightgray> parancsa, amellyel új
                     react alkalmazásokat készíthetünk
                     sablonokból. Egy új alkalmazást készíthetünk
-                    a Vite alapértelmezett React sablonjából. A <span className="bg-lightgray">cd</span> parancs
+                    a Vite alapértelmezett React sablonjából. A <BgLightgray>cd</BgLightgray> parancs
                     segítségével navigáljunk a kívánt könyvtárba
                     a terminál segítségével, ahová a React alkalmazásunkat szeretnénk telepíteni és ott futtassuk le a
                     következő parancsot.
                 </Paragraph>
                 <CodeDisplay code={code_6_create_app}/>
                 <Paragraph>
-                    Ez a parancs elkészíti a <span className="bg-lightgray">moz-todo-react</span> könyvtárat, ez lesz a
+                    Ez a parancs elkészíti a <BgLightgray>moz-todo-react</BgLightgray> könyvtárat, ez lesz a
                     projekt mappája, benne a
-                    Vite <span className="bg-lightgray">react</span> sablonjával.
+                    Vite <BgLightgray>react</BgLightgray> sablonjával.
                 </Paragraph>
                 <div className="note">
                     <Paragraph>
-                        <span className="bold">Megjegyzés:</span> A <span className="bg-lightgray">--</span> azért
-                        szükséges, hogy argumentumokat adhassunk a <span
-                        className="bg-lightgray">create</span> parancshoz és a <span
-                        className="bg-lightgray">--template react</span> argument azt mondja a Vite-nak hogy React
+                        <span className="bold">Megjegyzés:</span> A <BgLightgray>--</BgLightgray> azért
+                        szükséges, hogy argumentumokat adhassunk a <BgLightgray>create</BgLightgray> parancshoz és a <BgLightgray>--template react</BgLightgray> argument azt mondja a Vite-nak hogy React
                         sablon-t használjon.
                     </Paragraph>
                 </div>
                 <Paragraph>
                     A terminálodnak ki kell írnia néhány üzenetet ha a parancs sikeresen lefutott. Olyan üzenetet
                     kellene
-                    látnod, hogy navigálj a <span className="bg-lightgray">cd</span> paranccsal a projekt könyvtárába,
+                    látnod, hogy navigálj a <BgLightgray>cd</BgLightgray> paranccsal a projekt könyvtárába,
                     telepítsd a projekt függőségeit és
                     futtasd az
                     alkalmazást helyi szerveren, azaz localhost-on. Kezdjük két ilyen paranccsal! Futtasd a következő
@@ -329,70 +324,53 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <div className="image-container"><img src={app_structure} alt="App Structure"/></div>
                 <Paragraph>
-                    Az <span className="bg-lightgray">index.html</span> a legfontosabb legfelsőbb szintű fájl. A Vite
+                    Az <BgLightgray>index.html</BgLightgray> a legfontosabb legfelsőbb szintű fájl. A Vite
                     ebbe a fájlba szúrja be a kódodat, amelyet a böngésző futtat majd. A tutorialunk során ezt a fájlt
-                    nem kell szerkesztened, de meg kellene változtatnod a szöveget a <span
-                    className="bg-lightgray">&lt;title&gt;</span> elemben, hogy megváltoztasd az alkalmazás nevét. A
+                    nem kell szerkesztened, de meg kellene változtatnod a szöveget a <BgLightgray>&lt;title&gt;</BgLightgray> elemben, hogy megváltoztasd az alkalmazás nevét. A
                     pontos oldalcímek fontosak az akadálymentes alkalmazásokban.
                 </Paragraph>
                 <Paragraph>
-                    A <span className="bg-lightgray">public</span> könyvtár statikus fájlokat tartalmaz, amelyek
+                    A <BgLightgray>public</BgLightgray> könyvtár statikus fájlokat tartalmaz, amelyek
                     közvetlenül a böngészőhöz lesznek szolgáltatva, anélkül, hogy a Vite feldolgozná. Most egyedül egy
                     Vite logót tartalmaz.
                 </Paragraph>
                 <Paragraph>
-                    Az <span className="bg-lightgray">src</span> mappa ahol az időnk nagy részét fogjuk tölteni, ez az a
+                    Az <BgLightgray>src</BgLightgray> mappa ahol az időnk nagy részét fogjuk tölteni, ez az a
                     hely ahol az applikációnk forráskódja van. Észre fogod venni, hogy néhány Javascript fájl neve ebben
                     a
-                    mappában <span className="bg-lightgray">.jsx</span> kitejesztésre végződik. Ez a kiterjesztés
+                    mappában <BgLightgray>.jsx</BgLightgray> kitejesztésre végződik. Ez a kiterjesztés
                     szükséges bármelyik fájlhoz amelyben JSX kód van. Ez azt mondja a Vite-nak hogy fordítsa le a JSX
-                    kódot Javascript-re, amit a böngésző értelmezni tud. Az <span
-                    className="bg-lightgray">src/assets</span> mappa tartalmazza a React logo-t, amelyet láttál a
+                    kódot Javascript-re, amit a böngésző értelmezni tud. Az <BgLightgray>src/assets</BgLightgray> mappa tartalmazza a React logo-t, amelyet láttál a
                     böngészőben.
                 </Paragraph>
                 <Paragraph>
-                    A <span className="bg-lightgray">package.json</span> és a <span
-                    className="bg-lightgray">package-lock.json</span> metaadatokat tartalmaznak a projektünkről. Ezek a
-                    fájlok nem csak React applikációban találhatóak meg. A Vite feltöltötte adatokkal a <span
-                    className="bg-lightgray">package.json</span> fájlt, az npm pedig elkészítette a <span
-                    className="bg-lightgray">package-lock.json</span> fájlt amikor telepítettük a függőségeket. Ehhez a
+                    A <BgLightgray>package.json</BgLightgray> és a <BgLightgray>package-lock.json</BgLightgray> metaadatokat tartalmaznak a projektünkről. Ezek a
+                    fájlok nem csak React applikációban találhatóak meg. A Vite feltöltötte adatokkal a <BgLightgray>package.json</BgLightgray> fájlt, az npm pedig elkészítette a <BgLightgray>package-lock.json</BgLightgray> fájlt amikor telepítettük a függőségeket. Ehhez a
                     tutorial-hoz nem kell megértened ezeket a fájlokat, most nem kell foglalkoznod velük. Azonban, ha
                     szeretnél róluk többet megtudni, olvashatsz
-                    a <a target="_blank" href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json"><span
-                    className="bg-lightgray">package.json</span></a> és a <a target="_blank"
-                                                                             href="https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json"><span
-                    className="bg-lightgray">package-lock.json</span></a>-ról az npm dokumentumok között. Beszélünk még
-                    a <span className="bg-lightgray">package.json</span> fájlról a <a target="_blank"
-                                                                                      href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Csomagkezelés
+                    a <a target="_blank" href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json"><BgLightgray>package.json</BgLightgray></a> és a <a target="_blank"
+                                                                                                                                                               href="https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json"><BgLightgray>package-lock.json</BgLightgray></a>-ról az npm dokumentumok között. Beszélünk még
+                    a <BgLightgray>package.json</BgLightgray> fájlról a <a target="_blank"
+                                                                           href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Csomagkezelés
                     Alapozó</a> oktatóanyagban.
                 </Paragraph>
                 <h2>A dev script-ünk testreszabása</h2>
                 <Paragraph>
-                    Mielőtt továbbmennénk, lehet hogy meg akarod változtatni a <span
-                    className="bg-lightgray">package.json</span> fájlt egy kicsit hogy ne kelljen minden egyes <span
-                    className="bg-lightgray">npm run dev</span> indításnál a <span
-                    className="bg-lightgray">--open</span> és a <span
-                    className="bg-lightgray">--port</span> flag-eket beírogatni. Nyisd meg a <span
-                    className="bg-lightgray">package.json</span> fájlt a szövegszerkesztődben és keresd meg a <span
-                    className="bg-lightgray">scripts</span> objektumot. Változtasd meg a <span
-                    className="bg-lightgray">"dev"</span> kulcsot úgy, ahogy itt látod:
+                    Mielőtt továbbmennénk, lehet hogy meg akarod változtatni a <BgLightgray>package.json</BgLightgray> fájlt egy kicsit hogy ne kelljen minden egyes <BgLightgray>npm run dev</BgLightgray> indításnál a <BgLightgray>--open</BgLightgray> és a <BgLightgray>--port</BgLightgray> flag-eket beírogatni. Nyisd meg a <BgLightgray>package.json</BgLightgray> fájlt a szövegszerkesztődben és keresd meg a <BgLightgray>scripts</BgLightgray> objektumot. Változtasd meg a <BgLightgray>"dev"</BgLightgray> kulcsot úgy, ahogy itt látod:
                 </Paragraph>
                 <CodeDisplay code={code_9_npm_run_dev2}/>
                 <Paragraph>
-                    Ha ez rendben van, akkor az alkalmazás minden egyes <span
-                    className="bg-lightgray">npm run dev</span> indításkor a <span
-                    className="bg-lightgray">http://localhost:3000</span> címen fog megnyílni a böngészőben.
+                    Ha ez rendben van, akkor az alkalmazás minden egyes <BgLightgray>npm run dev</BgLightgray> indításkor a <BgLightgray>http://localhost:3000</BgLightgray> címen fog megnyílni a böngészőben.
                 </Paragraph>
                 <div className="note">
                     <Paragraph>
-                        <span className="bold">Megjegyzés:</span> Nincsen szükséged az extra <span
-                        className="bg-lightgray">--</span>-re itt, mivel az argumentumok közvetlenül a <span
+                        <span className="bold">Megjegyzés:</span> Nincsen szükséged az extra <BgLightgray>--</BgLightgray>-re itt, mivel az argumentumok közvetlenül a <span
                         className="bold">vite</span>-be mennek, nem egy előre definiált npm script-be.
                     </Paragraph>
                 </div>
             </div>
             <div className="article">
-                <h1>Fedezzük fel az első React komponensünket: <span className="bg-lightgray">&lt;App /&gt;</span></h1>
+                <h1>Fedezzük fel az első React komponensünket: <BgLightgray>&lt;App /&gt;</BgLightgray></h1>
                 <Paragraph>
                     A React-ban a <span className="bold">komponens</span> egy újra felhasználható, kis darabja, része
                     az egész applikációnak. Az
@@ -401,43 +379,40 @@ export default function Getting_Started_With_React() {
                     szolgálnak.
                 </Paragraph>
                 <Paragraph>
-                    Most nyissuk meg az <span className="bg-lightgray">src/App.jsx</span> fájlt, mivel a böngészőnk is
+                    Most nyissuk meg az <BgLightgray>src/App.jsx</BgLightgray> fájlt, mivel a böngészőnk is
                     arra
-                    bátorít, hogy szerkesszük a fájlt. Ez a fájl tartalmazza az első komponensünket az <span
-                    className="bg-lightgray">&lt;App /&gt;</span>-ot
+                    bátorít, hogy szerkesszük a fájlt. Ez a fájl tartalmazza az első komponensünket az <BgLightgray>&lt;App /&gt;</BgLightgray>-ot
                 </Paragraph>
                 <CodeDisplay code={code_10_appjsx}/>
                 <Paragraph>
-                    Az <span className="bg-lightgray">App.jsx</span> fájl három fő részből áll: néhány <span
-                    className="bg-lightgray">import</span> ismertetés a tetején, az <span
-                    className="bg-lightgray">App()</span> függvény
-                    a közepén és egy <span className="bg-lightgray">export</span> állítás az alján. A legtöbb React
+                    Az <BgLightgray>App.jsx</BgLightgray> fájl három fő részből áll: néhány <BgLightgray>import</BgLightgray> ismertetés a tetején, az <BgLightgray>App()</BgLightgray> függvény
+                    a közepén és egy <BgLightgray>export</BgLightgray> állítás az alján. A legtöbb React
                     komponens
                     követi ezt a mintát.
                 </Paragraph>
                 <h2>Import állítások</h2>
                 <Paragraph>
-                    Az <span className="bg-lightgray">import</span> állítások a fájl tetején megengedik az <span
+                    Az <BgLightgray>import</BgLightgray> állítások a fájl tetején megengedik az <span
                     className="bold">App.jsx</span> fájlnak, hogy olyan fájlokat használjon, amelyek máshol vannak
                     definiálva. Nézzük meg ezeket az állításokat közelebbről!
                 </Paragraph>
                 <CodeDisplay code={code_11_import}/>
                 <Paragraph>
-                    Az első sor importálja a <span className="bg-lightgray">useState</span> horgot a <span
+                    Az első sor importálja a <BgLightgray>useState</BgLightgray> horgot a <span
                     className="bold">react</span> könyvtárból. A horgokkal React funkciókat használhatunk a komponensen
                     belül. Később beszélni fogunk róluk ebben az oktatóanyagban.
                 </Paragraph>
                 <Paragraph>
-                    Azután importáljuk a <span className="bg-lightgray">reactLogo</span>-t és a <span
+                    Azután importáljuk a <BgLightgray>reactLogo</BgLightgray>-t és a <span
                     className="bold">viteLogo</span>-t. Vedd figyelembe, hogy az útvonalak <span
-                    className="bold">./</span> és <span className="bg-lightgray">/</span>-el kezdődnek és azt hogy <span
+                    className="bold">./</span> és <BgLightgray>/</BgLightgray>-el kezdődnek és azt hogy <span
                     className="bold">.svg</span> kiterjesztéssel végződnek. Ezek azt jelentik, hogy ezek az importok
                     lokálisak, azaz saját fájlokra hivatkoznak vagyis nem npm csomagokra.
                 </Paragraph>
                 <Paragraph>
                     Az utolsó sor importálja a CSS-t amely az <span
                     className="bold">&lt;App /&gt;</span> komponensünkhöz tartozik.
-                    Figyeld meg hogy nincsenek változó nevek és <span className="bg-lightgray">from</span> utasítás sem.
+                    Figyeld meg hogy nincsenek változó nevek és <BgLightgray>from</BgLightgray> utasítás sem.
                     Ezt <a
                     target="_blank"
                     href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only">mellékhatás-import</a>-nak
@@ -447,61 +422,61 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <h2>Az App() függvény</h2>
                 <Paragraph>
-                    Az importok után van egy olyan függvényed hogy <span className="bg-lightgray">App()</span>, amely
-                    definiálja az <span className="bg-lightgray">App</span> komponensünk felépítését. Mivel legtöbben a
+                    Az importok után van egy olyan függvényed hogy <BgLightgray>App()</BgLightgray>, amely
+                    definiálja az <BgLightgray>App</BgLightgray> komponensünk felépítését. Mivel legtöbben a
                     Javascript közösségben a <a target="_blank"
                                                 href="https://developer.mozilla.org/en-US/docs/Glossary/Camel_case">lower
                     camel case</a>-t preferálják, mint például a <span
                     className="bold">helloWorld</span>, a React komponensek Pascal case-t használnak a változónevekhez,
-                    amit upper-camel-case-nek is neveznek, mint a <span className="bg-lightgray">HelloWorld</span>, így
+                    amit upper-camel-case-nek is neveznek, mint a <BgLightgray>HelloWorld</BgLightgray>, így
                     világos,
                     hogy az adott JSX elem egy React komponens
                     és nem egy megszokott HTML tag. Ha átneveznéd a komponenset <span
-                    className="bold">App()</span>-ról <span className="bg-lightgray">app()</span>-ra, akkor a böngésző
+                    className="bold">App()</span>-ról <BgLightgray>app()</BgLightgray>-ra, akkor a böngésző
                     egy hibát
                     dobna mivel nem nagybetűvel kedődik, azaz nem felel meg az upper-camel-case-nek.
                 </Paragraph>
                 <Paragraph>
-                    Nézzük meg az <span className="bg-lightgray">App()</span>-ot még közelebbről!
+                    Nézzük meg az <BgLightgray>App()</BgLightgray>-ot még közelebbről!
                 </Paragraph>
                 <CodeDisplay code={code_12_app_closely}/>
                 <Paragraph>
-                    Az <span className="bg-lightgray">App()</span> függvény egy JSX kifejezést ad vissza. Ez a kifejezés
+                    Az <BgLightgray>App()</BgLightgray> függvény egy JSX kifejezést ad vissza. Ez a kifejezés
                     definiálja azt, amit végül a böngésző renderelni fog a DOM-ba.
                 </Paragraph>
                 <Paragraph>
-                    Közvetlenül a <span className="bg-lightgray">return</span> kulcsszó alatt található egy speciális
-                    szintaxis: <span className="bg-lightgray">&lt;&gt;</span>. Ez egy <a target="_blank"
-                                                                                         href="https://react.dev/reference/react/Fragment">fragment</a>.
+                    Közvetlenül a <BgLightgray>return</BgLightgray> kulcsszó alatt található egy speciális
+                    szintaxis: <BgLightgray>&lt;&gt;</BgLightgray>. Ez egy <a target="_blank"
+                                                                              href="https://react.dev/reference/react/Fragment">fragment</a>.
                     A React komponenseknek egyetlen JSX elemet kell visszaadniuk, és a fragment-ek megengedik nekünk,
-                    hogy ezt tegyük anélkül, hogy <span className="bg-lightgray">div</span>-ekbe kellene raknunk a
+                    hogy ezt tegyük anélkül, hogy <BgLightgray>div</BgLightgray>-ekbe kellene raknunk a
                     kifejezést.
-                    Így a böngészőnek nem kell külön azért egy <span className="bg-lightgray">div</span>-et renderelnie.
+                    Így a böngészőnek nem kell külön azért egy <BgLightgray>div</BgLightgray>-et renderelnie.
                     Látni
                     fogod a fragmenteket sok React alkalmazásban.
                 </Paragraph>
-                <h2>Az <span className="bg-lightgray">export</span> állítás</h2>
+                <h2>Az <BgLightgray>export</BgLightgray> állítás</h2>
                 <Paragraph>
-                    Van még egy sor kód az <span className="bg-lightgray">App()</span> funkció után.
+                    Van még egy sor kód az <BgLightgray>App()</BgLightgray> funkció után.
                 </Paragraph>
                 <CodeDisplay code={code_13_export}/>
                 <Paragraph>
-                    Ez az export állítás az <span className="bg-lightgray">App()</span> függvényünket elérhetővé teszi
+                    Ez az export állítás az <BgLightgray>App()</BgLightgray> függvényünket elérhetővé teszi
                     más
                     modulok számára. Később még beszélni fogunk róla.
                 </Paragraph>
             </div>
             <div className="article">
-                <h1>Nézzük a <span className="bg-lightgray">main</span> fájlt</h1>
+                <h1>Nézzük a <BgLightgray>main</BgLightgray> fájlt</h1>
                 <Paragraph>
-                    Most akkor nyissuk meg a <span className="bg-lightgray">src/main.jsx</span> fájlt, mert ott van
+                    Most akkor nyissuk meg a <BgLightgray>src/main.jsx</BgLightgray> fájlt, mert ott van
                     az <span
                     className="bold">App()</span> komponensünk használva. Ez a fájl a belépési pont az alkalmazásunk
                     számára és kezdetben így néz ki:
                 </Paragraph>
                 <CodeDisplay code={code_14_main}/>
                 <Paragraph>
-                    Mint az <span className="bg-lightgray">App.jsx</span>-el, a fájl azzal kezdődik, hogy importálja az
+                    Mint az <BgLightgray>App.jsx</BgLightgray>-el, a fájl azzal kezdődik, hogy importálja az
                     összes JS modult és más eszközöket
                     amelyekre szüksége van a futáshoz.
                 </Paragraph>
