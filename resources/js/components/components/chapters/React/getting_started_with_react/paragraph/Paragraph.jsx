@@ -1,12 +1,10 @@
 import React from 'react';
 import './paragraph.css';
-
 const Paragraph = ({children}) => {
-
     return (
-        <p className="paragraph">
+        <div className="paragraph">
             {children}
-        </p>
+        </div>
     );
 };
 export default Paragraph;

@@ -120,5 +120,9 @@ function App() {
 
 export default App;
 `
-export const code_16_jsx_practice = `<button type="button">Click me!</button>
+export const code_16_jsx_practice = `<button type="button">Kattints rám!</button>
 `
+export const code_17_jsx_className = `<button type="button" className="primary">
+    Click me!
+</button>`
+
