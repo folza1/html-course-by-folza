@@ -43,12 +43,13 @@ export default function Getting_Started_With_React() {
 
     return (
         <div className="container">
-            <div className="header_paragraph">
+            <h1>Kezdjük a React-ot!</h1>
+            <Article>
                 Ebben a cikkben hello-t mondunk a React-nek. Egy kicsit részletesebben fel fogjuk fedezni
                 a React hátterét és hogy milyen esetekben használjuk, beállítunk egy olyan eszközláncot
                 a helyi számítógépünkön, amelyet egy React alkamazás során szoktak használni, aztán készítünk
                 és kipróbálunk egy egyszerű kezdő alkalmazást - szóval tanulunk egy kicsit a React működéséről.
-            </div>
+            </Article>
 
             <Article className="article prerequisites">
                 <Paragraph>
@@ -678,6 +679,13 @@ export default function Getting_Started_With_React() {
                     kijavítsuk ezt a hibát kommenteljük ki
                     a <BgLightgray>&lt;h1&gt;Hello {"{"}subject{"}"}!&lt;/h1&gt;</BgLightgray> sort.
                 </Paragraph>
+                <Note>
+                    <div className="bold inline">Megjegyzés:</div>
+                    Ha a kódszerkesztő programod tudja elemezni a JSX-et (a legtöbb szerkesztő tudja), akkor
+                    használhatod a beépített komment billentyűkombinációt. Windows rendszeren: <BgLightgray>Ctrl +
+                    /</BgLightgray>, macOS rendszeren pedig <BgLightgray>Cmd + /</BgLightgray>. Ezzel gyorsan
+                    kommentelheted a kódodat.
+                </Note>
             </Article>
             <div id="scrollTarget">Görgetés Ide</div>
         </div>
