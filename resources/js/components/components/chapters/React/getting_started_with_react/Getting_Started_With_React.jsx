@@ -19,6 +19,9 @@ import {
     code_15_hello_world,
     code_16_jsx_practice,
     code_17_jsx_className,
+    code_18_jsx_subject,
+    code_19_jsx_example,
+    code_20_prop,
 
 } from "./code_texts.jsx";
 import npm_run_dev from "./img/1.npm_run_dev.png";
@@ -137,7 +140,8 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <CodeDisplay code={code_1_heading}/>
                 <Paragraph>
-                    Ez a heading konstans egy JSX kifejezés. A React használja ezt, hogy renderelje a <BgLightgray>&lt;h1&gt;</BgLightgray> tag-et
+                    Ez a heading konstans egy JSX kifejezés. A React használja ezt, hogy renderelje
+                    a <BgLightgray>&lt;h1&gt;</BgLightgray> tag-et
                     az
                     alkalmazásunkba.
                 </Paragraph>
@@ -159,7 +163,8 @@ export default function Getting_Started_With_React() {
                     </Paragraph>
                     <CodeDisplay code={code_3_header}/>
                     <Paragraph>
-                        Viszont kicsit furcsán néz ki, mivel a kezdő <BgLightgray>&lt;header&gt;</BgLightgray> tag nincsen behúzva mint a záró tag.
+                        Viszont kicsit furcsán néz ki, mivel a kezdő <BgLightgray>&lt;header&gt;</BgLightgray> tag
+                        nincsen behúzva mint a záró tag.
                     </Paragraph>
                 </div>
                 <Paragraph>
@@ -169,7 +174,8 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
                 <CodeDisplay code={code_4_header}/>
                 <Paragraph>
-                    Ki lehet hagyni a kompilációt és lehet használni a <BgLightgray>React.createElement()</BgLightgray>-et, ha önmagunk szeretnénk
+                    Ki lehet hagyni a kompilációt és lehet használni a <BgLightgray>React.createElement()</BgLightgray>-et,
+                    ha önmagunk szeretnénk
                     írni a UI-t, a
                     "user-interface"-et, azaz a felhasználói felületet. Azonban, ha azon a módon írjuk a kódot, akkor
                     elveszítjük a JSX
@@ -289,7 +295,8 @@ export default function Getting_Started_With_React() {
                 <div className="note">
                     <Paragraph>
                         <span className="bold">Megjegyzés:</span> A <BgLightgray>--</BgLightgray> azért
-                        szükséges, hogy argumentumokat adhassunk a <BgLightgray>create</BgLightgray> parancshoz és a <BgLightgray>--template react</BgLightgray> argument azt mondja a Vite-nak hogy React
+                        szükséges, hogy argumentumokat adhassunk a <BgLightgray>create</BgLightgray> parancshoz és
+                        a <BgLightgray>--template react</BgLightgray> argument azt mondja a Vite-nak hogy React
                         sablon-t használjon.
                     </Paragraph>
                 </div>
@@ -326,7 +333,8 @@ export default function Getting_Started_With_React() {
                 <Paragraph>
                     Az <BgLightgray>index.html</BgLightgray> a legfontosabb legfelsőbb szintű fájl. A Vite
                     ebbe a fájlba szúrja be a kódodat, amelyet a böngésző futtat majd. A tutorialunk során ezt a fájlt
-                    nem kell szerkesztened, de meg kellene változtatnod a szöveget a <BgLightgray>&lt;title&gt;</BgLightgray> elemben, hogy megváltoztasd az alkalmazás nevét. A
+                    nem kell szerkesztened, de meg kellene változtatnod a szöveget
+                    a <BgLightgray>&lt;title&gt;</BgLightgray> elemben, hogy megváltoztasd az alkalmazás nevét. A
                     pontos oldalcímek fontosak az akadálymentes alkalmazásokban.
                 </Paragraph>
                 <Paragraph>
@@ -340,31 +348,47 @@ export default function Getting_Started_With_React() {
                     a
                     mappában <BgLightgray>.jsx</BgLightgray> kitejesztésre végződik. Ez a kiterjesztés
                     szükséges bármelyik fájlhoz amelyben JSX kód van. Ez azt mondja a Vite-nak hogy fordítsa le a JSX
-                    kódot Javascript-re, amit a böngésző értelmezni tud. Az <BgLightgray>src/assets</BgLightgray> mappa tartalmazza a React logo-t, amelyet láttál a
+                    kódot Javascript-re, amit a böngésző értelmezni tud. Az <BgLightgray>src/assets</BgLightgray> mappa
+                    tartalmazza a React logo-t, amelyet láttál a
                     böngészőben.
                 </Paragraph>
                 <Paragraph>
-                    A <BgLightgray>package.json</BgLightgray> és a <BgLightgray>package-lock.json</BgLightgray> metaadatokat tartalmaznak a projektünkről. Ezek a
-                    fájlok nem csak React applikációban találhatóak meg. A Vite feltöltötte adatokkal a <BgLightgray>package.json</BgLightgray> fájlt, az npm pedig elkészítette a <BgLightgray>package-lock.json</BgLightgray> fájlt amikor telepítettük a függőségeket. Ehhez a
+                    A <BgLightgray>package.json</BgLightgray> és
+                    a <BgLightgray>package-lock.json</BgLightgray> metaadatokat tartalmaznak a projektünkről. Ezek a
+                    fájlok nem csak React applikációban találhatóak meg. A Vite feltöltötte adatokkal
+                    a <BgLightgray>package.json</BgLightgray> fájlt, az npm pedig elkészítette
+                    a <BgLightgray>package-lock.json</BgLightgray> fájlt amikor telepítettük a függőségeket. Ehhez a
                     tutorial-hoz nem kell megértened ezeket a fájlokat, most nem kell foglalkoznod velük. Azonban, ha
                     szeretnél róluk többet megtudni, olvashatsz
-                    a <a target="_blank" href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json"><BgLightgray>package.json</BgLightgray></a> és a <a target="_blank"
-                                                                                                                                                               href="https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json"><BgLightgray>package-lock.json</BgLightgray></a>-ról az npm dokumentumok között. Beszélünk még
+                    a <a target="_blank"
+                         href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json"><BgLightgray>package.json</BgLightgray></a> és
+                    a <a target="_blank"
+                         href="https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json"><BgLightgray>package-lock.json</BgLightgray></a>-ról
+                    az npm dokumentumok között. Beszélünk még
                     a <BgLightgray>package.json</BgLightgray> fájlról a <a target="_blank"
                                                                            href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Csomagkezelés
                     Alapozó</a> oktatóanyagban.
                 </Paragraph>
                 <h2>A dev script-ünk testreszabása</h2>
                 <Paragraph>
-                    Mielőtt továbbmennénk, lehet hogy meg akarod változtatni a <BgLightgray>package.json</BgLightgray> fájlt egy kicsit hogy ne kelljen minden egyes <BgLightgray>npm run dev</BgLightgray> indításnál a <BgLightgray>--open</BgLightgray> és a <BgLightgray>--port</BgLightgray> flag-eket beírogatni. Nyisd meg a <BgLightgray>package.json</BgLightgray> fájlt a szövegszerkesztődben és keresd meg a <BgLightgray>scripts</BgLightgray> objektumot. Változtasd meg a <BgLightgray>"dev"</BgLightgray> kulcsot úgy, ahogy itt látod:
+                    Mielőtt továbbmennénk, lehet hogy meg akarod változtatni
+                    a <BgLightgray>package.json</BgLightgray> fájlt egy kicsit hogy ne kelljen minden
+                    egyes <BgLightgray>npm run dev</BgLightgray> indításnál a <BgLightgray>--open</BgLightgray> és
+                    a <BgLightgray>--port</BgLightgray> flag-eket beírogatni. Nyisd meg
+                    a <BgLightgray>package.json</BgLightgray> fájlt a szövegszerkesztődben és keresd meg
+                    a <BgLightgray>scripts</BgLightgray> objektumot. Változtasd meg
+                    a <BgLightgray>"dev"</BgLightgray> kulcsot úgy, ahogy itt látod:
                 </Paragraph>
                 <CodeDisplay code={code_9_npm_run_dev2}/>
                 <Paragraph>
-                    Ha ez rendben van, akkor az alkalmazás minden egyes <BgLightgray>npm run dev</BgLightgray> indításkor a <BgLightgray>http://localhost:3000</BgLightgray> címen fog megnyílni a böngészőben.
+                    Ha ez rendben van, akkor az alkalmazás minden egyes <BgLightgray>npm run
+                    dev</BgLightgray> indításkor a <BgLightgray>http://localhost:3000</BgLightgray> címen fog megnyílni
+                    a böngészőben.
                 </Paragraph>
                 <div className="note">
                     <Paragraph>
-                        <span className="bold">Megjegyzés:</span> Nincsen szükséged az extra <BgLightgray>--</BgLightgray>-re itt, mivel az argumentumok közvetlenül a <span
+                        <span className="bold">Megjegyzés:</span> Nincsen szükséged az
+                        extra <BgLightgray>--</BgLightgray>-re itt, mivel az argumentumok közvetlenül a <span
                         className="bold">vite</span>-be mennek, nem egy előre definiált npm script-be.
                     </Paragraph>
                 </div>
@@ -381,11 +405,14 @@ export default function Getting_Started_With_React() {
                 <Paragraph>
                     Most nyissuk meg az <BgLightgray>src/App.jsx</BgLightgray> fájlt, mivel a böngészőnk is
                     arra
-                    bátorít, hogy szerkesszük a fájlt. Ez a fájl tartalmazza az első komponensünket az <BgLightgray>&lt;App /&gt;</BgLightgray>-ot
+                    bátorít, hogy szerkesszük a fájlt. Ez a fájl tartalmazza az első komponensünket
+                    az <BgLightgray>&lt;App /&gt;</BgLightgray>-ot
                 </Paragraph>
                 <CodeDisplay code={code_10_appjsx}/>
                 <Paragraph>
-                    Az <BgLightgray>App.jsx</BgLightgray> fájl három fő részből áll: néhány <BgLightgray>import</BgLightgray> ismertetés a tetején, az <BgLightgray>App()</BgLightgray> függvény
+                    Az <BgLightgray>App.jsx</BgLightgray> fájl három fő részből áll:
+                    néhány <BgLightgray>import</BgLightgray> ismertetés a tetején,
+                    az <BgLightgray>App()</BgLightgray> függvény
                     a közepén és egy <BgLightgray>export</BgLightgray> állítás az alján. A legtöbb React
                     komponens
                     követi ezt a mintát.
@@ -578,8 +605,50 @@ export default function Getting_Started_With_React() {
                     </Paragraph>
                     <Paragraph>
                         Utána helyettesítsük a "World" szót a <BgLightgray>&lt;h1&gt;</BgLightgray> elemben
-                        a <BgLightgray>subject</BgLightgray>-re:
+                        a <BgLightgray>{"{"}subject{"}"}</BgLightgray>-re:
                     </Paragraph>
+                    <CodeDisplay code={code_18_jsx_subject}/>
+                    <Paragraph>
+                        Mentsd el a fájlt és nézd a böngészőt. Azt kellene látnod, hogy a <BgLightgray>"Hello,
+                        React!"</BgLightgray> renderelődött.
+                    </Paragraph>
+                    <Paragraph>
+                        A kapcsos zárójelek a <BgLightgray>subject</BgLightgray> körül egy másik funkciója a JSX
+                        szintaxisnak. A kapcsos zárójelek
+                        azt mondják a React-nek, hogy ki akarjuk olvasni az értéket
+                        a <BgLightgray>subject</BgLightgray> változóból, ahelyett hogy
+                        a <BgLightgray>"subject"</BgLightgray> szöveget szeretnénk renderelni. Bármilyen érvényes
+                        Javascript kifejezést beletehetünk a kapcsos zárójelekbe a JSX-ben. A React kiértékeli azt és
+                        rendereli a kifejezés eredményét mint végső tartalom. Most következik néhány példa, kommentekkel
+                        felette elmagyarázva, mit is renderel mindegyik kifejezés:
+                    </Paragraph>
+                    <CodeDisplay code={code_19_jsx_example}/>
+                    <Paragraph>
+                        Még a kommentek is kapcsos zárójelben jelennek meg a JSX-ben. Ez azért van, mert technikailag a
+                        kommentek is Javascript kifejezések. A <BgLightgray>/* block comment syntax
+                        */</BgLightgray> szükséges a programod számára, hogy tudja hol kezdődik és végződik a komment.
+                    </Paragraph>
+                    <h2>Komponens property-k</h2>
+                    <Paragraph>
+                        A <div className="bold inline">Prop</div>-ok jelentése, hogy adatokat rakunk a React
+                        komponens-be. Az
+                        szintaxisa azonos mint az attribútumoknak, lényegében: prop="value". A különbség az az, hogy az
+                        attribútumok sima elemekbe mennek, a prop-ok React komponensekbe.
+                    </Paragraph>
+                    <Paragraph>
+                        React-ban az adatáramlás egyirányú: a propok csak a szülő elemtől haladnak lefelé a gyermek
+                        komponens felé.
+                    </Paragraph>
+                    <Paragraph>
+                        Most nyissuk meg a <BgLightgray>main.jsx</BgLightgray> fájlt és adjuk hozzá az <BgLightgray>&lt;
+                        App/&gt;</BgLightgray> komponens első prop-ját.
+                    </Paragraph>
+                    <Paragraph>
+                        Adjuk a <BgLightgray>subject</BgLightgray> prop-ot az <BgLightgray>&lt;
+                        App/&gt;</BgLightgray> komponens híváshoz a <BgLightgray>Clarice</BgLightgray> értékkel. Amikor kész vagy valami
+                        ilyesminek kellene kinéznie:
+                    </Paragraph>
+                    <CodeDisplay code={code_20_prop}/>
                 </Article>
             </div>
             <div id="scrollTarget">Ide szeretnék görgetni</div>

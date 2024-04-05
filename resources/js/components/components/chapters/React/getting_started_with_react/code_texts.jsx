@@ -120,9 +120,19 @@ function App() {
 
 export default App;
 `
-export const code_16_jsx_practice = `<button type="button">Kattints rám!</button>
+export const code_16_jsx_practice = `<button type="button">Click Me!</button>
 `
 export const code_17_jsx_className = `<button type="button" className="primary">
     Click me!
 </button>`
 
+export const code_18_jsx_subject = `<h1>Hello, {subject}!</h1>`
+
+export const code_19_jsx_example =  `{/* Hello, React :)! */}
+<h1>Hello, {subject + ' :)'}!</h1>
+{/* Hello, REACT */}
+<h1>Hello, {subject.toUpperCase()}</h1>
+{/* Hello, 4 */}
+<h1>Hello, {2 + 2}!</h1>
+`
+export const code_20_prop =  `<App subject="Clarice" />`
