@@ -715,6 +715,36 @@ export default function Getting_Started_With_React() {
                     <BgLightgray>main.jsx</BgLightgray>-hez, és szerkeszted a <BgLightgray>subject</BgLightgray> értékét
                     és elmented a szöveged meg fog változni a böngészőben.
                 </Paragraph>
+                <Paragraph>
+                    További gyakorlásként, megpróbálhatnál hozzáadni egy másik prop-ot mondjuk
+                    egy <BgLightgray>greeting</BgLightgray> prop-ot az <BgLightgray>&lt;App/&gt;</BgLightgray> komponens
+                    híváshoz a <BgLightgray>main.jsx</BgLightgray>-en belül, használva azt
+                    a <BgLightgray>subject</BgLightgray> prop mellett az <BgLightgray>App.jsx</BgLightgray>-ben.
+                </Paragraph>
+            </Article>
+            <Article>
+                <h1>Összefoglalás</h1>
+                <Paragraph>
+                    Ezzel a végére is értünk a React bemutatásának, beleértve hogyan telepítsük ezt lokálisan, hogyan
+                    készítsünk egy kezdő app-ot és hogyan működik is alapjáraton. A következő cikkben, elkezdjük
+                    felépíteni az első megfelelő alkalmazásunkat egy TODO Listát. Mielőtt azt tesszük azonban idézzünk
+                    fel néhány dolgot, amit tanultunk.
+                </Paragraph>
+                <Paragraph>
+                    React:
+
+                    <li>A komponensek importálni tudnak modulokat amire szükségük van és exportálniuk kell magukat a
+                        fájluk alján</li>
+                    <li>A komponens funkciók <BgLightgray>PascalCase</BgLightgray>-ként vannak formázva</li>
+                    <li>JSX-ben lehet Javascript kifejezéseket renderelni úgy, hogy kapcsos zárójelbe rakjuk őket,
+                        mint <BgLightgray>{"{"}így{"}"}</BgLightgray></li>
+                    <li>Néhány JSX attribútum különbözik a HTML attribútumoktól, így azok nem kerülnek konfliktusba a
+                        fenntartott Javascript kulcsszavakkal. Például a <BgLightgray>class</BgLightgray> a HTML-ben <BgLightgray>className</BgLightgray> React-ben.
+                    </li>
+                    <li>
+                        A prop-okat úgy írjuk, mint az attribútumokat a komponens hívás belsejében és így bele vannak rakva a komponensekbe.
+                    </li>
+                </Paragraph>
             </Article>
             <div id="scrollTarget">Görgetés Ide</div>
         </div>
