@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './getting_strarted_with_react.css';
+import './getting_started_with_react.css';
 import CodeDisplay from "../components/CodeDisplay.jsx";
 import {
     code_1_heading,

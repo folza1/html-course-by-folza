@@ -9,10 +9,10 @@ export const code_3_header = "const header = <header>\n" +
     "  <h1>Mozilla Developer Network</h1>\n" +
     "</header>";
 
-export const code_4_header = "const header = React.createElement(\n" +
+export const code_4_header = "const header = MDN_Course.createElement(\n" +
     "  'header',\n" +
     "  null,\n" +
-    "  React.createElement('h1', null, 'Mozilla Developer Network'),\n" +
+    "  MDN_Course.createElement('h1', null, 'Mozilla Developer Network'),\n" +
     ");";
 
 export const code_5_node_version = "node -v\n"
