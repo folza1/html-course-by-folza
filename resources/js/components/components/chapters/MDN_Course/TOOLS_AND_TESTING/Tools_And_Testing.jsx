@@ -75,8 +75,32 @@ export default function Getting_Started_With_React() {
                 <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks">Megérteni
                     a kliens-oldali Javascript keretrendszereket</a>
                 <Paragraph>
-
+                    A Javascript keretrendszerek elegendhetetlen részei a modern front-end webfejlesztésben, amelyek
+                    szolgáltatnak kipróbált és tesztelt eszközöket, hogy építsenek skálázható, interaktív
+                    webalkalmazásokat. Sok modern cég használ keretrendszereket, amelyek alapvető részét képezik az
+                    eszközkezelésnek, így sok front-end fejlesztő állás most megköveteli a keretrendszer tapasztalatot.
+                    Ez a modul ad neked egy kis alap háttér tudást arról, hogyan működnek a kliens oldali
+                    keretrendszerek
+                    és hogyan illenek az eszközkészletedhez, mielőtt rátérnénk a mai legnépszerűbbekről szóló
+                    tananyagra.
                 </Paragraph>
+            </Article>
+            <Article>
+                <h1>Git és Github</h1>
+                <Paragraph>
+                    Minden fejlesztő fog használni valamilyen verzió kezelő rendszert (VCS), egy eszközt ami segít nekik
+                    együttműködni más fejlesztőkkel egy projekten, annak a veszélye nélkül hogy felülírnák egymás
+                    munkáját, plusz segít visszatérni a kódbázis korábbi verzióihoz, ha egy probléma fel lett fedezve
+                    később. A legnépszerűbb VCS legalább is webfejlesztők között a Git, a GitHub-al, egy oldal amely
+                    biztosítja számodra az adattáraid kiszolgálását és számos eszközt amelyeket használhatsz velük.
+                    Ennek a modulnak a célja, hogy megtanítsa neked mit kell tudnod róluk.
+                </Paragraph>
+                All developers will use some kind of version control system (VCS), a tool to allow them to collaborate
+                with other developers on a project without danger of them overwriting each other's work, and roll back
+                to previous versions of the code base if a problem is discovered later on. The most popular VCS (at
+                least among web developers) is Git, along with GitHub, a site that provides hosting for your
+                repositories and several tools for working with them. This module aims to teach you what you need to
+                know about both of them.
             </Article>
         </div>
     );
