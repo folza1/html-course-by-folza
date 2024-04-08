@@ -86,21 +86,28 @@ export default function Getting_Started_With_React() {
                 </Paragraph>
             </Article>
             <Article>
-                <h1>Git és Github</h1>
+                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub">Git és
+                    Github</a>
                 <Paragraph>
                     Minden fejlesztő fog használni valamilyen verzió kezelő rendszert (VCS), egy eszközt ami segít nekik
                     együttműködni más fejlesztőkkel egy projekten, annak a veszélye nélkül hogy felülírnák egymás
                     munkáját, plusz segít visszatérni a kódbázis korábbi verzióihoz, ha egy probléma fel lett fedezve
                     később. A legnépszerűbb VCS legalább is webfejlesztők között a Git, a GitHub-al, egy oldal amely
                     biztosítja számodra az adattáraid kiszolgálását és számos eszközt amelyeket használhatsz velük.
-                    Ennek a modulnak a célja, hogy megtanítsa neked mit kell tudnod róluk.
+                    Ennek a modulnak a célja, hogy megtanítsa neked mit kell tudnod mindkettőről.
                 </Paragraph>
-                All developers will use some kind of version control system (VCS), a tool to allow them to collaborate
-                with other developers on a project without danger of them overwriting each other's work, and roll back
-                to previous versions of the code base if a problem is discovered later on. The most popular VCS (at
-                least among web developers) is Git, along with GitHub, a site that provides hosting for your
-                repositories and several tools for working with them. This module aims to teach you what you need to
-                know about both of them.
+            </Article>
+            <Article>
+                <a target="_blank"
+                   href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Böngészők
+                    közötti tesztelés</a>
+                <Paragraph>
+                    Ez a modul kifejezetten azzal a területtel foglalkozik, hogyan lehet web projekteket tesztelni
+                    különböző böngészők között. Ebben rátekintünk a célközönségedre, milyen felhasználók, böngészők és
+                    készülékek miat kell aggódnod, hogyan tesztelj, a fő problémákkal melyekkel szembesülni fogsz a
+                    különböző típusú kódoknál és hogyan oldhatod meg/csillapíthatod azokat, milyen eszközök a
+                    leghasznosabbak a tesztelés és a megoldás során és hogyan használj automatizációt, hogy felgyorsítsd a tesztelést.
+                </Paragraph>
             </Article>
         </div>
     );
