@@ -104,9 +104,10 @@ export default function Getting_Started_With_React() {
                 <Paragraph>
                     Ez a modul kifejezetten azzal a területtel foglalkozik, hogyan lehet web projekteket tesztelni
                     különböző böngészők között. Ebben rátekintünk a célközönségedre, milyen felhasználók, böngészők és
-                    készülékek miat kell aggódnod, hogyan tesztelj, a fő problémákkal melyekkel szembesülni fogsz a
+                    készülékek miatt kell aggódnod, hogyan tesztelj, a fő problémákkal melyekkel szembesülni fogsz a
                     különböző típusú kódoknál és hogyan oldhatod meg/csillapíthatod azokat, milyen eszközök a
-                    leghasznosabbak a tesztelés és a megoldás során és hogyan használj automatizációt, hogy felgyorsítsd a tesztelést.
+                    leghasznosabbak a tesztelés és a megoldás során és hogyan használj automatizációt, hogy felgyorsítsd
+                    a tesztelést.
                 </Paragraph>
             </Article>
         </div>
