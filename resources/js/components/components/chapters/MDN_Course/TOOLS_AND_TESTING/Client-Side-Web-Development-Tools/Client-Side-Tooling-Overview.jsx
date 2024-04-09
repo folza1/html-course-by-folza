@@ -211,6 +211,51 @@ export default function Client_Side_Tooling_Overview() {
                     href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">Javascript</a>, és vannak átalakító
                     eszközök mindegyik nyelvhez. Az átalakításnak két fő előnye van többek között:
                 </Paragraph>
+                <Paragraph>
+                    1. Az egyik az a képesség, hogy használni lehessen a legújabb nyelvi funkciókat és a mindennapos
+                    készülékeken is működjön a transzformált kód. Például a Javascript legújabb nyelvi funkcióit akarod
+                    használni írás közben, de azt szeretnéd, hogy a végső production kód működjön régebbi böngészőkön
+                    is, amelyek nem támogatják azokat a funkciókat. Jó példák erre:
+                    <li><a href="https://babeljs.io/" target="_blank">Babel</a>: Egy Javascript kompiler, amely
+                        megengedi a fejlesztőknek, hogy a legújabb Javascript kódot
+                        írják, amit majd a Babel átkonvertál régi fazonú Javascript kóddá amelyet több böngésző tud
+                        értelmezni. A fejlesztők is írhatnak és publikálhatnak <a target="_blank"
+                                                                                  href="https://babeljs.io/docs/plugins">plugin-okat
+                            a Babel-hez</a>.
+                    </li>
+                    <li>
+                        <a href="https://postcss.org/" target="_blank">PostCSS</a>: Ugyan azt a dolgot teszi mint a
+                        Babel, csak a legújabb CSS funkciókhoz. Ha nincsen
+                        egyenértékű módja hogy régebbi CSS funkciókhoz használjunk dolgokat, a PostCSS telepíteni fog
+                        egy Javascript
+                        polyfill-t hogy emulálja a CSS hatást amit akarsz.
+                    </li>
+                </Paragraph>
+                <Paragraph>
+                    2. A másik, hogy megírod a kódodat egy teljesen más nyelvben és azt alakítsd át web kompatibilis
+                    nyelvvé. Például:
+                    <li>
+                        <a href="https://sass-lang.com/" target="_blank">Sass/SCSS</a>: Ez a CSS kiterjesztés,
+                        megengedi, hogy változókat, beágyazott szabályokat,
+                        mixin-eket, függvényeket és sok más dolgot használjunk, néhány közülük elérhető natív CSS-ben
+                        mint a változók például, néhányak pedig nem.
+                    </li>
+                    <li>
+                        <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>: Egy Javascript
+                        kiterjesztés, amely további funkciókat ad hozzá. Az TypeScript
+                        kompiler átkonvertálja a Typescript kódot Javascript kóddá, mikor a build-elés történik.
+                    </li>
+                    <li>
+                        Keretrendszerek mint a <a href="https://react.dev/" target="_blank">React</a>, <a
+                        href="https://emberjs.com/"
+                        target="_blank">Ember</a>, <a
+                        href="https://vuejs.org/" target="_blank">Vue</a>: A keretrendszerek sok funkcionalitást adnak
+                        ingyen és
+                        engedélyezik neked, hogy használd őket egyedi szintaxissal amely a vanilla Javascript-re épül. A
+                        háttérben a keretrendszerek Javascript kódja szorgosan fordítja ezt az egyedi szintaxist és
+                        render-eli mint végső alkalmazást.
+                    </li>
+                </Paragraph>
             </Article>
         </div>
     );
