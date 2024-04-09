@@ -256,6 +256,55 @@ export default function Client_Side_Tooling_Overview() {
                         render-eli mint végső alkalmazást.
                     </li>
                 </Paragraph>
+                <h2>Fejlesztés után</h2>
+                <Paragraph>
+                    A fejlesztés utáni eszközök biztosítják a szoftver-ednek, hogy felrakd a web-re és ott fusson
+                    folyamatosan. Ez magába foglalja a deployment folyamatokat, a keretrendszerek tesztelését, eszközök
+                    ellenőrzését és még többet.
+                </Paragraph>
+                <Paragraph>
+                    A fejlesztésnek ez a szakasza az a folyamat amelyhez legkevesebb mértékű interakciót akarsz
+                    hozzátenni, ha már egyszer beállítottad. Legtöbbször automatikusan fut magától.
+                </Paragraph>
+                <h3>Tesztelő eszközök</h3>
+                <Paragraph>
+                    Ezek az eszközök általában automatikus teszteket futtatnak a kódodhoz biztosítva azt, hogy minden
+                    helyes legyen mielőtt tovább mennél, például mielőtt push-olnád a változtatásokat a GitHub repo-ba.
+                    Ez magában foglalja a linting-et, a jobban kifinomult folyamatokat mint a unit tesztek, ahol a kódod
+                    egy részét futtatod, hogy biztos legyél benne hogy úgy viselkedik ahogyan kell.
+                </Paragraph>
+                <Paragraph>
+                    <li>Keretrendszerek teszíráshoz mint a <a href="https://jestjs.io/" target="_blank">Jest</a>, <a
+                        href="https://mochajs.org/" target="_blank">Mocha</a>, és a <a href="https://jasmine.github.io/"
+                                                                                       target="_blank">Jasmine</a></li>
+                    <li>Automatizált teszt futtatók és értesítés rendszerek mint <a href="https://www.travis-ci.com/"
+                                                                                    target="_blank">Travis CI</a>, <a
+                        href="https://www.jenkins.io/" target="_blank">Jenkins</a>, <a href="https://circleci.com/"
+                                                                                       target="_blank">Circle
+                        CI</a> és <a
+                        href="https://en.wikipedia.org/wiki/List_of_build_automation_software#Continuous_integration"
+                        target="_blank">mások</a>
+                    </li>
+                </Paragraph>
+                <h3>Telepítési eszközök</h3>
+                <Paragraph>
+                    A telepítési rendszerek lehetővé teszik, hogy publikálva legyen az oldalad, elérhetőek mind statikus
+                    és dinamikus oldalakhoz, és általában hajlamosak tesztelő rendszerekkel együttműködni. Például egy
+                    tipikus eszközlánc meg fogja várni míg push-olod a változtatásokat a remote repo-ba, lefuttatja a
+                    teszteket, hogy minden OK-e és aztán ha minden teszten átmegy automatikusan telepíti az
+                    alkalmazásodat a production oldalra.
+                </Paragraph>
+                <Paragraph>
+                    A <a href="https://www.netlify.com/" target="_blank">Netlify</a> az egyik legnépszerűbb deployment
+                    eszköz mostanában, de mások is vannak mint a <a href="https://vercel.com/"
+                                                                    target="_blank">Vercel</a> és a <a
+                    href="https://pages.github.com/" target="_blank">Github
+                    Pages</a>.
+                </Paragraph>
+                <h3>Mások</h3>
+                <Paragraph>
+
+                </Paragraph>
             </Article>
         </div>
     );
