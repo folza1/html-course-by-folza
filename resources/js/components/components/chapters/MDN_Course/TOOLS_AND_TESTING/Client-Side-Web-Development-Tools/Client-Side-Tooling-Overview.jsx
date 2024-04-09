@@ -394,8 +394,34 @@ export default function Client_Side_Tooling_Overview() {
                 <Paragraph>
                     Mikor kiválasztasz egy eszközt használatra, az első feladatod az kell hogy legyen, hogy felmész a
                     projekt főoldalára. Az lehet egy teljes weboldal vagy lehet egy egyszerű readme dokument a kód
-                    repo-ban. A <a href="https://date-fns.org/docs/Getting-Started" target="_blank">date-fns dokumentumai</a> egész jók, teljesek és könnyű követni. Néhány dokumentum azonban
+                    repo-ban. A <a href="https://date-fns.org/docs/Getting-Started" target="_blank">date-fns
+                    dokumentumai</a> egész jók, teljesek és könnyű követni. Néhány dokumentum azonban
                     inkább technikailag és elméletileg nem jó választás a tanulási igányeidhez.
+                </Paragraph>
+
+                <Paragraph>
+                    Helyette találhatsz néhány erre a célra készített tutorialt, amely megmutatja, hogyan használj
+                    bizonyos típusú eszközöket. Egy nagyszerű kezdő hely az ha weboldalakra keresel mint a <a
+                    href="https://css-tricks.com/" target="_blank">CSS
+                    Tricks</a>,
+                    <a href="https://dev.to/" target="_blank">Dev</a>, <a href="https://www.freecodecamp.org/"
+                                                                          target="_blank">freeCodeCamp</a> és <a
+                    href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a>, népszerű oldalak a
+                    webfejlesztő ágazatban.
+                </Paragraph>
+
+                <Paragraph>
+                    Valószínűleg ki fogsz próbálni számos különböző eszközt mire megtalálod a jót, próbáld ki őket, hogy
+                    lásd van e értelmük, jól támogatottak-e és azt csinálják e amit akarsz. Ez mind jó a tanuláshoz és
+                    az út egyre könnyebb lesz ahogy nagyobb a tapasztalatod.
+                </Paragraph>
+            </Article>
+            <Article>
+                <h1>Összegzés</h1>
+                <Paragraph>
+                    Ez volt a bemutató a kliens oldali eszközkezelésről. A következő részben készültünk egy parancssor
+                    gyorstalpalóval, ahonnan a legtöbb eszköz meg van hívva. Rápillantunk mit tud a parancssor és
+                    megpróbáljuk telepíteni és használni az első eszközünket.
                 </Paragraph>
             </Article>
         </div>
