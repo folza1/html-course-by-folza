@@ -303,8 +303,42 @@ export default function Client_Side_Tooling_Overview() {
                 </Paragraph>
                 <h3>Mások</h3>
                 <Paragraph>
-
+                    Számos más poszt-development eszközök elérhetőek, mint a <a href="" target="_blank">Code Climate</a>,
+                    mellyel kód minőségi adatokat
+                    nyerhetünk, a <a href="https://webhint.io/docs/user-guide/extensions/extension-browser/"
+                                     target="_blank">webhint böngésző bővítmény</a>, amely futásidő alatt készít
+                    analízist a böngészők közötti
+                    kompatibilitásról és más ellenőrzéseket végez, a <a href="https://probot.github.io/"
+                                                                        target="_blank">GitHub bot-ok</a> a még
+                    funkcionálisabb GitHub-ért,
+                    <a href="https://updown.io/" target="_blank">Updown</a> amely információkat ad az alkalmazás
+                    futásáról és még sok más.
                 </Paragraph>
+                <h2>Néhány gondolat az eszközök típusáról</h2>
+                <Paragraph>
+                    Bizonyára van egy sorrend, amely szerint a különböző eszköztípusokat alkalmazzák a fejlesztés
+                    életciklusa során, de maradjunk annyiban, hogy neked nem kell az összes ezközt használnod, hogy
+                    kirakj egy weboldalt. Valójában egyikre sincs szükség ezek közül. Azonban, ha használsz párat ezek
+                    közül az eszközök közül a folyamat során növelni fogja a fejlesztési tapasztalatodat és szépen
+                    növeli
+                    a kódod minőségét úgy összességében.
+                </Paragraph>
+                <Paragraph>
+                    Gyakran időbe telik az új fejlesztő eszközöket munkára bírni a komplexitásuk miatt. Az egyik
+                    legnépszerűbb eszköz a Webpack, amelynek olyan hírneve van, hogy komplikált dolgozni vele, azonban
+                    a legújabb kiadásával nagy egyszerűsítés érkezett, szóval a konfigurálást leegyszerűsítették az
+                    abszolút minimum-ra.
+                </Paragraph>
+                <Paragraph>
+                    Nincsen határozottan olyan eszköz amely garantált siker, de ahogyan a tapasztalat nő úgy fogod
+                    találni, hogy a munkafolyamatok neked vagy a csapatodnak és a projektjeidnek dolgoznak. Miután az
+                    összes csavart megismerted, nem lesz nagy ügy az eszközlánc
+                    és csak munkának fog tűnni.
+                </Paragraph>
+            </Article>
+            <h1>Hogyan válasszunk és kapjunk segítséget egy bizonyos eszköztől</h1>
+            <Article>
+
             </Article>
         </div>
     );
