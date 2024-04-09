@@ -89,11 +89,68 @@ export default function Client_Side_Tooling_Overview() {
                     Most nézzük meg egyesével őket egy kicsit részletesebben:
                 </Paragraph>
 
-                <h2>Biztonsági háló></h2>
+                <h2>Biztonsági háló</h2>
                 <Paragraph>
                     Ezek az eszközök amelyekkel a kód írása egy kicsit jobb.
                 </Paragraph>
+                <Paragraph>
+                    Ez a rész az eszközökről specifikus kell hogy legyen a saját fejlesztési környezetednek, de cégeknél
+                    vannak olyan szabályzatok vagy előre meghatározott elérhető konfigurációk
+                    és így a fejlesztőik ugyanazokat a folyamatokat használják.
+                </Paragraph>
+                <Paragraph>
+                    Ez magába foglal bármit ami könnyebbé teszi a fejlesztésed, hogy stabil, megbízható kódot készíts. A
+                    biztonsági háló (safety net) eszközöknek segíteniük kell megelőzni a hibákat vagy kijavítani azokat
+                    automatikusan
+                    anélkül hogy magadtól kellene minden egyes alkalommal.
+                </Paragraph>
+                <Paragraph>
+                    Néhány nagyon közös safety net eszköztípus melyeket találni fogsz a következők:
+                </Paragraph>
+                <h3 className="bold">Linters</h3>
+                <Paragraph>
+                    A linter-ek eszközök melyek végig ellenőrzik a kódodat és mutatják a hibákat, hogy milyen típusú a
+                    hiba, és melyik sorban vannak pontosan. A linter-ek beállíthatók úgy, hogy ne csak hibákat
+                    jelezzenek, de jelezzenek olyan meghatározott stílustól eltérő dolgokat, amit a csapat használ,
+                    például ha a kód más behúzási értéket használ vagy ha <a target="_blank"
+                                                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template
+                    literals</a>-ot használ a megszokott
+                    string literals helyett.
+                </Paragraph>
+                <Paragraph>
+                    Az <a target="_blank" href="https://eslint.org/">ESLint</a> az ágazat sztenderd Javascript linter-e.
+                    Egy jól konfigurálható eszköz amely megtalálja a
+                    potenciális szintaxis hibákat és ajánlásokat tesz a legjobb kódírási gyakorlatra. Néhány cég és
+                    projekt <a target="_blank" href="https://www.npmjs.com/search?q=keywords:eslintconfig">megosztja az
+                    ESLint beállításait</a>.
+                </Paragraph>
+                <Paragraph>
+                    Találhatsz még linting eszközöket més nyelvekhez is mint például a <a
+                    href="http://csslint.net/">csslint</a>-et.
+                </Paragraph>
+                <Paragraph>
+                    Érdemes megnézni a <a target="_blank" href="https://webhint.io/">webhint</a> oldalt, amely egy
+                    konfigurálható, nyílt forráskódú linter a web számára,
+                    amely a legjobb gyakorlatot követi beleértve az akadálymentesítést, a teljesítményt, böngészők
+                    közötti kompatibilitást az <a target="_blank" href="https://github.com/mdn/browser-compat-data">MDN
+                    böngésző kompatibilitási adat</a>-ai révén, a biztonságot, a PWA
+                    tesztelést és még sok mást. Elérhető mint <a target="_blank"
+                                                                 href="https://webhint.io/docs/user-guide/">Node.js
+                    parancssori eszköz</a> és <a target="_blank"
+                                                 href="https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint">VS
+                    Code bővítmény</a
+                >.
+                </Paragraph>
+                <h3 className="bold">Forráskód kontrol</h3>
+                <Paragraph>
+
+                </Paragraph>
             </Article>
+            Also known as version control systems (VCS), source code control is essential for backing work up and
+            working in teams. A typical VCS involves having a local version of the code that you make changes to. You
+            then "push" changes to a "master" version of the code inside a remote repository stored on a server
+            somewhere. There is usually a way of controlling and coordinating what changes are made to the "master" copy
+            of the code, and when, so a team of developers doesn't end up overwriting each other's work all the time.
         </div>
     );
 }
