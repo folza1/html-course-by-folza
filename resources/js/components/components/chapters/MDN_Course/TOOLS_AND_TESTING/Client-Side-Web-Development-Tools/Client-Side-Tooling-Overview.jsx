@@ -338,7 +338,65 @@ export default function Client_Side_Tooling_Overview() {
             </Article>
             <h1>Hogyan válasszunk és kapjunk segítséget egy bizonyos eszköztől</h1>
             <Article>
+                <Paragraph>
+                    A legtöbb eszköz izolálva van amikor írják és kiadják, így bár majdnem mindig elérhető a segítség,
+                    soha nem ugyanazon a helyen és formában. Így tehát nehéz lehet segítséget találni az eszköz
+                    használatával kapcsolatban vagy, hogy melyiket is válasszuk. A tudás arról, hogy melyik eszköz
+                    használata a legjobb, közösségenként változik, ami azt jelenti, ha nem vagy már a webközösségben
+                    nehéz megtalálni pontosan melyik is illik hozzád. Ez az egyik oka, hogy írtuk ezt a cikksorozatot és
+                    hogy segítsünk megtenni az első lépéseket, amit nehéz megtenni egyedül egyébként.
+                </Paragraph>
+                <Paragraph>
+                    Valószínűleg szükséged lesz a következő dolgok kombinációjára:
+                    <li>
+                        Tapasztalt tanárok, mentorok, tanuló társak vagy kollégák akiknek van némi tapasztalata és
+                        megoldottak problémákat és tudnak tanácsot adni.
+                    </li>
+                    <li>
+                        Egy hasznos különleges eszköz a keresésre. Általános wek keresők front-end fejlesztő eszközökhöz
+                        általánosságban haszontalanok, kivéve, ha már tudod a nevét az eszköznek amit keresel.
+                    </li>
 
+                    <li>
+                        Ha például az npm csomagkezelőt használod, hogy irányítsd a függőségeidet, az egy jó ötlet, ha
+                        felmész az <a href="https://www.npmjs.com/" target="_blank">npm főoldalára</a> és rákeresel az
+                        eszköz típusára amit keresel, például próbálj meg
+                        keresni a "date"-re, ha dátum formázó segédet akarsz, vagy "formatter"-re, ha egy általános kód
+                        formázóra van szükséged. Figyelj oda a népszerűségére, a minőségére és a karbantartási adataira
+                        és hogy milyen régen volt legutóbb frissítve. Klikkelj át az eszközök oldalára hogy megtaláld
+                        hányan töltötték le havonta a csomagot és hogy van e jó dokumentáció hozzá hogy megállapítsd azt
+                        teszi e amit szeretnél. Ezen kritériumok alapján a <a
+                        href="https://www.npmjs.com/package/date-fns" target="_blank">"date-fns" könyvtár</a> jónak
+                        tűnik a dátum
+                        formázó
+                        eszközök között. Látni fogod ezt az eszközt működés közben és tanulni fogsz a csomagkezelőkről
+                        úgy általában a 3. Fejezetben ebben a modulban.
+                    </li>
+
+                    <li>
+                        Ha plugin-t keresel a kódszerkesztődhöz, hogy további funkcionalitást integrálj az eszközödbe,
+                        nézd meg a kódszerkesztőd
+                        plugins/extensions oldalt, ha például <a href="https://marketplace.visualstudio.com/VSCode"
+                                                                 target="_blank">VSCode bővítményt</a> akarsz. Vess
+                        egy pillantást a bővítményekre a főoldalon, és újra próbáld megkeresni a bővítményt, ami után
+                        nézel (vagy az eszköz nevét, például ESLint a VSCode bővítmény oldalon). Mikor megvannak az
+                        eredmények, vess egy pillantást az információra, hogy hány csillagos vagy hányan töltötték le,
+                        amely jelzi a minőségét.
+                    </li>
+                    <li>
+                        Vannak fejlesztői fórumok, ahol kérdezhetsz, hogy milyen eszközt használj, például az <a
+                        href="https://discourse.mozilla.org/c/mdn/learn/250" target="_blank">MDN
+                        Learn
+                        Discourse</a>, vagy <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>.
+                    </li>
+                </Paragraph>
+
+                <Paragraph>
+                    Mikor kiválasztasz egy eszközt használatra, az első feladatod az kell hogy legyen, hogy felmész a
+                    projekt főoldalára. Az lehet egy teljes weboldal vagy lehet egy egyszerű readme dokument a kód
+                    repo-ban. A <a href="https://date-fns.org/docs/Getting-Started" target="_blank">date-fns dokumentumai</a> egész jók, teljesek és könnyű követni. Néhány dokumentum azonban
+                    inkább technikailag és elméletileg nem jó választás a tanulási igányeidhez.
+                </Paragraph>
             </Article>
         </div>
     );
