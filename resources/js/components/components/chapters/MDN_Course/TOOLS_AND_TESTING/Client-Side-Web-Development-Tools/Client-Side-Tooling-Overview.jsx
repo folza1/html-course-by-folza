@@ -141,16 +141,77 @@ export default function Client_Side_Tooling_Overview() {
                     Code bővítmény</a
                 >.
                 </Paragraph>
-                <h3 className="bold">Forráskód kontrol</h3>
+                <h3 className="bold">Forráskód vezérlés</h3>
                 <Paragraph>
-
+                    Úgy is ismert hogy <div className="bold inline">verzió kezelő rendszer</div> (VCS), elengedhetetlen
+                    a forráskód biztonsági mentéséhez
+                    és a csapatmunkához. Egy tipikus VCS magában foglalja a helyi verziót a kódról amin változtatásokat
+                    hajtasz végre. Aztán felnyomod "push"-olod a "master" verzióba a kódot egy távoli repo-ba, amelyet
+                    egy szerver tárol valahol. Általában van mód rá, hogy irányítsuk és koordináljuk milyen változások
+                    történtek a "master" másolatában és hogy mikor történtek ezek, így a fejlesztők végül nem írják
+                    felül egymás kódját
+                </Paragraph>
+                <Paragraph>
+                    A <a href="https://git-scm.com/" target="_blank">Git</a> a forráskód kontrol rendszer amit a legtöbb
+                    ember használ ma. Elsődlegesen a parancssorból
+                    érhető el, de elérhető grafikus interfészen is. A git-es adattárban lévő kódot fel lehet tölteni egy
+                    saját szerverre vagy használhatsz olyan forrás kontrol kiszolgálókat is mint a <a
+                    href="https://github.com/" target="_blank">GitHub</a
+                >, a <a href="https://about.gitlab.com/" target="_blank">GitLab</a> vagy a <a
+                    href="https://bitbucket.org/product" target="_blank">BitBucket</a>.
+                </Paragraph>
+                <Paragraph>
+                    Mi GitHub-ot fogunk használni ebben a modulban. További információt találsz a <a target="_blank"
+                                                                                                     href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub">Git
+                    és
+                    a GitHub</a> címen.
+                </Paragraph>
+                <h3 className="bold">Kód formázók</h3>
+                <Paragraph>
+                    A kód formázók valamilyen módon a linter-ekhez tartoznak, de inkább, hogy hibákat mutassanak a
+                    kódban, általában arra használatosak, hogy a kód helyesen legyen formázva, a stílusaid szerint,
+                    ideális esetben automatikusan kijavítson hibákat amelyeket talál.
+                </Paragraph>
+                <Paragraph>
+                    A Prettier egy nagyon népszerű kódformázó, amelyet később fogunk használni ebben a modulban.
+                </Paragraph>
+                <h3>Bundler-ek(kötegelők) és csomagolók</h3>
+                <Paragraph>
+                    Ezekkel az eszközökkel a kódod készen fog állni a bemutatásra, production-ra. Például csak azok a
+                    könyvtárak legyenek benne amelyeket a kód aktuálisan használ a végső production-ben, vagy
+                    minify-olni kell a kódot, amely eltávolít minden whitespace karaktert a production kódból, kisebbé
+                    téve
+                    azt mielőtt feltöltöd a szerverre.
+                </Paragraph>
+                <Paragraph>
+                    A <a target="_blank" href="https://parceljs.org/">Parcel</a> egy igazán okos eszköz amely pont ebbe
+                    a kategóriába tartozik. Tudja a fenti feladatokat,
+                    de
+                    segít csomagolni a HTML, CSS és az image fájlokat kötegekbe, amit már vihetsz is
+                    deploy-olni és adhatsz hozzá függőségeket magadnak bármikor is próbálod használni őket. Még kód
+                    transzformációt is tud végezni.
+                </Paragraph>
+                <Paragraph>
+                    A <a href="https://webpack.js.org/" target="_blank">Webpack</a> egy másik nagyon népszerű csomagoló
+                    eszköz amely hasonló dolgokat csinál.
+                </Paragraph>
+                <h3>Transformáció</h3>
+                <Paragraph>
+                    Lehet hogy a kódod "future kód"-nak számít mivel a legújabb CSS és Javascript funkciókat használtad
+                    amelyeknek még nincsen natív böngésző támogatása, vagy a kódod teljesen más nyelvet használ mint
+                    például a <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>. Transzformáló
+                    eszközök tudnak ebben segíteni és böngésző kompatibilissé tenni a
+                    kódodat, melyet már használhatsz a production-ban.
+                </Paragraph>
+                <Paragraph>
+                    Általánosságban a webfejlesztés három nyelvből áll: <a target="_blank"
+                                                                           href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a>, <a
+                    target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a> és a <a
+                    target="_blank"
+                    href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">Javascript</a>, és vannak átalakító
+                    eszközök mindegyik nyelvhez. Az átalakításnak két fő előnye van többek között:
                 </Paragraph>
             </Article>
-            Also known as version control systems (VCS), source code control is essential for backing work up and
-            working in teams. A typical VCS involves having a local version of the code that you make changes to. You
-            then "push" changes to a "master" version of the code inside a remote repository stored on a server
-            somewhere. There is usually a way of controlling and coordinating what changes are made to the "master" copy
-            of the code, and when, so a team of developers doesn't end up overwriting each other's work all the time.
         </div>
     );
 }
