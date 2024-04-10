@@ -3,7 +3,7 @@ import Article from "../../REACT/article/Article.jsx";
 import Paragraph from "../../REACT/paragraph/Paragraph.jsx";
 import Note from "../../REACT/note/Note.jsx";
 import cmd_powershell from "./img/1.cmd_powershell.png";
-
+import macos_terminal from "./img/2.macos_terminal.png";
 
 
 export default function Command_Line_Crash_Course() {
@@ -92,14 +92,50 @@ export default function Command_Line_Crash_Course() {
                 <h2>Hogyan néz ki a terminal?</h2>
 
                 <Paragraph>
-                    Alább látható néhány különböző megjelenésű terminál amivle találkozhatsz.
+                    Ezalatt látható néhány különböző megjelenésű terminál amivle találkozhatsz.
                 </Paragraph>
 
                 <Paragraph>
                     A következő képek megmutatják a parancssori prompt-okat Windows-on. Váaszthatsz "cmd"-t vagy
                     "powershell"-t, amelyet a start menüből futtathatsz beírva a program nevét.
                 </Paragraph>
+
                 <div className="image-container"><img src={cmd_powershell} alt="Cmd or Powershell"/></div>
+
+                <Paragraph>
+                    Ezalatt pedig látható a macOS terminál applikáció.
+                </Paragraph>
+
+                <div className="image-container"><img src={macos_terminal} alt="Cmd or Powershell"/></div>
+
+                <h2>Hogyan férsz hozzá a terminálhoz?</h2>
+
+                <Paragraph>
+                    Sok fejlesztő ma Unix alapú eszközöket használ, mint a terminál és az eszközök amelyekkel elérheted
+                    azt. Sok tutorial és eszköz amelyek ma léteznek támogatják a Unix alapú rendszereket, de nem kell
+                    aggódni a legtöbb rendszeren elérhetőek. Ebben a szekcióban megnézzük, hogyan férhetünk hozzá a
+                    terminálhoz az általad választott rendszeren.
+                </Paragraph>
+
+                <h3>Linux/Unix</h3>
+
+                <Paragraph>
+                    Ahogy említettük az előbb a Linux/Unix rendszereken elérhető alapértelmezettként a terminál, más
+                    alakalmazások mellett.
+                </Paragraph>
+
+                <h3>MacOS</h3>
+
+                <Paragraph>
+                    A macOS-nek van egy rendszere melyet Darwin-nak neveznek amely a grafikus felhasználói interfész
+                    alatt található. A Darwin az egy Unix szerű rendszer amely szolgáltatja a terminal-t és van
+                    hozzáférése az alacsonyabb szintű eszközökhöz. A macOS Darwin legtöbb esetben azonos a Unix-al,
+                    bizonyára elég jó ahhoz, hogy ne kelljen aggódni a vele készült munka során ebben a cikkben.
+                </Paragraph>
+
+                <Paragraph>
+                    A teminal elérhető a macOS-en az Applications/Utilities/Terminal útvonalon.
+                </Paragraph>
             </Article>
         </div>
     )
