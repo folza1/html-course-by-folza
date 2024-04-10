@@ -6,11 +6,14 @@ import Understand_Web_Development_Tools
     from "../chapters/MDN_Course/TOOLS_AND_TESTING/Client-Side-Web-Development-Tools/Understand_Web_Development_Tools.jsx";
 import Client_Side_Tooling_Overview
     from "../chapters/MDN_Course/TOOLS_AND_TESTING/Client-Side-Web-Development-Tools/Client-Side-Tooling-Overview.jsx";
+import Command_Line_Crash_Course
+    from "../chapters/MDN_Course/TOOLS_AND_TESTING/Client-Side-Web-Development-Tools/Command_Line_Crash_Course.jsx";
 
 export default function Feed() {
     return (
         <div className="feed">
-            <Client_Side_Tooling_Overview/>
+            <Command_Line_Crash_Course/>
+            {/*<Client_Side_Tooling_Overview/>*/}
             {/*<Understand_Web_Development_Tools/>*/}
             {/*<Tools_And_Testing/>*/}
             {/*<Getting_Started_With_React/>*/}
