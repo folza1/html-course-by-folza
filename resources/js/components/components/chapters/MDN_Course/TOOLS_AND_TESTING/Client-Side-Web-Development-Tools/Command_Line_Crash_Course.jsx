@@ -4,12 +4,14 @@ import Paragraph from "../../REACT/paragraph/Paragraph.jsx";
 import Note from "../../REACT/note/Note.jsx";
 import cmd_powershell from "./img/1.cmd_powershell.png";
 import macos_terminal from "./img/2.macos_terminal.png";
+import WSL from "./img/3.WSL.png";
+import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 
 
 export default function Command_Line_Crash_Course() {
     return (
         <div className="container">
-            <h1>Paranccsor gyorstalpaló</h1>
+            <h1 className="bold">Paranccsor gyorstalpaló</h1>
             <Paragraph>
                 A fejlesztési folyamat során, kétségtelenül szükséged lesz kódokat futtatni a terminál-ban vagy a
                 parancssorban, lényegében a kettő ugyan az. Ez a cikk ad egy bevezetőt a terminálról, az elengedhetetlen
@@ -34,7 +36,7 @@ export default function Command_Line_Crash_Course() {
             </Article>
 
             <Article>
-                <h1>Üdvözöllek a terminálban</h1>
+                <h1 className="bold">Üdvözöllek a terminálban</h1>
                 <Paragraph>
                     A terminál egy szöveg interfész szöveg alapú programok futtatására. Ha használsz eszközöket a
                     webfejlesztéshez akkor közel biztos hogy meg fogod nyitni a terminált és futtatsz néhány parancsot,
@@ -62,7 +64,7 @@ export default function Command_Line_Crash_Course() {
                     segítsünk a kezdésben ezzel a látszólag barátságtalan környezettel.
                 </Paragraph>
 
-                <h2>Honnan jön a terminál?</h2>
+                <h2 className="bold">Honnan jön a terminál?</h2>
 
                 <Paragraph>
                     A terminál az 1950-es 60-as évekből származik és az eredete nagyon hasonlít amira ma is használjuk,
@@ -89,7 +91,7 @@ export default function Command_Line_Crash_Course() {
                     Szóval a terminál nem fog eltűnni egyhamar!
                 </Paragraph>
 
-                <h2>Hogyan néz ki a terminal?</h2>
+                <h2 className="bold">Hogyan néz ki a terminal?</h2>
 
                 <Paragraph>
                     Ezalatt látható néhány különböző megjelenésű terminál amivle találkozhatsz.
@@ -108,7 +110,7 @@ export default function Command_Line_Crash_Course() {
 
                 <div className="image-container"><img src={macos_terminal} alt="Cmd or Powershell"/></div>
 
-                <h2>Hogyan férsz hozzá a terminálhoz?</h2>
+                <h2 className="bold">Hogyan férsz hozzá a terminálhoz?</h2>
 
                 <Paragraph>
                     Sok fejlesztő ma Unix alapú eszközöket használ, mint a terminál és az eszközök amelyekkel elérheted
@@ -117,14 +119,14 @@ export default function Command_Line_Crash_Course() {
                     terminálhoz az általad választott rendszeren.
                 </Paragraph>
 
-                <h3>Linux/Unix</h3>
+                <h3 className="bold">Linux/Unix</h3>
 
                 <Paragraph>
                     Ahogy említettük az előbb a Linux/Unix rendszereken elérhető alapértelmezettként a terminál, más
                     alakalmazások mellett.
                 </Paragraph>
 
-                <h3>MacOS</h3>
+                <h3 className="bold">MacOS</h3>
 
                 <Paragraph>
                     A macOS-nek van egy rendszere melyet Darwin-nak neveznek amely a grafikus felhasználói interfész
@@ -136,6 +138,70 @@ export default function Command_Line_Crash_Course() {
                 <Paragraph>
                     A teminal elérhető a macOS-en az Applications/Utilities/Terminal útvonalon.
                 </Paragraph>
+
+                <h3 className="bold">Windows</h3>
+
+                <Paragraph>
+                    Mint más programozó eszköz, használni a terminált vagy parancssort a Windows-on alapvetően nem olyan
+                    könnyű mint más operációs rendszeren. De a dolgok egyre könnyebbek.
+                </Paragraph>
+
+                <Paragraph>
+                    A Windows-nak megvolt sokáig a saját terminál szerű programja a cmd, a "command prompt", de ez
+                    határozottan nem volt kompatibilis a Unix-os parancsokkal és egyenlő volt a régi stílusú Windows DOS
+                    prompt-al.
+                </Paragraph>
+
+                <Paragraph>
+                    Jobb programok léteznek már, hogy terminál szerű élményt nyújtsanak a Windows-on, mint a Powershell
+                    (<a href="https://github.com/PowerShell/PowerShell" target="_blank">itt találsz telepítőt</a>) vagy
+                    a Gitbash, amely a <a href="https://gitforwindows.org/" target="_blank">Windows-os git
+                    eszköztár</a> része.
+                </Paragraph>
+
+                <Paragraph>
+                    Azonban a legjobb választás a Windows-ra a modern napokban a Windows Subsystem for Linux (WSL), egy
+                    kompatibilitási réteg amivel Linux operációs rendszereket lehet futtatni közvetlenül Windows 10-ből,
+                    amely megengedi hogy "igazi terminál"-t futtass közvetlenül Windows-on, virtuális gép nélkül.
+                </Paragraph>
+
+                <Paragraph>
+                    Ez közvetlenül telepíthető a Windows Store-ból ingyen. Minden információt megtalálsz a <a
+                    target="_blank" href="https://learn.microsoft.com/en-gb/windows/wsl/">Windows
+                    Subsystem for Linux Dokumentációban</a>.
+                </Paragraph>
+
+                <div className="image-container"><img src={WSL} alt="Windows Subsystem for Linux"/></div>
+
+                <Paragraph>
+                    Hogy melyiket válaszd Windows-ra, mi erősen ajánljuk a WSL telepítését. Használhatod az
+                    alapértelmezett command prompt-ot (<BgLightgray>cmd</BgLightgray>)-t is és sok eszköz működni is fog
+                    rendesen, de mindent
+                    könnyebbnek fogsz találni ha Unix-os rendszerrel egyenértékű eszközt használsz.
+                </Paragraph>
+
+                <h3 className="bold">Mi a különbség a parancssor és a terminál között?</h3>
+
+                <Paragraph>
+                    Általánosságban, ezt a két kifejezést felcserélhetően használják. Technikailag, a terminál az egy
+                    szoftver amely indul és csatlakozik a shell-hez. A shell a te session-öd és session környezeted ahol
+                    olyan
+                    dolgok, mint a prompt és a parancsikonok vannak személyre szabva. A parancssor az a szó szerinti sor
+                    ahová beírod a parancsokat és ahol a kurzor villog.
+                </Paragraph>
+
+                <h2 className="bold">Használnod kell a terminált?</h2>
+
+                <Paragraph>
+                    Bár gazdagon lehet találni eszközöket amelyek elérhetőek a parancssorból, ha olyan eszközt
+                    használsz, mint a Visual Studio Code ott is nagy számú bővítmény elérhető, amelyet lehet használni
+                    mint terminal helyettesítőt anélkül, hogy terminált használnál közvetlenül. Azonban nem fogsz találni
+                    olyan kódszerkesztő bővítményt, amely mindent megcsinál amit szeretnél - szóval kell egy kis tapasztalat a terminállal.
+                </Paragraph>
+            </Article>
+
+            <Article>
+                <h1 className="bold">Alapvető beépített terminal parancsok</h1>
             </Article>
         </div>
     )
