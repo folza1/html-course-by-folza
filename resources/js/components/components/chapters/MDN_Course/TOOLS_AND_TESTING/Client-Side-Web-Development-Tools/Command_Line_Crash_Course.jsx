@@ -195,13 +195,55 @@ export default function Command_Line_Crash_Course() {
                 <Paragraph>
                     Bár gazdagon lehet találni eszközöket amelyek elérhetőek a parancssorból, ha olyan eszközt
                     használsz, mint a Visual Studio Code ott is nagy számú bővítmény elérhető, amelyet lehet használni
-                    mint terminal helyettesítőt anélkül, hogy terminált használnál közvetlenül. Azonban nem fogsz találni
-                    olyan kódszerkesztő bővítményt, amely mindent megcsinál amit szeretnél - szóval kell egy kis tapasztalat a terminállal.
+                    mint terminal helyettesítőt anélkül, hogy terminált használnál közvetlenül. Azonban nem fogsz
+                    találni
+                    olyan kódszerkesztő bővítményt, amely mindent megcsinál amit szeretnél - szóval kell egy kis
+                    tapasztalat a terminállal.
                 </Paragraph>
             </Article>
 
             <Article>
                 <h1 className="bold">Alapvető beépített terminal parancsok</h1>
+
+                <Paragraph>
+                    Eleget beszéltünk - gyerünk nézzünk pár terminál parancsot! Itt csak pár parancsot mutatunk be,
+                    mellette az eszköz nevével:
+                </Paragraph>
+
+                <Paragraph>
+                    Navigálás a számítógép fájlrendszerében alapvető feladatokkal mint létrehozás, másolás, átnevezés és
+                    törlés:
+                </Paragraph>
+
+                <Paragraph>
+                    <li>Mozogni a könyvtárstruktúrában: <BgLightgray>cd</BgLightgray></li>
+                    <li>Mappa létrehozása: <BgLightgray>mkdir</BgLightgray></li>
+                    <li>Fájl létrehozása (és a metadata-k módosítása): <BgLightgray>touch</BgLightgray></li>
+                    <li>Fájl vagy mappa másolása: <BgLightgray>cp</BgLightgray></li>
+                    <li>Fájl vagy mappa mozgatása: <BgLightgray>mv</BgLightgray></li>
+                    <li>Fájl vagy mappa törlese: <BgLightgray>rm</BgLightgray></li>
+                    <li>Fájlok letöltése URL-ről: <BgLightgray>curl</BgLightgray></li>
+                    <li>Szótöredék keresése nagyobb szövegben: <BgLightgray>grep</BgLightgray></li>
+                    <li>Fájl tartalmának megjelenítése
+                        oldalakonként: <BgLightgray>less</BgLightgray>, <BgLightgray>cat</BgLightgray></li>
+                    <li>Szöveg manipulálása (például az összes &lt;div&gt;-et le akarjuk cserélni &lt;article&gt;-re egy
+                        HTML
+                        fájlban): <BgLightgray>awk</BgLightgray>, <BgLightgray>tr</BgLightgray>, <BgLightgray>sed</BgLightgray>
+                    </li>
+                </Paragraph>
+            </Article>
+
+            <Article>
+                <Note>
+                    <div className="bold inline">Megjegyzés:</div>
+                    Sok jó tutorial van a weben amely mélyebb betekintést ad a parancssorba - ez csak egy rövid
+                    bevezető.
+                </Note>
+            </Article>
+
+            <Article>
+                Gyerünk haladjunk előre és használjunk néhány eszközt ezek közül a parancssorban! Mielőtt
+                továbbmennél nyisd meg a saját terminál programod.
             </Article>
         </div>
     )
