@@ -72,6 +72,50 @@ export default function Package_Management_Basics() {
                     eltávolitva.
                 </Paragraph>
             </Article>
+
+            <Article>
+                <h1>Mi is pontosan a csomagkezelő?</h1>
+                <Paragraph>
+                    Találkoztunk már az <a href="https://www.npmjs.com/" target="_blank">npm</a>-el, de lépjünk most
+                    vissza magától az npm-től, a csomagkezelő az egy
+                    rendszer amely kezelni fogja a projekted függőségeit.
+                </Paragraph>
+
+                <Paragraph>
+                    A csomagkezelő majd biztosít egy módot arra, hogy telepíts új függőségeket (más néven csomagokat),
+                    segít kezelni, hogy hol tárold a csomagokat a fájlrendszeredben és lehetőséget ad arra, hogy
+                    publikáld a saját csomagjaidat.
+                </Paragraph>
+
+                <Paragraph>
+                    Elméletben nincsen szükséged csomagkezelőre és manuálisan le tudod tölteni és elmenteni a projekt
+                    függőségeidet, de a csomagkezelő egyszerűen kezeli a csomagok telepítését és törlését. Ha nem
+                    használsz csomagkezelőt akkor manuálisan kell kezelned ezeket:
+                </Paragraph>
+
+                <Paragraph>
+                    <li>Meg kell találni a helyes csomag Javascript fájlokat.</li>
+                    <li>Ellenőrizni kell őket, hogy biztosan nem tartalmaznak-e bármilyen ismert sebezhetőséget.</li>
+                    <li>Le kell tölteni őket és a megfelelő helyre kell rakni őket a projektben.</li>
+                    <li>A kódban include-olni kell a csomagokat (ehhez Javascript modulokat kell használni, egy másik
+                        téma amit érdemes olvasni és megérteni).
+                    </li>
+                    <li>Ugyanezeket kell tenni minden csomag alfüggőségével amely lehet több tíz vagy több száz.</li>
+                    <li>Törölni kell az összes fájlt, ha el akarod távolítani a csomagokat.</li>
+                </Paragraph>
+
+                <Paragraph>
+                    Továbbá, a csomagkezelők kezelik a duplikált függőségeket (valami ami fontos és megszokott a
+                    front-end fejlesztésben.)
+                </Paragraph>
+
+                <Paragraph>
+                    Az npm a Javascript és Node-alapú csomagkezelők esetében két lehetőség van arra hogy hová tudod
+                    telepíteni a függőségeidet. Amint már említettük az előző cikkben, a függőségek telepíthetők
+                    globálisan és lokálisan a projektbe. Habár több előnye van a globális telepítésnek, az előnye a
+                    lokális telepítésnek sokkal fontosabb (például a hordozhatóság és a verzió zárolás).
+                </Paragraph>
+            </Article>
         </div>
     );
 }
