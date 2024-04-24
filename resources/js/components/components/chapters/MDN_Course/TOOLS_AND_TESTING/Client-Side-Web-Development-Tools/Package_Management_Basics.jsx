@@ -3,6 +3,11 @@ import Paragraph from "../../REACT/paragraph/Paragraph.jsx";
 import Article from "../../REACT/article/Article.jsx";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import Note from "../../REACT/note/Note.jsx";
+import CodeDisplay from "../../components/CodeDisplay.jsx";
+import {
+    code_1_parcel,
+    code_2_parcel,
+} from "./package_management_basics_code_texts.jsx";
 
 export default function Package_Management_Basics() {
     return (
@@ -176,15 +181,91 @@ export default function Package_Management_Basics() {
                 <h1>A csomag ökoszisztéma használata</h1>
 
                 <Paragraph>
-                    Most fussunk át egy példán, hogy elkezdjünk egy csomagkezelőt és regisztert használni. Telepítsünk
+                    Most fussunk át egy példán, hogy elkezdjünk egy csomagkezelőt és regisztert használni. Telepítünk
                     egy
                     parancssoros segédet hozzá.
                 </Paragraph>
 
                 <Paragraph>
-                    A <a href="https://parceljs.org/" target="_blank">Parcel</a> egy másik eszköz amit a fejlesztők gyakran használnak a fejlesztés során. A Parcel abban
+                    A <a href="https://parceljs.org/" target="_blank">Parcel</a> egy másik eszköz amit a fejlesztők
+                    gyakran használnak a fejlesztés során. A Parcel abban
                     okos hogy meg tudja nézni a kódunk tartalmát, hogy meghívja a függőségeket és automatikusan telepít
                     bármilyen függőséget amire a kódunknak szüksége van. Plusz, automatikusan build-eli is a kódunkat.
+                </Paragraph>
+
+                <h2>Állítsuk be az applikációt mint egy npm csomagot</h2>
+
+                <Paragraph>
+                    Először is készítsünk egy új mappát amelyben elhelyezzük a kísérleti alkalmazást, valahol ahol
+                    könnyen megtalálod. A mappát parcel-experiment-nek fogjuk nevezni, de elnevezheted bármi másnak is:
+                </Paragraph>
+
+                <CodeDisplay code={code_1_parcel}/>
+
+                <Paragraph>
+                    A következő lépés, hogy inicializáljuk az alkalmazásunkat mint npm csomag, amely készít egy config
+                    fájlt a <BgLightgray>package.json</BgLightgray>-t, amely lehetővé teszi, hogy elmentsük a
+                    beállításunk részleteit arra az
+                    esetre, ha szeretnénk később újra elkészíteni ezt a környezetet vagy ha publikálni szeretnénk a
+                    csomagot az npm regiszterbe (de az túlmegy ennek a cikknek a tartalmán).
+                </Paragraph>
+
+                <Paragraph>
+                    Gépeld be a következő parancsot! Mellette légy biztos abban hogy
+                    a <BgLightgray>parcel-experiment</BgLightgray> mappában vagy:
+                </Paragraph>
+
+                <CodeDisplay code={code_2_parcel}/>
+
+                <Paragraph>
+                    Pár kérdés lesz ezután feltéve neked! Az npm csinálni fog egy
+                    alapértelmezett <BgLightgray>package.json</BgLightgray> fájlt a válaszaid alapján:
+                </Paragraph>
+
+                <Paragraph>
+                    <li><BgLightgray>name</BgLightgray>: Egy név az alkalmazás azonosítására. Csak nyomj
+                        egy <BgLightgray>Enter</BgLightgray>-t az alapértelmezetthez, ami jelen
+                        esetben a <BgLightgray>parcel-experiment</BgLightgray>.
+                    </li>
+
+                    <li>
+                        <BgLightgray>version</BgLightgray>: A kezdő verzió szám az alkalmazáshoz. Csak nyomj
+                        egy <BgLightgray>Enter</BgLightgray>-t az alapértelmezetthez, ami
+                        jelen esetben <BgLightgray>1.0.0</BgLightgray>.
+                    </li>
+
+                    <li><BgLightgray>description</BgLightgray>: Egy gyors leírás az app céljáról. Gépelj be valami
+                        igazán
+                        egyszerűt, mint például "A
+                        simple npm package to learn about using npm", aztán nyomj egy <BgLightgray>Enter</BgLightgray>-t.
+                    </li>
+
+                    <li>
+                        <BgLightgray>entry point</BgLightgray>: Ez lesz a legfelsőbb szintű Javascript fájl az
+                        alkalamazásban. Az alapértelmezett
+                        <BgLightgray>index.js</BgLightgray> tökéletes lesz jelen esetben,
+                        aztán <BgLightgray>Enter</BgLightgray>.
+                    </li>
+
+                    <li>
+                        <BgLightgray>test command</BgLightgray>, <BgLightgray>git
+                        repository</BgLightgray> és <BgLightgray>keywords</BgLightgray>:
+                        Nyomj <BgLightgray>Enter</BgLightgray>-t mindegyikre, hogy üresen hagyjuk most.
+                    </li>
+
+                    <li>
+                        <BgLightgray>author</BgLightgray>: A projekt szerzőjéhez. Írd be a nevedet, majd nyomj
+                        egy <BgLightgray>Enter</BgLightgray>-t.
+                    </li>
+
+                    <li>
+                        <BgLightgray>license</BgLightgray>: A liszensz ami alá a csomag tartozik. Nyomj
+                        egy <BgLightgray>Enter</BgLightgray>-t az alapértelmezetthez most.
+                    </li>
+                </Paragraph>
+                
+                <Paragraph>
+                    Még egyszer nyomd meg az <BgLightgray>Enter</BgLightgray> billentyűt, hogy elfogadja a beállításokat.
                 </Paragraph>
             </Article>
         </div>
