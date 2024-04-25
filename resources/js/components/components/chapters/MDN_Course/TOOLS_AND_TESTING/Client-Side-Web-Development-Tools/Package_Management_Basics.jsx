@@ -7,6 +7,10 @@ import CodeDisplay from "../../components/CodeDisplay.jsx";
 import {
     code_1_parcel,
     code_2_parcel,
+    code_3_parcel_json,
+    code_4_parcel,
+    code_5_parcel,
+    code_6_index_html,
 } from "./package_management_basics_code_texts.jsx";
 
 export default function Package_Management_Basics() {
@@ -263,10 +267,70 @@ export default function Package_Management_Basics() {
                         egy <BgLightgray>Enter</BgLightgray>-t az alapértelmezetthez most.
                     </li>
                 </Paragraph>
-                
+
                 <Paragraph>
-                    Még egyszer nyomd meg az <BgLightgray>Enter</BgLightgray> billentyűt, hogy elfogadja a beállításokat.
+                    Még egyszer nyomd meg az <BgLightgray>Enter</BgLightgray> billentyűt, hogy elfogadja a
+                    beállításokat.
                 </Paragraph>
+
+                <Paragraph>
+                    Most menj a <BgLightgray>parcel-experiment</BgLightgray> mappába és most látnod kell egy
+                    package.json fájlt. Nyisd meg és
+                    valami ilyesmit kellene látnod:
+                </Paragraph>
+
+                <CodeDisplay code={code_3_parcel_json}/>
+
+                <Paragraph>
+                    Szóval akkor ez a config fájl amely definiálja a csomagot. Most jól is vagyunk, folytassuk a
+                    következő lépéssel!
+                </Paragraph>
+
+                <h2>A Parcel telepítése</h2>
+
+                <Paragraph>
+                    Futtasd a következő parancsot a Parcel helyi telepítéséhez!
+                </Paragraph>
+
+                <CodeDisplay code={code_4_parcel}/>
+
+                <Paragraph>
+                    Miután minden dologgal készen vagyunk most már készen állunk némi modern kliens oldali fejlesztésre,
+                    ami annyit tesz, hogy build eszközöket használunk, hogy jobbá tegyük a fejlesztői élményt.
+                    Először azonban vessünk egy pillantást a package.json fájlra. Látni fogod, hogy az npm hozzáadott
+                    egy új mezőt a dependencies-t azaz a függőségeket:
+                </Paragraph>
+
+                <CodeDisplay code={code_5_parcel}/>
+
+                <Paragraph>
+                    Ez része az npm varázslatnak. Ha a jövőben áthelyezed a kódbázisodat egy másik helyre, egy másik
+                    gépre, újra tudod kreálni ugyanezt a beállítást az <BgLightgray>npm
+                    install</BgLightgray> paranccsal, aztán az npm megnézi a
+                    függőségeket és telepíti azt neked.
+                </Paragraph>
+
+                <Paragraph>
+                    Egy hátrány, hogy a Parcel egyedül a <BgLightgray>parcel-experiment</BgLightgray> mappában elérhető,
+                    nem fogod tudni futtatni
+                    más könyvtárban. De több előnye van mint hátránya.
+                </Paragraph>
+
+                <h2>Állítsuk fel a példa alkalmazásunkat!</h2>
+
+                <Paragraph>
+                    Parcel vár egy <BgLightgray>index.html</BgLightgray> és
+                    egy <BgLightgray>index.js</BgLightgray> fájlt amivel dolgozhat, de máskülönben rajtad múlik,
+                    hogyan szervezed a projekted. Más eszközök lehetnek nagyon különbözőek, de legalább a Parcel
+                    könnyűvé teszi a kezdő kísérletünket.
+                </Paragraph>
+
+                <Paragraph>
+                    Most akkor adnunk kell egy <BgLightgray>index.html</BgLightgray> fájlt a munka mappánkba (working directory). Hozd létre az
+                    <BgLightgray>index.html</BgLightgray> fájlt a teszt mappában és tedd bele a következő tartalmat:
+                </Paragraph>
+
+                <CodeDisplay code={code_6_index_html}/>
             </Article>
         </div>
     );
