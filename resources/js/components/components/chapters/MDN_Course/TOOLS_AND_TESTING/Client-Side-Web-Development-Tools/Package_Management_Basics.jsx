@@ -474,6 +474,21 @@ export default function Package_Management_Basics() {
                 <Paragraph>
                     A production fájlok a <BgLightgray>dist</BgLightgray> mappában lesznek.
                 </Paragraph>
+
+                <h2>Az app fáljméretének csökkentése</h2>
+
+                <Paragraph>
+                    Azonban még ha az összes eszköz segít is a fejlesztőnek gyakran vannak hátrányos dolgok. Ebben az
+                    esetben a fájl mérete. A Javascript bundle-je my-project.fb76efcf.js elég nagynak tűnik, 195KB ahhoz
+                    képest hogy egy sor szöveget írat ki. Bizonyára kiszámoltuk, hogy 195KB Javascript kódot nem ér meg
+                    nekünk ennyiért.
+                </Paragraph>
+
+                <Paragraph>
+                    Amikor fejlesztési eszközöket használunk érdemes megkérdezni magunktól, hogy vajon jól csinálja-e
+                    majd a dolgát. Ebben az esetben a csomag közel 200KB, valójában tartalmazza az egész <BgLightgray>date-fns</BgLightgray>
+                    könyvtárat, nem csak azt a funkciót amit használunk.
+                </Paragraph>
             </Article>
         </div>
     );
