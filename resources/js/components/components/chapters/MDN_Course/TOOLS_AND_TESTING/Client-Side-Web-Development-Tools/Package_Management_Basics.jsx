@@ -11,6 +11,10 @@ import {
     code_4_parcel,
     code_5_parcel,
     code_6_index_html,
+    code_7_parcel_run,
+    code_8_parcel_run,
+    code_8_index_js,
+    code_9_package_json,
 } from "./package_management_basics_code_texts.jsx";
 
 export default function Package_Management_Basics() {
@@ -326,11 +330,121 @@ export default function Package_Management_Basics() {
                 </Paragraph>
 
                 <Paragraph>
-                    Most akkor adnunk kell egy <BgLightgray>index.html</BgLightgray> fájlt a munka mappánkba (working directory). Hozd létre az
+                    Most akkor adnunk kell egy <BgLightgray>index.html</BgLightgray> fájlt a munka mappánkba (working
+                    directory). Hozd létre az
                     <BgLightgray>index.html</BgLightgray> fájlt a teszt mappában és tedd bele a következő tartalmat:
                 </Paragraph>
 
                 <CodeDisplay code={code_6_index_html}/>
+
+                <Paragraph>
+                    A következő, hogy létrehozzuk az <BgLightgray>index.js</BgLightgray> fájlt ugyanabban a mappában
+                    mint az <BgLightgray>index.html</BgLightgray> fájlt. Most
+                    az <BgLightgray>index.js</BgLightgray> fájl üres, csak léteznie kell. Hozd létre most!
+                </Paragraph>
+
+                <h2>Most játsszunk egy kicsit a Parcel-el!</h2>
+
+                <Paragraph>
+                    Most futtatni fogjuk az újonnan telepített Parcel eszközünket. A terminálodban futtasd a következő
+                    parancsot:
+                </Paragraph>
+
+                <CodeDisplay code={code_7_parcel_run}/>
+
+                <Paragraph>
+                    Valami hasonlót kell látnod a terminálodban:
+                </Paragraph>
+
+                <CodeDisplay code={code_8_parcel_run}/>
+
+                <Note>
+                    <Paragraph>
+                        <div className="bold inline">Megjegyzés:</div>
+                        Ha olyan problémába ütközöl, hogy a terminál kiírja a "command not found" hibát, akkor próbáld
+                        meg használni a következő parancsot az <BgLightgray>npx</BgLightgray> paranccsal, mint
+                        például <BgLightgray>npx
+                        parcel index.html</BgLightgray>.
+                    </Paragraph>
+                </Note>
+
+                <Paragraph>
+                    Most már készen állunk a teljes Javascript csomag ökoszisztéma előnyeire. Kezdésként most van egy
+                    helyi webszerverünk ami a <BgLightgray>http://localhost:1234</BgLightgray> címen fut. Nyissuk meg és
+                    most még semmit nem
+                    látunk, de ami jó benne, hogy mikor változtatást hajtasz végre az applikációban, akkor a Parcel majd
+                    újra build-eli és újratölti a szervert automatikusan így azonnal fogod látni a hatását annak amit
+                    megváltoztattál.
+                </Paragraph>
+
+                <Paragraph>
+                    Most rakjunk bele egy kis tartalmat. Mondjuk meg szeretnénk mutatni egy emberileg olvasható relatív
+                    dátumot mint például a "2 órája", "4 nappal ezelőtt" vagy valami hasonlót. A <a
+                    href="https://date-fns.org/" target="_blank">date-fns</a
+                > csomag
+                    <BgLightgray>formatDistanceToNow()</BgLightgray> metódus hasznunkra lesz ebben (vannak más csomagok
+                    is melyek ugyanezt a dolgot csinálják).
+                </Paragraph>
+
+                <Paragraph>
+                    Az <BgLightgray>index.js</BgLightgray> fájlba rakd a következő kódot és mentsd el:
+                </Paragraph>
+
+                <CodeDisplay code={code_8_index_js}/>
+
+                <Paragraph>
+                    Most menj vissza a <BgLightgray>http://localhost:1234</BgLightgray> címre és látni fogod mennyi idő
+                    telt el azóta, hogy a szerző 18 éves lett.
+                </Paragraph>
+
+                <Paragraph>
+                    Ami különösen rendhagyó a fenti kódban az az hogy
+                    a <BgLightgray>formatDistanceToNow()</BgLightgray> funkciót használja a
+                    <BgLightgray>date-fns</BgLightgray> csomagból, amit még nem telepítettünk. A Parcel észlelte, hogy
+                    szükséged van a modulra,
+                    rákeresett az <BgLightgray>npmjs.com</BgLightgray> csomag regiszterben és telepítette azt lokálisan
+                    automatikusan. Ezt be is
+                    tudod bizonyítani, ha belenézel a <BgLightgray>package.json</BgLightgray> fájlba újra és látni
+                    fogod, hogy a <BgLightgray>dependencies</BgLightgray> (függőségek) mező megváltozott:
+                </Paragraph>
+
+                <CodeDisplay code={code_9_package_json}/>
+
+                <Paragraph>
+                    A Parcel hozzáadta a szükséges fájlokat is arra az esetre, ha valaki más használná a projektet és
+                    telepítené bármelyik függőséget amit felhasználtunk. Ha vetsz egy pillantást a mappára amelyben a
+                    <BgLightgray>parcel</BgLightgray> parancsot futtattad, számos új fájlt fogsz találni. A
+                    legérdekesebbek a következők:
+                </Paragraph>
+
+                <Paragraph>
+                    <li><BgLightgray>node_modules</BgLightgray>: A függőségi fájlok a Parcel-hez és a date-fns-hez.</li>
+                    <li><BgLightgray>dist</BgLightgray>: A disztribúciós mappa. Ezek a fájlok automatikusan csomagolva
+                        vannak, minify-olt fájlok melyeket a
+                        Parcel build-elt nekünk, és a fájlok melyek a <BgLightgray>localhost:1234</BgLightgray> oldalon
+                        vannak kiszolgálva. Ezek
+                        azok a fájlok melyeket fel kell töltened a webszerverre amikor azt publikálni szeretnéd a
+                        web-en.
+                    </li>
+                </Paragraph>
+
+                <Paragraph>
+                    Szóval ha tudjuk a csomag nevét akkor már használhatjuk is a kódunkban és a Parcel megkeresi,
+                    letölti és telepíti (jelen esetben másolja) a csomagot a helyi mappába a node_modules-ba.
+                </Paragraph>
+
+                <h2>Build-eljük a kódunkat a bemutatáshoz</h2>
+
+                <Paragraph>
+                    Azonban a kód még nincsen készen a bemutatásra. A legtöbb build eszközrendszernek van fejlesztői
+                    módja és production (bemutató) módja. A lényeges különbség az hogy a sok hasznos funkció amit
+                    fejlesztői módban használsz nem szükségesek a végső bemutatáskor, így nem lesz benne a production
+                    módban.
+                    Például a "hot modul replacement", az "élő újrafrissítés" és a "nem tömörített és a kommentelt
+                    kód"-ok. A teljesség igénye nélkül ez néhány megszokott webfejlesztő funkció volt amelyek nagyon
+                    hasznosak a fejlesztői módban, de nem nagyon hasznosak a production módban. A production-ban csak
+                    növelik a website méretét.
+                </Paragraph>
             </Article>
         </div>
     );

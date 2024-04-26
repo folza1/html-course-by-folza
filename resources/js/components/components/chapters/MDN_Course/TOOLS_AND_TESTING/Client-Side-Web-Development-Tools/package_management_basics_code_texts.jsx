@@ -34,3 +34,20 @@ export const code_6_index_html = `<!doctype html>
   </body>
 </html>
 `
+export const code_7_parcel_run = ` npx parcel index.html
+`
+
+export const code_8_parcel_run = `Server running at http://localhost:1234
+✨  Built in 193ms.
+`
+export const code_8_index_js = `import { formatDistanceToNow } from "date-fns";
+
+const date = "1996-09-13 10:00:00";
+document.body.textContent = \`\${formatDistanceToNow(new Date(date))} ago\`;
+`
+
+export const code_9_package_json = `"dependencies": {
+  "date-fns": "^2.12.0",
+  "parcel-bundler": "^1.12.4"
+}
+`
