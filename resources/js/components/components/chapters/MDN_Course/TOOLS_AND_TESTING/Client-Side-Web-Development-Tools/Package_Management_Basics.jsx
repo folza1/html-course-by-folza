@@ -15,6 +15,8 @@ import {
     code_8_parcel_run,
     code_8_index_js,
     code_9_package_json,
+    code_10_parcel_build,
+    code_11_parcel_build_2,
 } from "./package_management_basics_code_texts.jsx";
 
 export default function Package_Management_Basics() {
@@ -444,6 +446,33 @@ export default function Package_Management_Basics() {
                     kód"-ok. A teljesség igénye nélkül ez néhány megszokott webfejlesztő funkció volt amelyek nagyon
                     hasznosak a fejlesztői módban, de nem nagyon hasznosak a production módban. A production-ban csak
                     növelik a website méretét.
+                </Paragraph>
+
+                <Paragraph>
+                    Most állítsuk le az előző Parcel parancsot a <BgLightgray>CTRL+C</BgLightgray> billentyű
+                    kombinációval.
+                </Paragraph>
+
+                <Paragraph>
+                    Most pedig előkészítjük a példa oldalunkat egy képzeletbeli deployment-re (telepítésre). A
+                    Parcel-nek van egy további parancsa amellyel generálhatjuk a fájlokat a publikáláshoz, bundle-t
+                    (becsomagolt fájlokat) készít a build opcióval, amiről már beszéltünk.
+                </Paragraph>
+
+                <Paragraph>
+                    Futtasd a következő parancsot:
+                </Paragraph>
+
+                <CodeDisplay code={code_10_parcel_build}/>
+
+                <Paragraph>
+                    Utána ezt kellene látnod:
+                </Paragraph>
+
+                <CodeDisplay code={code_11_parcel_build_2}/>
+
+                <Paragraph>
+                    A production fájlok a <BgLightgray>dist</BgLightgray> mappában lesznek.
                 </Paragraph>
             </Article>
         </div>

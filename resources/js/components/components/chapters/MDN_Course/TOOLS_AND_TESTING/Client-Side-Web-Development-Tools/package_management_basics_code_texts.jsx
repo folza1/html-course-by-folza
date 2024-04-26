@@ -51,3 +51,12 @@ export const code_9_package_json = `"dependencies": {
   "parcel-bundler": "^1.12.4"
 }
 `
+export const code_10_parcel_build = `npx parcel build index.html
+`
+
+export const code_11_parcel_build_2 = `✨  Built in 9.35s.
+
+dist/my-project.fb76efcf.js.map    648.58 KB     64ms
+dist/my-project.fb76efcf.js        195.74 KB    8.43s
+dist/index.html                        288 B    806ms
+`
