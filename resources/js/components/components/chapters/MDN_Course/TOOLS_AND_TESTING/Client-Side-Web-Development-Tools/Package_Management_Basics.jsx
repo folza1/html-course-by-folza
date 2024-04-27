@@ -151,7 +151,7 @@ export default function Package_Management_Basics() {
 
                 <Note>
                     <Paragraph>
-                        <div className="bold inline">Megjegyzés:</div>
+                        <div className="bold inline mr-1">Megjegyzés:</div>
                         Az npm nem az egyetlen elérhető csomagkezelő. Egy másik népszerű alternatív csomagkezelő a <a
                         href="https://yarnpkg.com/" target="_blank">Yarn</a
                     >.
@@ -364,7 +364,7 @@ export default function Package_Management_Basics() {
 
                 <Note>
                     <Paragraph>
-                        <div className="bold inline">Megjegyzés:</div>
+                        <div className="bold inline mr-1">Megjegyzés:</div>
                         Ha olyan problémába ütközöl, hogy a terminál kiírja a "command not found" hibát, akkor próbáld
                         meg használni a következő parancsot az <BgLightgray>npx</BgLightgray> paranccsal, mint
                         például <BgLightgray>npx
@@ -531,7 +531,8 @@ export default function Package_Management_Basics() {
                 </Paragraph>
 
                 <Paragraph>
-                    Akkor most maradjunk a Parcel-nél, már csak azért is mert telepítettük. Próbáld meg futtatni a következőt:
+                    Akkor most maradjunk a Parcel-nél, már csak azért is mert telepítettük. Próbáld meg futtatni a
+                    következőt:
                 </Paragraph>
 
                 <CodeDisplay code={code_12_parcel_tree_shaking}/>
@@ -544,6 +545,31 @@ export default function Package_Management_Basics() {
 
                 <Paragraph>
                     Most a bundle (csomag) megközelítőleg 10K. Sokkal jobb.
+                </Paragraph>
+
+                <Paragraph>
+                    Ha fel szeretnénk tölteni a projektet egy szerverre, akkor elég lenne feltölteni a dist mappában
+                    lévő fájlokat. A Parcel automatikusan kezelte nekünk az összes fájlnév változást. Ajánlott belenézni
+                    a forráskódba a dist/index.html-ben, csak hogy megnézni a Parcel milyen automatikus változtatásokat
+                    hajtott végre.
+                </Paragraph>
+
+                <Note>
+                    <Paragraph>
+                        <div className="bold inline mr-1">Megjegyzés:</div>
+                        Amikor ezt a szöveget írták a Parcel 2 még nem volt kiadva. Azonban mikor azt kiadják ezek a
+                        parancsok még mindig működni fognak, mert a Parcel szerzői egy kicsit más nevet adnak az új
+                        verziónak. Ha a Parcel 1.x-et szeretnéd telepíteni akkor
+                        a <BgLightgray>parcel-bundler</BgLightgray> parancsot használd,
+                        ha a 2.x-et akarod akkor a <BgLightgray>parcel</BgLightgray> parancsot.
+                    </Paragraph>
+                </Note>
+
+                <Paragraph>
+                    Nagyon sok elérhető eszköz van és a Javascript csomag ökoszisztéma még eddig nem látott mértékben
+                    növekszik, amelynek meg vannak az előnyei és a hátrányai is. Javulás mindig is van és hogy a
+                    választék növekedése most hogy jobb vagy rosszabb nekünk, állandóan nő. Szembesülve a nagy
+                    eszközválasztékkal, valószínűleg a legfontosabb lecke, hogy megtanuljuk a választott eszköz mire is képes.
                 </Paragraph>
             </Article>
         </div>
