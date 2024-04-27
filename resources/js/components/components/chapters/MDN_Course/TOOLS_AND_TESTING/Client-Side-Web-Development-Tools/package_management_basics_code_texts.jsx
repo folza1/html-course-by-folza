@@ -34,8 +34,7 @@ export const code_6_index_html = `<!doctype html>
   </body>
 </html>
 `
-export const code_7_parcel_run = ` npx parcel index.html
-`
+export const code_7_parcel_run = ` npx parcel index.html`
 
 export const code_8_parcel_run = `Server running at http://localhost:1234
 ✨  Built in 193ms.
@@ -51,12 +50,19 @@ export const code_9_package_json = `"dependencies": {
   "parcel-bundler": "^1.12.4"
 }
 `
-export const code_10_parcel_build = `npx parcel build index.html
-`
+export const code_10_parcel_build = `npx parcel build index.html`
 
 export const code_11_parcel_build_2 = `✨  Built in 9.35s.
 
 dist/my-project.fb76efcf.js.map    648.58 KB     64ms
 dist/my-project.fb76efcf.js        195.74 KB    8.43s
 dist/index.html                        288 B    806ms
+`
+
+export const code_12_parcel_tree_shaking = `npx parcel build index.html --experimental-scope-hoisting`
+
+export const code_13_parcel_tree_shaking = `✨  Built in 7.87s.
+
+dist/my-project.86f8a5fc.js    10.34 KB    7.17s
+dist/index.html                   288 B    753ms
 `

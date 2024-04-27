@@ -17,6 +17,8 @@ import {
     code_9_package_json,
     code_10_parcel_build,
     code_11_parcel_build_2,
+    code_12_parcel_tree_shaking,
+    code_13_parcel_tree_shaking,
 } from "./package_management_basics_code_texts.jsx";
 
 export default function Package_Management_Basics() {
@@ -503,6 +505,45 @@ export default function Package_Management_Basics() {
                     Azonban itt van a fejlesztői eszközök esélye arra, hogy bizonyítsanak. Amíg az eszköz a gépünkön
                     van, megkérhetjük a szoftvert, hogy vizsgálja meg a kódunkat és csak azokat a funkciókat tartalmazza
                     amelyeket a production-ban használ. Ezt a folyamatot "Tree Shaking"-nek (fa rázásnak) hívjuk.
+                </Paragraph>
+
+                <Paragraph>
+                    És van is értelme ha le akarjuk csökkenteni a fájl méretét és így az app olyan gyorsan tölt be
+                    amennyire csak lehetséges. Különböző eszközök különböző módokon hajtják végre a tree shaking-et.
+                </Paragraph>
+
+                <Paragraph>
+                    Bár a lista hónapról hónapra növekszik, van három fő ajánlásunk olyan eszközökre amelyek csomagot
+                    készítenek a forráskódodból: A Webpack, a <a href="https://rollupjs.org/introduction/"
+                                                                 target="_blank">RollUp</a> és a Parcel. Több is
+                    elérhető, de ezek a népszerűbbek:
+                </Paragraph>
+
+                <Paragraph>
+                    <li>A RollUp eszköz tree shaking-et, és code splitting-et is kínál, mint főbb funkciókat.</li>
+                    <li>A Webpack-nak szüksége van némi konfigurációra, bár néhányan lehet alulbecsülik néhány fejlesztő
+                        Webpack beállításait.
+                    </li>
+                    <li>A Parcel esetében, főleg a 2-es verzióban egy speciális flag kell a tree shaking-hez a
+                        build-elés
+                        során, ami az <BgLightgray>--experimental-scope-hoisting</BgLightgray>
+                    </li>
+                </Paragraph>
+
+                <Paragraph>
+                    Akkor most maradjunk a Parcel-nél, már csak azért is mert telepítettük. Próbáld meg futtatni a következőt:
+                </Paragraph>
+
+                <CodeDisplay code={code_12_parcel_tree_shaking}/>
+
+                <Paragraph>
+                    És láthatod is a hatalmas különbséget:
+                </Paragraph>
+
+                <CodeDisplay code={code_13_parcel_tree_shaking}/>
+
+                <Paragraph>
+                    Most a bundle (csomag) megközelítőleg 10K. Sokkal jobb.
                 </Paragraph>
             </Article>
         </div>
