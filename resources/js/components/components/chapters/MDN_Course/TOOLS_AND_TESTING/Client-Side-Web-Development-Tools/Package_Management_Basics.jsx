@@ -486,8 +486,23 @@ export default function Package_Management_Basics() {
 
                 <Paragraph>
                     Amikor fejlesztési eszközöket használunk érdemes megkérdezni magunktól, hogy vajon jól csinálja-e
-                    majd a dolgát. Ebben az esetben a csomag közel 200KB, valójában tartalmazza az egész <BgLightgray>date-fns</BgLightgray>
+                    majd a dolgát. Ebben az esetben a csomag közel 200KB, valójában tartalmazza az
+                    egész <BgLightgray>date-fns</BgLightgray>
                     könyvtárat, nem csak azt a funkciót amit használunk.
+                </Paragraph>
+
+                <Paragraph>
+                    Ha nem használunk fejlesztői eszközöket és a <BgLightgray>
+                    &lt;script src=""&gt;
+                </BgLightgray> elemet használjuk a <BgLightgray>date-fns</BgLightgray>
+                    betöltésére, akkor nagyjából ugyanaz a dolog történne, az egész könyvtárat le kellene tölteni amikor
+                    a példa oldal betöltődik a böngészőben.
+                </Paragraph>
+
+                <Paragraph>
+                    Azonban itt van a fejlesztői eszközök esélye arra, hogy bizonyítsanak. Amíg az eszköz a gépünkön
+                    van, megkérhetjük a szoftvert, hogy vizsgálja meg a kódunkat és csak azokat a funkciókat tartalmazza
+                    amelyeket a production-ban használ. Ezt a folyamatot "Tree Shaking"-nek (fa rázásnak) hívjuk.
                 </Paragraph>
             </Article>
         </div>
