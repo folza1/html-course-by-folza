@@ -33,7 +33,7 @@ export default function Package_Management_Basics() {
 
             <Article>
                 <Paragraph>
-                    <div className="bold inline">Előfeltételek:</div>
+                    <div className="bold inline mr-1">Előfeltételek:</div>
                     Alapismeretek a <a target="_blank"
                                        href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a>, <a
                     target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a> és a <a
@@ -41,7 +41,7 @@ export default function Package_Management_Basics() {
                     href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">Javascript</a> nyelvekkel.
                 </Paragraph>
                 <Paragraph>
-                    <div className="bold inline">Cél:</div>
+                    <div className="bold inline mr-1">Cél:</div>
                     Megérteni mik is azok a csomagkezelők és csomag adattárak, miért van rájuk szükségünk és annak az
                     alapjai, hogy, hogyan használjuk őket.
                 </Paragraph>
