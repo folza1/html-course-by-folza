@@ -571,6 +571,10 @@ export default function Package_Management_Basics() {
                     választék növekedése most hogy jobb vagy rosszabb nekünk, állandóan nő. Szembesülve a nagy
                     eszközválasztékkal, valószínűleg a legfontosabb lecke, hogy megtanuljuk a választott eszköz mire is képes.
                 </Paragraph>
+
+                <Paragraph>
+                    Commit Teszt
+                </Paragraph>
             </Article>
         </div>
     );
