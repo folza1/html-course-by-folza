@@ -573,7 +573,7 @@ export default function Package_Management_Basics() {
                 </Paragraph>
 
                 <Paragraph>
-                    Commit Teszt Teszt 2
+                    Commit Teszt Teszt 3
                 </Paragraph>
             </Article>
         </div>
