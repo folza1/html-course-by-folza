@@ -569,7 +569,18 @@ export default function Package_Management_Basics() {
                     Nagyon sok elérhető eszköz van és a Javascript csomag ökoszisztéma még eddig nem látott mértékben
                     növekszik, amelynek meg vannak az előnyei és a hátrányai is. Javulás mindig is van és hogy a
                     választék növekedése most hogy jobb vagy rosszabb nekünk, állandóan nő. Szembesülve a nagy
-                    eszközválasztékkal, valószínűleg a legfontosabb lecke, hogy megtanuljuk a választott eszköz mire is képes.
+                    eszközválasztékkal, valószínűleg a legfontosabb lecke, hogy megtanuljuk a választott eszköz mire is
+                    képes.
+                </Paragraph>
+            </Article>
+
+            <Article>
+                <h1>Egy elnagyolt útmutató csomagkezelő kliensekhez</h1>
+
+                <Paragraph>
+                    Ebben a tutorial-ban telepítettük a Parcel csomagot npm-et használva és mint említettük korábban van
+                    néhány alternatívája is. Érdemes legalább azt tudni, hogy léteznek és hogy van elképzelésünk az
+                    eszközök közös parancsairól. Néhányat már láttunk működés közben, de most nézzünk meg még pár másikat.
                 </Paragraph>
 
                 <Paragraph>
