@@ -66,3 +66,12 @@ export const code_13_parcel_tree_shaking = `✨  Built in 7.87s.
 dist/my-project.86f8a5fc.js    10.34 KB    7.17s
 dist/index.html                   288 B    753ms
 `
+export const code_14_init = `npm init
+yarn init
+`
+export const code_15_install_dependencies = `npm install date-fns
+yarn add date-fns
+`
+export const code_16_update_dependencies = `npm update
+yarn upgrade
+`
