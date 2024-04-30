@@ -659,6 +659,19 @@ export default function Package_Management_Basics() {
                 <h3>Függőségek update-elése (frissítése)</h3>
 
                 <CodeDisplay code={code_16_update_dependencies}/>
+
+                <Paragraph>
+                    Ez a parancs a jelenleg telepített függőségekhez fog frissítéseket keresni és ha van telepíti is
+                    azokat. A megadott verzió skálán (range)-en belül, amely meg van adva
+                    a <BgLightgray>package.json</BgLightgray>-ban
+                </Paragraph>
+
+                <Paragraph>
+                    A range meg van határozva a <BgLightgray>package.json</BgLightgray> fájl-ban, mint
+                    a <BgLightgray>date-fns@^2.0.1.</BgLightgray> Ebben az esetben a <BgLightgray>^</BgLightgray>
+                    karakter azt jelzi, hogy minden kisebb kiadott verzió és patch beleértve a 2.0.1-től felfelé egészen
+                    3.0.0-ig amelyet már nem kell beleérteni
+                </Paragraph>
             </Article>
         </div>
     );
