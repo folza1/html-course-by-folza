@@ -19,6 +19,9 @@ import {
     code_11_parcel_build_2,
     code_12_parcel_tree_shaking,
     code_13_parcel_tree_shaking,
+    code_14_init,
+    code_15_install_dependencies,
+    code_16_update_dependencies,
 } from "./package_management_basics_code_texts.jsx";
 
 export default function Package_Management_Basics() {
@@ -580,7 +583,94 @@ export default function Package_Management_Basics() {
                 <Paragraph>
                     Ebben a tutorial-ban telepítettük a Parcel csomagot npm-et használva és mint említettük korábban van
                     néhány alternatívája is. Érdemes legalább azt tudni, hogy léteznek és hogy van elképzelésünk az
-                    eszközök közös parancsairól. Néhányat már láttunk működés közben, de most nézzünk meg még pár másikat.
+                    eszközök közös parancsairól. Néhányat már láttunk működés közben, de most nézzünk meg még pár
+                    másikat.
+                </Paragraph>
+
+                <Paragraph>
+                    Ez a lista nőni fog idővel, de a cikk írásakor a következő fő csomagkezelők elérhetőek:
+                    <li>A npm az <a href="https://www.npmjs.com/" target="_blank">npmjs.org</a>-on</li>
+                    <li>A pnpm a <a href="https://pnpm.js.org/" target="_blank">pnpm.js.org</a>-on</li>
+                    <li>A Yarn a <a href="https://yarnpkg.com/" target="_blank">yarnpkg.com</a>-on</li>
+                </Paragraph>
+
+                <Paragraph>
+                    Az npm és a pnpm hasonlóak a parancssor nézőpontból. Lényegében a pnpm célja hogy teljesen
+                    egyenértékű legyen azzal amit az npm kínál. Abban különbözik hogy különböző metódust használ a
+                    letöltéshez és a csomagok tárolásához a számítógépen, azzal a céllal, hogy csökkentse a teljes
+                    lemezterület használatot.
+                </Paragraph>
+
+                <Paragraph>
+                    Ahol a példáinkban az npm-et használjuk, pnpm-el is fog működni a parancs.
+                </Paragraph>
+
+                <Paragraph>
+                    A Yarn-ot gyakran gyorsabbnak tekintik a telepítés szempontjából mint az npm-et, bár a teljesítmény
+                    változhat. Ez fontos a fejlesztőknek mert lényeges idő mehet el a függőségek telepítésével és a
+                    számítógépre másolással.
+                </Paragraph>
+
+                <Note>
+                    <Paragraph>
+                        <div className="bold inline mr-1">Megjegyzés:</div>
+                        Az npm csomagkezelőnek nem szükséges, hogy az npm regiszterből telepítse a csomagokat, annak
+                        ellenére, hogy ugyanaz a nevük. A pnpm és a Yarn ugyanazt
+                        a <BgLightgray>package.json</BgLightgray> formátumú fájlt
+                        használja mint az npm és bármelyik csomagot telepítheti bármelyik regiszterből.
+                    </Paragraph>
+                </Note>
+
+                <Paragraph>
+                    Most nézzünk meg pár gyakori tevékenységet amit a csomagkezelőkkel tehetsz.
+                </Paragraph>
+
+                <h2>Inicializálni (elindítani) egy új projektet</h2>
+
+                <CodeDisplay code={code_14_init}/>
+
+                <Paragraph>
+                    Amint fentebb láthattuk ez a parancs végigvezet minket egy sor kérdésen, amely körülírja a
+                    projektünket (név, liszensz, leírás, és így tovább), aztán készít
+                    egy <BgLightgray>package.json</BgLightgray> fájlt, amely majd
+                    meta információkat tartalmaz a projektedhez és a függőségeihez.
+                </Paragraph>
+
+                <h2>Függőségek telepítése</h2>
+
+                <CodeDisplay code={code_15_install_dependencies}/>
+
+                <Paragraph>
+                    Láthattuk azt is hogyan <BgLightgray>telepíthetünk</BgLightgray> csomagokat a fenti módon. Ez
+                    közvetlenül hozzáadja a <BgLightgray>date-fns</BgLightgray>
+                    csomagot a munkamappába (working directory-be) egy almappába
+                    a <BgLightgray>node_modules</BgLightgray>-ba a <BgLightgray>date-fns</BgLightgray> csomag
+                    függőségeivel
+                    együtt.
+                </Paragraph>
+
+                <Paragraph>
+                    Alapértelmezettként ez a parancs a legújabb date-fns csomagot fogja telepíteni, de beállíthatunk
+                    másat is. Kérhetjük, hogy a date-fns@1-et telpítse ami a legújabb 1.x verziót fogja, amely az
+                    1.30.1. De úgy is dönthetünk, hogy date-fns@^2.3.0 amely azt jelenti, hogy a legújabb verzió a 2.3.0
+                    után vagy beleértve még a 2.3.0-at, amely a cikk írásakor a 2.8.1-es verzió.
+                </Paragraph>
+
+                <h3>Függőségek update-elése (frissítése)</h3>
+
+                <CodeDisplay code={code_16_update_dependencies}/>
+
+                <Paragraph>
+                    Ez a parancs a jelenleg telepített függőségekhez fog frissítéseket keresni és ha van telepíti is
+                    azokat. A megadott verzió skálán (range)-en belül, amely meg van adva
+                    a <BgLightgray>package.json</BgLightgray>-ban
+                </Paragraph>
+
+                <Paragraph>
+                    A range meg van határozva a <BgLightgray>package.json</BgLightgray> fájl-ban, mint
+                    a <BgLightgray>date-fns@^2.0.1.</BgLightgray> Ebben az esetben a <BgLightgray>^</BgLightgray>
+                    karakter azt jelzi, hogy minden kisebb kiadott verzió és patch beleértve a 2.0.1-től felfelé egészen
+                    3.0.0-ig amelyet már nem kell beleérteni
                 </Paragraph>
             </Article>
         </div>
