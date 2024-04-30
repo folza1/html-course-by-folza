@@ -582,10 +582,6 @@ export default function Package_Management_Basics() {
                     néhány alternatívája is. Érdemes legalább azt tudni, hogy léteznek és hogy van elképzelésünk az
                     eszközök közös parancsairól. Néhányat már láttunk működés közben, de most nézzünk meg még pár másikat.
                 </Paragraph>
-
-                <Paragraph>
-                    Commit Teszt Teszt 3
-                </Paragraph>
             </Article>
         </div>
     );
