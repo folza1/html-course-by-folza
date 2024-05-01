@@ -669,9 +669,27 @@ export default function Package_Management_Basics() {
                 <Paragraph>
                     A range meg van határozva a <BgLightgray>package.json</BgLightgray> fájl-ban, mint
                     a <BgLightgray>date-fns@^2.0.1.</BgLightgray> Ebben az esetben a <BgLightgray>^</BgLightgray>
-                    karakter azt jelzi, hogy minden kisebb kiadott verzió és patch beleértve a 2.0.1-től felfelé egészen
-                    3.0.0-ig amelyet már nem kell beleérteni
+                    karakter azt jelzi, hogy minden kiadott alverzió és patch, beleértve a 2.0.1-től felfelé
+                    egészen
+                    3.0.0-ig, amelyet már nem kell beleérteni.
                 </Paragraph>
+
+                <Paragraph>
+                    Ez egy <a href="https://semver.org/" target="_blank">semver</a> rendszer alapján van meghatározva,
+                    amely egy kicsit bonyolultnak tűnik a
+                    dokumentációból nézve, de könnyen leegyszerűsíthető ha csak az összefoglaló információt nézzük és,
+                    hogy a verzió a következőképpen van
+                    reprezentálva: <BgLightgray>FŐVERZIÓ.ALVERZIÓ.PATCH</BgLightgray>, szóval a 2.0.1
+                    jelentése, hogy a 2. főverzió, 0. alverzió, és az 1. patch-el. Egy nagyszerű módja, hogy kipróbáljuk a semver
+                    értékeket, a <a href="https://semver.npmjs.com/" target="_blank">semver kalkulátor</a>.
+                </Paragraph>
+
+                <Paragraph>
+                    Fontos, hogy az <BgLightgray>npm update</BgLightgray> nem fogja upgrade-elni a függőségeket a range-en kívüli verzióra amely a
+                    <BgLightgray>package.json</BgLightgray> fájlban található. Upgrade-eléshez szükséges lesz telepíteni azt a főverziót.
+                </Paragraph>
+
+                <h2>Sebezhetőségekre való vizsgálat</h2>
             </Article>
         </div>
     );
