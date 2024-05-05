@@ -22,6 +22,7 @@ import {
     code_14_init,
     code_15_install_dependencies,
     code_16_update_dependencies,
+    code_17_vulnerabilities,
 } from "./package_management_basics_code_texts.jsx";
 
 export default function Package_Management_Basics() {
@@ -680,17 +681,41 @@ export default function Package_Management_Basics() {
                     dokumentációból nézve, de könnyen leegyszerűsíthető ha csak az összefoglaló információt nézzük és,
                     hogy a verzió a következőképpen van
                     reprezentálva: <BgLightgray>FŐVERZIÓ.ALVERZIÓ.PATCH</BgLightgray>, szóval a 2.0.1
-                    jelentése, hogy a 2. főverzió, 0. alverzió, és az 1. patch-el. Egy nagyszerű módja, hogy kipróbáljuk a semver
+                    jelentése, hogy a 2. főverzió, 0. alverzió, és az 1. patch-el. Egy nagyszerű módja, hogy kipróbáljuk
+                    a semver
                     értékeket, a <a href="https://semver.npmjs.com/" target="_blank">semver kalkulátor</a>.
                 </Paragraph>
 
                 <Paragraph>
-                    Fontos, hogy az <BgLightgray>npm update</BgLightgray> nem fogja upgrade-elni a függőségeket a range-en kívüli verzióra amely a
-                    <BgLightgray>package.json</BgLightgray> fájlban található. Upgrade-eléshez szükséges lesz telepíteni azt a főverziót.
+                    Fontos, hogy az <BgLightgray>npm update</BgLightgray> nem fogja upgrade-elni a függőségeket a
+                    range-en kívüli verzióra amely a
+                    <BgLightgray>package.json</BgLightgray> fájlban található. Upgrade-eléshez szükséges lesz telepíteni
+                    azt a főverziót.
                 </Paragraph>
 
                 <h2>Sebezhetőségekre való vizsgálat</h2>
+
+                <CodeDisplay code={code_17_vulnerabilities}/>
+
+                <Paragraph>
+                    Ez a parancs ellenőrizni fogja a függőségi fát a projektedben és a használt függőség verzióját
+                    összeveti egy sebezhetőség adatbázissal és értesít téged, ha potenciálisan sebezhető csomag van a
+                    projektedben.
+                </Paragraph>
+
+                <Paragraph>
+                    Egy jó kezdőpont a sebezhetőségekről tanulni a <a href="https://snyk.io/" target="_blank">Snyk
+                    projekt</a>, amely lefedi mind a Javascript és más
+                    programozási nyelv csomagjait is.
+                </Paragraph>
+
+                <h2>Függőségre való vizsgálat</h2>
+
+                <Paragraph>
+
+                </Paragraph>
             </Article>
+
         </div>
     );
 }

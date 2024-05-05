@@ -75,3 +75,6 @@ yarn add date-fns
 export const code_16_update_dependencies = `npm update
 yarn upgrade
 `
+export const code_17_vulnerabilities = `npm audit
+yarn audit
+`
