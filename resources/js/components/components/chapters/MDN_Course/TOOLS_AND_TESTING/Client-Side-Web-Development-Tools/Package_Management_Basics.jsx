@@ -23,6 +23,12 @@ import {
     code_15_install_dependencies,
     code_16_update_dependencies,
     code_17_vulnerabilities,
+    code_18_checking,
+    code_19_run_own,
+    code_20_scripts,
+    code_21_scripts,
+    code_22_run_dev,
+    code_23_index_html
 } from "./package_management_basics_code_texts.jsx";
 
 export default function Package_Management_Basics() {
@@ -711,8 +717,124 @@ export default function Package_Management_Basics() {
 
                 <h2>Függőségre való vizsgálat</h2>
 
-                <Paragraph>
+                <CodeDisplay code={code_18_checking}/>
 
+                <Paragraph>
+                    Ez a parancs megmutatja melyik verziója van telepítve a függőségnek és hogyan került bele a
+                    projektedbe. Lehetséges hogy egy másik felső szintű csomag is be van behívva
+                    a <BgLightgray>date-fns</BgLightgray>-be. Az is
+                    lehetséges és nem ideális hogy több verzió is telepítve van a projektedben ugyanabból a csomagból.
+                    Ezt átnézhetjük a <a href="https://lodash.com/" target="_blank">lodash</a> csomaggal ami nagyon
+                    hasznos tud lenni.
+                </Paragraph>
+
+                <Paragraph>
+                    Bár a csomagkezelő alapból vizsgálja, hogy ne legyen csomag duplikáció, lehet, hogy meg akarod nézni
+                    pontosan melyik verzió is van telepítve.
+                </Paragraph>
+
+                <h2>További parancsok</h2>
+
+                <Paragraph>
+                    Megtudhatsz többet a különböző parancsokról még az <a href="https://docs.npmjs.com/cli/v10"
+                                                                          target="_blank">npm</a> és a <a
+                    href="https://classic.yarnpkg.com/en/docs/cli/" target="_blank">yarn</a
+                > online felületén. Ismétlésként
+                    elmondanám, hogy a <a href="https://pnpm.io/cli/add" target="_blank">pnpm</a> parancsok megegyeznek
+                    az npm parancsokkal kiegészítve hasznos
+                    kiegészítőkkel.
+                </Paragraph>
+            </Article>
+
+            <Article>
+                <h1>Készítsd el a saját parancsaidat</h1>
+                <Paragraph>
+                    A csomagkezelők támogatják, hogy saját parancsokat hozz létre és futtasd őket a parancssorban.
+                    Például elkészíthetjük a következő parancsot:
+                </Paragraph>
+
+                <CodeDisplay code={code_19_run_own}/>
+
+                <Paragraph>
+                    Ez le fog futtatni egy egyedi szkriptet, hogy elindítsa a projektünket "fejlesztői mód"-ban.
+                    Valójában rendszeresen használjuk ezt az összes projektben amikor helyi fejlesztési módban vagyunk
+                    és
+                    ez egy kicsit különbözően fut mint ha production módban lenne.
+                </Paragraph>
+
+                <Paragraph>
+                    Ha ezt kipróbáltad a teszt Parcel projektben akkor valószínűleg egy "dev script is missing" hibát
+                    kell, hogy dobjon. Ez azért van mert az npm, Yarn és hasonlók keresik a dev property-t
+                    a <BgLightgray>scripts</BgLightgray> property-ben a <BgLightgray>package.json</BgLightgray> fájlban.
+                </Paragraph>
+
+                <Paragraph>
+                    A Parcel futtatni tud egy fejlesztői szervert a következő parancssal: <BgLightgray>parcel serve
+                    filename.html</BgLightgray>,
+                    amelyet gyakran használhatunk a fejlesztés során.
+                </Paragraph>
+
+                <Paragraph>
+                    Most akkor készítsünk egy egyedi rövidített parancsot a "dev"-et
+                    a <BgLightgray>package.json</BgLightgray>-ban.
+                </Paragraph>
+
+                <Paragraph>
+                    Ha követted a tananyagot korábbról, akkor lennie kell
+                    egy <BgLightgray>package.json</BgLightgray> fájlnak a parcel-experiment
+                    könyvtárban. Nyisd meg és a <BgLightgray>scripts</BgLightgray> résznél látnod kellene a következőt:
+                </Paragraph>
+
+                <CodeDisplay code={code_20_scripts}/>
+
+                <Paragraph>
+                    Változtasd meg erre és mentsd el a fájlt:
+                </Paragraph>
+
+                <CodeDisplay code={code_21_scripts}/>
+
+                <Paragraph>
+                    Ezennel adtunk egy egyedi <BgLightgray>dev</BgLightgray> parancsot npm szkript-ként.
+                </Paragraph>
+
+                <Paragraph>
+                    Most próbáljuk meg futtatni a terminálban, miközben
+                    a <BgLightgray>parcel-experiment</BgLightgray> könyvtárban vagy:
+                </Paragraph>
+
+                <CodeDisplay code={code_22_run_dev}/>
+
+                <Paragraph>
+                    Ez el fogja indítani a Parcel-t és a helyi fejlesztői szerveren futtatja az index.html-t, amelyet
+                    már láttunk korábban:
+                </Paragraph>
+
+                <CodeDisplay code={code_23_index_html}/>
+
+                <Paragraph>
+                    Továbbá, az npm és yarn parancsok okosak abban, hogy parancssoros eszközökre fognak keresni, amelyek
+                    lokálisan telepítve vannak a projektben, még mielőtt megkeresnéd őket hagyományos módszerekkel. <a
+                    href="https://docs.npmjs.com/cli/v10/commands/npm-run-script" target="_blank">Tanulhatsz még
+                    a <BgLightgray>run</BgLightgray> parancs technikai bonyodalmairól</a>, bár a legtöbb esetben a
+                    saját szkriptek is kiválóan működnek.
+                </Paragraph>
+
+                <Paragraph>
+                    Szinte bármilyen dolgot adhatsz a scripts property-hez, amelyek segítik a munkádat. Mi bizonyára
+                    fogunk és <a
+                    href="https://github.com/facebook/create-react-app/blob/c5b96c2853671baa3f1f297ec3b36d7358898304/package.json#L6"
+                    target="_blank">mások
+                    is</a
+                >.
+                </Paragraph>
+            </Article>
+
+            <Article>
+                <h1>Összefoglalás</h1>
+
+                <Paragraph>
+                    Ezennel a csomagkezelők túra végéhez is értünk. A következő téma, hogy felépítünk egy minta
+                    eszközláncot (toolchain-et), amely segít majd átültetni a gyakorlatba mindazt, amit tanultunk eddig.
                 </Paragraph>
             </Article>
 

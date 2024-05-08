@@ -78,3 +78,24 @@ yarn upgrade
 export const code_17_vulnerabilities = `npm audit
 yarn audit
 `
+
+export const code_18_checking = `npm ls date-fns
+yarn why date-fns
+`
+export const code_19_run_own = `npm run dev
+# or yarn run dev
+`
+export const code_20_scripts = `"scripts": {
+  "test": "echo \\"Error: no test specified\\" && exit 1",
+},
+`
+export const code_21_scripts = `"scripts": {
+  "test": "echo \\"Error: no test specified\\" && exit 1",
+  "dev": "parcel serve index.html"
+},
+`
+export const code_22_run_dev = ` npm run dev
+`
+export const code_23_index_html = `Server running at http://localhost:1234
+✨  Built in 5.48s.
+`
