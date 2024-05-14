@@ -153,12 +153,32 @@ export default function Introducing_A_Complete_Toolchain() {
                     Azonban ez a projekt csak 4 SVG képet tartalmaz, amelyeket az <a
                     href="https://www.npmjs.com/package/svgo" target="_blank">SVGO használatával minimalizálunk
                     manuálisan</a
-> mielőtt hozzáadnánk a projekthez.
+                > mielőtt hozzáadnánk a projekthez.
                 </Paragraph>
             </Article>
 
             <Article>
                 <h1>Egy pár előfeltétel</h1>
+                <Paragraph>
+                    Amellett az eszközök mellet amelyeket telepíteni fogunk, hogy hozzájáruljanak az eszközláncunkhoz,
+                    megemlítettünk két webszolgáltatást a fenti eszközök között. Most használjuk ki a lehetőséget és
+                    állítsuk be őket mielőtt továbbmennénk. Készítened kellesz egy GitHub és Netlify fiókot, ha
+                    szeretnéd teljesíteni a tananyagot.
+                </Paragraph>
+                <Paragraph>
+                    <li>
+                        Ahogyan említettük előzőleg, a Github az egy forráskód adattár amely közösségi funkciókat
+                        tartalmaz, mint a probléma követés, a projekt kiadások (release) követése és még sok más. A
+                        következő fejezetben fel fogunk tölteni egy GitHub adattárba és utána telepíthetjük majd a
+                        szoftvert a web-re.
+                    </li>
+                    <li>
+                        A Netlify az egy hosting-szolgáltatás statikus weboldalak számára (amelyek csak olyan fájlokat
+                        tatalmaznak amelyek nem változnak valós időben), amely megengedi nekünk, hogy egy nap többször
+                        deploy-oljunk és ingyenesen hosting-oljunk mindenféle statikus oldalakat. A Netlify szolgáltat
+                        nekünk egy "otthont a web-en", ahol ingyenesen deploy-olhatunk és tesztelhetjük az applikációnkat.
+                    </li>
+                </Paragraph>
             </Article>
         </div>
     )
