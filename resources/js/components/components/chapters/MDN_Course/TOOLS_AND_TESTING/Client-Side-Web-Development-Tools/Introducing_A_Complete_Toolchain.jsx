@@ -176,8 +176,24 @@ export default function Introducing_A_Complete_Toolchain() {
                         A Netlify az egy hosting-szolgáltatás statikus weboldalak számára (amelyek csak olyan fájlokat
                         tatalmaznak amelyek nem változnak valós időben), amely megengedi nekünk, hogy egy nap többször
                         deploy-oljunk és ingyenesen hosting-oljunk mindenféle statikus oldalakat. A Netlify szolgáltat
-                        nekünk egy "otthont a web-en", ahol ingyenesen deploy-olhatunk és tesztelhetjük az applikációnkat.
+                        nekünk egy "otthont a web-en", ahol ingyenesen deploy-olhatunk és tesztelhetjük az
+                        applikációnkat.
                     </li>
+                </Paragraph>
+
+                <Paragraph>
+                    Miután regisztráltál a <a href="https://github.com/" target="_blank">GitHub</a>-ra (Kattints a Sign
+                    Up Link-re a kezdőlapon, ha még nincsen fiókod és
+                    kövesd az utasításokat), használhatod a GitHub fiókodat, hogy hitelesítsd magad a <a
+                    href="https://www.netlify.com/" target="_blank">Netlify</a
+                >-on
+                    (kattints a Sign Up-ra, aztán válaszd ki a "Sign up with one of the following" listából a
+                    GitHub-ot), így technikailag csak egy fiókot kell regisztrálnod.
+                </Paragraph>
+
+                <Paragraph>
+                    Később szükséges lesz csatlakoztatni a Netlify fiókodat a Github adattáradhoz, hogy telepítsd a
+                    projektet, amit a következő fejezetben láthatsz.
                 </Paragraph>
             </Article>
         </div>
