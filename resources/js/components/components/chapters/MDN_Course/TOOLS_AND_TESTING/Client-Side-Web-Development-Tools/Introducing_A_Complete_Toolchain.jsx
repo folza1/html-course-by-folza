@@ -196,6 +196,82 @@ export default function Introducing_A_Complete_Toolchain() {
                     projektet, amit a következő fejezetben láthatsz.
                 </Paragraph>
             </Article>
+
+            <Article>
+                <h1>Az eszközök három szintje</h1>
+
+                <Paragraph>
+                    Ahogyan már beszéltünk az első fejezetben róla, az eszközlánc a következő fázisokban lesz
+                    struktúrálva:
+
+                    <li>
+                        <span className="bold">Biztonsági Háló</span>: Stabillá és még hatékonyabbá teszi a szoftver
+                        fejlesztés élményét. Akár úgy is
+                        hívhatnánk ez a mi fejlesztői környezetünk.
+                    </li>
+
+                    <li>
+                        <span className="bold">Transzformáció</span>: Eszközhasználat mely megengedi nekünk használni a
+                        legújabb funkcióit egy nyelvnek (mint például a JavaScript) vagy egy egészen más nyelvnek (mint
+                        például a JSX vagy a TypeScript) a fejlesztési folyamat során és aztán transzformáljuk a
+                        kódunkat úgy, hogy a produkciós verzió sok modern és régebbi böngészőben futhasson.
+                    </li>
+
+                    <li>
+                        <span className="bold">Fejlesztés után</span>: Eszközhasználat amely azután jön szóba amikor már
+                        készen vagy a fejlesztéssel és biztosítani szeretnéd, hogy a szoftvered a web-en legyen és
+                        folyamatosan működjön is. Ebben az esettanulmányban adunk pár tesztet a kódodhoz és telepítjük
+                        az app-ot a Netlify használatával, így elérhető lesz mindenki számára a web-en.
+                    </li>
+
+                </Paragraph>
+
+                <Paragraph>
+                    Most kezdjünk el dolgozni ezeken! Kezdjük a fejlesztői környezettel!
+                </Paragraph>
+            </Article>
+
+            <Article>
+                <h1>Fejlesztői környezet létrehozása</h1>
+
+                <Paragraph>
+                    Az eszközláncnak ez a része néha úgy tűnik, hogy késlelteti az aktuális munkát és nagyon könnyű
+                    beleesni abba a hibába, hogy sok időt töltesz azzal, hogy egy pont jó környezetet próbálsz
+                    beállítani.
+                </Paragraph>
+
+                <Paragraph>
+                    De úgy is gondolhatod, hogy ugyanolyan módon állítod be, mint a fizikai mmunkakörnyezetet. A széknek
+                    kényelmesnek kell lennie és jó pozícióba állítod, hogy jó legyen a testtartásodnak. Szükséged van
+                    áramra, Wi-Fi-re és USB port-okra! Fontos lehet még a dekoráció vagy a zene amely segíti a mentális
+                    állapotod. Ez mind fontos, hogy a legjobbat kihozd magadból munka során és az lenne a jó ha
+                    mindezt egyszer elég lenne beállítani, ha minden megfelelő.
+                </Paragraph>
+
+                <Paragraph>
+                    Ugyanilyen módon állíthatod be a fejlesztői környezetedet is, ha minden rendben, akkor elég egyszer
+                    beállítani és később újra felhasználható a jövőbeni projektekhez. Valószínűleg rendszeresen át
+                    akarod
+                    majd nézni az eszközlánc ezen részét és átgondolni vannak-e újabb frissítések vagy változások
+                    melyeket bevezetnél, de azok nem szükségesek olyan gyakran.
+                </Paragraph>
+
+                <Paragraph>
+                    Az eszközláncod a saját szükségleteid szerint változik, de ebben a (lehetséges) eszközláncban az
+                    előre telepített eszközök a következők:
+                </Paragraph>
+
+                <Paragraph>
+                    <li>Könyvtár telepítő eszközök - hogy függőségeket adhass hozzá</li>
+                    <li>Kód vizsgálat irányítás</li>
+                    <li>Kód tisztító eszközök - a JavaScript, CSS és HTML tisztításához</li>
+                    <li>Kód linting eszközök - a kód linteléséhez</li>
+                </Paragraph>
+                Library installation tools — for adding dependencies.
+                Code revision control.
+                Code tidying tools — for tidying JavaScript, CSS, and HTML.
+                Code linting tools — for linting our code.
+            </Article>
         </div>
     )
 };
