@@ -263,15 +263,37 @@ export default function Introducing_A_Complete_Toolchain() {
 
                 <Paragraph>
                     <li>Könyvtár telepítő eszközök - hogy függőségeket adhass hozzá</li>
-                    <li>Kód vizsgálat irányítás</li>
+                    <li>Kód verziókezelés</li>
                     <li>Kód tisztító eszközök - a JavaScript, CSS és HTML tisztításához</li>
                     <li>Kód linting eszközök - a kód linteléséhez</li>
                 </Paragraph>
-                Library installation tools — for adding dependencies.
-                Code revision control.
-                Code tidying tools — for tidying JavaScript, CSS, and HTML.
-                Code linting tools — for linting our code.
+
+                <h2>Könyvtár telepítő eszközök</h2>
+
+                <Paragraph>
+                    Npm-et fogunk telepíteni eszközként, amellyel először a második fejezetben találkoztunk. Már
+                    telepítve kellene, hogy legyen Node.js és npm a gépeden, de, ha nem akkor <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups"
+                    target="_blank">tekints vissza arra a
+                    fejezetre</a>.
+                </Paragraph>
+
+                <Note>
+                    <Paragraph>
+                        <div className="bold inline mr-1">Megjegyzés:</div>
+                        Bár nem nyílvánvaló a telepítési folyamatból, az npm telepítésével egy kiegészítő eszközt is
+                        telepít, amit npx-nek neveznek. A fejezetben később fogjuk használni az npx-et, hogy segítsen
+                        futtatni eszközöket, amelyek lokális függőségként vannak telepítve a projekthez.
+                    </Paragraph>
+                </Note>
+
+                <Paragraph>
+                    Az npm arra lesz használva, hogy telepítsük az eszközláncunk későbbi elemeit. Először is azonban
+                    telepíteni fogjuk a git-et, hogy segítséget kapjunk a verziókezeléshez
+                </Paragraph>
             </Article>
+            npm will be used to install subsequent parts of our toolchain. First of all, however, we'll install git to
+            help with revision control.
         </div>
     )
 };
