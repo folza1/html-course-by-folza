@@ -350,7 +350,7 @@ export default function Introducing_A_Complete_Toolchain() {
                     vagy még közvetlenül a kódszerkesztődből, ahogyan látszik a példában a Visual Studio Code-al:
                 </Paragraph>
 
-                <div className="image-container"><img src={git_VS_Code} alt="Git in Code Editor"/></div>
+                {/*<div className="image-container"><img src={git_VS_Code} alt="Git in Code Editor"/></div>*/}
 
 
             </Article>
