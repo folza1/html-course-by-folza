@@ -289,11 +289,49 @@ export default function Introducing_A_Complete_Toolchain() {
 
                 <Paragraph>
                     Az npm arra lesz használva, hogy telepítsük az eszközláncunk későbbi elemeit. Először is azonban
-                    telepíteni fogjuk a git-et, hogy segítséget kapjunk a verziókezeléshez
+                    telepíteni fogjuk a git-et, hogy segítséget kapjunk a verziókezeléshez.
+                </Paragraph>
+
+                <h2>Kód verzió kezelés</h2>
+
+                <Paragraph>
+                    Lehetséges, hogy hallottál már a git-ről korábban. A <a href="https://git-scm.com/"
+                                                                            target="_blank">Git</a> jelenleg a
+                    legnépszerűbb forráskód verzió
+                    kezelő eszköz fejlesztők számára. A verzió kezelő sok előnnyel rendelkezik, például biztonsági
+                    másolatot készíthetsz a munkádról egy távoli helyen és csapatban dolgozhatsz ugyanazon a projekten
+                    anélkül, hogy félned kellene attól, hogy felülírjátok egymás kódját.
+                </Paragraph>
+
+                <Paragraph>
+                    Lehet, hogy nyílvánvaló lehet néhányaknak, de megéri ismételni: A Git nem ugyanaz mint a GitHub. A
+                    Git a verzió kezelő eszköz, míg a <a href="https://github.com/" target="_blank">GitHub</a> egy
+                    online tárhely git adattárakhoz, plusz számos hasznos
+                    eszközökkel dolgozhatsz ott. Jegyezd meg azonban, hogy GitHub-ot fogunk használni ebben a
+                    fejezetben. Van számos alternatívája mint a <a href="https://about.gitlab.com/"
+                                                                   target="_blank">GitLab</a> és a <a
+                    href="https://www.atlassian.com/software/bitbucket" target="_blank">Bitbucket</a
+                > és még
+                    tárolhatod saját tárhelyen
+                    is az adattáraidat.
+                </Paragraph>
+
+                <Paragraph>
+                    Használni a verzió kezelőt a projekteidben és belevenni az eszköztárba segít majd a kódod
+                    evolúciójában azaz fejlődésében. Segítségével "commit"-olhatod a munkád részeit ahogyan haladsz
+                    előre és kommenteket is adhatsz hozzá mint például "Új funkció hozzáadva" vagy "Az egyik hiba
+                    kijavítva valaminek a változtatásával". A "commit"-ról megtudhatsz egy későbbi fejezetben.
+                    Lényegében csinálsz egy pillanatképet a projektedről, hogy bármikor visszamehess oda ha valamit
+                    változtatni kell. Az a "commit". Így megvizsgálhatod a projektedet fejlesztési szakaszonként.
+                </Paragraph>
+
+                <Paragraph>
+                    A verziókezelés lehetővé teszi, hogy ágakra oszd a projekted, elkülönülő verziókat készíts és új
+                    működéseket adj hozzá anélkül, hogy az hatással lenne az eredeti kódra.
                 </Paragraph>
             </Article>
-            npm will be used to install subsequent parts of our toolchain. First of all, however, we'll install git to
-            help with revision control.
+            Revision control can also allow you to branch out your project code, creating a separate version, and trying
+            out new functionality on, without those changes affecting your original code.
         </div>
     )
 };
