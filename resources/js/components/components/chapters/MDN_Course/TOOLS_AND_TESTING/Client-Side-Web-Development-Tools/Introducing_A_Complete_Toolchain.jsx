@@ -329,9 +329,34 @@ export default function Introducing_A_Complete_Toolchain() {
                     A verziókezelés lehetővé teszi, hogy ágakra oszd a projekted, elkülönülő verziókat készíts és új
                     működéseket adj hozzá anélkül, hogy az hatással lenne az eredeti kódra.
                 </Paragraph>
+
+                <Paragraph>
+                    Máskülönben segíthet visszavonni változtatásokat vagy visszaállítani a kódot egy olyan állapotra
+                    "amikor még működött", ha egy hiba felmerül a fejlesztés során és problémád van a megoldásával. Ezek
+                    olyan dolgok amelyekkel minden fejlesztő szembesül egyszer-egyszer.
+                </Paragraph>
+
+                <Paragraph>
+                    A Git <a href="https://git-scm.com/downloads" target="_blank">letölthető és telepíthető a git-scm
+                    weboldalról</a>. Töltsd le a megfelelő telepítőt a
+                    rendszeredhez, futtasd és kövesd az útmutatót. Ennyit kell tenned hozzá.
+                </Paragraph>
+
+                <Paragraph>
+                    Dolgozhatsz a git-tel számos módon. Parancssorból parancsokkal, <a
+                    href="https://git-scm.com/downloads/guis" target="_blank">Git GUI</a
+>-t használva gombokat
+                    nyomogatva
+                    vagy még közvetlenül a kódszerkesztődből, ahogyan látszik a példában a Visual Studio Code-al:
+                </Paragraph>
+
+                <div className="image-container"><img src={git_VS_Code} alt="Git in Code Editor"/></div>
+
+
             </Article>
-            Revision control can also allow you to branch out your project code, creating a separate version, and trying
-            out new functionality on, without those changes affecting your original...
+            You can interact with git in a number of different ways, from using the command line to issue commands, to
+            using a git GUI app to issue the same commands by pushing buttons, or even from directly inside your code
+            editor, as seen in the Visual Studio Code example below:
         </div>
     )
 };
