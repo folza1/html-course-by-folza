@@ -331,7 +331,7 @@ export default function Introducing_A_Complete_Toolchain() {
                 </Paragraph>
             </Article>
             Revision control can also allow you to branch out your project code, creating a separate version, and trying
-            out new functionality on, without those changes affecting your original code
+            out new functionality on, without those changes affecting your original code..
         </div>
     )
 };
