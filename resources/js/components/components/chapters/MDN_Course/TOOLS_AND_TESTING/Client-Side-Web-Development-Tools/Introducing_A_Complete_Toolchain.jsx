@@ -2,7 +2,14 @@ import React from 'react';
 import Paragraph from "../../REACT/paragraph/Paragraph.jsx";
 import Article from "../../REACT/article/Article.jsx";
 import Note from "../../REACT/note/Note.jsx";
+import CodeDisplay from "../../components/CodeDisplay.jsx";
 import mini_site from "./img/4.mini_site.png";
+import git_VS_Code from "./img/5.git_VS_Code.png";
+import {
+    toolchain_1_prettier,
+    toolchain_2_prettier_install,
+    toolchain_3_prettier_example,
+} from "./toolchain_code_texts.jsx";
 
 
 export default function Introducing_A_Complete_Toolchain() {
@@ -345,18 +352,71 @@ export default function Introducing_A_Complete_Toolchain() {
                 <Paragraph>
                     Dolgozhatsz a git-tel számos módon. Parancssorból parancsokkal, <a
                     href="https://git-scm.com/downloads/guis" target="_blank">Git GUI</a
->-t használva gombokat
+                >-t használva gombokat
                     nyomogatva
                     vagy még közvetlenül a kódszerkesztődből, ahogyan látszik a példában a Visual Studio Code-al:
                 </Paragraph>
 
-                {/*<div className="image-container"><img src={git_VS_Code} alt="Git in Code Editor"/></div>*/}
+                <div className="image-container"><img src={git_VS_Code} alt="Git in Code Editor"/></div>
 
+                <Paragraph>
+                    Akárhogyan is, a git letepítésére lesz most szükség a dolgunkhoz. Gyerünk tovább!
+                </Paragraph>
 
+                <h2>Kód tisztító eszközök</h2>
+
+                <Paragraph>
+                    Prettier-t fogunk használni, amivel először a második fejezetben találkoztunk, hogy megtisztítsuk a
+                    kódunkat ebben a projektben. Ha követted az utasításokat a <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#installing_prettier"
+                    target="_blank">Prettier Telepítés</a
+                > részben akkor lehet
+                    van már Prettier telepítve. Ha nem akkor telepíteni fogjuk a Prettier-t globálisan a terminálból.
+                </Paragraph>
+
+                <Paragraph>
+                    A következő terminálos paranccsal ellenőrizheted, hogy globálisan van-e a Prettier telepítve?
+                </Paragraph>
+
+                <CodeDisplay code={toolchain_1_prettier}/>
+
+                <Paragraph>
+                    Ha telepítve van, akkor válaszként egy verzió számot kell, hogy kiírjon a terminál mint 2.0.2, ha
+                    nem akkor
+                    "command not found" szöveget. Ha az utóbbi, akkor telepítsük a következő paranccsal:
+                </Paragraph>
+
+                <CodeDisplay code={toolchain_2_prettier_install}/>
+
+                <Paragraph>
+                    Most, hogy a Prettier telepítve van, most már bárhonnak tudod futtatni és tisztítani a kódodat a
+                    számítógépen a parancssorból, mint például:
+                </Paragraph>
+
+                <CodeDisplay code={toolchain_3_prettier_example}/>
+
+                <Note>
+                    <Paragraph>
+                        <div className="bold inline mr-1">Megjegyzés:</div>
+                        A fenti parancsban a Prettier --write flag-et használ. Amit a Prettier úgy értelmez, hogy ha van
+                        probléma a kód formázottságában, akkor kijavítja és aztán menti a fájlt. Ez tökéletes a
+                        fejlesztési folyamatunk számára, de használhatjuk a --write flag nélkül is és akkor csak
+                        ellenőrzi a fájlt. Ellenőrzi a fájlt és nem menti el. Ez az ellenőrzés hasznos lehet egy release
+                        (szoftver kiadás, publikálás) előtt. Ne adj ki, publikálj kódot mielőtt az megfelelően lenne
+                        formázva!
+                    </Paragraph>
+                </Note>
+
+                <Paragraph>
+                    Az fáradságos lenne hogy ugyanazt a parancsot futassuk minden egyes fájl-hoz és hasznos lenne egy
+                    parancs erre a célra (és ugyanez jól lesz a linting eszközeinkhez is).
+                </Paragraph>
+
+                <Paragraph>
+                    Több megoldás is létezik, hogy megoldjuk ezt a problémát. Itt van néhány:
+                </Paragraph>
             </Article>
-            You can interact with git in a number of different ways, from using the command line to issue commands, to
-            using a git GUI app to issue the same commands by pushing buttons, or even from directly inside your code
-            editor, as seen in the Visual Studio Code example below:
+            There are many ways to solve this problem; here's just a few:
         </div>
     )
 };
