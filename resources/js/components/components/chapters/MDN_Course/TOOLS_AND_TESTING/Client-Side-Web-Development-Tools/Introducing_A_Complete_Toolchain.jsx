@@ -416,7 +416,7 @@ export default function Introducing_A_Complete_Toolchain() {
                     Több megoldás is létezik, hogy megoldjuk ezt a problémát. Itt van néhány:
                 </Paragraph>
             </Article>
-            There are many ways to solve this problem; here's just a few::
+            There are many ways to solve this problem; here's just a few:: ::
         </div>
     )
 };
