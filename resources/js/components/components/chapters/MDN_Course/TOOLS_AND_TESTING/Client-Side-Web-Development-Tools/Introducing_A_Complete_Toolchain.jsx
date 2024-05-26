@@ -2,8 +2,14 @@ import React from 'react';
 import Paragraph from "../../REACT/paragraph/Paragraph.jsx";
 import Article from "../../REACT/article/Article.jsx";
 import Note from "../../REACT/note/Note.jsx";
-import mini_site from "./img/4.mini_site.png";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
+import mini_site from "./img/4.mini_site.png";
+import git_VS_Code from "./img/5.git_VS_Code.png";
+import {
+    toolchain_1_prettier,
+    toolchain_2_prettier_install,
+    toolchain_3_prettier_example,
+} from "./toolchain_code_texts.jsx";
 
 
 export default function Introducing_A_Complete_Toolchain() {
@@ -346,7 +352,7 @@ export default function Introducing_A_Complete_Toolchain() {
                 <Paragraph>
                     Dolgozhatsz a git-tel számos módon. Parancssorból parancsokkal, <a
                     href="https://git-scm.com/downloads/guis" target="_blank">Git GUI</a
->-t használva gombokat
+                >-t használva gombokat
                     nyomogatva
                     vagy még közvetlenül a kódszerkesztődből, ahogyan látszik a példában a Visual Studio Code-al:
                 </Paragraph>
