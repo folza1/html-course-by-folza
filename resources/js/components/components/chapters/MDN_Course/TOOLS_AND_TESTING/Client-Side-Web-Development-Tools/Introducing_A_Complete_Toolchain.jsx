@@ -640,7 +640,7 @@ export default function Introducing_A_Complete_Toolchain() {
                     Mint sok újabban készített eszköz, a Prettier is megfelelő
                     alapértelmezett beállításokkal van ellátva. Ami annyit tesz,
                     hogy használhatod a Prettier-t anélkül, hogy bármit is be
-                    kellene állítanod (ha boldog vagy az{" "}
+                    kellene állítanod (ha elégedett vagy az{" "}
                     <a
                         href="https://prettier.io/docs/en/configuration.html"
                         target="_blank"
@@ -659,11 +659,24 @@ export default function Introducing_A_Complete_Toolchain() {
                     Ez egy kulcs összetevője a jó eszközláncnak és sok
                     fejlesztési projekt alapértelmezetten használja.
                 </Paragraph>
+
+                <Paragraph>
+                    Web fejlesztő linter eszközök legtöbbször JavaScript-hez
+                    vannak, bár van néhány HTML-hez és CSS-hez is. Ez azért is
+                    van, mert ha egy ismeretlen HTML elem vagy egy érvénytelen
+                    CSS tulajdonság van használatban a nyelv természetéből adódó
+                    rugalmasság miatt semmi sem romlik el. A JavaScript sokkal
+                    törékenyebb. Például egy hibásan meghívott funkció, amely
+                    nem létezik, a JavaScript szkript futásában törést okoz. A
+                    JavaScript lint-elése tehát nagyon fontos és segítségével
+                    könnyen megtalálhatjuk a kódunkban a hibát, különösen
+                    nagyobb projektekben.
+                </Paragraph>
             </Article>
-            Linting helps with code quality but also is a way to catch potential
-            errors earlier during development. It's a key ingredient of a good
-            toolchain and one that many development projects will include by
-            default.
+            The go-to tool for JavaScript linting is ESLint. It's an extremely
+            powerful and versatile tool but can be tricky to configure correctly
+            and you could easily consume many hours trying to get a
+            configuration just right!
         </div>
     );
 }
