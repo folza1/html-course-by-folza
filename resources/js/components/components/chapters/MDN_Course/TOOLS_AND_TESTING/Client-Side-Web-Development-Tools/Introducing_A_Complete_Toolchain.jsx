@@ -571,7 +571,7 @@ export default function Introducing_A_Complete_Toolchain() {
                 <Paragraph>
                     Az fáradságos lenne hogy ugyanazt a parancsot futassuk
                     minden egyes fájl-hoz és hasznos lenne egy parancs erre a
-                    célra (és ugyanez jól lesz a linting eszközeinkhez is).
+                    célra (és ugyanez jó lesz a linting eszközeinkhez is).
                 </Paragraph>
 
                 <Paragraph>
@@ -608,34 +608,62 @@ export default function Introducing_A_Complete_Toolchain() {
                         állapotáról). Bár a git hook-ok (horgok) egy kicsit túl
                         vannak komplikálva (a szerző véleménye szerint), viszont
                         ha helyén vannak kezelve igen erőteljesek lehetnek. Ha
-                        érdekel a hook-ok (horgok) használata a
+                        érdekel a hook-ok (horgok) használata a{" "}
                         <a
                             href="https://github.com/typicode/husky"
                             target="_blank"
                         >
                             Husky
-                        </a>
+                        </a>{" "}
                         egy nagyban egyszerűsített út azok használatához.
                     </Paragraph>
                 </Note>
 
                 <Paragraph>
-                    A VS Code-hoz egy hasznos extension (kiterjesztés) a
-                    Prettier Code Formatter (Prettier Kód Formázó), Esben
-                    Petersen-től, amely automatikus kódformázást tesz lehetővé a
-                    fájl mentésekor. Ez azt jelenti, hogy bármilyen fájl a
+                    A VS Code-hoz egy hasznos extension (kiterjesztés) a{" "}
+                    <a
+                        href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+                        target="_blank"
+                    >
+                        Prettier Code Formatter (Prettier Kód Formázó), Esben
+                        Petersen
+                    </a>
+                    -től, amely automatikus kódformázást tesz lehetővé a fájl
+                    mentésekor. Ez azt jelenti, hogy bármilyen fájl a
                     projektben, amelyen dolgozunk szépen formázva lesz, legyen
                     az HTML, CSS, JavaScript, JSON, markdown vagy más. Csak
                     annyit kell beállítanod, hogy "Format On Save" ("Formázás
                     Mentéskor") legyen bepipálva, be legyen kapcsolva.
                 </Paragraph>
+
+                <Paragraph>
+                    Mint sok újabban készített eszköz, a Prettier is megfelelő
+                    alapértelmezett beállításokkal van ellátva. Ami annyit tesz,
+                    hogy használhatod a Prettier-t anélkül, hogy bármit is be
+                    kellene állítanod (ha boldog vagy az{" "}
+                    <a
+                        href="https://prettier.io/docs/en/configuration.html"
+                        target="_blank"
+                    >
+                        alapértelmezett beállításokkal
+                    </a>
+                    ). Így több időd jut a fontos dolgokra, mint például a
+                    kreatív munkára.
+                </Paragraph>
+
+                <h2>Kód hiba jelző eszközök (linter-ek, lint-elés)</h2>
+
+                <Paragraph>
+                    A lint-elés segít a kód minőségében, de arra is jó, hogy
+                    kijavítsunk felmerülő hibákat korábban a fejlesztés során.
+                    Ez egy kulcs összetevője a jó eszközláncnak és sok
+                    fejlesztési projekt alapértelmezetten használja.
+                </Paragraph>
             </Article>
-            For VS Code, one useful extension is the Prettier Code Formatter by
-            Esben Petersen, which lets VSCode automatically format code upon
-            saving. This means that any file in the project we are working on
-            gets formatted nicely, including HTML, CSS, JavaScript, JSON,
-            markdown, and more. All the editor needs is "Format On Save"
-            enabled.
+            Linting helps with code quality but also is a way to catch potential
+            errors earlier during development. It's a key ingredient of a good
+            toolchain and one that many development projects will include by
+            default.
         </div>
     );
 }
