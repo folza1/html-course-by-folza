@@ -582,7 +582,7 @@ export default function Introducing_A_Complete_Toolchain() {
                 <Paragraph>
                     <li>
                         Használhatsz npm szkripteket, hogy futtass több
-                        parancsot a parancssorból egyszerre, mint az{" "}
+                        parancsot a parancssorból egyszerre, mint az
                         <BgLightgray>npm run tidy-code</BgLightgray>.
                     </li>
                     <li>
@@ -608,17 +608,34 @@ export default function Introducing_A_Complete_Toolchain() {
                         állapotáról). Bár a git hook-ok (horgok) egy kicsit túl
                         vannak komplikálva (a szerző véleménye szerint), viszont
                         ha helyén vannak kezelve igen erőteljesek lehetnek. Ha
-                        érdekel a hook-ok (horgok) használata a Husky egy
-                        nagyban egyszerűsített út azok használatához.
+                        érdekel a hook-ok (horgok) használata a
+                        <a
+                            href="https://github.com/typicode/husky"
+                            target="_blank"
+                        >
+                            Husky
+                        </a>
+                        egy nagyban egyszerűsített út azok használatához.
                     </Paragraph>
                 </Note>
+
+                <Paragraph>
+                    A VS Code-hoz egy hasznos extension (kiterjesztés) a
+                    Prettier Code Formatter (Prettier Kód Formázó), Esben
+                    Petersen-től, amely automatikus kódformázást tesz lehetővé a
+                    fájl mentésekor. Ez azt jelenti, hogy bármilyen fájl a
+                    projektben, amelyen dolgozunk szépen formázva lesz, legyen
+                    az HTML, CSS, JavaScript, JSON, markdown vagy más. Csak
+                    annyit kell beállítanod, hogy "Format On Save" ("Formázás
+                    Mentéskor") legyen bepipálva, be legyen kapcsolva.
+                </Paragraph>
             </Article>
-            Note: What is a git hook? Git (not GitHub) provides a system that
-            lets us attach pre- and post- actions to the tasks we perform with
-            git (such as committing your code). Although git hooks can be a bit
-            overly complicated (in this author's opinion), once they're in place
-            they can be very powerful. If you're interested in using hooks,
-            Husky is a greatly simplified route into using hooks.
+            For VS Code, one useful extension is the Prettier Code Formatter by
+            Esben Petersen, which lets VSCode automatically format code upon
+            saving. This means that any file in the project we are working on
+            gets formatted nicely, including HTML, CSS, JavaScript, JSON,
+            markdown, and more. All the editor needs is "Format On Save"
+            enabled.
         </div>
     );
 }
