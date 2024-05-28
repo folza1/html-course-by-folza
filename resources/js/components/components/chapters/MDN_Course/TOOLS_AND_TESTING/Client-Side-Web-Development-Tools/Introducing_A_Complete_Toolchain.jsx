@@ -158,7 +158,7 @@ export default function Introducing_A_Complete_Toolchain() {
                             Parcel
                         </a>
                         -t, hogy build-eljük és minimizáljuk a kódunkat és hogy
-                        egy rakás configurációs fájltartalmat írassunk
+                        egy rakás konfigurációs fájltartalmat írassunk
                         automatikusan.
                     </li>
                     <li>
@@ -672,11 +672,69 @@ export default function Introducing_A_Complete_Toolchain() {
                     könnyen megtalálhatjuk a kódunkban a hibát, különösen
                     nagyobb projektekben.
                 </Paragraph>
+
+                <Paragraph>
+                    Egy nagyszerű linting eszköz a JavaScript-hez az{" "}
+                    <a href="https://eslint.org/" target="_blank">
+                        ESLint
+                    </a>
+                    . Az ESLint egy nagyon erőteljes és sokoldalú eszköz, de
+                    trükkös lehet helyesen konfigurálni és könnyen órákat el
+                    lehet tölteni csak azzal, hogy beállítsunk egy jó
+                    konfigurációt.
+                </Paragraph>
+
+                <Paragraph>
+                    Alapból az ESLint panaszolni fogja, hogy nem találja a
+                    konfigurációs fájlt (ahol a beállítások vannak tárolva), ha
+                    futtatod. A konfigurációs fájl több formátumot támogat, de
+                    ehhez a projekthez mi az{" "}
+                    <BgLightgray>.eslintrc.json</BgLightgray> fájlt fogjuk
+                    használni (a "pont" az elején azt jelzi, hogy
+                    alapértelmezettként rejtett fájl a mappában).
+                </Paragraph>
+
+                <Paragraph>
+                    Az ESLint-et npm-el lehet telepíteni, amit már a második
+                    fejezetben említettünk. Telepítheted lokálisan vagy
+                    globálisan az eszközt. Mindkettő lehetőség használata
+                    ajánlott:
+                </Paragraph>
+
+                <Paragraph>
+                    <li>
+                        Olyan projektek esetén, amelyeket meg szeretnél osztani,
+                        mindig lokális függőségként kellene belevenni a
+                        projektbe, így bárki aki létrehozza a saját másolatát a
+                        projektről, követni tudja a szabályokat amelyeket
+                        alkalmaztál a projekthez.
+                    </li>
+                    <li>
+                        Azt is megfontolhatod, hogy globálisan telepíted az
+                        ESLint-et, így gyorsan használhatod bármelyik fájlhoz az
+                        ellenőrzést, amelyikhez csak akarod, függetlenül attól,
+                        hogy hol is van a fájl a számítógépeden.
+                    </li>
+                </Paragraph>
+
+                <Paragraph>
+                    Az egyszerűség kedvéért ebben a fejezetben nem tárgyaljuk az
+                    ESLint összes funkcióját, de létre fogunk hozni egy
+                    konfigurációt amely megfelelő a projektünkhöz és annak
+                    igényeihez. Azonban tartsd észben, hogy ha finomítani
+                    szeretnél azon, hogyan néz ki a kódod vagy hogy, hogyan
+                    ellenőrzi a kódod és szabályokat akarsz hozzá rendelni,
+                    akkor nagyon valószínű, hogy azt egy jól beállított ESLint
+                    konfigurációval tudod elérni.
+                </Paragraph>
+
+                <Paragraph>
+                    Egy kicsit később ebben a fejezetben, adni fogunk egy ESLint
+                    konfigurációt. Miután van egy helyes konfiguráció, egy
+                    parancs futtatásával szerezhetünk néhány hasznos
+                    információt. Itt egy ESLint terminál válasz (output) példa:
+                </Paragraph>
             </Article>
-            The go-to tool for JavaScript linting is ESLint. It's an extremely
-            powerful and versatile tool but can be tricky to configure correctly
-            and you could easily consume many hours trying to get a
-            configuration just right!
         </div>
     );
 }
