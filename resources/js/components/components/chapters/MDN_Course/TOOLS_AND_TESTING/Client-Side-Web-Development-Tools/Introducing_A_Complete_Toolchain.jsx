@@ -5,11 +5,15 @@ import Note from "../../REACT/note/Note.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
 import mini_site from "./img/4.mini_site.png";
 import git_VS_Code from "./img/5.git_VS_Code.png";
+import eslint from "./img/6.eslint.png";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import {
     toolchain_1_prettier,
     toolchain_2_prettier_install,
     toolchain_3_prettier_example,
+    toolchain_4_eslint_output,
+    toolchain_5_project_start,
+    toolchain_6_project_src,
 } from "./toolchain_code_texts.jsx";
 
 export default function Introducing_A_Complete_Toolchain() {
@@ -732,9 +736,85 @@ export default function Introducing_A_Complete_Toolchain() {
                     Egy kicsit később ebben a fejezetben, adni fogunk egy ESLint
                     konfigurációt. Miután van egy helyes konfiguráció, egy
                     parancs futtatásával szerezhetünk néhány hasznos
-                    információt. Itt egy ESLint terminál válasz (output) példa:
+                    információt. Itt egy ESLint terminál válasz (terminal
+                    output) példa:
+                </Paragraph>
+
+                <CodeDisplay code={toolchain_4_eslint_output} />
+
+                <Note>
+                    <Paragraph>
+                        <div className="bold inline mr-1">Megjegyzés:</div>A
+                        következő szekcióban fogjuk telepíteni az ESLint-et, ne
+                        aggódj most miatta.
+                    </Paragraph>
+                </Note>
+
+                <Paragraph>
+                    Mint más eszközöknél, a kódszerkesztő integráció támogatás
+                    kifejezetten jó az ESLint-hez. Ami annyit tesz, hogy a
+                    kódszerkesztődhöz van ESLint beépítve, és ez igazán hasznos
+                    mert valós időben kapsz információt, ha egy probléma
+                    felmerül. Ahogyan írod a kódot, már jelzi is a hibákat. Ha
+                    vannak.
+                </Paragraph>
+
+                <div className="image-container">
+                    <img src={eslint} alt="ESLint Code Editor Integration" />
+                </div>
+            </Article>
+            <Article>
+                <h1>Állítsuk be a projektet a kezdéshez</h1>
+
+                <Paragraph>
+                    Ezeket az eszközöket használva egy új projekt biztonságosan
+                    beállítható annak tudatában, hogy sok alapvető hiba az
+                    elején meg fog mutatkozni.
+                </Paragraph>
+
+                <Paragraph>
+                    A parancssort használva készítünk egy projektet, telepítjük
+                    az eszközöket az induláshoz és rövid konfigurációs fájlokat
+                    hozunk létre. Miután megismételted ezt a folyamatot párszor,
+                    elgondolkozhatsz azon, hogy milyen alapértelmezett
+                    beállításokat kellene alkalmazni. Természetesen amit
+                    mutatunk csak egy lehetséges beállítás (konfiguráció).
+                </Paragraph>
+
+                <h2>Kezdeti beállítás</h2>
+
+                <Paragraph>
+                    Rendben, akkor kezdjük a kezdeti projekt beállításokkal.
+                </Paragraph>
+
+                <Paragraph>
+                    <ol className="ml-1">
+                        <li>
+                            Először is nyisd meg a terminál-od, és navigálj egy
+                            olyan könyvtárba, ahol majd könnyen megtalálod a
+                            projekted. Az Asztal vagy a "home" könyvtár vagy a
+                            Dokumentumok mappa egész jó lesz erre a célra.
+                        </li>
+                        <li>
+                            A következő feladatod az lesz, hogy futtasd a
+                            következő parancsokat, hogy elkészítsd a mappát,
+                            amelyben a projekt lesz és aztán belenavigálunk abba
+                            a mappába, hogy az utána következő parancsok már a
+                            projekt-re legyenek érvényesek. A projekt neve
+                            "will-it-miss" lesz.
+                        </li>
+                        <CodeDisplay code={toolchain_5_project_start} />
+                        <li>
+                            Ezután fogunk készíteni egy új mappát amiben a
+                            weboldalunk fejlesztői kódja lesz. Ehhez futtasd a
+                            következőt:
+                        </li>
+                        <CodeDisplay code={toolchain_6_project_src} />
+                    </ol>
                 </Paragraph>
             </Article>
+            Now we will create a new directory for all of our website's
+            development code to live in. Run the following now:
         </div>
     );
 }
