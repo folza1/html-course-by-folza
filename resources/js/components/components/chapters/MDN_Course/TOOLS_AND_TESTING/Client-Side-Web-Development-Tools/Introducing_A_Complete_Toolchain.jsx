@@ -14,6 +14,7 @@ import {
     toolchain_4_eslint_output,
     toolchain_5_project_start,
     toolchain_6_project_src,
+    toolchain_7_git_start,
 } from "./toolchain_code_texts.jsx";
 
 export default function Introducing_A_Complete_Toolchain() {
@@ -806,15 +807,25 @@ export default function Introducing_A_Complete_Toolchain() {
                         <CodeDisplay code={toolchain_5_project_start} />
                         <li>
                             Ezután fogunk készíteni egy új mappát amiben a
-                            weboldalunk fejlesztői kódja lesz. Ehhez futtasd a
-                            következőt:
+                            weboldalunk fejlesztői kódja lesz, az "src" mappa.
+                            Ehhez futtasd a következőt:
                         </li>
-                        <CodeDisplay code={toolchain_6_project_src} />
+                        <CodeDisplay code={toolchain_6_project_src} />A kód
+                        szervezése eléggé változó csapatonként. Ebben a
+                        projektben a forráskód az "src" mappában lesz.
+                        <li>
+                            Most pedig légy biztos benne hogy a will-it-miss
+                            könyvtár gyökerében vagy és írd be a következő
+                            parancsot, hogy elindítsd a git verziókezelő
+                            működését a will-it-miss projektben.
+                        </li>
+                        <CodeDisplay code={toolchain_7_git_start} />
                     </ol>
                 </Paragraph>
             </Article>
-            Now we will create a new directory for all of our website's
-            development code to live in. Run the following now:
+            Making sure you are inside the root of the will-it-miss directory,
+            enter the following command to start git's source control
+            functionality working on the directory:
         </div>
     );
 }

@@ -13,3 +13,4 @@ cd will-it-miss
 `;
 export const toolchain_6_project_src = `mkdir src
 `;
+export const toolchain_7_git_start = `git init`;
