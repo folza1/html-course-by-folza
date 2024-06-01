@@ -15,6 +15,7 @@ import {
     toolchain_5_project_start,
     toolchain_6_project_src,
     toolchain_7_git_start,
+    toolchain_8_npm_init,
 } from "./toolchain_code_texts.jsx";
 
 export default function Introducing_A_Complete_Toolchain() {
@@ -814,18 +815,28 @@ export default function Introducing_A_Complete_Toolchain() {
                         szervezése eléggé változó csapatonként. Ebben a
                         projektben a forráskód az "src" mappában lesz.
                         <li>
-                            Most pedig légy biztos benne hogy a will-it-miss
+                            Most pedig légy biztos benne hogy a{" "}
+                            <BgLightgray>will-it-miss</BgLightgray>
                             könyvtár gyökerében vagy és írd be a következő
                             parancsot, hogy elindítsd a git verziókezelő
                             működését a will-it-miss projektben.
                         </li>
                         <CodeDisplay code={toolchain_7_git_start} />
+                        Ez annyit tesz, hogy mostantól képes leszel
+                        "pillanatképet" tárolni a mappa tartalmáról, elmentheted
+                        egy távoli adattárban, stb. Erről többet később.
+                        <li>
+                            A következő paranccsal a könyvtáradat átváltoztatjuk
+                            egy npm csomaggá azokkal az előnyökkel felruházva
+                            amelyekről az előző cikkben tanultunk:
+                        </li>
+                        <CodeDisplay code={toolchain_8_npm_init} />
                     </ol>
                 </Paragraph>
             </Article>
-            Making sure you are inside the root of the will-it-miss directory,
-            enter the following command to start git's source control
-            functionality working on the directory:
+            Next, enter the following command to turn your directory into an npm
+            package, with the advantages that we discussed in the previous
+            article:
         </div>
     );
 }
