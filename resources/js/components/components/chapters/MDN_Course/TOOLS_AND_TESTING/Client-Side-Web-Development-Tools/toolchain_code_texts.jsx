@@ -16,3 +16,5 @@ export const toolchain_6_project_src = `mkdir src
 export const toolchain_7_git_start = `git init`;
 
 export const toolchain_8_npm_init = `npm init --force`;
+
+export const toolchain_9_npm_install = `npm install --save-dev eslint prettier babel-eslint`;

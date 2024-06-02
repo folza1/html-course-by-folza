@@ -17,6 +17,7 @@ import {
     toolchain_6_project_src,
     toolchain_7_git_start,
     toolchain_8_npm_init,
+    toolchain_9_npm_install,
 } from "./toolchain_code_texts.jsx";
 
 export default function Introducing_A_Complete_Toolchain() {
@@ -888,9 +889,38 @@ export default function Introducing_A_Complete_Toolchain() {
                         </li>
                     </ol>
                 </Paragraph>
+
+                <Paragraph>
+                    Most már helyén vannak a projekt fájljai. Ennyit kellet most
+                    tennünk.
+                </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        A projekt beállításához a helyi gépen, menj a nem
+                        tömörített gyökér mappába és nyisd meg a terminált azon
+                        a helyen és futtasd az{" "}
+                        <BgLightgray>npm install</BgLightgray> parancsot a
+                        terminálban. Ez telepíteni fogja az összes projekt
+                        függőséget, amely említve van a{" "}
+                        <BgLightgray>package.json</BgLightgray> fájl-ban.
+                    </Paragraph>
+                </Note>
+
+                <h2>Eszközeink telepítése</h2>
+
+                <Paragraph>
+                    Most itt az idő, hogy telepítsük a kezdeti eszközöket
+                    amelyeket használni fogunk a fejlesztői környezetünkben.
+                    Futtasd a következő parancsot a projekt gyökér mappájában:
+                </Paragraph>
+
+                <CodeDisplay code={toolchain_9_npm_install} />
             </Article>
-            Now copy the contents of the project's src directory to your
-            currently empty src directory.
+            Now it's time to install the initial set of tools we'll be using in
+            our dev environment. Run the following from inside your project's
+            root directory:
         </div>
     );
 }
