@@ -947,17 +947,44 @@ export default function Introducing_A_Complete_Toolchain() {
                     munkát, amikor telepítjük a projektet produkció-ra (amit a
                     következő fejezetben láthatunk).
                 </Paragraph>
+
+                <Paragraph>
+                    Mielőtt elkezdenénk a fejlesztését az aktuális alkamazás
+                    kódjának, egy kis konfigurálás szükséges, hogy megfelelően
+                    tudjuk használni az eszközöket. Ez nem előfeltétele a
+                    webfejlesztésnek, de hasznos, hogy megfelelően legyenek
+                    beállítva az eszközök, hogy segítséget kapjunk a hibák
+                    észlelésére a fejlesztés során (amelyre az ESLint különösen
+                    jó).
+                </Paragraph>
             </Article>
-            The second important part of this install command is the --save-dev
-            option. This tells the npm tool that these particular dependencies
-            are only needed for development (npm therefore lists them in the
-            package.json file under devDependencies, not dependencies). This
-            means that if this project is installed in production mode these
-            dependencies will not be installed. A "typical" project can have
-            many development dependencies which are not needed to actually run
-            the code in production. Keeping them as separate dependencies
-            reduces any unnecessary work when deploying to production (which we
-            will look at in the next chapter).
+            <Article>
+                <h1>Az eszközeink konfigurálása</h1>
+
+                <Paragraph>
+                    A projekt gyökérkönyvtárában (nem az{" "}
+                    <BgLightgray>src</BgLightgray> mappában), hozzá fogunk adni
+                    konfigurációs fájlokat, hogy beállítsuk néhány eszközünket,
+                    név szerint a Prettier-t és az ESLint-et. Ez egy általános
+                    gyakorlat az eszközök beállításához, azaz meg fogod találni
+                    a config (konfigurációs) fájlokat a projekt gyökerében,
+                    amely gyakoribb mint config fájlok nélkül JSON stuktúrában
+                    kifejezve. Azonban az eszközeink mint sok más is támogatja a
+                    YAML-t, amelyre válthatsz, ha az jobban tetszik.
+                </Paragraph>
+
+                <Paragraph>
+                    <ol className="ml-1">
+                        <li>
+                            Először is hozzunk létre egy fájlt a will-it-miss
+                            projekt gyökérkönyvtárában és nevezzük el
+                            .prettierrc.json-nek.
+                        </li>
+                    </ol>
+                </Paragraph>
+            </Article>
+            First of all, create a file in the root of your will-it-miss
+            directory called .prettierrc.json.
         </div>
     );
 }
