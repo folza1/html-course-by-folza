@@ -6,6 +6,7 @@ import CodeDisplay from "../../components/CodeDisplay.jsx";
 import mini_site from "./img/4.mini_site.png";
 import git_VS_Code from "./img/5.git_VS_Code.png";
 import eslint from "./img/6.eslint.png";
+import git_repo from "./img/7.git_repo.png";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import {
     toolchain_1_prettier,
@@ -827,16 +828,69 @@ export default function Introducing_A_Complete_Toolchain() {
                         egy távoli adattárban, stb. Erről többet később.
                         <li>
                             A következő paranccsal a könyvtáradat átváltoztatjuk
-                            egy npm csomaggá azokkal az előnyökkel felruházva
+                            egy npm csomaggá azokkal az előnyökkel felruházva,
                             amelyekről az előző cikkben tanultunk:
                         </li>
                         <CodeDisplay code={toolchain_8_npm_init} />
+                        Ez készíteni fog egy alapértelmezett{" "}
+                        <BgLightgray>package.json</BgLightgray> fájlt amit
+                        később konfigurálhatunk, ha úgy akarjuk. A{" "}
+                        <BgLightgray>--force</BgLightgray> zászló "flag" azt
+                        jelzi a parancsban, hogy azonnal elkészíti az
+                        alapértelmezett <BgLightgray>package.json</BgLightgray>{" "}
+                        fájlt anélkül, hogy végigkérdezné az összes szokásos
+                        kérdést a tartalomról amit szeretnél (ahogyan már láttuk
+                        korábban). Most csak az alapértelmezettekre van
+                        szükségünk, szóval megspórol nekünk egy kis időt.
+                    </ol>
+                </Paragraph>
+
+                <h2>A projekt fájljai</h2>
+
+                <Paragraph>
+                    Most fogjuk a projekt fájljait (HTML, CSS, JavaScript, stb.)
+                    és belerakjuk őket az <BgLightgray>src</BgLightgray>{" "}
+                    mappába. Nem tanítjuk meg most, hogyan is működnek, nem ez a
+                    célja ennek a fejezetnek. Csupán azt tanuljuk itt egy
+                    kicsit, hogyan futtassuk az eszközöket.
+                </Paragraph>
+
+                <Paragraph>
+                    <ol className="ml-1">
+                        <li>
+                            Hogy megkapd a fájlokat látogass el a{" "}
+                            <a
+                                href="https://github.com/remy/mdn-will-it-miss"
+                                target="_blank"
+                            >
+                                https://github.com/remy/mdn-will-it-miss
+                            </a>{" "}
+                            oldalra és töltsd le ebből az adattárból aztán
+                            csomagold ki a tömörített fájlt és mentsd el valahol
+                            a helyi számítógépeden. Letöltheted az egész
+                            projektet zip fájlként a Clone (klónozást) választva
+                            vagy{" "}
+                            <span className="italic">
+                                download &gt; Download ZIP
+                            </span>{" "}
+                            gombokra kattintva.
+                        </li>
+                        <div className="image-container">
+                            <img
+                                src={git_repo}
+                                alt="Git Repository of mdn-will-it-miss"
+                            />
+                        </div>
+                        <li>
+                            Most pedig másold a tartalmat a projekt{" "}
+                            <BgLightgray>src</BgLightgray> mappájából a te most
+                            még üres <BgLightgray>src</BgLightgray> mappádba.
+                        </li>
                     </ol>
                 </Paragraph>
             </Article>
-            Next, enter the following command to turn your directory into an npm
-            package, with the advantages that we discussed in the previous
-            article:
+            Now copy the contents of the project's src directory to your
+            currently empty src directory.
         </div>
     );
 }
