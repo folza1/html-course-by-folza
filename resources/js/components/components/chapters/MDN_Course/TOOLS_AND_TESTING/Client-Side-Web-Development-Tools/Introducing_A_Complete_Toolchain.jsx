@@ -917,10 +917,47 @@ export default function Introducing_A_Complete_Toolchain() {
                 </Paragraph>
 
                 <CodeDisplay code={toolchain_9_npm_install} />
+
+                <Paragraph>
+                    Két fontos dolog amit érdemes megjegyezned az előbb
+                    futtatott parancsról. Az első, hogy a függőségeket lokálisan
+                    telepítjük a projekt számára, ez jobb módszer egy konkrét
+                    projekt számára. Az hogy lokálisan telepítjük, azaz nem
+                    alkalmazzuk a <BgLightgray>--global</BgLightgray> flag
+                    lehetőséget a parancsban, megkönnyíti a dolgunkat, ha meg
+                    szeretnénk ismételni a telepítést egy másik gépen vagy
+                    gépeken.
+                </Paragraph>
+
+                <Paragraph>
+                    A másik fontos része a telepítő parancsnak a{" "}
+                    <BgLightgray>--save-dev</BgLightgray>
+                    lehetőség. Ez azt mondja az npm-nek, hogy ezek a függőségek
+                    csak fejlesztésre szükségesek, azaz az npm a{" "}
+                    <BgLightgray>package.json</BgLightgray>
+                    fájlban a <BgLightgray>devDependencies</BgLightgray> kulcsok
+                    között találhatók nem pedig a{" "}
+                    <BgLightgray>dependencies</BgLightgray> között. Ez azt
+                    jelenti, ha a projekt produkciós módban van telepítve ezek a
+                    függőségek nem lesznek telepítve. A produkciós mód, amikor a
+                    projekt már megtekintésre van szánva a célközönség számára.
+                    Egy tipikus projektnek lehet sok fejlesztői függősége,
+                    amelyeknek nem kell futniuk produkciós módban.
+                    Különválasztva a függőségeket csökkenthetjük a szükséges
+                    munkát, amikor telepítjük a projektet produkció-ra (amit a
+                    következő fejezetben láthatunk).
+                </Paragraph>
             </Article>
-            Now it's time to install the initial set of tools we'll be using in
-            our dev environment. Run the following from inside your project's
-            root directory:
+            The second important part of this install command is the --save-dev
+            option. This tells the npm tool that these particular dependencies
+            are only needed for development (npm therefore lists them in the
+            package.json file under devDependencies, not dependencies). This
+            means that if this project is installed in production mode these
+            dependencies will not be installed. A "typical" project can have
+            many development dependencies which are not needed to actually run
+            the code in production. Keeping them as separate dependencies
+            reduces any unnecessary work when deploying to production (which we
+            will look at in the next chapter).
         </div>
     );
 }
