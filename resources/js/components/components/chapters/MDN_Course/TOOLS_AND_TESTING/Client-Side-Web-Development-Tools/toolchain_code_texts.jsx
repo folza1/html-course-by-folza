@@ -18,3 +18,25 @@ export const toolchain_7_git_start = `git init`;
 export const toolchain_8_npm_init = `npm init --force`;
 
 export const toolchain_9_npm_install = `npm install --save-dev eslint prettier babel-eslint`;
+
+export const toolchain_10_prettier_config = `{
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+  `;
+
+export const toolchain_11_eslint_config = `{
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": 0
+  }
+}
+`;

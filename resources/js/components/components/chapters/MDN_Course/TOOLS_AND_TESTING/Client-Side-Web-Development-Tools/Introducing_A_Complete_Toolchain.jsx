@@ -18,6 +18,8 @@ import {
     toolchain_7_git_start,
     toolchain_8_npm_init,
     toolchain_9_npm_install,
+    toolchain_10_prettier_config,
+    toolchain_11_eslint_config,
 } from "./toolchain_code_texts.jsx";
 
 export default function Introducing_A_Complete_Toolchain() {
@@ -976,15 +978,52 @@ export default function Introducing_A_Complete_Toolchain() {
                 <Paragraph>
                     <ol className="ml-1">
                         <li>
-                            Először is hozzunk létre egy fájlt a will-it-miss
+                            Először is hozzunk létre egy fájlt a{" "}
+                            <BgLightgray>will-it-miss</BgLightgray>
                             projekt gyökérkönyvtárában és nevezzük el
-                            .prettierrc.json-nek.
+                            <BgLightgray>.prettierrc.json</BgLightgray>-nek.
                         </li>
+
+                        <li>
+                            Hogy konfiguráljuk a Prettier-t adjuk hozzá a
+                            következő tartalmat a{" "}
+                            <BgLightgray>.prettierrc.json</BgLightgray> fájlhoz:
+                        </li>
+
+                        <CodeDisplay code={toolchain_10_prettier_config} />
+
+                        <li>
+                            Ezekkel a beállításokkal, amikor a Prettier formázza
+                            a JavaScript kódodat minden idézőjeles értékhez
+                            egyszeres idézőjelet fog használni ( mert ugye van
+                            egyszeres és dupla idézőjel is ) és nem fog
+                            használni a sor végén záró vesszőt azaz "trailing
+                            comma"-t (ez egy újabb funkció az ECMAScript-nél
+                            amely hibát okozhat régebbi böngészőkben). Többet
+                            tudhatsz meg a{" "}
+                            <a
+                                href="https://prettier.io/docs/en/configuration.html"
+                                target="_blank"
+                            >
+                                Prettier konfigurálásáról a dokumentációjában
+                            </a>
+                            .
+                        </li>
+
+                        <li>
+                            Következésképpen konfigurálni fogjuk az ESLint-et,
+                            készítünk egy másik fájlt a will-it-miss
+                            gyökérmappájában és elnevezzük .eslintrc.json-nek és
+                            rakunk bele egy kis tartalmat:
+                        </li>
+
+                        <CodeDisplay code={toolchain_11_eslint_config} />
                     </ol>
                 </Paragraph>
             </Article>
-            First of all, create a file in the root of your will-it-miss
-            directory called .prettierrc.json.
+            Next up, we'll configure ESLint — create another file in the root of
+            your will-it-miss directory called .eslintrc.json, and give it the
+            following contents:
         </div>
     );
 }
