@@ -64,3 +64,5 @@ export const toolchain_11_eslint_config_jsx = `{
 `;
 
 export const toolchain_12_jsx_plugin_install = `npm install --save-dev eslint-plugin-react`;
+
+export const toolchain_13_parcel_install = `npm install --save-dev parcel-bundler`;

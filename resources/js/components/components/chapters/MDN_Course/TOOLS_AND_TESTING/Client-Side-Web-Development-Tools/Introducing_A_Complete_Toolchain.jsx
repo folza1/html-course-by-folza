@@ -22,6 +22,7 @@ import {
     toolchain_11_eslint_config,
     toolchain_11_eslint_config_jsx,
     toolchain_12_jsx_plugin_install,
+    toolchain_13_parcel_install,
 } from "./toolchain_code_texts.jsx";
 
 export default function Introducing_A_Complete_Toolchain() {
@@ -1158,10 +1159,24 @@ export default function Introducing_A_Complete_Toolchain() {
                     telepítéséről és konfigurációjáról anélkül, hogy közbe
                     kellene avatkoznunk (a legtöbb esetben).
                 </Paragraph>
+
+                <Paragraph>
+                    Aztán egy bónusz a végére, a Parcel össze tudja csomagolni
+                    (bundle) és elő tudja készíteni a kódot a produkciós
+                    telepítésre, gondoskodva a minification-ról és a böngésző
+                    kompatibilitás követelményeiről.
+                </Paragraph>
+
+                <Paragraph>
+                    Nekünk tehát telepíteni kell a parcel függőséget is a
+                    projektünkbe, amelyhez futtasd a következő parancsot a
+                    terminálban:
+                </Paragraph>
+
+                <CodeDisplay code={toolchain_13_parcel_install} />
             </Article>
-            Parcel will take care of installing any transformation tooling and
-            configuration required without us needing to intervene (in most
-            cases).
+            We therefore need to install the parcel dependency in our project
+            too — run the following command in your terminal:
         </div>
     );
 }
