@@ -1083,23 +1083,85 @@ export default function Introducing_A_Complete_Toolchain() {
                 </Paragraph>
 
                 <Paragraph>
-                    Van egy komplett lista az ESLint szabályokról, amelyek közül
-                    választhatsz és a saját tetszésed szerint állíthatod be azt.
-                    Van sok cég és csapat akik nyílvánossá teszik a saját ESLint
-                    beállításaikat, amelyek néha hasznosak lehetnek vagy
-                    kiválaszthatod a saját céljaid alapján, amelyiket a
-                    legjobbnak érzed. Egy kis figyelmeztetés: Az ESLint
-                    konfiguráció egy nagyon mély nyúlüreg, ha érted mire
-                    gondolok!
+                    Van egy komplett{" "}
+                    <a
+                        href="https://eslint.org/docs/latest/rules/"
+                        target="_blank"
+                    >
+                        lista az ESLint szabályokról
+                    </a>
+                    , amelyek közül választhatsz és a saját tetszésed szerint
+                    állíthatod be azt. Van sok cég és csapat akik nyílvánossá
+                    teszik a{" "}
+                    <a
+                        href="https://www.npmjs.com/search?q=keywords:eslintconfig"
+                        target="_blank"
+                    >
+                        saját ESLint beállításaikat
+                    </a>
+                    , amelyek néha hasznosak lehetnek vagy kiválaszthatod a
+                    saját céljaid alapján, amelyiket a legjobbnak érzed. Egy kis
+                    figyelmeztetés: Az ESLint konfiguráció egy nagyon mély
+                    nyúlüreg, ha érted mire gondolok!
                 </Paragraph>
 
                 <Paragraph>
                     Ezen a ponton a fejlesztői környezetünk teljes. Most akkor
-                    készen vagy majdnem készen állunk a kódolásra.
+                    készen vagy közel majdnem készen állunk a kódolásra.
                 </Paragraph>
             </Article>
-            That's our dev environment setup complete at this point. Now,
-            finally we're (very nearly) ready to code.
+            <Article>
+                <h1>Build-elő (építő) és transzformáló eszközök</h1>
+
+                <Paragraph>
+                    Ehhez a projekthez, ahogyan említettük React lesz használva,
+                    ami annyit is jelent, hogy JSX lesz használva a
+                    forráskódban. A projekt a legújabb JavaScript funkciókat
+                    fogja használni.
+                </Paragraph>
+
+                <Paragraph>
+                    Egy azonnali probléma, hogy nincsen olyan böngésző amely
+                    támogatja alapból a JSX-et. A JSX egy köztes nyelv, ami azt
+                    jelenti, hogy kompilálni (átfordítani) kell egy olyan
+                    nyelvre, amelyet a böngésző megért a produkciós módban.
+                </Paragraph>
+
+                <Paragraph>
+                    Ha a böngésző megpróbálja futtatni a JavaScript-et a
+                    forráskódból, azonnal hibát fog jelezni. A projektnek
+                    szüksége van egy build (építő) eszközre, amely átalakítja a
+                    forráskódot egy olyan kóddá, amit a böngésző használni tud
+                    probléma nélkül.
+                </Paragraph>
+
+                <Paragraph>
+                    Számos választható transzformáló eszköz van és bár a Webpack
+                    különösen népszerű, ehhez a projekthez Parcel-t fogunk
+                    használni, főleg azért mert sokkal kevesebb beállítást
+                    igényel.
+                </Paragraph>
+
+                <Paragraph>
+                    Parcel az alapján működik, hogy meg fogja próbálni
+                    konfigurálni a fejlesztői követelményeket menet közben. A
+                    Parcel figyelni fogja a kódot és futtatni fog egy élő
+                    oldalfrissítő webkiszolgálót (webszerver-t) a fejlesztés
+                    során. Ez azt is jelenti, hogy a Parcel telepíteni fogja
+                    nekünk a függőségeket automatikusan, ahogyan annak
+                    referenciája megjelenik a forráskódban, ahogyan láttuk azt a
+                    harmadik fejezetben.
+                </Paragraph>
+
+                <Paragraph>
+                    A Parcel gondoskodni fog bármilyen transzformáló eszköz
+                    telepítéséről és konfigurációjáról anélkül, hogy közbe
+                    kellene avatkoznunk (a legtöbb esetben).
+                </Paragraph>
+            </Article>
+            Parcel will take care of installing any transformation tooling and
+            configuration required without us needing to intervene (in most
+            cases).
         </div>
     );
 }
