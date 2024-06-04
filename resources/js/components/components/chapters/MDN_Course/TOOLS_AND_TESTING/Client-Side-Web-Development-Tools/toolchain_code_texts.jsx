@@ -40,3 +40,27 @@ export const toolchain_11_eslint_config = `{
   }
 }
 `;
+
+export const toolchain_11_eslint_config_jsx = `{
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react"],
+  "rules": {
+    "semi": "error",
+    "no-console": 0,
+    "react/jsx-uses-vars": "error"
+  }
+}
+`;
+
+export const toolchain_12_jsx_plugin_install = `npm install --save-dev eslint-plugin-react`;

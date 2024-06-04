@@ -20,6 +20,8 @@ import {
     toolchain_9_npm_install,
     toolchain_10_prettier_config,
     toolchain_11_eslint_config,
+    toolchain_11_eslint_config_jsx,
+    toolchain_12_jsx_plugin_install,
 } from "./toolchain_code_texts.jsx";
 
 export default function Introducing_A_Complete_Toolchain() {
@@ -1015,15 +1017,89 @@ export default function Introducing_A_Complete_Toolchain() {
                             készítünk egy másik fájlt a will-it-miss
                             gyökérmappájában és elnevezzük .eslintrc.json-nek és
                             rakunk bele egy kis tartalmat:
+                            <CodeDisplay code={toolchain_11_eslint_config} />A
+                            fenti ESLint beállítás annyit tesz, hogy az ajánlott
+                            ESLint beállításokat szeretnénk használni, ami
+                            annyit jelent, hogy megengedjük ES6 funkciók
+                            használatát, mint a{" "}
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+                                target="_blank"
+                            >
+                                map()
+                            </a>{" "}
+                            vagy{" "}
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set"
+                                target="_blank"
+                            >
+                                Set()
+                            </a>
+                            , aztán használhatjuk az{" "}
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"
+                                target="_blank"
+                            >
+                                import
+                            </a>
+                            -ot és a{" "}
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/API/console/log_static"
+                                target="_blank"
+                            >
+                                console.log
+                            </a>
+                            -ot is.
                         </li>
 
-                        <CodeDisplay code={toolchain_11_eslint_config} />
+                        <li>
+                            Azonban a projekt forrás fáljokban React JSX
+                            szintaxist használunk (az igazi projektjeidben
+                            lehet, hogy React-ot, Vue-t vagy más keretrendszert
+                            használsz, de az is lehet, hogy semilyet sem.). Ha
+                            JSX szintaxist használunk elég gyorsan problémát
+                            jelenthet az ESLint-nek a jelenlegi beállításokkal,
+                            ezért több beállítást kell hozzáadnunk az ESLint
+                            konfigurációhoz, hogy elfogadjon JSX funkciókat. A
+                            végső config fájlnak így kellene kinéznie:
+                            <CodeDisplay
+                                code={toolchain_11_eslint_config_jsx}
+                            />
+                            Most, hogy a konfiguráció egy "React"-nak hívott
+                            plugin-t (beépülő modult) használ, ennek a
+                            fejlesztői függőségnek is telepítve kell lennie, így
+                            aztán a kód készen áll, hogy futtatva legyen a
+                            linting folyamat.
+                        </li>
+
+                        <li>
+                            Futtasd a következő terminál parancsot a projekted
+                            gyökérkönyvtárában:
+                            <CodeDisplay
+                                code={toolchain_12_jsx_plugin_install}
+                            />
+                        </li>
                     </ol>
                 </Paragraph>
+
+                <Paragraph>
+                    Van egy komplett lista az ESLint szabályokról, amelyek közül
+                    választhatsz és a saját tetszésed szerint állíthatod be azt.
+                    Van sok cég és csapat akik nyílvánossá teszik a saját ESLint
+                    beállításaikat, amelyek néha hasznosak lehetnek vagy
+                    kiválaszthatod a saját céljaid alapján, amelyiket a
+                    legjobbnak érzed. Egy kis figyelmeztetés: Az ESLint
+                    konfiguráció egy nagyon mély nyúlüreg, ha érted mire
+                    gondolok!
+                </Paragraph>
+
+                <Paragraph>
+                    Ezen a ponton a fejlesztői környezetünk teljes. Most akkor
+                    készen vagy majdnem készen állunk a kódolásra.
+                </Paragraph>
             </Article>
-            Next up, we'll configure ESLint — create another file in the root of
-            your will-it-miss directory called .eslintrc.json, and give it the
-            following contents:
+            That's our dev environment setup complete at this point. Now,
+            finally we're (very nearly) ready to code.
         </div>
     );
 }
