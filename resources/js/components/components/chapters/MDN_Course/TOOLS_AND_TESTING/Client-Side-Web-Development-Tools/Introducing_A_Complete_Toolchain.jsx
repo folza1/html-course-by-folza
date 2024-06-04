@@ -23,6 +23,7 @@ import {
     toolchain_11_eslint_config_jsx,
     toolchain_12_jsx_plugin_install,
     toolchain_13_parcel_install,
+    toolchain_14_css_plugin,
 } from "./toolchain_code_texts.jsx";
 
 export default function Introducing_A_Complete_Toolchain() {
@@ -1174,9 +1175,72 @@ export default function Introducing_A_Complete_Toolchain() {
                 </Paragraph>
 
                 <CodeDisplay code={toolchain_13_parcel_install} />
+
+                <h2>A jövő funkcióinak használata</h2>
+
+                <Paragraph>
+                    A projektünk kódja használ néhány új web funkciót, amelyek
+                    olyan újak, hogy még nincsenek teljesen sztenderdizálva.
+                    Például, ahelyett hogy olyan eszközöket használnánk mint a
+                    <a href="https://sass-lang.com/" target="_blank">
+                        Sass
+                    </a>
+                    , ez a projekt a W3C-nek az ajánlását fogja használni a{" "}
+                    <a
+                        href="https://drafts.csswg.org/css-nesting/"
+                        target="_blank"
+                    >
+                        CSS nesting
+                    </a>
+                    -hez (beágyazáshoz). A CSS nesting megengedi számunkra, hogy
+                    beágyazzunk CSS selector-okat és tulajdonságokat
+                    (property-ket) egy másik belsejében és így még specifikusabb
+                    selector működési területet hozhatunk létre. A Sass volt az
+                    egyik első (vagy az is lehet, hogy az első) preprocesszor
+                    (előfeldolgozó), amely támogatta a CSS beágyazást, de most
+                    sok évvel később a beágyazás (nesting) úgy néz ki hamarosan
+                    sztenderdizálva lesz, ami azt jelenti, hogy build eszközök
+                    nélkül is elérhető lesz a böngészőinkben.
+                </Paragraph>
+
+                <Paragraph>
+                    A Parcel fogja csinálni a transzformációt a beágyazott CSS
+                    és a natívan támogatott CSS között a{" "}
+                    <a href="https://postcss.org/" target="_blank">
+                        PostCSS
+                    </a>{" "}
+                    segítségével, amellyel a Parcel dolgozik alapból. Mióta
+                    kifejezetten eldöntöttük , hogy ennek a projektnek CSS
+                    nesting-et kellene használni a Sass helyett, a projektnek
+                    szüksége lesz egy PostCSS plugin-ra (beépülő modulra).
+                </Paragraph>
+
+                <Paragraph>
+                    Akkor használjuk a{" "}
+                    <a href="https://preset-env.cssdb.org/" target="_blank">
+                        postcss-preset-env
+                    </a>{" "}
+                    -et, amely "engedi számunkra használni a holnap CSS-ét ma".
+                    Hogy így járjunk el, kövesd a következő lépéseket:
+                </Paragraph>
+
+                <Paragraph>
+                    <ol>
+                        <li>
+                            Adj egy fájlt a projekt gyökérmappájába amelynek a
+                            neve legyen <BgLightgray>.postcssrc</BgLightgray>
+                        </li>
+                        <li>
+                            Adjuk hozzá a következő tartalmat a fájlba, amely
+                            automatikusan teljes hozzáférést fog adni a legújabb
+                            CSS funkciókhoz.
+                            <CodeDisplay code={toolchain_14_css_plugin} />
+                        </li>
+                    </ol>
+                </Paragraph>
             </Article>
-            We therefore need to install the parcel dependency in our project
-            too — run the following command in your terminal:
+            Add the following contents to the new file, which will automagically
+            give us full access to the latest CSS features:
         </div>
     );
 }
