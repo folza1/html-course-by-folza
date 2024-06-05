@@ -75,3 +75,8 @@ export const toolchain_14_css_plugin = `{
   }
 }
 `;
+export const toolchain_15_start_parcel = `npx parcel src/index.html`;
+
+export const toolchain_15_started_parcel = `Server running at http://localhost:1234
+✨  Built in 129ms.
+`;

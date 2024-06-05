@@ -24,6 +24,8 @@ import {
     toolchain_12_jsx_plugin_install,
     toolchain_13_parcel_install,
     toolchain_14_css_plugin,
+    toolchain_15_start_parcel,
+    toolchain_15_started_parcel,
 } from "./toolchain_code_texts.jsx";
 
 export default function Introducing_A_Complete_Toolchain() {
@@ -1151,8 +1153,14 @@ export default function Introducing_A_Complete_Toolchain() {
                     oldalfrissítő webkiszolgálót (webszerver-t) a fejlesztés
                     során. Ez azt is jelenti, hogy a Parcel telepíteni fogja
                     nekünk a függőségeket automatikusan, ahogyan annak
-                    referenciája megjelenik a forráskódban, ahogyan láttuk azt a
-                    harmadik fejezetben.
+                    referenciája megjelenik a forráskódban,{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management#using_the_package_ecosystem"
+                        target="_blank"
+                    >
+                        ahogyan láttuk azt a harmadik fejezetben
+                    </a>
+                    .
                 </Paragraph>
 
                 <Paragraph>
@@ -1225,22 +1233,148 @@ export default function Introducing_A_Complete_Toolchain() {
                 </Paragraph>
 
                 <Paragraph>
-                    <ol>
+                    <ol className="ml-1">
                         <li>
                             Adj egy fájlt a projekt gyökérmappájába amelynek a
                             neve legyen <BgLightgray>.postcssrc</BgLightgray>
                         </li>
                         <li>
-                            Adjuk hozzá a következő tartalmat a fájlba, amely
+                            Adjuk hozzá a következő tartalmat a fájlhoz, amely
                             automatikusan teljes hozzáférést fog adni a legújabb
                             CSS funkciókhoz.
                             <CodeDisplay code={toolchain_14_css_plugin} />
                         </li>
                     </ol>
                 </Paragraph>
+
+                <Paragraph>
+                    Ez minden amit tennünk kell. Emlékezz, hogy a Parcel
+                    telepíti a függőségeket nekünk alapértelmezetten.
+                </Paragraph>
+
+                <Paragraph>
+                    Bár az eszközlánc felépítése elég fáradságos lehet, de
+                    szándékosan olyan eszközöket próbáltunk ki amelyek
+                    lecsökkentik a konfigurációt és a bonyolultságot. Most már
+                    nem kell tennünk semmit a fejlesztés előkészítő fázisban. A
+                    modulok helyesen be vannak importálva, a beágyazott CSS
+                    megfelelően át van alakítva a szokásos CSS-re és a
+                    fejlesztés nincsen akadályozva a build folyamattal.
+                </Paragraph>
+
+                <Paragraph>
+                    Most már a szoftverünk készen áll az írásra.
+                </Paragraph>
             </Article>
-            Add the following contents to the new file, which will automagically
-            give us full access to the latest CSS features:
+            <Article>
+                <h1>Az átalakítás (transzformáció) futtatása</h1>
+                <Paragraph>
+                    Hogy elkezdjünk dolgozni a projektünkön, futtatni fogjuk a
+                    Parcel szervert a parancssorban. Alapértelmezett módban
+                    figyelni fogja a változásokat a kódodban és automatikusan
+                    telepíteni fogja a függőségeket. Ez jó dolog mert nem kell
+                    folyton ide oda mászkálni a kód és a parancssor között.
+                </Paragraph>
+                <Paragraph>
+                    <ol className="ml-1">
+                        <li>
+                            Hogy elindítsuk a parcelt a háttérben, menj a
+                            terminálba és futtasd a következő parancsot:
+                            <CodeDisplay code={toolchain_15_start_parcel} />
+                            Egy ilyen kiírást kellene látnod mint ez (miután a
+                            függőségek telepítve lettek):
+                            <CodeDisplay code={toolchain_15_started_parcel} />A
+                            Parcel azokat a függőségeket is telepíti amelyeket
+                            használunk a kódunkban, beleértve ezeket: react,
+                            react-dom, react-async-hook, date-fns és a
+                            format-number. Ezért a Parcel első elindítása tehát
+                            hosszabb lesz mint máskor.
+                            <Note>
+                                <div className="bold inline mr-1">
+                                    Megjegyzés:
+                                </div>
+                                Ha futtatod a Parcel-t ehhez a projekthez és
+                                találkozol egy ilyen hibával:{" "}
+                                <BgLightgray>
+                                    Error: ENOENT: no such file or directory
+                                </BgLightgray>{" "}
+                                akkor állítsd le a folyamatot a{" "}
+                                <BgLightgray>CTRL+C</BgLightgray> billentyű
+                                kombinációval és próbáld meg újra futtatni.
+                            </Note>
+                            A szerver most a kiírt URL-en fut (az én esetemben
+                            localhost:1234).
+                        </li>
+                        <li>
+                            Nyisd meg az URL-t a böngésződben és látni fogod a
+                            futó példa alkalmazást!
+                        </li>
+                    </ol>
+                </Paragraph>
+                <Paragraph>
+                    Egy másik nagyszerű Parcel trükk, hogy amikor változtatás
+                    van a forráskódodban, akkor megfrissül a böngészőben
+                    megnyitott oldal. Így neked azzal már nem kell foglalkoznod,
+                    automatikusan megfrissíti neked. Próbáld ki:
+                </Paragraph>
+                <Paragraph>
+                    <ol className="ml-1">
+                        <li>
+                            Nyisd meg a{" "}
+                            <BgLightgray>src/components/App.js</BgLightgray>{" "}
+                            fájlt a kedvenc szövegszerkesztődben.
+                        </li>
+                        <li>
+                            Keress rá a "near misses" kifejezésre, majd cseréld
+                            le valami hasonló bolondságra mint ez: "flying pigs"
+                        </li>
+                        <li>
+                            Mentsd el a fájlt, aztán menj vissza a böngészőbe,
+                            ahol az alkalmazás van megnyitva. Észre fogod venni,
+                            hogy a böngésző automatikusan megfrissítette az
+                            oldalt és a sor ahol a "near misses" kifejezés volt
+                            a lap tetején megváltozott "flying pigs"-re.
+                        </li>
+                    </ol>
+                </Paragraph>
+
+                <Paragraph>
+                    Kipróbálhatod az ESLint-et és a Prettier-t is. Próbálj meg
+                    szándékosan eltávolítani pár whitespace karaktert az egyik
+                    fájlodból és futtasd a Prettier-t, hogy megtisztítsa azt,
+                    vagy hozz létre egy szintaxis hibát az egyik JavaScript
+                    fájlban és nézd milyen hibát jelez az ESLint, amikor a
+                    Parcel-t akarod futtatni újra build-elés esetén.
+                </Paragraph>
+            </Article>
+            <Article>
+                <h1>Összefoglalás</h1>
+
+                <Paragraph>
+                    Végére is értünk ennek a fejezetnek, amiben felépítettünk
+                    egy szép helyi fejlesztői környezetet, hogy létrehozzunk egy
+                    alkalmazást benne.
+                </Paragraph>
+
+                <Paragraph>
+                    Most már a webes szoftver fejlesztés során el kellene
+                    készítened a kódod a szoftverhez, amelyet build-elni
+                    szándékozol. Mivel ez a modul a webfejlesztés eszközeinek a
+                    tanulásáról szól, nem magáról a webfejlesztésről,
+                    kódolásról, itt mi nem fogunk téged kódolni tanítani. Az
+                    ahhoz tartozó információkat megtanulhatod az oldal többi
+                    cikkéből.
+                </Paragraph>
+
+                <Paragraph>
+                    Helyette írtunk egy példa projektet amelyet használhatsz az
+                    eszközökhöz. Azt ajánlanánk, hogy tanuld meg a fejezet többi
+                    részét a mi példa projektünkkel használva és próbáld
+                    megváltoztatni az src mappát a saját projektedben és
+                    publikálni azt Netlify-on. És valóban, telepíteni Netlify-ra
+                    lesz az utolsó cél a következő fejezetben.
+                </Paragraph>
+            </Article>
         </div>
     );
 }
