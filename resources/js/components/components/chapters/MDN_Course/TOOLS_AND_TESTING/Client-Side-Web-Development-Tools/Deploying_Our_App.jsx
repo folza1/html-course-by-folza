@@ -85,8 +85,29 @@ export default function Deploying_Our_App() {
                         </li>
                     </ul>
                 </Paragraph>
-                Actually deploying the updated code to a live URL: Or
-                potentially a staging URL so it can be reviewed first.
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        A "cache busting" egy új kifejezés, amivel még nem
+                        találkoztunk ezelőtt ebben a modulban. Ez egy stratégia,
+                        amivel megkerülhetjük a böngésző saját cache
+                        mechanizmusát, amely kényszeríti a böngészőt, hogy
+                        töltse le a kódod új verzióját. A Parcel és több más
+                        eszköz is egyedi fájlneveket fog generálni minden egyes
+                        build-elésnél. Ezek az egyedi fájlnevek újabbak lesznek
+                        a cache-ben lévőkhöz képest, így mindig az újabb kódot
+                        fogja megjeleníteni a böngésző, minden esetben amikor
+                        frissítve van a deploy-olt kódod.
+                    </Paragraph>
+                </Note>
+                Note: Cache busting is a new term that we haven't met before in
+                the module. This is the strategy of breaking a browser's own
+                caching mechanism, which forces the browser to download a new
+                copy of your code. Parcel (and indeed many other tools) will
+                generate filenames that are unique to each new build. This
+                unique filename "busts" your browser's cache, thereby making
+                sure the browser downloads the fresh code each time an update is
+                made to the deployed code.
             </Article>
         </div>
     );
