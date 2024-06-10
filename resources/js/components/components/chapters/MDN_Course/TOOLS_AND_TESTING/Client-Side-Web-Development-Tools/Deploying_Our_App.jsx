@@ -99,25 +99,24 @@ export default function Deploying_Our_App() {
                         fogja megjeleníteni a böngésző, minden esetben amikor
                         frissítve van a deploy-olt kódod.
                     </Paragraph>
-                    <Paragraph>
-                        A fenti feladatok további feladatokká szedhetők szét.
-                        Jegyezd meg, hogy a legtöbb webfejlesztő csapatnak
-                        meglesznek a saját kifejezései és folyamatai legalább a
-                        fejlesztés utáni fázis néhány részében.
-                    </Paragraph>
-                    <Paragraph>
-                        Ehhez a projekthez a{" "}
-                        <a href="https://www.netlify.com/" target="_blank">
-                            Netlify
-                        </a>
-                        -t fogjuk használni amely csodálatos statikus hosting
-                        szolgáltatást nyújt a projektünkhöz.
-                    </Paragraph>
                 </Note>
-                For this project, we're going to use Netlify's wonderful static
-                hosting offering to host our project. Netlify gives us hosting
-                or more specifically, a URL to view your project online and to
-                share it with your friends, family, and colleagues.
+                <Paragraph>
+                    A fenti feladatok további feladatokká szedhetők szét.
+                    Jegyezd meg, hogy a legtöbb webfejlesztő csapatnak
+                    meglesznek a saját kifejezései és folyamatai legalább a
+                    fejlesztés utáni fázis néhány részében.
+                </Paragraph>
+                <Paragraph>
+                    Ehhez a projekthez a{" "}
+                    <a href="https://www.netlify.com/" target="_blank">
+                        Netlify
+                    </a>
+                    -t fogjuk használni, amely csodálatos statikus hosting
+                    szolgáltatást nyújt a projektünkhöz. A Netlify hostingot
+                    nyújt vagy még spcifikusabban egy URL-t, hogy megnézd a
+                    projektet online és, hogy megoszthasd azt a barátaiddal, a
+                    családdal vagy a kollégákkal.
+                </Paragraph>
             </Article>
         </div>
     );
