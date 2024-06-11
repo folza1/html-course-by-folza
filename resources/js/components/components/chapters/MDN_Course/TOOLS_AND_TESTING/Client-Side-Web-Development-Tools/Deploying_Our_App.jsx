@@ -193,10 +193,19 @@ export default function Deploying_Our_App() {
                     <BgLightgray>dist</BgLightgray> mappa telepítve
                     (deploy-olva) legyen a weboldalunkon.
                 </Paragraph>
+                <Paragraph>
+                    Ez az a rész ahol a kódunk, a GitHub és a Netlify együtt
+                    kell, hogy működjenek egymással, így minden egyes alkalommal
+                    amikor frissítjük a kódunkat a Github adattárban, a Netlify
+                    automatikusan megfogja a változtatásokat, futtatja a build
+                    feladatokat és végül release-eli (kibocsátja) az új
+                    változatot, update-et.
+                </Paragraph>
             </Article>
-            However, doing this step manually isn't our final aim — what we want
-            is for the build to happen automatically and the result of the dist
-            directory to be deployed live on our website.
+            This is where our code, GitHub, and Netlify need to be set up to
+            talk to one another, so that each time we update our GitHub code
+            repository, Netlify will automatically pick up the changes, run the
+            build tasks, and finally release a new update.
         </div>
     );
 }
