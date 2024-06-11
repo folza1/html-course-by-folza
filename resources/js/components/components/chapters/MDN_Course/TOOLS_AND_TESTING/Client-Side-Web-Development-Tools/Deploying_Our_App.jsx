@@ -117,7 +117,52 @@ export default function Deploying_Our_App() {
                     projektet online és, hogy megoszthasd azt a barátaiddal, a
                     családdal vagy a kollégákkal.
                 </Paragraph>
+                <Paragraph>
+                    Telepíteni egy hosting szerverre, a projekt életciklusának a
+                    végén szokott lenni, de olyan szolgáltatásokkal, mint a
+                    Netlify alacsonyan lehet tartani a telepítések (deployments)
+                    költségét, mind pénzügyi értelemben, mind időgazdálkodás
+                    szempontjából, hogy mennyi időbe is telik egy telepítés. A
+                    Netlify-al az is lehetséges, hogy telepítsd a projektet már
+                    a fejlesztés során azért, hogy megoszthasd a munkád, hogyan
+                    halad vagy, hogy kiadhass egy pre-release-t (egy előzetest a
+                    projektről) valamilyen más célból.
+                </Paragraph>
+                <Paragraph>
+                    A Netlify más dolgok mellett megengedi neked, hogy futtass
+                    deployment (telepítés) előtti feladatokat, amely a mi
+                    esetünkben azt jelenti, hogy az összess kód productió build
+                    (építés) folyamatai a Netlify-on belül lesznek teljesítve és
+                    ha a build sikeres, a weboldal változásai deploy-olva
+                    (telepítve) lesznek a hosting szerveren.
+                </Paragraph>
+                <Paragraph>
+                    Bár a Netlify egy{" "}
+                    <a href="https://app.netlify.com/drop" target="_blank">
+                        drag and drop (húzd és dobd)
+                    </a>{" "}
+                    deploy szolgáltatást nyújt, mi új deployment-et (telepítést)
+                    szándékozunk végrehajtani a Netlify-ra minden egyes
+                    alkalommal, amikor a GitHub repo-ba push-olunk (feltöltünk).
+                </Paragraph>
+                <Paragraph>
+                    Ezek pontosan azok a fajta összekapcsolt szolgáltatások,
+                    amelyekre ösztönöztünk téged, hogy nézz utána, amikor
+                    eldöntöd milyen eszközláncot építesz fel magadnak. Tudjuk
+                    commit-olni a kódunkat és push-olni GitHub-ra, aztán a
+                    frissített kód automatikusan végrehajtja az egész build
+                    rutint. Ha minden jól megy, kapunk egy élő automatikusan
+                    változtatásokat deploy-oló (telepítő) rnedszert. Amit
+                    tennünk kell hozzá az csak a "push" a GitHub adattárba.
+                </Paragraph>
+
+                <Paragraph>
+                    Azonban be is kell ehhez állítanunk a dolgokat és ezután azt
+                    fogjuk megnézni.
+                </Paragraph>
             </Article>
+            However, we do have to set these steps up, and we'll look at that
+            now.
         </div>
     );
 }
