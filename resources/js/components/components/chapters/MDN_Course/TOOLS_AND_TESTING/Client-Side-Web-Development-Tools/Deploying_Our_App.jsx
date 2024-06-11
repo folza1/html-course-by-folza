@@ -2,6 +2,7 @@ import React from "react";
 import Paragraph from "../../REACT/paragraph/Paragraph.jsx";
 import Article from "../../REACT/article/Article.jsx";
 import Note from "../../REACT/note/Note.jsx";
+import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
 
 export default function Deploying_Our_App() {
@@ -161,8 +162,41 @@ export default function Deploying_Our_App() {
                     fogjuk megnézni.
                 </Paragraph>
             </Article>
-            However, we do have to set these steps up, and we'll look at that
-            now.
+            <Article>
+                <h1>A build folyamat</h1>
+                <Paragraph>
+                    Újra elmondom, hogy mi Parcel-t használunk a fejlesztéshez
+                    és a build hozzáadása a projekthez nagyon egyszerű.
+                    Ahelyett, hogy futtatjuk a szervert az{" "}
+                    <BgLightgray>npx parcel src/index.html</BgLightgray>{" "}
+                    paranccsal, inkább az{" "}
+                    <BgLightgray>npx parcel build src/index.html</BgLightgray>{" "}
+                    parancsot használjuk és a Parcel build-elni fog mindent és
+                    elkészíti azokat produkcióra (bemutatásra), ahelyett, hogy
+                    csak futtatja azt fejlesztési és tesztelési célokra. Ebben
+                    benne van a minification és a kód "tree-shaking"-e (amely
+                    eltávolítja a kódból a nem használt részeket) és a fájlnevek
+                    "cache-busting"-ja (minden egyes build-nél új egyedi
+                    fájlnevet kapnak a fájlok).
+                </Paragraph>
+                <Paragraph>
+                    Az újonnan elkészített produkciós kód egy új mappában van
+                    elhelyezve, név szerint a <BgLightgray>dist</BgLightgray>{" "}
+                    mappában. Ez a mappa talrtalmazza az összes fájlt, amely
+                    szükséges a weboldal futtatásához és készen áll a szerverre
+                    feltöltéshez.
+                </Paragraph>
+                <Paragraph>
+                    Azonban végül nem az a célunk, hogy manuálisan futtassuk
+                    minden alkalommal. Azt akarjuk, hogy a build automatikusan
+                    történjen és az eredményezett{" "}
+                    <BgLightgray>dist</BgLightgray> mappa telepítve
+                    (deploy-olva) legyen a weboldalunkon.
+                </Paragraph>
+            </Article>
+            However, doing this step manually isn't our final aim — what we want
+            is for the build to happen automatically and the result of the dist
+            directory to be deployed live on our website.
         </div>
     );
 }
