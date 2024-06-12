@@ -5,7 +5,7 @@ import Note from "../../REACT/note/Note.jsx";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
 
-import { deploy_1_wd } from "./deploy_code_text.jsx";
+import { deploy_1_wd, deploy_2_add } from "./deploy_code_text.jsx";
 
 export default function Deploying_Our_App() {
     return (
@@ -238,10 +238,52 @@ export default function Deploying_Our_App() {
                     hogy futtasd a következő parancsot:
                 </Paragraph>
                 <CodeDisplay code={deploy_1_wd} />
+                <Paragraph>
+                    A parancsra válaszként kapnod kellene egy státusz beszámolót
+                    (report-ot) milyen fájlok is vannak megfigyelés alatt,
+                    milyen fájlok vannak staged állapotban (commit-ra
+                    előkészítve) és így tovább. Ezek a kifejezések a git
+                    "nyelvtan"-hoz tartoznak. Ha{" "}
+                    <BgLightgray>fatal: not a git repository</BgLightgray>
+                    hibát ír a terminál, akkor a munkamappa nem egy git
+                    munkamappa és akkor a <BgLightgray>
+                        git init
+                    </BgLightgray>{" "}
+                    parancssal lehet azzá tenni.
+                </Paragraph>
+
+                <Paragraph>Most akkor három feladat van előttünk:</Paragraph>
+
+                <Paragraph>
+                    <ul className="ml-1">
+                        <li>
+                            Adjunk hozzá bármilyen változást amit csináltunk a
+                            stage-hez (ez egy speciális név ahonnan a fájlok
+                            commit-olva (változatások rögzítve) lesznek).
+                        </li>
+                        <li>
+                            Commit-oljuk (rögzítsük) a változtatásokat
+                            adattárhoz.
+                        </li>
+                        <li>
+                            Push-oljuk (töltsük fel) a változtatásokat a
+                            GitHub-ra.
+                        </li>
+                    </ul>
+                </Paragraph>
+
+                <Paragraph>
+                    <ol className="ml-1">
+                        <li>
+                            Hogy hozzáadjuk a változtatásokat az adattárhoz
+                            futtassuk ezt a parancsot:
+                            <CodeDisplay code={deploy_2_add} />
+                        </li>
+                    </ol>
+                </Paragraph>
             </Article>
-            We initialized our working directory as a git working directory
-            earlier on. A quick way to verify this is to run the following
-            command:
+            Add any changes we've made to the stage (a special name for the
+            place that git will commit files from).
         </div>
     );
 }
