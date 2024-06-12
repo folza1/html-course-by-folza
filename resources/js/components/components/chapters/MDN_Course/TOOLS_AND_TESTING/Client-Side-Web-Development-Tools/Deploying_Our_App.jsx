@@ -5,6 +5,8 @@ import Note from "../../REACT/note/Note.jsx";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
 
+import { deploy_1_wd } from "./deploy_code_text.jsx";
+
 export default function Deploying_Our_App() {
     return (
         <div className="container">
@@ -109,8 +111,8 @@ export default function Deploying_Our_App() {
                 </Paragraph>
                 <Paragraph>
                     Ehhez a projekthez a{" "}
-                    <a href="https://www.netlify.com/" target="_blank">
-                        Netlify
+                    <a href="https://pages.github.com/" target="_blank">
+                        GitHub Pages
                     </a>
                     -t fogjuk használni, amely csodálatos statikus hosting
                     szolgáltatást nyújt a projektünkhöz. A Netlify hostingot
@@ -124,28 +126,33 @@ export default function Deploying_Our_App() {
                     Netlify alacsonyan lehet tartani a telepítések (deployments)
                     költségét, mind pénzügyi értelemben, mind időgazdálkodás
                     szempontjából, hogy mennyi időbe is telik egy telepítés. A
-                    Netlify-al az is lehetséges, hogy telepítsd a projektet már
-                    a fejlesztés során azért, hogy megoszthasd a munkád, hogyan
-                    halad vagy, hogy kiadhass egy pre-release-t (egy előzetest a
-                    projektről) valamilyen más célból.
+                    Github Pages-el az is lehetséges, hogy telepítsd a projektet
+                    már a fejlesztés során azért, hogy megoszthasd a munkád,
+                    hogyan halad vagy, hogy kiadhass egy pre-release-t (egy
+                    előzetest a projektről) valamilyen más célból.
                 </Paragraph>
+
                 <Paragraph>
-                    A Netlify más dolgok mellett megengedi neked, hogy futtass
-                    deployment (telepítés) előtti feladatokat, amely a mi
-                    esetünkben azt jelenti, hogy az összess kód productió build
-                    (építés) folyamatai a Netlify-on belül lesznek teljesítve és
-                    ha a build sikeres, a weboldal változásai deploy-olva
-                    (telepítve) lesznek a hosting szerveren.
+                    A GitHub egy egyszerű munkafolyamatot biztosít, hogy élő
+                    website-á alakítsd az új kódodat. Lássuk!
                 </Paragraph>
+
                 <Paragraph>
-                    Bár a Netlify egy{" "}
-                    <a href="https://app.netlify.com/drop" target="_blank">
-                        drag and drop (húzd és dobd)
-                    </a>{" "}
-                    deploy szolgáltatást nyújt, mi új deployment-et (telepítést)
-                    szándékozunk végrehajtani a Netlify-ra minden egyes
-                    alkalommal, amikor a GitHub repo-ba push-olunk (feltöltünk).
+                    <ul className="ml-1">
+                        <li>Push-olod a kódod GitHub-ra</li>
+                        <li>
+                            Meghatározol egy GitHub Action-t (akciót), ami
+                            beindul amikor egy új push-ot hajtasz végre a main
+                            branch-en (fő ágon), amely build-eli a kódot és egy
+                            meghatározott helyre feltölti azt.
+                        </li>
+                        <li>
+                            A Github Pages aztán szolgáltatja a kódot egy
+                            megadott URL-re.
+                        </li>
+                    </ul>
                 </Paragraph>
+
                 <Paragraph>
                     Ezek pontosan azok a fajta összekapcsolt szolgáltatások,
                     amelyekre ösztönöztünk téged, hogy nézz utána, amikor
@@ -153,8 +160,9 @@ export default function Deploying_Our_App() {
                     commit-olni a kódunkat és push-olni GitHub-ra, aztán a
                     frissített kód automatikusan végrehajtja az egész build
                     rutint. Ha minden jól megy, kapunk egy élő automatikusan
-                    változtatásokat deploy-oló (telepítő) rnedszert. Amit
-                    tennünk kell hozzá az csak a "push" a GitHub adattárba.
+                    változtatásokat deploy-oló (telepítő) rendszert. Amit
+                    tennünk kell hozzá az csak a "push" (feltöltés) a GitHub
+                    adattárba.
                 </Paragraph>
 
                 <Paragraph>
@@ -165,47 +173,75 @@ export default function Deploying_Our_App() {
             <Article>
                 <h1>A build folyamat</h1>
                 <Paragraph>
-                    Újra elmondom, hogy mi Parcel-t használunk a fejlesztéshez
-                    és a build hozzáadása a projekthez nagyon egyszerű.
-                    Ahelyett, hogy futtatjuk a szervert az{" "}
-                    <BgLightgray>npx parcel src/index.html</BgLightgray>{" "}
-                    paranccsal, inkább az{" "}
-                    <BgLightgray>npx parcel build src/index.html</BgLightgray>{" "}
-                    parancsot használjuk és a Parcel build-elni fog mindent és
-                    elkészíti azokat produkcióra (bemutatásra), ahelyett, hogy
-                    csak futtatja azt fejlesztési és tesztelési célokra. Ebben
-                    benne van a minification és a kód "tree-shaking"-e (amely
-                    eltávolítja a kódból a nem használt részeket) és a fájlnevek
-                    "cache-busting"-ja (minden egyes build-nél új egyedi
-                    fájlnevet kapnak a fájlok).
+                    Vite-ot fogunk használni a fejlesztéshez, mert a build
+                    folyamatot nagyon könnyen hozzá tudjuk adni. Ahogyan láttuk
+                    korábban már van egy egyedi parancsunk az npm run build
+                    amely lehetővé teszi a Vite számára hogy build-eljen mindent
+                    készen a produkcióra ahelyett, hogy csak futtatja azt
+                    fejlesztés vagy teszt céljából. Ez magábafoglalja a "
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Glossary/Minification"
+                        target="_blank"
+                    >
+                        minification
+                    </a>
+                    "-t a "
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking"
+                        target="_blank"
+                    >
+                        tree-shaking
+                    </a>
+                    "-et és a fájlnevek "cache-busting"-ját.
                 </Paragraph>
                 <Paragraph>
-                    Az újonnan elkészített produkciós kód egy új mappában van
-                    elhelyezve, név szerint a <BgLightgray>dist</BgLightgray>{" "}
-                    mappában. Ez a mappa talrtalmazza az összes fájlt, amely
-                    szükséges a weboldal futtatásához és készen áll a szerverre
-                    feltöltéshez.
+                    Az a legjobb gyakorlat, hogy mindig meghatározunk egy{" "}
+                    <BgLightgray>build</BgLightgray> script-et a projektünkben,
+                    így amikor futtatjuk az{" "}
+                    <BgLightgray>npm run build</BgLightgray> parancsot, hogy
+                    végrehajtódjon a build, ne kelljen emlékeznünk a különleges
+                    build parancs argumentumokra minden egyes projektnél.
                 </Paragraph>
+
                 <Paragraph>
-                    Azonban végül nem az a célunk, hogy manuálisan futtassuk
-                    minden alkalommal. Azt akarjuk, hogy a build automatikusan
-                    történjen és az eredményezett{" "}
-                    <BgLightgray>dist</BgLightgray> mappa telepítve
-                    (deploy-olva) legyen a weboldalunkon.
+                    Egy újonnan készített produkciós kód egy{" "}
+                    <BgLightgray>dist</BgLightgray> nevű új mappában lesz, amely
+                    tartalmazza az összes fájlt, ami szükséges a website
+                    futtatásához és készen áll hogy feltöltsd egy szerverre.
                 </Paragraph>
+
                 <Paragraph>
-                    Ez az a rész ahol a kódunk, a GitHub és a Netlify együtt
-                    kell, hogy működjenek egymással, így minden egyes alkalommal
-                    amikor frissítjük a kódunkat a Github adattárban, a Netlify
-                    automatikusan megfogja a változtatásokat, futtatja a build
-                    feladatokat és végül release-eli (kibocsátja) az új
-                    változatot, update-et.
+                    Azonban, nem manuálisan akarjuk ezt végrehajtani. Amit
+                    akarunk az az, hogy a build történjen meg automatikusan és a
+                    végeredmény a <BgLightgray>dist</BgLightgray> mappából
+                    legyen azonnal deploy-olva a website-unkon.
                 </Paragraph>
             </Article>
-            This is where our code, GitHub, and Netlify need to be set up to
-            talk to one another, so that each time we update our GitHub code
-            repository, Netlify will automatically pick up the changes, run the
-            build tasks, and finally release a new update.
+            <Article>
+                <h1>A változtatások commit-olása a GitHub-ra</h1>
+                <Paragraph>
+                    Ez a szekció átvezet azon, hogyan is kell tárolni a kódodat
+                    a git adattárban, de ez messze különbözik egy git
+                    tutorial-tól. Vannak nagyszerű tutorial-ok és könyvek és a
+                    mi{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub"
+                        target="_blank"
+                    >
+                        Git és GitHub oldalunk
+                    </a>{" "}
+                    egy jó hely a kezdéshez.
+                </Paragraph>
+                <Paragraph>
+                    Korábban elindítottuk a munkamappánkat (working directory)
+                    git-es munkamappaként. Egy gyors módja az ellenőrzéséhez,
+                    hogy futtasd a következő parancsot:
+                </Paragraph>
+                <CodeDisplay code={deploy_1_wd} />
+            </Article>
+            We initialized our working directory as a git working directory
+            earlier on. A quick way to verify this is to run the following
+            command:
         </div>
     );
 }
