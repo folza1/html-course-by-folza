@@ -278,12 +278,17 @@ export default function Deploying_Our_App() {
                             Hogy hozzáadjuk a változtatásokat az adattárhoz
                             futtassuk ezt a parancsot:
                             <CodeDisplay code={deploy_2_add} />
+                            Figyelj a pontra a parancs végén, ami azt jelenti,
+                            hogy "mindent hozzáad ebben a mappában".
                         </li>
                     </ol>
                 </Paragraph>
             </Article>
-            Add any changes we've made to the stage (a special name for the
-            place that git will commit files from).
+            Note the period at the end, it means "everything in this directory".
+            The git add . command is a bit of a sledgehammer approach — it will
+            add all local changes you've worked on in one go. If you want finer
+            control over what you add, then use git add -p for an interactive
+            process, or add individual files using git add path/to/file.
         </div>
     );
 }
