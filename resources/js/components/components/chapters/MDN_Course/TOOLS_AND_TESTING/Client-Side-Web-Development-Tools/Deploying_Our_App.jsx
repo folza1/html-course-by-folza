@@ -10,6 +10,8 @@ import {
     deploy_1_wd,
     deploy_2_add,
     deploy_3_commit,
+    deploy_4_remote,
+    deploy_4_remote2,
 } from "./deploy_code_text.jsx";
 
 export default function Deploying_Our_App() {
@@ -333,13 +335,29 @@ export default function Deploying_Our_App() {
                                 />
                             </div>
                         </li>
+                        <li>
+                            A remote (távoli) helyet meg kell adni a helyi git
+                            repository-nak és akkor push-olhatunk a remote
+                            repository-ba, másként nem találja, hogy hová is
+                            kell push-olni. Futtatnod kell a következő parancsot
+                            a következő felépítésben (használjuk a megadott
+                            HTTPS lehetőséget most - különösen ha új vagy a
+                            GitHub-on - nem pedig az SSH lehetőséget):
+                            <CodeDisplay code={deploy_4_remote} />
+                            Szóval ha a távoli címed
+                            <BgLightgray>
+                                https://github.com/remy/super-website.git
+                            </BgLightgray>{" "}
+                            volt, ahogyan a fenti képen, akkor a parancs a
+                            következőképpen néz ki:
+                            <CodeDisplay code={deploy_4_remote2} />
+                            Változtasd meg az URL címet a saját repository-d
+                            URL-ére és futtasd.
+                        </li>
                     </ol>
                 </Paragraph>
             </Article>
-            Give your repository a short, memorable name, without spaces in it
-            (use hyphens to separate words), and a description, then click
-            Create repository at the bottom of the page. You should now have a
-            "remote" URL that points to your new GitHub repo.
+            Change the URL to your own repository, and run it now.
         </div>
     );
 }
