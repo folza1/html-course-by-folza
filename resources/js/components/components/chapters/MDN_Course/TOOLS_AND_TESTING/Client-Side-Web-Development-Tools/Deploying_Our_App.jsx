@@ -4,6 +4,7 @@ import Article from "../../REACT/article/Article.jsx";
 import Note from "../../REACT/note/Note.jsx";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
+import remote_repo from "./img/8.remote_repo.png";
 
 import {
     deploy_1_wd,
@@ -309,13 +310,36 @@ export default function Deploying_Our_App() {
                                 érthető lesz mit miért csináltál.
                             </Note>
                         </li>
+                        <li>
+                            Végül a kódot push-olni kell a GitHub által host-olt
+                            adattárban. Gyerünk csináljuk most! Látogasd meg a{" "}
+                            <a href="https://github.com/new">
+                                https://github.com/new
+                            </a>{" "}
+                            oldalt és készíts egy új repository-t (adattárat),
+                            amely majd host-olja a kódot.
+                        </li>
+                        <li>
+                            Adj a repository-nak (adattárnak) egy rövid,
+                            megjegyezhető nevet, szóközök nélkül (használj
+                            szóköz helyett alsó kötőjelet) és adj egy leírást is
+                            róla aztán kattints a Create repository gombra a lap
+                            alján. Most már lennie kell egy "remote" (távoli)
+                            URL-nek ami az új GitHub repository-ra mutat.
+                            <div className="image-container">
+                                <img
+                                    src={remote_repo}
+                                    alt="New Remote Repository"
+                                />
+                            </div>
+                        </li>
                     </ol>
                 </Paragraph>
             </Article>
-            Note: Although you're free to write whatever you wish in the commit
-            message, there's some useful tips around the web on good commit
-            messages. Keep them short, concise, and descriptive, so they clearly
-            describe what the change does.
+            Give your repository a short, memorable name, without spaces in it
+            (use hyphens to separate words), and a description, then click
+            Create repository at the bottom of the page. You should now have a
+            "remote" URL that points to your new GitHub repo.
         </div>
     );
 }
