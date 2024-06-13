@@ -5,7 +5,11 @@ import Note from "../../REACT/note/Note.jsx";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
 
-import { deploy_1_wd, deploy_2_add } from "./deploy_code_text.jsx";
+import {
+    deploy_1_wd,
+    deploy_2_add,
+    deploy_3_commit,
+} from "./deploy_code_text.jsx";
 
 export default function Deploying_Our_App() {
     return (
@@ -279,16 +283,39 @@ export default function Deploying_Our_App() {
                             futtassuk ezt a parancsot:
                             <CodeDisplay code={deploy_2_add} />
                             Figyelj a pontra a parancs végén, ami azt jelenti,
-                            hogy "mindent hozzáad ebben a mappában".
+                            hogy "mindent hozzáad ebből a mappából", ahol
+                            változtatás van. A git add. parancs egy kalapácshoz
+                            hasonlít, amely hozzáadja az összes lokális
+                            változtatást, amin dolgoztál mégpedig egyszerre. Ha
+                            szeretnéd finomítani, hogy mit adsz hozzá, akkor
+                            használd a git add -p parancsot, amely interaktív
+                            módon végigvezet a változtatásokon, vagy add hozzá
+                            az egyedi fájlokat használva a git add path/to/file
+                            parancsot, ahol hozzáadhatod a fájl útvonala
+                            alapján.
+                        </li>
+                        <li>
+                            Most az összes kód staged állapotban van készen a
+                            commit-ra. Futtasd a következőt:
+                            <CodeDisplay code={deploy_3_commit} />
+                            <Note>
+                                <div className="bold inline mr-1">
+                                    Megjegyzés:
+                                </div>
+                                Bármilyen commit üzenetet írhatsz amilyet csak
+                                akarsz a commit-hoz, viszont van néhány hasznos
+                                tipp a web-en hozzá. Legyenek rövidek, tömörek
+                                és jó leírást adjanak a commit-ról, így tisztán
+                                érthető lesz mit miért csináltál.
+                            </Note>
                         </li>
                     </ol>
                 </Paragraph>
             </Article>
-            Note the period at the end, it means "everything in this directory".
-            The git add . command is a bit of a sledgehammer approach — it will
-            add all local changes you've worked on in one go. If you want finer
-            control over what you add, then use git add -p for an interactive
-            process, or add individual files using git add path/to/file.
+            Note: Although you're free to write whatever you wish in the commit
+            message, there's some useful tips around the web on good commit
+            messages. Keep them short, concise, and descriptive, so they clearly
+            describe what the change does.
         </div>
     );
 }
