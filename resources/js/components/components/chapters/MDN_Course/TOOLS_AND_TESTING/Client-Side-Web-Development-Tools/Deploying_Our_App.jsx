@@ -398,10 +398,41 @@ export default function Deploying_Our_App() {
                     </a>
                     .
                 </Note>
+
+                <Paragraph>
+                    Ez a parancs végül azt mondja a git-nek, hogy push-olja a
+                    kódot a remote (távoli) helyre amit mi{" "}
+                    <BgLightgray>origin</BgLightgray>-nek neveztünk (az a
+                    repository (adattár) amelyet elhelyeztünk a github.com-on -
+                    bármi másra is nevethettük volna, amire csak szeretnénk) és
+                    a <BgLightgray>main</BgLightgray> brach-ét (ág-át)
+                    használjuk. Még nem beszéltünk a branch-ekről (ág-akról), de
+                    a "main" branch az az alapértelmezett hely a munkánknak és
+                    itt jön szóba a git. Amikor létrehozunk egy action-t
+                    (akció-t) a website-unk build-elésével, akkor a "main"
+                    branch-et fogjuk megadni, hogy az azon lévő változások
+                    legyenek figyelve.
+                </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    2020 Októberig az alapértelmezett branch a GitHub-on a
+                    <BgLightgray>master</BgLightgray> volt, amely számos
+                    szociális okokból <BgLightgray>main</BgLightgray>-re lett
+                    megváltoztatva. Figyelembe kell venned, hogy ez a régebbi
+                    alapértelmezett branch feltűnhet számos projektnél, szóval
+                    találkozhatsz vele, de mi azt ajánljuk, hogy a{" "}
+                    <BgLightgray>main</BgLightgray>-t használd a saját
+                    projektjeidhez.
+                </Note>
+
+                <Paragraph>
+                    Szóval akkor a projektünk commit-olve van a git-ben és
+                    push-olva van a GitHub repository-nkba, a következő lépés az
+                    eszközláncban, hogy meghatározunk egy build action-t így a
+                    projektünk élőben deploy-olva lesz a web-en.
+                </Paragraph>
             </Article>
-            If you are interested in using the SSH option, thereby avoiding the
-            need to enter your username and password every time you push to
-            GitHub, this tutorial walks you through how.
         </div>
     );
 }
