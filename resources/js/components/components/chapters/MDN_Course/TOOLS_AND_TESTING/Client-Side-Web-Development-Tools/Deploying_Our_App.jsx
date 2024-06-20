@@ -12,6 +12,7 @@ import {
     deploy_3_commit,
     deploy_4_remote,
     deploy_4_remote2,
+    deploy_5_push,
 } from "./deploy_code_text.jsx";
 
 export default function Deploying_Our_App() {
@@ -354,10 +355,53 @@ export default function Deploying_Our_App() {
                             Változtasd meg az URL címet a saját repository-d
                             URL-ére és futtasd.
                         </li>
+                        <li>
+                            Most már készen állunk arra, hogy push-oljuk
+                            (feltöltsük) a kódot GitHub-ra. Futtasd hozzá a
+                            következő kódot:
+                            <CodeDisplay code={deploy_5_push} />
+                            Ennél a pontnál be kell majd írnod a
+                            felhasználónevet és a jelszót mielőtt a Git
+                            engedélyezi a push elküldését. Ez azért van mert a
+                            HTTPS lehetőséget használjuk az SSH lehetőség
+                            helyett, ahogyan azt láthattuk a képen ezelőtt.
+                            Ezért szükség lesz a GitHub felhasználónévre és
+                            aztán, ha nincsen két-faktoros hitelesítés (2FA)
+                            bekapcsolva akkor a GitHub jelszóra. Bátorítunk
+                            arra, hogy használj 2FA-t, ha lehetséges, de tartsd
+                            észben, ha úgy teszel akkor egy "personal access
+                            token"-t (személyes hozzáférési token-t) is
+                            használnod kell. A GitHub help oldalán vannak nagyon
+                            jó és{" "}
+                            <a
+                                href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens"
+                                target="_blank"
+                            >
+                                egyszerű leírások melyek végigvezetnek, hogyan
+                                is szerezhetsz egyet
+                            </a>
+                            .
+                        </li>
                     </ol>
                 </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    Ha érdekel az SSH lehetőség használata, amivel elkerülheted
+                    a felhasználónév és a jelszó használatát minden alkalommal
+                    amikor push-olsz a GitHub-ra,{" "}
+                    <a
+                        href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh"
+                        target="_blank"
+                    >
+                        ez a tananyag végigvezet rajta hogyan
+                    </a>
+                    .
+                </Note>
             </Article>
-            Change the URL to your own repository, and run it now.
+            If you are interested in using the SSH option, thereby avoiding the
+            need to enter your username and password every time you push to
+            GitHub, this tutorial walks you through how.
         </div>
     );
 }

@@ -8,3 +8,5 @@ export const deploy_4_remote = `git remote add origin https://github.com/your-na
 `;
 export const deploy_4_remote2 = `git remote add origin https://github.com/remy/super-website.git
 `;
+export const deploy_5_push = `git push origin main
+`;
