@@ -5,6 +5,7 @@ import Note from "../../REACT/note/Note.jsx";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
 import remote_repo from "./img/8.remote_repo.png";
+import commit from "./img/9.commit.png";
 
 import {
     deploy_1_wd,
@@ -431,6 +432,59 @@ export default function Deploying_Our_App() {
                     push-olva van a GitHub repository-nkba, a következő lépés az
                     eszközláncban, hogy meghatározunk egy build action-t így a
                     projektünk élőben deploy-olva lesz a web-en.
+                </Paragraph>
+            </Article>
+            <Article>
+                <h1>
+                    GitHub Actions (akciók) használata a deployment-hez
+                    (webszerverre való telepítéshez)
+                </h1>
+                <Paragraph>
+                    A GitHub Actions, mint az ESLint konfiguráció egy nagyon
+                    mély nyúlüreg. Nem könnyű jól csinálni az első
+                    próbálkozásra, de olyan népszerű feladatokhoz mint a
+                    "statikus weboldal build-elése és deploy-olása a GitHub
+                    Pages-re" van sok példa, amit lemásolhatunk és
+                    beilleszthetünk. Követheted az instrukciókat a{" "}
+                    <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow">
+                        Publikálás egyedi GitHub Actions munkafolyamattal
+                    </a>{" "}
+                    oldalon. Megnézheted a{" "}
+                    <a href="https://github.com/mdn/client-toolchain-example/blob/main/.github/workflows/github-pages.yml">
+                        GitHub Action fájlunkat
+                    </a>{" "}
+                    mint egy működő példát. (A fájl neve nem számít.)
+                </Paragraph>
+
+                <Paragraph>
+                    Miután commit-olod ezt a fájlt a main branch-be, akkor
+                    látnod kellene egy kis zöld pipát a commit cím mellett:
+                </Paragraph>
+
+                <div className="image-container">
+                    <img src={commit} alt="Commit" />
+                </div>
+
+                <Paragraph>
+                    Ha egy sárga pontot látsz azt jelenti, hogy az akció
+                    folyamatban van és ha egy piros keresztet, akkor valami
+                    probléma adódott. Klikkelj az ikonra és láthatod a státuszát
+                    és a log-jait (napló fájlokat) a build akciónak (a mi
+                    esetünkben a "Deploy build"-nek nevezve).
+                </Paragraph>
+
+                <Paragraph>
+                    Ha vársz pár percet meglátogathatod a GitHub Pages URL-jét
+                    láthatod a website-ot élőben a web-en. A linknek ilyesminek
+                    kell lennie
+                    https://&lt;a-neved&gt;.github.io&lt;/a-repository-neve&gt;.
+                    A mi példánkban:
+                    https://mdn.github.io/client-toolchain-example.
+                </Paragraph>
+
+                <Paragraph>
+                    Most az utolsó dolgunk az eszközláncban: tesztelni, hogy
+                    megbizonyosodjunk, hogy a kódunk működik.
                 </Paragraph>
             </Article>
         </div>
