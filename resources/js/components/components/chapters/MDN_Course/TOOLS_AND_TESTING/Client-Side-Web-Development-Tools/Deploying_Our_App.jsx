@@ -14,6 +14,8 @@ import {
     deploy_4_remote,
     deploy_4_remote2,
     deploy_5_push,
+    deploy_6_vitest,
+    deploy_7_vitest_package_json,
 } from "./deploy_code_text.jsx";
 
 export default function Deploying_Our_App() {
@@ -485,6 +487,123 @@ export default function Deploying_Our_App() {
                 <Paragraph>
                     Most az utolsó dolgunk az eszközláncban: tesztelni, hogy
                     megbizonyosodjunk, hogy a kódunk működik.
+                </Paragraph>
+            </Article>
+            <Article>
+                <h1>Tesztelés</h1>
+
+                <Paragraph>
+                    A tesztelés magában egy hatalmas téma, még a front-end
+                    kifejezésen belül is. Meg fogom mutatni, hogyan adj egy
+                    kezdeti tesztet a projektedhez és hogyan használd a tesztet
+                    a deployment megakadályozására vagy engedélyezésére.
+                </Paragraph>
+
+                <Paragraph>
+                    Amikor tesztelésről van szó jó, ha a különböző módokon
+                    közelítjük meg a problémát:
+                    <ul className="ml-1">
+                        <li>
+                            Az end-to-end tesztelés, amely magába foglalja a
+                            látogató kattintását egy dolgon és más történéseket.
+                        </li>
+                        <li>
+                            Integráció tesztelés, amely alapjábavéve annyit
+                            jelent, hogy "A kód egyes blokkja még működik-e,
+                            amikor egy másik blokkhoz csatlakoztattam azt?"
+                        </li>
+                        <li>
+                            A unit tesztelés, amikor kis és különleges részek
+                            működőképessége van tesztelve, hogy azt teszik-e
+                            amire hivatottak.
+                        </li>
+                        <li>
+                            <a
+                                href="https://en.wikipedia.org/wiki/Functional_testing"
+                                target="_blank"
+                            >
+                                És még sok más típus létezik.
+                            </a>{" "}
+                            Nézz utána a{" "}
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing"
+                                target="_blank"
+                            >
+                                böngészők közötti tesztelési modulunknak
+                            </a>{" "}
+                            sok hasznos tesztelési tanácsért.
+                        </li>
+                    </ul>
+                </Paragraph>
+
+                <Paragraph>
+                    Vedd figyelembe, hogy a tesztek nem korlátozottak a
+                    JavaScript-re; a tesztek futtathatók a renderelt DOM-hoz, a
+                    felhasználói interakciókhoz, a CSS-hez és még ahhoz is,
+                    hogyan néz ki az oldal.
+                </Paragraph>
+
+                <Paragraph>
+                    Azonban, ehhez a projekthez készíteni fogunk egy kis tesztet
+                    amely leellenőrzi, hogy a GitHub API adat megfelelő formában
+                    van-e. Ha nem, akkor a teszt sikertelen lesz és
+                    megakadályozza azt, hogy a projektünk élőben működjön. Hogy
+                    más dolgokat is csináljunk az ennek a modulnak a tananyagán
+                    túl van - mivel a tesztelés egy hatalmas témakör, amely
+                    igazán azt igényli, hogy külön modulokra osszuk. Reméljük,
+                    hogy ez a rész legalább tudatosítja benned a tesztelés
+                    szükségességét, és elülteti a magvakat, amelyek majd később
+                    inspirálnak, ahogy haladsz és tanulsz tovább.
+                </Paragraph>
+
+                <Paragraph>
+                    Önmagában nem a teszt, ami fontos. A fontos az, hogyan van a
+                    tesz sikertelensége vagy sikeressége kezelve. Mert, ha
+                    írtunk már egy egyedi build akciót, hozzá adhatunk egy
+                    lépést a build elé, amely futtatja a tesztet. Ha a teszt
+                    sikertelen, akkor a build is és így a deployment sem fog
+                    megtörténni.
+                </Paragraph>
+
+                <Paragraph>
+                    A jó hír: mivel Vite-ot használunk, a Vite már kínál egy jó
+                    integrált eszközt a teszteléshez: a{" "}
+                    <a href="https://vitest.dev/guide/" target="_blank">
+                        Vitest
+                    </a>
+                    -et.
+                </Paragraph>
+
+                <Paragraph>Kezdjük is!</Paragraph>
+
+                <Paragraph>
+                    <ol className="ml-1">
+                        <li>
+                            Telepítsd a Vitest-et!
+                            <CodeDisplay code={deploy_6_vitest} />
+                        </li>
+                        <li>
+                            A package.json fájlodban, keresd meg a{" "}
+                            <BgLightgray>scripts</BgLightgray> tagot és
+                            változtasd meg úgy, hogy tartalmazza a teszt és
+                            build parancsokat a "vitest" hozzáadásával.
+                            <CodeDisplay code={deploy_7_vitest_package_json} />
+                            <Note>
+                                <div className="bold inline mr-1">
+                                    Megjegyzés:
+                                </div>
+                                <Paragraph>
+                                    Itt a jó része annak, hogy a Vite-ot
+                                    használjuk a Vitest mellett. Ha más teszt
+                                    keretrendszert használsz, akkor más
+                                    konfigurációt kell hozzáadnod, amely leírja,
+                                    hogyan kell a teszt fájlokat alakítani, de a
+                                    Vitest automatikusan a Vite konfigurációt
+                                    fogja használni.
+                                </Paragraph>
+                            </Note>
+                        </li>
+                    </ol>
                 </Paragraph>
             </Article>
         </div>

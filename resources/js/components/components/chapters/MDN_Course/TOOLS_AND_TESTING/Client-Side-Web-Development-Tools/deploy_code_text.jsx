@@ -10,3 +10,10 @@ export const deploy_4_remote2 = `git remote add origin https://github.com/remy/s
 `;
 export const deploy_5_push = `git push origin main
 `;
+export const deploy_6_vitest = `npm install --save-dev vitest
+`;
+export const deploy_7_vitest_package_json = `"scripts": {
+  // …
+  "test": "vitest"
+}
+`;
