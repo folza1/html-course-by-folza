@@ -16,6 +16,10 @@ import {
     deploy_5_push,
     deploy_6_vitest,
     deploy_7_vitest_package_json,
+    deploy_8_run_test,
+    deploy_9_test_output,
+    deploy_10_git_yaml,
+    deploy_11_git_push,
 } from "./deploy_code_text.jsx";
 
 export default function Deploying_Our_App() {
@@ -603,9 +607,70 @@ export default function Deploying_Our_App() {
                                 </Paragraph>
                             </Note>
                         </li>
+                        <li>
+                            Most természetesen hozzá kell adnunk a tesztet a
+                            kódbázisunkhoz. Általában ha egy fájl
+                            működőképességét teszteled, mondjuk az{" "}
+                            <BgLightgray>App.jsx</BgLightgray>-ét, akkor hozzá
+                            kellene adnod egy fájlt például az
+                            <BgLightgray>App.test.jsx</BgLightgray> néven. Ebben
+                            az esetben most csak az adatot teszteljük, így
+                            készítsünk egy másik mappát amiben a teszteket
+                            tartjuk. Megnyithatod az előző fejezetben letöltött
+                            példa adattárból és átmásolhatod a{" "}
+                            <BgLightgray>tests</BgLightgray> (tesztek) mappát.
+                        </li>
+                        <li>
+                            Most manuálisan futtathatjuk a tesztet a
+                            parancssorból a következőképpen:
+                            <CodeDisplay code={deploy_8_run_test} />
+                            Ehhez hasonló kimenetet kellene látnod
+                            <CodeDisplay code={deploy_9_test_output} />
+                            Ez azt jelenti átment a teszten. Mint a Vite, ez is
+                            figyelni fogja a kódírás során a változásokat és
+                            újra futtatja a tesztet amikor elmented a fájlt.
+                            Kiléphetünk belőle a <BgLightgray>
+                                q
+                            </BgLightgray>{" "}
+                            billentyű megnyomásával.
+                        </li>
+                        <li>
+                            Még hozzá kell fűznünk a tesztet a build akcióhoz,
+                            szóval az gátolja a build folyamatot, ha a teszt
+                            sikertelen. Nyisd meg a{" "}
+                            <BgLightgray>
+                                .github/workflows/github-pages.yml
+                            </BgLightgray>{" "}
+                            fájlt a projekt mappájában (vagy azt a fájlt amit a
+                            build akcióhoz hoztál létre) és add hozzá a
+                            következő lépést, pontosan az{" "}
+                            <BgLightgray>npm run build</BgLightgray> lépés elé:
+                            <CodeDisplay code={deploy_10_git_yaml} />
+                            Ez le fogja futtatni a tesztet a build folyamat
+                            előtt. Ha a teszt sikertelen, akkor a build folyamat
+                            is sikertelen és a deployment nem fog megtörténni.
+                        </li>
+                        <li>
+                            Most pedig töltsük fel az új kódot a GitHub-ra,
+                            hasonló parancsokat használva mint ezelőtt:
+                            <CodeDisplay code={deploy_11_git_push} />
+                            Néhány esetben lehet, hogy szeretnéd tesztelni a kód
+                            build-elésének a folyamatát, így a tesztnek a build
+                            parancs után kellene lefutnia. Mindig meg kell majd
+                            fontolnod ezeket az egyedülálló nézőpontokat,
+                            mialatt a saját projekteiden dolgozol.
+                        </li>
                     </ol>
                 </Paragraph>
+
+                <Paragraph>
+                    Végül egy kb. egy perccel a push után a GitHub Pages
+                    telepíti is a projekted frissített változatát. De csak, ha a
+                    teszten átment, amit bemutattunk.
+                </Paragraph>
             </Article>
+            Finally, a minute or so after pushing, GitHub Pages will deploy the
+            project update. But only if it passes the test that was introduced.
         </div>
     );
 }
