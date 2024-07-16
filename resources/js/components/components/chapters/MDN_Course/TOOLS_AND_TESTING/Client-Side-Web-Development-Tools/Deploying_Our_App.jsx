@@ -669,8 +669,110 @@ export default function Deploying_Our_App() {
                     teszten átment, amit bemutattunk.
                 </Paragraph>
             </Article>
-            Finally, a minute or so after pushing, GitHub Pages will deploy the
-            project update. But only if it passes the test that was introduced.
+            <Article>
+                <h1>Összegzés</h1>
+
+                <Paragraph>
+                    Ez volt a mi esettanulmány példánk és a modul. Reméljük
+                    hasznosnak találtad. Még sok idő kell, hogy eszköz
+                    varázslónak mondhasd magadat, de reméljük, hogy ez a modul
+                    megadta az első fontos lépéseket annak irányába, hogy
+                    megértsd a kliens oldali eszközöket és a magabiztosságot,
+                    hogy tovább tanulj és kipróbálj új dolgokat.
+                </Paragraph>
+
+                <Paragraph>
+                    Összegezzük az összes részt az eszközláncról:
+                    <ul className="ml-2">
+                        <li>
+                            A kódminőség és a karbantartás az ESLint és a
+                            Prettier segítségével történik. Ezek az eszközök
+                            devDependencies-ként (fejlesztési függőségként)
+                            lettek hozzáadva a projekthez a{" "}
+                            <BgLightgray>
+                                npm install --dev eslint prettier
+                                eslint-plugin-react ...
+                            </BgLightgray>{" "}
+                            parancs segítségével (az ESLint plugin is szükséges
+                            mert ehhez a projekthez React-ot használtunk).
+                        </li>
+                        <li>
+                            Két konfigurációs fájl van amelyet a kódminőség
+                            eszközök olvasnak: az{" "}
+                            <BgLightgray>eslint.config.js</BgLightgray> és a{" "}
+                            <BgLightgray>.prettierrc</BgLightgray>
+                        </li>
+                        <li>
+                            A fejlesztés során további függőségeket adtunk a
+                            projekthez az npm-et használva. A Vite fejlesztői
+                            szerver fut a háttérben és vizsgálja a változásokat,
+                            hogy automatikusan build-elje a forráskódot.
+                        </li>
+                        <li>
+                            A deployment (telepítés) a változtatások GitHub-ra
+                            való push-olásával jön létre (a main branch-en
+                            (ágon)), amely elindítja a build és a deployment
+                            folyamatot GitHub Actions-t használva, amely
+                            eredményeként a projekt publikálva van. A mi
+                            esetünkben az URL az a
+                            <a
+                                href="https://mdn.github.io/client-toolchain-example"
+                                target="_blank"
+                            >
+                                https://mdn.github.io/client-toolchain-example
+                            </a>{" "}
+                            , vagy a te egyedi URL-ed is lehet.
+                        </li>
+                        <li>
+                            Van egy egyszerű tesztünk is, amely blokkolja a
+                            build és deployment folyamatot, ha a GitHub API-ról
+                            érkező adatok nincsenek helyes formátumban.
+                        </li>
+                    </ul>
+                </Paragraph>
+
+                <Paragraph>
+                    Azoknak akik kihívásra vágynak, fontolják meg vajon tudnák-e
+                    optimalizálni ennek az eszközláncnak a részeit. Néhány
+                    kérdés amit fel kell tenned magadnak:
+                    <ul className="ml-2">
+                        <li>
+                            Vajon ki tudnánk vonni csak a funkciókat a
+                            plotly.js-ből, amire szükségünk van? Ez mérsékelné a
+                            JavaScript bundle (csomag) méretét.
+                        </li>
+                        <li>
+                            Talán hozzá szeretnél adni más eszközt, mint a
+                            TypeScript-et a gépelés ellenőrzésére vagy a
+                            stylelint-et a CSS lint-eléséhez?
+                        </li>
+                        <li>
+                            Lecserélhető a React valami{" "}
+                            <a href="https://preactjs.com/" target="_blank">
+                                kisebbre
+                            </a>
+                            ?
+                        </li>
+                        <li>
+                            Hozzáadnál több tesztet rossz build megelőzésére a
+                            deployment folyamatból, mint például{" "}
+                            <a
+                                href="https://developer.chrome.com/docs/lighthouse/performance/performance-scoring"
+                                target="_blank"
+                            >
+                                teljesítmény vizsgálatot
+                            </a>
+                            ?
+                        </li>
+                        <li>
+                            Beállítanál egy értesítést, amely tudtodra adja,
+                            hogy a deploy sikeres volt-e vagy sikertelen?
+                        </li>
+                    </ul>
+                </Paragraph>
+            </Article>
+            Could you set up a notification to let you know when a new deploy
+            succeeded or failed?
         </div>
     );
 }
