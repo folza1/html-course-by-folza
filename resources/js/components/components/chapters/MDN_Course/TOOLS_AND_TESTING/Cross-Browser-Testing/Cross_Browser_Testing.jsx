@@ -22,13 +22,35 @@ export default function Cross_Browser_Testing() {
                 és hogyan használj automatizációt, hogy felgyorsítsd a
                 tesztelést.
             </Paragraph>
-            This module focuses on testing web projects across different
-            browsers. We look at identifying your target audience (e.g. what
-            users, browsers, and devices do you most need to worry about?), how
-            to go about doing testing, the main issues that you'll face with
-            different types of code and how to mitigate them, what tools are
-            most useful in helping you test and fix problems, and how to use
-            automation to speed up testing.
+            <Paragraph>
+                <div className="bold inline mr-1">Előfeltételek:</div>
+                Igazán tudnod kellene a{" "}
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
+                    target="_blank"
+                >
+                    HTML
+                </a>
+                ,{" "}
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/CSS"
+                    target="_blank"
+                >
+                    CSS
+                </a>{" "}
+                és a{" "}
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"
+                    target="_blank"
+                >
+                    JavaScript
+                </a>{" "}
+                nyelvek alapjait először, mielőtt elkezded használni az itt
+                részletezett eszközöket.
+            </Paragraph>
+            You should really learn the basics of the core HTML, CSS, and
+            JavaScript languages first before attempting to use the tools
+            detailed here.
         </div>
     );
 }
