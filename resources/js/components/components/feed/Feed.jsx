@@ -9,11 +9,13 @@ import Package_Management_Basics from "../chapters/MDN_Course/TOOLS_AND_TESTING/
 import Introduction_A_Complete_Toolchain from "../chapters/MDN_Course/TOOLS_AND_TESTING/Client-Side-Web-Development-Tools/Introducing_A_Complete_Toolchain.jsx";
 import Deploying_Our_App from "../chapters/MDN_Course/TOOLS_AND_TESTING/Client-Side-Web-Development-Tools/Deploying_Our_App.jsx";
 import Cross_Browser_Testing from "../chapters/MDN_Course/TOOLS_AND_TESTING/Cross-Browser-Testing/Cross_Browser_Testing.jsx";
+import Introduction_To_Cross_Browser_Testing from "../chapters/MDN_Course/TOOLS_AND_TESTING/Cross-Browser-Testing/Introduction_To_Cross_Browser_Testing.jsx";
 
 export default function Feed() {
     return (
         <div className="feed">
-            <Cross_Browser_Testing />
+            <Introduction_To_Cross_Browser_Testing />
+            {/* <Cross_Browser_Testing /> */}
             {/* <Deploying_Our_App /> */}
             {/* <Introduction_A_Complete_Toolchain/> */}
             {/*<Package_Management_Basics/>*/}
