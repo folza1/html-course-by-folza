@@ -96,10 +96,65 @@ export default function Introduction_To_Cross_Browser_Testing() {
                         problémákat.
                     </Paragraph>
                 </Note>
+
+                <Paragraph>
+                    A weboldalaknak elérhetőnek kell lenniük különböző
+                    böngészőkön és eszközökön és olyan embereknek is akik
+                    fogyatékosságokkal élnek (például képernyő olvasó barátnak
+                    kell lennie). Az oldalnak nem kell, hogy pontosan ugyanazt a
+                    felhasználói élményt nyújtsa minden böngészőn és eszközön,
+                    amíg a fő funkcionalitás hozzáférhető valamilyen módon.
+                    Például egy modern böngésző megjelenít valami animált, 3
+                    dimenziós fénylő dolgot, míg a régebbi böngészők lehet csak
+                    egy egyszerű grafikát jelenítenek meg ugyanazzal az
+                    információval.
+                </Paragraph>
+
+                <Paragraph>
+                    Az is szinte lehetetlen, hogy egy weboldal működik MINDEN
+                    böngészőn és eszközön, így a webfejlesztőnek meg kell
+                    egyeznie az oldal tulajdonosával milyen böngészőkön és
+                    eszközökön fog a kód működni.
+                </Paragraph>
             </Article>
-            Note: Make the web work for everyone discusses the different
-            browsers, their market share, and related cross-browser
-            compatibility issues.
+            <Article>
+                <h1>A cross-browser problémák miért merülnek fel?</h1>
+                <Paragraph>
+                    Sok különbőző ok lehet miért merülnek fel cross-browser
+                    problémák és jegyezd meg itt most mi olyan problémákról
+                    írunk, mikor a dolgok különbözően viselkednek különböző
+                    böngészőkön/eszközökön/böngésző beállítások esetén. Mielőtt
+                    cross-browser problémába botlanál, kellene, hogy legyen már
+                    tapasztalatod hiba (bug) kijavításában ( nézd meg a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML"
+                        target="_blank"
+                    >
+                        HTML Debugging
+                    </a>
+                    ,{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS"
+                        target="_blank"
+                    >
+                        CSS Debugging
+                    </a>{" "}
+                    és a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong"
+                        target="_blank"
+                    >
+                        Mi romlott el? JavaScript hibaelhárítás
+                    </a>{" "}
+                    oldalakat a különbőző témákban, hogy frissítsd a memóriádat
+                    ha szükséges).
+                </Paragraph>
+
+                <Paragraph>
+                    A cross-browser problémák általában ezek miatt merülnek fel:
+                </Paragraph>
+            </Article>
+            Cross-browser issues commonly occur because:
         </div>
     );
 }
