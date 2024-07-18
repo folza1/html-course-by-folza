@@ -153,8 +153,34 @@ export default function Introduction_To_Cross_Browser_Testing() {
                 <Paragraph>
                     A cross-browser problémák általában ezek miatt merülnek fel:
                 </Paragraph>
+
+                <Paragraph>
+                    <ul className="ml-2">
+                        <li>
+                            Néha a böngészőkben van hiba (bug) vagy másképpen
+                            hajtanak végre funkciókat. A helyzet sokkal kevésbé
+                            rossz mint régebben. Régen az IE4 (Internet Explorer
+                            böngésző) és a Netscape 4 böngésző versenyezett
+                            egymással melyik legyen a domináns böngésző az
+                            1990-es években és a böngésző cégek szabadon,
+                            másképpen oldottak meg dolgokat egymástól
+                            különbözően, hogy előnyt szerezzenek vele és ez a
+                            fejlesztők számára mondhatni maga volt a pokol. Ma
+                            sokkal jobb a helyzet mert a böngészők standard
+                            (szabvány) alapján vannak gyártva, de különbségek és
+                            bug-ok (hibák) még néha mindig belopódznak.
+                        </li>
+                    </ul>
+                </Paragraph>
             </Article>
-            Cross-browser issues commonly occur because:
+            sometimes browsers have bugs, or implement features differently.
+            This situation is a lot less bad than it used to be; back when IE4
+            and Netscape 4 were competing to be the dominant browser in the
+            1990s, browser companies deliberately implemented things differently
+            from each other to try to gain a competitive advantage, which made
+            life hell for developers. Browsers are much better at following
+            standards these days, but differences and bugs still creep through
+            sometimes.{" "}
         </div>
     );
 }
