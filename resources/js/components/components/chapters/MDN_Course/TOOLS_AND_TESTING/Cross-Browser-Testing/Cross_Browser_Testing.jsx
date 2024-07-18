@@ -81,14 +81,120 @@ export default function Cross_Browser_Testing() {
                     használata és erre a célra készült tesztelő alkalmazások
                     használata) és a tesztelést felhasználói csoportokkal.
                 </Paragraph>
+
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS"
+                    target="_blank"
+                >
+                    Közönséges HTML és CSS problémák kezelése
+                </a>
+
+                <Paragraph>
+                    Ebben a részben meg fogjuk nézni különösen a közönséges
+                    böngészők közötti problémákat, amelyek felmerülnek a HTML és
+                    CSS kód írása során és, hogy milyen eszközöket használjunk,
+                    hogy megelőzzük ezeknek a hibáknak a megtörténését, vagy
+                    megoldjuk a problémákat ha felmerülnek. Ez magában foglalja
+                    a kód lintelését, a CSS prefix-ek kezelését, a böngésző
+                    fejlesztői eszközeinek használatát a problémák
+                    kinyomozásához, a polyfill-ek használatát, hogy támogatást
+                    adjunk hozzá a böngészőkhöz, a reszponzív megjelenéssel járó
+                    problémákkal való megküzdést és még többet is.
+                </Paragraph>
+
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript"
+                    target="_blank"
+                >
+                    Gyakori JavaScript problémák kezelése
+                </a>
+
+                <Paragraph>
+                    Itt gyakori böngészők közötti JavaScript problémákat fogunk
+                    megnézni és hogy, hogyan javítsuk ki őket. Ez magában
+                    foglalja a böngésző fejlesztői eszközeinek a használatát,
+                    hogy kinyomozzuk és kijavítsuk a problémákat, polyfill-ek és
+                    könyvtárak használatát, hogy körüljárjuk a problémákat,
+                    modern JavaScript funkciók használatát régebbi böngészőkön
+                    és még mást is.
+                </Paragraph>
+
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility"
+                    target="_blank"
+                >
+                    Gyakori akadálymnetesítési problémák kezelése{" "}
+                </a>
+
+                <Paragraph>
+                    Aztán az akadálymentesítésre fordítjuk a figyelmünket,
+                    információt nyújtunk gyakori problémákról, hogyan csináljunk
+                    egyszerű teszteket és hogyan használjuk az
+                    ellenőrző/automatizáció eszközöket, hogy megtaláljuk az
+                    akadálymentesítésbeli problémákat.
+                </Paragraph>
+
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection"
+                    target="_blank"
+                >
+                    Funkció észlelés végrehajtása
+                </a>
+
+                <Paragraph>
+                    A funkció észlelés magába foglalja, hogy vajon egy böngésző
+                    támogat-e egy bizonyos kódblokkot és futtat egy másik kódot
+                    attól függően, hogy támogatta-e vagy nem, így az a böngésző
+                    mindig működtetni fogja kódot, ahelyett, hogy összeomlik
+                    vagy hibát jelez néhány böngészőben. Ez a cikk részletezi,
+                    hogyan írd meg a saját funkció észlelést (feature
+                    detection-t), hogyan használj egy könyvtárat hozzá, hogy
+                    felgyorsítsd a végrehajtását és hogyan használj natív
+                    funkciókat a feature detection-höz mint a{" "}
+                    <BgLightgray>@supports</BgLightgray>-ot.
+                </Paragraph>
+
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing"
+                    target="_blank"
+                >
+                    Bevezetés az automatizált tesztelésbe
+                </a>
+
+                <Paragraph>
+                    Manuálisan lefuttatni a teszteket számos böngészőn és
+                    eszközön, napi többször unalmas és időpazarló lehet. Hogy
+                    kezeljük ezt hatékonyan, meg kell ismerned néhány
+                    automatizáló eszközt. Ebben a cikkben megnézzük milyen
+                    elérhető eszközök vannak és hogyan használj feladat
+                    futtatókat és annak alapjait, hogyan használj kereskedelmi
+                    forgalomban kapható böngésző teszt automatizáló
+                    alkalmazásokat, mint a Sauce Labs és a Browser Stack.
+                </Paragraph>
+
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment"
+                    target="_blank"
+                >
+                    A saját teszt automatizáló környezet beállítása
+                </a>
+
+                <Paragraph>
+                    Ebben a cikkben megtanulhatod, hogyan telepítsd a saját
+                    automatizáló környezetet és futtasd a saját tesztjeidet a
+                    Selenium/Webdriver használatával és a tesztelő könyvtárat,
+                    mint a <BgLightgray>selenium-webdriver</BgLightgray>-t,
+                    amely elérhető a Node-hoz. Azt is meg fogjuk nézni, hogyan
+                    integrálhatod a helyi tesztelő környezetet kereskedelmi
+                    alkalmazásokkal (az előző cikkben voltak említve).
+                </Paragraph>
             </Article>
-            Next, we drill down into carrying out testing, looking at
-            identifying a target audience (e.g. what browsers, devices, and
-            other segments should you make sure are tested), lo-fi testing
-            strategies (get yourself a range of devices and some virtual
-            machines and do ad hoc tests when needed), higher tech strategies
-            (automation, using dedicated testing apps), and testing with user
-            groups.
+            In this article, we will teach you how to install your own
+            automation environment and run your own tests using
+            Selenium/WebDriver and a testing library such as selenium-webdriver
+            for Node. We will also look at how to integrate your local testing
+            environment with commercial apps like the ones discussed in the
+            previous article.
         </div>
     );
 }
