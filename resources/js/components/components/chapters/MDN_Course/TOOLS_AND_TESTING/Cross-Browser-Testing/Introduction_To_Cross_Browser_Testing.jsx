@@ -88,8 +88,8 @@ export default function Introduction_To_Cross_Browser_Testing() {
                             href="https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/"
                             target="_blank"
                         >
-                            A Make the web work for everyone (a web működjön
-                            mindenki számára)
+                            A Make the web work for everyone (A web legyen
+                            működőképes mindenki számára)
                         </a>{" "}
                         vizsgálja a különböző böngészőket, a piaci részesedéseit
                         és a hozzá tartozó cross-browser kompatibilitási
