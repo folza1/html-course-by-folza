@@ -185,8 +185,8 @@ export default function Introduction_To_Cross_Browser_Testing() {
                             támogatni, akkor lehet, hogy nem azokat az
                             élvonalbeli funkciókat kellene használni vagy át
                             kell konvertálnod a kódot olyan régebbi fazonú
-                            szintaxisra valamilyen cross-compiler-el (kereszt
-                            fordítóval) ahol szükséges.
+                            szintaxisra valamilyen cross-compiler-el (böngészők
+                            közötti fordítóval) ahol szükséges.
                         </li>
                         <li>
                             Néhány eszköznek lehet vannak korlátai, melyek
