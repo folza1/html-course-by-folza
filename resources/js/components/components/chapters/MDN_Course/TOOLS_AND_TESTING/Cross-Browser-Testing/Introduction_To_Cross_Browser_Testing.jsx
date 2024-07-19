@@ -170,17 +170,47 @@ export default function Introduction_To_Cross_Browser_Testing() {
                             (szabvány) alapján vannak gyártva, de különbségek és
                             bug-ok (hibák) még néha mindig belopódznak.
                         </li>
+                        <li>
+                            Néhány böngésző különböző szintű technológiai
+                            támogatással rendelkezik mint mások. Ez sajnos
+                            elkerülhetetlen, hogy, ha a legmodernebb funkciókat
+                            használod, amit a böngészők még csak most kezdenek
+                            kivitelezni vagy olyan nagyon régi böngészőket kell
+                            támogatni amelyeket nem fejlesztenek tovább és már
+                            régen azelőtt befagyasztották azok fejlesztését, már
+                            régen az új funkciók feltalálása előtt. Egy példa
+                            erre, ha élvonalbeli JavaScript funkciókat akarsz az
+                            oldaladon, azok lehet nem fognak működni régebbi
+                            böngészőkön. Ha régebbi böngészőket akarsz
+                            támogatni, akkor lehet, hogy nem azokat az
+                            élvonalbeli funkciókat kellene használni vagy át
+                            kell konvertálnod a kódot olyan régebbi fazonú
+                            szintaxisra valamilyen cross-compiler-el (kereszt
+                            fordítóval) ahol szükséges.
+                        </li>
+                        <li>
+                            Néhány eszköznek lehet vannak korlátai, melyek
+                            lassulást okozhatnak a weboldalon vagy rosszul
+                            jelenítik meg. Például, ha az oldal asztali
+                            számítógépre volt tervezve, hogy ott nézzen ki jól,
+                            valószínűleg nem lesz olyan jól olvasható a mobil
+                            eszközökön. Ha az oldalon vannak nagy animációk,
+                            lehet minden rendben lesz a legújabb táblagépeken,
+                            de lassú vagy szaggatott lehet az alsóbb kategóriás
+                            eszközökön.
+                        </li>
                     </ul>
                 </Paragraph>
+
+                <Paragraph>... és van több ok is ezeken kívül.</Paragraph>
+
+                <Paragraph>
+                    Későbbi cikkekben fel fogjuk fedezni a közönséges
+                    cross-browser problémákat és megoldásokat nézünk hozzájuk.
+                </Paragraph>
             </Article>
-            sometimes browsers have bugs, or implement features differently.
-            This situation is a lot less bad than it used to be; back when IE4
-            and Netscape 4 were competing to be the dominant browser in the
-            1990s, browser companies deliberately implemented things differently
-            from each other to try to gain a competitive advantage, which made
-            life hell for developers. Browsers are much better at following
-            standards these days, but differences and bugs still creep through
-            sometimes.{" "}
+            In later articles, we'll explore common cross-browser problems, and
+            look at solutions to those.
         </div>
     );
 }
