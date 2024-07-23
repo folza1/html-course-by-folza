@@ -267,17 +267,66 @@ export default function Introduction_To_Cross_Browser_Testing() {
                     ezt, de a cross-browser problémáknak komoly hatása van az
                     ilyen tervekre nézve.
                 </Paragraph>
+
+                <Paragraph>
+                    Miután megtudtad milyen összetevőkkel kell ellátnod az
+                    oldalt és hogy milyen technológiákkal fogod kivitelezni
+                    azokat, utána el kell kezdened felfedezni a célközönséget
+                    (milyen böngészőkre, eszközökre stb.), milyen célközönségre
+                    kell elkészítened az oldalt. A kliensnek lehet már van róla
+                    információja erről egy korábbi kutatás eredményéből, amelyet
+                    ők végeztek. Például birtokolnak más oldalakat és onnan van
+                    az információ, vagy a weboldal korábbi verzióiból eredő
+                    információk alapján, amin most te fogsz dolgozni. Ha
+                    nincsenek jó ötlet lehet más források után kutatni, mint a
+                    versenytársak vagy országok statisztikái alapján attól
+                    függően, milyen célt szolgál az oldal. Egy kicsit
+                    használhatod a megérzéseidet is.
+                </Paragraph>
+
+                <Paragraph>
+                    Például lehet egy e-kereskedelmi oldalt építesz amely
+                    Észak-Amerika-i látogatókat szolgál ki. Az oldalnak működnie
+                    kellene a legutóbbi néhány legnépszerűbb asztali és mobil
+                    böngészőkön. Ebben benne kellene lennie a Chrome-nak (az
+                    Edge-nek és az Opera-nak, mivel ezek ugyanazon a Chrome
+                    motor alapján működnek), a Firefox-nak és a Safari-nak. És
+                    meg kell, hogy felejen a WCAG AA szabványnak.
+                </Paragraph>
+
+                <Paragraph>
+                    Most már tudod a tesztelési célterületet és most vissza
+                    kell, hogy menj és utánanézz a szükséges összetevők
+                    listájának és hogy milyen technológiákat fogsz használni.
+                    Például, ha az e-kereskedelmi oldal tulajdonosa akar egy
+                    WebGL támogatott 3 dimenziós túrát az oldalon minden egyes
+                    termékhez amelyet el lehet érni, akkor el kell, hogy
+                    fogadják ez nem fog működni minden elavult böngésző verzión.
+                </Paragraph>
+
+                <Paragraph>
+                    Össze kell állítanod egy listát a lehetséges problémás
+                    területekről.
+                </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    Találhatsz információt a böngésző támogatásról az MDN-en is
+                    különböző összetevőkről. További részletes tanácsokat
+                    kaphatsz a{" "}
+                    <a href="https://caniuse.com/" target="_blank">
+                        caniuse.com
+                    </a>
+                    -on is.
+                </Note>
+
+                <Paragraph>
+                    Miután megegyeztetek ezekben a részletekben, kezdődhet az
+                    oldal fejlesztése.
+                </Paragraph>
             </Article>
-            In the initial planning phase, you will probably have several
-            planning meetings with the site owner/client (this might be your
-            boss, or someone from an external company you are building a website
-            for), in which you determine exactly what the website should be —
-            what content and functionality should it have, what should it look
-            like, etc. At this point, you'll also want to know how much time you
-            have to develop the site — what is their deadline, and how much are
-            they going to pay you for your work? We won't go into much detail
-            about this, but cross-browser issues can have a serious effect on
-            such planning.
+            Once you've agreed on these details, you can go ahead and start
+            developing the site.
         </div>
     );
 }
