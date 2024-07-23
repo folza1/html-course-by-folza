@@ -341,10 +341,56 @@ export default function Introduction_To_Cross_Browser_Testing() {
                 <Paragraph>
                     Több általános stratégia van a cross-browser fejlesztéshez,
                     például:
+                    <ul className="ml-2">
+                        <li>
+                            Úgy kell csinálni a munkát, hogy közel az összes
+                            lehetséges célböngészőn működjön. Ez magában
+                            foglalhatja a különböző kód útvonalakat, amelyek más
+                            funkcionalitással rendelkeznek, más böngészőkön vagy
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Glossary/Polyfill"
+                                target="_blank"
+                            >
+                                Polyfill
+                            </a>{" "}
+                            használata, amely utánoz bármilyen funkciót a
+                            JavaScript vagy más technológiák használatával vagy
+                            egy olyan könyvtár használata, amely megengedi
+                            neked, hogy akár 1 bit kódot írj és az különböző
+                            dolgokat tesz a háttérben attól függően, hogy a
+                            böngésző mit támogat.
+                        </li>
+                        <li>
+                            Fogadd el azt, hogy a dolgok nem ugyanúgy működnek
+                            az összes böngészőn és különböző elfogadható
+                            megoldást kell kínálnod az olyan böngészőkre,
+                            amelyek nem teljesen támogatottak. Néha ez
+                            elkerülhetetlen az eszköz miatt, például a
+                            szélesvásznú mozi nem fogja ugyanazt vizuális
+                            élményt nyújtani, mint egy 4 hüvelykes mobil
+                            képernyő, függetlenül attól hogyan programozod az
+                            oldalt.
+                        </li>
+                        <li>
+                            Fogadd el azt is, hogy az oldalad nem fog működni
+                            régebbi böngészőkön és így tovább. Ez rendben is
+                            van, ha a kliensek és a felhasználók értesítve
+                            vannak.
+                        </li>
+                    </ul>
+                </Paragraph>
+
+                <Paragraph>
+                    Normális módon a fejlesztés magába fogja foglalni a fenti
+                    három megközelítések egyikét. A legfontosabb dolog az, hogy
+                    teszteld minden kis részét mielőtt továbbmennél a kód
+                    "commit"-olásával. Ne hagyd az összes tesztelést a végére!
                 </Paragraph>
             </Article>
-            There are multiple general strategies to cross-browser development,
-            for example:
+            Normally your development will involve a combination of the above
+            three approaches. The most important thing is that you test each
+            small part before committing it — don't leave all the testing till
+            the end!
         </div>
     );
 }
