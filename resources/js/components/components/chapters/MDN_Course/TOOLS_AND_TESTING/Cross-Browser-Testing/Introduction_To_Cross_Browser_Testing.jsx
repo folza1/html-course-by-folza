@@ -209,8 +209,52 @@ export default function Introduction_To_Cross_Browser_Testing() {
                     cross-browser problémákat és megoldásokat nézünk hozzájuk.
                 </Paragraph>
             </Article>
-            In later articles, we'll explore common cross-browser problems, and
-            look at solutions to those.
+            <Article>
+                <h1>Munkafolyamatok a cross-browser teszteléshez</h1>
+                <Paragraph>
+                    Az egész cross-browser tesztelés téma időpazarlónak és
+                    ijesztőnek tűnhet, de nem kell annak lennie, csak gondosan
+                    megtervezettnek kell lennie és legyél biztos benne, hogy
+                    eleget tesztelsz a megfelelő részeknél, hogy biztos legyél
+                    benne nem futsz bele váratlan problémákba. Ha egy nagy
+                    projekten dolgozol, rendszeresen kellesz majd tesztelned,
+                    hogy megbizonyosodj az új funkciók és összetevők működnek a
+                    célközönséged számára és hogy a kódhoz hozzáadott új részek
+                    nem gátolnak régebbi funkciókat, amelyek előzőleg működtek.
+                </Paragraph>
+
+                <Paragraph>
+                    Ha az összes tesztelést a projekt végére hagyod, akkor
+                    bármelyik bug (hiba), amelyet nem teszteltél sokkal nehezebb
+                    és időigényesebb lesz, mintha menet közben javítanád ki
+                    őket.
+                </Paragraph>
+
+                <Paragraph>
+                    A tesztelés és a bux fix-ek (hibajavítások) elintézése egy
+                    projektben durván erre a négy fázisra bontható le (ez csak
+                    egy nagyon durva lebontás, különböző emberek elég
+                    különbözően intézhetik ezeket):
+                </Paragraph>
+
+                <Paragraph>
+                    KEZDETI TERVEZÉS {">"} FEJLESZTÉS {">"} TESZTELÉS/HIBÁK
+                    MEGTALÁLÁSA {">"} KIJAVÍTÁS/ISMÉTLÉS
+                </Paragraph>
+
+                <Paragraph>
+                    A 2-4-ig terjedő lépések megismételhetők annyiszor ahányszor
+                    szükséges, hogy minden rendben végrehajtódjon. Külön meg
+                    fogjuk nézni a különböző részeket a tesztelés folyamatán
+                    belül nagyobb részletességgel a következő cikkekben, de most
+                    csak összegezzük mi fog történni az egyes lépésekben.
+                </Paragraph>
+            </Article>
+            Steps 2–4 will tend to be repeated as many times as necessary to get
+            all of the implementation done. We will look at the different parts
+            of the testing process in much greater detail in subsequent
+            articles, but for now, let's just summarize what may occur in each
+            step.
         </div>
     );
 }
