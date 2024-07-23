@@ -324,9 +324,27 @@ export default function Introduction_To_Cross_Browser_Testing() {
                     Miután megegyeztetek ezekben a részletekben, kezdődhet az
                     oldal fejlesztése.
                 </Paragraph>
+
+                <h2>Az oldal fejlesztése</h2>
+
+                <Paragraph>
+                    Most áttérünk az oldal fejlesztésére. Szét kellene
+                    választanod a fejlesztést különböző modulokra, részekre.
+                    Például szétválaszhatod az oldalt különböző részekre, mint
+                    kezdőoldal, termékoldal, bevásárlókosár, fizetési
+                    munkafolyamat, stb. Aztán tovább oszthatod ezeket is.
+                    Például készíthetsz fejlécet (header), láblécet (footer),
+                    termék részletező oldalt, megvalósíthatsz állandó
+                    bevásárlókosár minialkalmazást, stb.
+                </Paragraph>
+
+                <Paragraph>
+                    Több általános stratégia van a cross-browser fejlesztéshez,
+                    például:
+                </Paragraph>
             </Article>
-            Once you've agreed on these details, you can go ahead and start
-            developing the site.
+            There are multiple general strategies to cross-browser development,
+            for example:
         </div>
     );
 }
