@@ -238,8 +238,10 @@ export default function Introduction_To_Cross_Browser_Testing() {
                 </Paragraph>
 
                 <Paragraph>
-                    KEZDETI TERVEZÉS {">"} FEJLESZTÉS {">"} TESZTELÉS/HIBÁK
-                    MEGTALÁLÁSA {">"} KIJAVÍTÁS/ISMÉTLÉS
+                    <span className="bold">
+                        KEZDETI TERVEZÉS {">"} FEJLESZTÉS {">"} TESZTELÉS/HIBÁK
+                        MEGTALÁLÁSA {">"} KIJAVÍTÁS/ISMÉTLÉS
+                    </span>
                 </Paragraph>
 
                 <Paragraph>
@@ -249,12 +251,33 @@ export default function Introduction_To_Cross_Browser_Testing() {
                     belül nagyobb részletességgel a következő cikkekben, de most
                     csak összegezzük mi fog történni az egyes lépésekben.
                 </Paragraph>
+
+                <h2>Kezdeti tervezés</h2>
+
+                <Paragraph>
+                    A kezdeti tervezési szakaszban valószínűleg több találkozód
+                    lesz az oldal birtokosával / a klienssel (aki lehet a
+                    főnököd vagy valaki egy külsős cégtől, akinek a weboldalát
+                    fogod készíteni), aki pontosan meghatározza, milyennek kell
+                    lennie a weboldalnak, milyen tartalom legyen rajta és milyen
+                    funkcionalitású legyen az oldal, hogyan nézzen ki, stb.
+                    Ennél a pontnál azt is meg akarod majd tudni, hogy mennyi
+                    idő kell majd a fejlesztéshez, mi a határidő és mennyit
+                    fognak fizetni a munkádért. Nem fogjuk nagyon részletezni
+                    ezt, de a cross-browser problémáknak komoly hatása van az
+                    ilyen tervekre nézve.
+                </Paragraph>
             </Article>
-            Steps 2–4 will tend to be repeated as many times as necessary to get
-            all of the implementation done. We will look at the different parts
-            of the testing process in much greater detail in subsequent
-            articles, but for now, let's just summarize what may occur in each
-            step.
+            In the initial planning phase, you will probably have several
+            planning meetings with the site owner/client (this might be your
+            boss, or someone from an external company you are building a website
+            for), in which you determine exactly what the website should be —
+            what content and functionality should it have, what should it look
+            like, etc. At this point, you'll also want to know how much time you
+            have to develop the site — what is their deadline, and how much are
+            they going to pay you for your work? We won't go into much detail
+            about this, but cross-browser issues can have a serious effect on
+            such planning.
         </div>
     );
 }
