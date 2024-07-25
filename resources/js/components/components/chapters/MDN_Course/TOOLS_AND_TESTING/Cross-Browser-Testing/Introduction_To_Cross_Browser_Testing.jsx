@@ -386,11 +386,35 @@ export default function Introduction_To_Cross_Browser_Testing() {
                     teszteld minden kis részét mielőtt továbbmennél a kód
                     "commit"-olásával. Ne hagyd az összes tesztelést a végére!
                 </Paragraph>
+
+                <h2>Tesztelés/hibák felfedezése</h2>
+
+                <Paragraph>
+                    Minden egyes végrehajtási fázis után, le kell tesztelned,
+                    hogy működik-e az új dolog, azaz funkcionál-e? Hogy elkezdd,
+                    biztosnak kell lenned benne, hogy nincsenek általános
+                    problémák a kódoddal, amelyek megakadályozzák a funkcióid
+                    működését:
+                    <ol className="ml-2">
+                        <li>
+                            Teszteld le pár stabil böngészőn a rendszereden,
+                            olyan böngészőkön, mint a Firefox, Safari, Chrome
+                            vagy Edge.
+                        </li>
+                        <li>
+                            Csinálj egy kis lo-fi hozzáférhetőség tesztelést,
+                            mint például próbáld meg használni az oldalad csak
+                            billentyűzettel vagy használd az oldalad képernyő
+                            olvasóval, hogy meglásd lehet-e rajta navigálni.
+                        </li>
+                        <li>
+                            Teszteld olyan mobil platform-on, mint az Android
+                            vagy az iOS
+                        </li>
+                    </ol>
+                </Paragraph>
             </Article>
-            Normally your development will involve a combination of the above
-            three approaches. The most important thing is that you test each
-            small part before committing it — don't leave all the testing till
-            the end!
+            Test on a mobile platform, such as Android or iOS.
         </div>
     );
 }
