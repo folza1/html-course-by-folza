@@ -710,8 +710,21 @@ export default function Introduction_To_Cross_Browser_Testing() {
                     </ul>
                 </Paragraph>
             </Article>
-            Just to reiterate on what was said above, if you discover bugs in
-            browsers, you should report them:
+            <Article>
+                <h1>Összefoglalás</h1>
+
+                <Paragraph>
+                    Ez a cikk valószínűleg adott neked egy magas szintű
+                    megértést a legfontosabb fogalmakról, amelyeket tudnod kell
+                    a cross-browser tesztelésről. Felvértezve ezzel a tudással,
+                    most már készen állsz, hogy továbbhaladj és elkezdj tanulni
+                    a Cross-browser tesztelő stratégiákról.
+                </Paragraph>
+            </Article>
+            This article should have given you a high-level understanding of the
+            most important concepts you need to know about cross browser
+            testing. Armed with this knowledge, you are now ready to move on and
+            start learning about Cross-browser testing strategies.
         </div>
     );
 }
