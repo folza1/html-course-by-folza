@@ -514,9 +514,89 @@ export default function Introduction_To_Cross_Browser_Testing() {
                         </li>
                     </ul>
                 </Paragraph>
+
+                <Paragraph>
+                    Ha pénzt akarsz fektetni a tesztelésbe, vannak kereskedelmi
+                    forgalomban kapható eszközök, amelyek automatizálni tudják a
+                    sok beállítást és tesztelést neked, mint a{" "}
+                    <a href="https://saucelabs.com/" target="_blank">
+                        Sauce Labs
+                    </a>{" "}
+                    és a{" "}
+                    <a href="https://www.browserstack.com/" target="_blank">
+                        Browser Stack
+                    </a>
+                    . Ezek a fajta eszközök általában képesek a CI (folyamatos
+                    integrációs (continuous integration)) munkafolyamatokra,
+                    amellyel a kódbeli változások automatikusan tesztelve
+                    vannak, mielőtt azok engedélyezve vannak a kód adattárba
+                    való elküldésre (általában "push" akció, például a
+                    GitHub-ra).
+                </Paragraph>
+
+                <h3>Tesztelés kiadás előtti böngészőkön</h3>
+
+                <Paragraph>
+                    Gyakran jó ötlet a kiadás előtti böngésző verziókon való
+                    tesztelés. Kövesd a következő linkeket:
+                    <ul className="ml-2">
+                        <li>
+                            <a
+                                href="https://www.mozilla.org/en-US/firefox/developer/"
+                                target="_blank"
+                            >
+                                Firefox Fejlesztői Változat
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.microsoft.com/en-us/edge/download/insider?form=MA13FJ"
+                                target="_blank"
+                            >
+                                Microsoft Edge Insider
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://developer.apple.com/safari/technology-preview/"
+                                target="_blank"
+                            >
+                                Safari Technology Előnézet
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.google.com/chrome/canary/"
+                                target="_blank"
+                            >
+                                Chrome Canary
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.opera.com/browsers/opera/developer"
+                                target="_blank"
+                            >
+                                Opera Fejlesztői Változat
+                            </a>
+                        </li>
+                    </ul>
+                </Paragraph>
+
+                <Paragraph>
+                    Ez különösen akkor fontos, ha a legújabb technológiát
+                    használod az oldaladon és le akarod tesztelni a legújabb
+                    megvalósításokat vagy, ha találsz egy hibát a böngésző
+                    legújabb kiadott változatában és azt akarod, hogy a
+                    fejlesztők javítsák ki a hibát majd a böngésző újabb
+                    verziójában.
+                </Paragraph>
             </Article>
-            take a screenshot of each, allowing you to see if a layout is
-            consistent across the different browsers.
+            This is especially prevalent if you are using very new technologies
+            in your site, and you want to test against the latest
+            implementations, or if you are coming across a bug in the latest
+            release version of a browser, and you want to see if the browser's
+            developers have fixed the bug in a newer version.
         </div>
     );
 }
