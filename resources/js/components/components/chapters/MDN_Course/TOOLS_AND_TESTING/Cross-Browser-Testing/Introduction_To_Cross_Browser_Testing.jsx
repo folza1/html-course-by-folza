@@ -584,19 +584,96 @@ export default function Introduction_To_Cross_Browser_Testing() {
                 </Paragraph>
 
                 <Paragraph>
-                    Ez különösen akkor fontos, ha a legújabb technológiát
+                    Ez különösen akkor érvényes, ha a legújabb technológiát
                     használod az oldaladon és le akarod tesztelni a legújabb
                     megvalósításokat vagy, ha találsz egy hibát a böngésző
                     legújabb kiadott változatában és azt akarod, hogy a
                     fejlesztők javítsák ki a hibát majd a böngésző újabb
                     verziójában.
                 </Paragraph>
+
+                <h2>Kijavítások és ismétlés</h2>
+
+                <Paragraph>
+                    Ha egyszer felfedeztél egy hibát, akkor meg kell próbálnod
+                    kijavítani azt.
+                </Paragraph>
+
+                <Paragraph>
+                    Az első dolog amit tenni kell, hogy leszűkítjük amennyire
+                    csak lehetséges, hogy hol is van a hiba. Szerezz minnél több
+                    információt a személytől, aki jelentette a hibát, milyen
+                    platformok-ról, eszközökről, böngésző verziókról vagy más
+                    dolgokról van szó. Próbálj ki hasonló beállításokat (például
+                    ugyanazt a böngésző verziót különböző asztali számítógép
+                    platformokon vagy néhány különböző böngésző verziót
+                    ugyanazon a platformon), hogy lásd milyen széleskörben
+                    elterjedt a hiba.
+                </Paragraph>
+
+                <Paragraph>
+                    Nem a te hibád, ha találsz egy létező hibát a böngészőben,
+                    amelyet aztán remélhetőleg a gyártó gyorsan javítani is fog.
+                    Lehet, hogy már ki is van javítva, például ha egy hiba
+                    felüti magát a Firefox 49-es verziójában, de az már nincsen
+                    benne a Firefox Nightly-ben (az 52-es verzióban), akkor már
+                    kijavították. Ha nem történt javítás, akkor lehet, hogy
+                    jelenteni akarod azt. Lásd a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#reporting_bugs"
+                        target="_blank"
+                    >
+                        Hibák jelentése
+                    </a>{" "}
+                    részt alább.
+                </Paragraph>
+
+                <Paragraph>
+                    Ha a hiba miattad van, akkor ki kell javítanod! Keresd meg
+                    az okát a bug-nak, magában foglalva ugyanazt a stratégiát,
+                    mint bármely webfejlesztési hibánál(újra,{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML"
+                        target="_blank"
+                    >
+                        Debugging HTML
+                    </a>
+                    ,{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS"
+                        target="_blank"
+                    >
+                        Debugging CSS
+                    </a>
+                    , és a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong"
+                        target="_blank"
+                    >
+                        Mi romlott el? JavaScript hibaelhárítás
+                    </a>
+                    ). Miután felfedezted mi is okozza a hibát (bug-ot), el kell
+                    döntened, hogyan dolgozod ki a megoldást azon a böngészőn,
+                    amelyen okozódik a probléma, mert nem változtathatod meg a
+                    kódot csak úgy, mert problémát okozhat más böngészőkben. Az
+                    általános megközelítés általában, hogy fogd a kódot (közben
+                    legyen róla biztonsági másolat) és például használj
+                    JavaScript funkció felismerő kódot, hogy felismerj
+                    szituációkat, mikor egy problémás rész nem működik és
+                    futtass egy kicsit más kódot azokban az esetekben, amikor
+                    működik.
+                </Paragraph>
+
+                <Paragraph>
+                    Miután egy javítás elkészült, akkor meg akarod majd
+                    ismételni a tesztelési folyamatod, hogy megbizonyosodj a
+                    javítással minden rendben van és nem okozott hibát az
+                    oldalon máshol vagy más böngészőkön.
+                </Paragraph>
             </Article>
-            This is especially prevalent if you are using very new technologies
-            in your site, and you want to test against the latest
-            implementations, or if you are coming across a bug in the latest
-            release version of a browser, and you want to see if the browser's
-            developers have fixed the bug in a newer version.
+            Once a fix has been made, you'll want to repeat your testing process
+            to make sure your fix is working OK, and hasn't caused the site to
+            break in other places or other browsers.
         </div>
     );
 }
