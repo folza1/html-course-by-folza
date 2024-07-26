@@ -413,8 +413,47 @@ export default function Introduction_To_Cross_Browser_Testing() {
                         </li>
                     </ol>
                 </Paragraph>
+
+                <Paragraph>
+                    Ezen a ponton javítod a problémákat, ami az új kódoddal
+                    felmerül.
+                </Paragraph>
+
+                <Paragraph>
+                    Következésképpen meg kell próbálnod kiterjeszteni a teszt
+                    böngészők listáját, hogy teljesítse a célközönséged
+                    böngészőlistáját és el kell kezdened koncentrálni
+                    kigyomlálni a cross-browser problémákat (nézz utána további
+                    információért a következő cikkben a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies"
+                        target="_blank"
+                    >
+                        cél böngészők meghatározásához
+                    </a>
+                    ). Például:
+                    <ul className="ml-2">
+                        <li>
+                            Próbáld meg letesztelni a legújabb változásokat az
+                            összes modern asztali számítógép böngészőkön, amit
+                            csak tudsz. Beleértve a Firefox, Chrome, Opera, Edge
+                            és Safari böngészőket az asztali számtógépeken (Mac,
+                            Windows és Linux rendszereken ideális esetben)
+                        </li>
+                        <li>
+                            Teszteld le közönséges telefon és táblagép
+                            böngészőkön (mint az iOS Safari az iPhone/iPad-eken,
+                            Chrome és Firefox az iPhone/iPad/Android eszközökön)
+                        </li>
+                        <li>
+                            És teszteld bármelyik olyan böngészőkön amelyek
+                            benne vannak a cél listán.
+                        </li>
+                    </ul>
+                </Paragraph>
             </Article>
-            Test on a mobile platform, such as Android or iOS.
+            Also do tests in any other browsers you have included inside your
+            target list.
         </div>
     );
 }
