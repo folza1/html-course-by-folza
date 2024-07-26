@@ -671,9 +671,47 @@ export default function Introduction_To_Cross_Browser_Testing() {
                     oldalon máshol vagy más böngészőkön.
                 </Paragraph>
             </Article>
-            Once a fix has been made, you'll want to repeat your testing process
-            to make sure your fix is working OK, and hasn't caused the site to
-            break in other places or other browsers.
+            <Article>
+                <h1>Hibák jelentése</h1>
+
+                <Paragraph>
+                    Csak ismételd meg, amit fentebb mondtunk, ha felfedezel egy
+                    hibát a böngészőkben, amelyet jelenteni is kell:
+                    <ul className="ml-2">
+                        <li>
+                            <a
+                                href="https://bugzilla.mozilla.org/home"
+                                target="_blank"
+                            >
+                                Firefox Bugzilla
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://bugs.webkit.org/" target="_blank">
+                                Safari
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://issues.chromium.org/issues"
+                                target="_blank"
+                            >
+                                Chrome
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://opera.atlassian.net/servicedesk/customer/portal/9"
+                                target="_blank"
+                            >
+                                Opera
+                            </a>
+                        </li>
+                    </ul>
+                </Paragraph>
+            </Article>
+            Just to reiterate on what was said above, if you discover bugs in
+            browsers, you should report them:
         </div>
     );
 }
