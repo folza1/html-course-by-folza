@@ -446,14 +446,51 @@ export default function Introduction_To_Cross_Browser_Testing() {
                             Chrome és Firefox az iPhone/iPad/Android eszközökön)
                         </li>
                         <li>
-                            És teszteld bármelyik olyan böngészőkön amelyek
-                            benne vannak a cél listán.
+                            És teszteld bármelyik olyan böngészőn amely benne
+                            van a cél listán.
                         </li>
                     </ul>
                 </Paragraph>
+
+                <Paragraph>
+                    A legtöbb lo-fi lehetőséghez magadnak tesztelj le mindent,
+                    amit csak tudsz (belevehetsz csapattagokat, hogy
+                    kisegítsenek, ha csapatban dolgoztok). A teszteket igazi
+                    fizikai eszközökön kellene megpróbálni, ahol csak
+                    lehetséges.
+                </Paragraph>
+
+                <Paragraph>
+                    Ha nincsen meg a lehetőséged, hogy az összes különböző
+                    böngészőn, operációs rendszeren és eszközön (fizikai
+                    hardware-en) tesztelj, még akkor is van lehetőséged emulátor
+                    használatára (amellyel az asztali számítógépen tudod
+                    tesztelni, hogyan működik a kódód egy eszközön) és virtuális
+                    gépek használatára (olyan szoftverek melyek megengedik, hogy
+                    emulálj számos operációs rendszert/szoftverek kombinációját
+                    egy asztali számítógépeden). Ez egy nagyon népszerű
+                    választás, különösen bizonyos esetekben, például mikor a
+                    Windows nem engedi, hogy egyszerre több verziójú Windows
+                    legyen telepítve egyszerre ugyanazon a gépen, szóval pár
+                    virtuális gép használata gyakran az egyedüli választás ilyen
+                    esetekben.
+                </Paragraph>
+
+                <Paragraph>
+                    A másik lehetőség a felhasználói csoportok, amelyekkel egy
+                    csoport embert használsz a fejlesztő csapaton kívül akik
+                    letesztelik az oldaladat. Ezek az emberek lehetnek a
+                    barátaid, a családod vagy egy csoport más alkalmazottakból,
+                    egy osztály a helyi egyetemről vagy egy szakmai tesztelői
+                    csoport, ahol az emberek fizetést kapnak a tesztelésért és
+                    eredményt adnak róla.
+                </Paragraph>
             </Article>
-            Also do tests in any other browsers you have included inside your
-            target list.
+            Another option is user groups — using a group of people outside your
+            development team to test your site. This could be a group of friends
+            or family, a group of other employees, a class at a local
+            university, or a professional user testing setup, where people are
+            paid to test out your site and provide results.
         </div>
     );
 }
