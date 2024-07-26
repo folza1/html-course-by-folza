@@ -485,12 +485,38 @@ export default function Introduction_To_Cross_Browser_Testing() {
                     csoport, ahol az emberek fizetést kapnak a tesztelésért és
                     eredményt adnak róla.
                 </Paragraph>
+
+                <Paragraph>
+                    Végezetül, okosabb lehetsz a tesztelés során, ha audit
+                    (ellenőrző) vagy automatizáló eszközöket használsz. Ez egy
+                    ésszerű választás, amint a projekted egyre nagyobb lesz,
+                    mivel, ha az összes tesztelést kézzel csinálod, az kezdhet
+                    egy kicsit igazán sok időt felhasználni. Felállíthatod a
+                    saját teszt automatizáló rendszered (a{" "}
+                    <a href="https://www.selenium.dev/" target="_blank">
+                        Selenium
+                    </a>{" "}
+                    egy igazán népszerű választás), amely például betöltheti az
+                    oldaladat számos különböző böngészőbe és:
+                    <ul className="ml-2">
+                        <li>
+                            például megnézi, hogy, ha egy gombra kattintás
+                            történt az okozott-e valami sikeres történést
+                            (mondjuk például egy térkép megjelenítést) és
+                            megjeleníti az eredményt egyszer, miután a tesztek
+                            befejeződtek.
+                        </li>
+                        <li>
+                            vagy készít egy screenshot-ot (képernyő
+                            lefényképezést) mindegyikről, amely segít meglátni,
+                            hogy egy elrendezés megfelelő-e különböző
+                            böngészőkön.
+                        </li>
+                    </ul>
+                </Paragraph>
             </Article>
-            Another option is user groups — using a group of people outside your
-            development team to test your site. This could be a group of friends
-            or family, a group of other employees, a class at a local
-            university, or a professional user testing setup, where people are
-            paid to test out your site and provide results.
+            take a screenshot of each, allowing you to see if a layout is
+            consistent across the different browsers.
         </div>
     );
 }
