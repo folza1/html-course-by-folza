@@ -228,10 +228,32 @@ export default function Strategies_For_Carrying_Out_Testing() {
                     . Ezekhez elvárt, hogy te host-old az analitikai
                     platform-ot.
                 </Paragraph>
+
+                <h3>A Google Analytics beállítása</h3>
+
+                <Paragraph>
+                    <ol className="ml-2">
+                        <li>
+                            Először is szükség van rá egy Google fiókra.
+                            Használd a Google fiókod a Google Analytics-be való
+                            belépéshez.
+                        </li>
+                        <li>
+                            Válaszd a{" "}
+                            <a
+                                href="https://analytics.google.com/analytics/web/provision/#/provision"
+                                target="_blank"
+                            >
+                                Google Analytics
+                            </a>{" "}
+                            lehetőséget és kattints a Sign Up (Regisztráció)
+                            gombra.
+                        </li>
+                    </ol>
+                </Paragraph>
             </Article>
-            You may also consider using open-source and privacy-focused
-            analytics platforms like Open Web Analytics and Matomo. They expect
-            you to self-host the analytics platform.
+            Choose the Google Analytics (web) option, and click the Sign Up
+            button.
         </div>
     );
 }
