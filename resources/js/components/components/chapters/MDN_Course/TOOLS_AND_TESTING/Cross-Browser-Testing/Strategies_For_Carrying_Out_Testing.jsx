@@ -186,9 +186,52 @@ export default function Strategies_For_Carrying_Out_Testing() {
                         során.
                     </Paragraph>
                 </Note>
+
+                <h2>Böngésző statisztikák</h2>
+
+                <Paragraph>
+                    Néhány weboldal megmutatja melyek azok a böngészők, amelyek
+                    népszerűek egy adott régióban. Például a{" "}
+                    <a href="https://gs.statcounter.com/" target="_blank">
+                        Statcounter
+                    </a>
+                    információkat ad a trendekről Észak-Amerika régióból.
+                </Paragraph>
+
+                <h2>Elemzések használata</h2>
+
+                <Paragraph>
+                    Egy pontosabb adatforrás, ha még nem ismersz ilyet, egy
+                    elemző alkalmazás mint a{" "}
+                    <a
+                        href="https://marketingplatform.google.com/about/analytics/"
+                        target="_blank"
+                    >
+                        Google Analytics
+                    </a>
+                    , amely elmondja neked pontosan milyen böngészővel nézték
+                    meg az oldalad. Természetesen ehhez kell, hogy legyen egy
+                    oldalad amin használhatod, szóval ez nem jó teljesen új
+                    oldalakhoz.
+                </Paragraph>
+
+                <Paragraph>
+                    Fontolóra veheted nyílt-forráskódú és magánélet központú
+                    elemző platform-ok használatát, mint az{" "}
+                    <a href="https://www.openwebanalytics.com/" target="_blank">
+                        Open Web Analytics
+                    </a>{" "}
+                    és a{" "}
+                    <a href="https://matomo.org/" target="_blank">
+                        Matomo
+                    </a>
+                    . Ezekhez elvárt, hogy te host-old az analitikai
+                    platform-ot.
+                </Paragraph>
             </Article>
-            "The CEO of my company uses a Blackberry, so we'd better make sure
-            it looks good on that" can also be something to consider.
+            You may also consider using open-source and privacy-focused
+            analytics platforms like Open Web Analytics and Matomo. They expect
+            you to self-host the analytics platform.
         </div>
     );
 }
