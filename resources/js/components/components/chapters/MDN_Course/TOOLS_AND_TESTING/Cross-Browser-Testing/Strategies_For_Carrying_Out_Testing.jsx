@@ -246,14 +246,48 @@ export default function Strategies_For_Carrying_Out_Testing() {
                             >
                                 Google Analytics
                             </a>{" "}
-                            lehetőséget és kattints a Sign Up (Regisztráció)
-                            gombra.
+                            lehetőséget és kattints a{" "}
+                            <span className="italic">Sign Up</span>{" "}
+                            (Regisztráció) gombra.
+                        </li>
+                        <li>
+                            Add meg a weboldal/alkalmazás részleteit a
+                            regisztráció oldalon. A legfontosabb rész az a
+                            weboldal URL-je. Ez lesz az oldalad/alkalmazásod
+                            gyökér URL-je.
+                        </li>
+                        <li>
+                            Ha végeztél az űrlap kitöltésével, akkor nyomd meg a{" "}
+                            <span className="italic">Get Tracking ID</span>{" "}
+                            gombot, aztán fogadd el a szolgáltatás feltételeit,
+                            amely feltűnik.
+                        </li>
+                        <li>
+                            A következő oldal egy kis kód részletet és más
+                            instrukciókat biztosít. Egy kezdő oldalhoz, amit
+                            tenned kell az az, hogy másolod a{" "}
+                            <span className="italic">Website tracking</span> kód
+                            blokkot és beilleszted azt különböző oldalakon, ahol
+                            mérni szeretnél az oldaladon a Google Analytics
+                            segítségével. Elhelyezheted a blokkot a záró{" "}
+                            <BgLightgray>&lt;/body&gt;</BgLightgray>
+                            tag után vagy valahol egy megfelelő helyen, ahol nem
+                            zavarja össze az alkalmazásod kódját.
+                        </li>
+                        <li>
+                            Töltsd fel a változást a fejlesztői szerverre vagy
+                            máshová, ahol szükséged van rá.
                         </li>
                     </ol>
                 </Paragraph>
+
+                <Paragraph>
+                    És készen is! Most már az oldalad készen áll, hogy adatokat
+                    küldjön elemzés céljára.
+                </Paragraph>
             </Article>
-            Choose the Google Analytics (web) option, and click the Sign Up
-            button.
+            That's it! Your site should now be ready to start reporting
+            analytics data.
         </div>
     );
 }
