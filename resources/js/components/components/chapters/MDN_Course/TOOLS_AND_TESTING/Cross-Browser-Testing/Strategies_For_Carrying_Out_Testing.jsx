@@ -4,6 +4,7 @@ import Article from "../../REACT/article/Article.jsx";
 import Note from "../../REACT/note/Note.jsx";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
+import analytics from "./img/1.analytics.png";
 
 // import {} from "./cross_browser_testing_text.jsx";
 
@@ -285,9 +286,41 @@ export default function Strategies_For_Carrying_Out_Testing() {
                     És készen is! Most már az oldalad készen áll, hogy adatokat
                     küldjön elemzés céljára.
                 </Paragraph>
+
+                <h3>Az adatok elemzése</h3>
+
+                <Paragraph>
+                    Most már visszamehetsz az{" "}
+                    <a
+                        href="https://analytics.google.com/analytics/web/provision/#/provision"
+                        target="_blank"
+                    >
+                        Analytics Web
+                    </a>{" "}
+                    kezdőoldalára és elkezdheted megnézegetni az adatokat,
+                    amelyeket gyűjtött neked az oldalról (persze hagyni kell egy
+                    kis időt míg adatokat gyűjt az oldalról természetesen).
+                </Paragraph>
+
+                <Paragraph>
+                    Alapból ezt az oldalt fogod látni a website-odról készült
+                    jelentéssel (riporttal):
+                </Paragraph>
+
+                <div className="image-container">
+                    <img
+                        src={analytics}
+                        alt="Default Analytics Report Of Your Site"
+                    />
+                </div>
+
+                <Paragraph></Paragraph>
             </Article>
-            That's it! Your site should now be ready to start reporting
-            analytics data.
+            There is a huge amount of data you could look at using Google
+            Analytics — customized reports in different categories, etc. — and
+            we haven't got time to discuss it all. Getting started with
+            Analytics provides some useful guidance on reporting (and more) for
+            beginners.{" "}
         </div>
     );
 }
