@@ -352,12 +352,33 @@ export default function Strategies_For_Carrying_Out_Testing() {
                 </Note>
 
                 <h3>Egyéb megfontolások</h3>
+
+                <Paragraph>
+                    A fogyatékkal élők számára biztosított hozzáférhetőséget
+                    bele kell venni az A osztályú tesztelés követelményei közé.
+                    Később taglaljuk pontosan mit is kell tesztelnünk egy
+                    későbbi cikkben (
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility"
+                        target="_blank"
+                    >
+                        Gyakori hozzáférhetőségi problémák kezelése
+                    </a>
+                    ).
+                </Paragraph>
+
+                <Paragraph>
+                    Szituáció specifikus szükségleteknek is a tudatában kell
+                    lenned. Például, ha a termék célpiacának az elsődleges
+                    eszközei a mobil telefonok (legtöbbször azzal csatlakoznak
+                    az internetre), akkor valószínűleg elsődlegesen mobil
+                    böngészőket akarsz majd támogatni.
+                </Paragraph>
             </Article>
-            When using Google analytics, you need to beware of misleading bias,
-            e.g. "We have no Firefox Mobile users" might lead you to not bother
-            supporting Firefox mobile. But you are not going to have any Firefox
-            Mobile users if the site was broken on Firefox mobile in the first
-            place.
+            Also, you should be aware of situation-specific needs. For example,
+            if your product targets a market where mobile phones are the primary
+            means of accessing the internet, you will probably want to make
+            mobile browser support a priority.
         </div>
     );
 }
