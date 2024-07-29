@@ -314,13 +314,50 @@ export default function Strategies_For_Carrying_Out_Testing() {
                     />
                 </div>
 
-                <Paragraph></Paragraph>
+                <Paragraph>
+                    Hatalmas méretű adatot láthatsz a Google Analytics
+                    segítségével - személyre szabott jelentéseket különböző
+                    kategóriákban stb - és most nincsen időnk mindegyiket
+                    megvitatni. A{" "}
+                    <a
+                        href="https://support.google.com/analytics/answer/9304153?visit_id=637855964517698041-2103767437&rd=2"
+                        target="_blank"
+                    >
+                        Kezdés az Analytics-el
+                    </a>{" "}
+                    hasznos utmutatókat nyújt a jelentésekkel és más dolgokkal
+                    kapcsolatban a kezdők számára.
+                </Paragraph>
+
+                <Paragraph>
+                    Megnézheted vele milyen böngészőket és operációs
+                    rendszereket használnak a felhasználóid a jobb oldali
+                    menüből kiválasztva.{" "}
+                    <span className="italic">
+                        Audience &gt; Technology &gt; Browser & OS
+                    </span>
+                </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        Amikor a Google Analytics-et használod, tudnod kell,
+                        hogy vannak félrevezető következtetések. Például ha a
+                        "Nincsenek Firefox Mobil felhasználóink" arra vezet,
+                        hogy ne foglalkozzunk Firefox mobil támogatással.
+                        Viszont, ha az oldal összeomlik egy Firefox mobil
+                        eszközön, akkor nem is lesznek Firefox mobile
+                        felhasználóid.
+                    </Paragraph>
+                </Note>
+
+                <h3>Egyéb megfontolások</h3>
             </Article>
-            There is a huge amount of data you could look at using Google
-            Analytics — customized reports in different categories, etc. — and
-            we haven't got time to discuss it all. Getting started with
-            Analytics provides some useful guidance on reporting (and more) for
-            beginners.{" "}
+            When using Google analytics, you need to beware of misleading bias,
+            e.g. "We have no Firefox Mobile users" might lead you to not bother
+            supporting Firefox mobile. But you are not going to have any Firefox
+            Mobile users if the site was broken on Firefox mobile in the first
+            place.
         </div>
     );
 }
