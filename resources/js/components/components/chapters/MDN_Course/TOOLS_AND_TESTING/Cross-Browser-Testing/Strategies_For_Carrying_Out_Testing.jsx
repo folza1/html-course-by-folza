@@ -374,11 +374,111 @@ export default function Strategies_For_Carrying_Out_Testing() {
                     az internetre), akkor valószínűleg elsődlegesen mobil
                     böngészőket akarsz majd támogatni.
                 </Paragraph>
+
+                <h3>A végső támogatási táblázat</h3>
+
+                <Paragraph>
+                    Szóval akkor a támogatási táblázatunk a következőképpen fog
+                    kinézni:
+                    <ol className="ml-2">
+                        <li>
+                            A-osztály: Chrome és Firefox a Windows/Mac
+                            rendszerekhez, Safari a Mac-hez, Edge a Windows-hoz,
+                            iOS Safari az iPhone/iPad-hoz, Android stock (gyári)
+                            böngésző (legújabb két verzió)
+                            telefonhoz/táblagéphez, Chrome és Firefox az Android
+                            rendszerekhez (legújabb két verzió)
+                            telefonhoz/táblagéphez
+                        </li>
+                        <li>B-osztály: Opera Mini</li>
+                        <li>
+                            C-osztály: Opera és más kevésbé elterjedt böngészők
+                        </li>
+                    </ol>
+                </Paragraph>
             </Article>
-            Also, you should be aware of situation-specific needs. For example,
-            if your product targets a market where mobile phones are the primary
-            means of accessing the internet, you will probably want to make
-            mobile browser support a priority.
+            <Article>
+                <h1>Mit fogsz tesztelni</h1>
+
+                <Paragraph>
+                    Amikor a kódbázisodhoz hozzáadás történik, annak szüksége
+                    van tesztelésre és mielőtt elkezded letesztelni írnod
+                    kellene egy listát a tesztelés követelményeiről amelyet el
+                    is kell fogadtatni valakivel. Ezek a követelmények lehetnek
+                    vizuálisak vagy funkcionálisak. A kettő kombinációjából
+                    készíteni lehet egy használható weboldal jellemzőt.
+                </Paragraph>
+
+                <Paragraph>
+                    Figyeld meg a következő példát (
+                    <a
+                        href="https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html"
+                        target="_blank"
+                    >
+                        itt a forráskódja
+                    </a>{" "}
+                    és{" "}
+                    <a
+                        href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html"
+                        target="_blank"
+                    >
+                        itt pedig élőben tekintheted meg
+                    </a>
+                    ):
+                </Paragraph>
+
+                <Paragraph>
+                    Ennek a funkciónak a tesztelési feltételei a következőképpen
+                    írhatók fel:
+                </Paragraph>
+
+                <Paragraph>
+                    A és B osztály:
+                    <ul className="ml-2">
+                        <li>
+                            A gombnak aktiválhatóvá kell lennie a felhasználó
+                            elsődleges vezérlő mehanizmusa által, bármi is az,
+                            abba beletartozik az egér, a billentyűzet és az
+                            érintés.
+                        </li>
+                        <li>
+                            A kapcsoló (toggle) gombnak meg
+                            kelljeleníteni/elrejteni az információ dobozt.
+                        </li>
+                        <li>A szövegnek olvashatónak kell lennie.</li>
+                        <li>
+                            A látásában károsodott felhasználók, akik
+                            képernyőolvasót használnak hozzá kell, hogy férjenek
+                            a szöveghez.
+                        </li>
+                    </ul>
+                </Paragraph>
+
+                <Paragraph>
+                    A osztály:
+                    <ul className="ml-2">
+                        <li>
+                            Az információ doboznak simán kell animálódnia amikor
+                            feltűnik/eltűnik.
+                        </li>
+                        <li>
+                            A színátmenetnek és a szöveg árnyékának feltűnőnek
+                            kell lennie, hogy növelje a doboz láthatóságát.
+                        </li>
+                    </ul>
+                </Paragraph>
+
+                <Paragraph>
+                    Talán észrevetted, hogy a gomb nem használható csak a
+                    billentyűzettel. Erre megoldást találhatunk ha JavaScript-et
+                    használunk, hogy végrehajtsunk billentyűzetes vezérlést a
+                    kapcsoló gombhoz vagy használhatunk valamilyen más
+                    megoldást.
+                </Paragraph>
+
+                <Paragraph>Ezek a teszt kritériumok hasznosak mert:</Paragraph>
+            </Article>
+            These test criteria are useful, because:
         </div>
     );
 }
