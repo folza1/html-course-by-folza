@@ -519,14 +519,82 @@ export default function Strategies_For_Carrying_Out_Testing() {
                     Az egyik lehetőség, hogy kivitelezzük a böngésző teszteket,
                     ha magunk csináljuk azokat. Ha így döntünk, akkor
                     valószínűleg használhatjuk hozzá a jelenlegi fizikai
-                    eszközünket és más emulált környezeteknek (emulátor vagy
-                    virtuális gép) a kombinációját.
+                    eszközünket és más emulált környezetek (emulátor vagy
+                    virtuális gép) kombinációját.
+                </Paragraph>
+
+                <h2>Fizikai eszközök</h2>
+
+                <Paragraph>
+                    Általánosságban elmondható, hogy jobb ha, van egy igazi
+                    eszközünk, amin fut a böngésző, amin tesztelni akarsz, mert
+                    a legnagyobb pontosságot adja abban az értelemben, hogyan is
+                    viselkedik majd rajta a program és átfogó képet ad a
+                    felhasználói élményről. Valószínűleg akarsz majd valami
+                    hasonlót a teszthez:
+                    <ul className="ml-2">
+                        <li>
+                            Egy Mac-et böngészőkkel telepítve, ami lehet
+                            Firefox, Chrome, Opera és Safari.
+                        </li>
+                        <li>
+                            Egy Windows PC-t telepített böngészőkkel a teszthez,
+                            ami lehet Edge, Internet Explorer, Chrome, Firefox
+                            és Opera.
+                        </li>
+                        <li>
+                            Egy jobb Android telefon és táblagép a teszthez
+                            szükséges böngészővel telepítve, amelybe
+                            beletartozik a Chrome, Firefox és Opera Mini az
+                            Android-hoz és a gyári Android böngésző.
+                        </li>
+                        <li>
+                            Egy jobb iOS telefon és táblagép a számodra
+                            szükséges böngészőkkel telepítve, amelybe
+                            beletartozik az iOS Safari és Chrome, Firefox és az
+                            Opera Mini az iOS-hez.
+                        </li>
+                    </ul>
+                </Paragraph>
+
+                <Paragraph>
+                    A következők is jó lehetőségek, ha megvannak:
+                    <ul className="ml-2">
+                        <li>
+                            Egy Linux PC, ha különösen Linux OS-en futó
+                            böngészőket akarsz tesztelni. A Linux felhasználók
+                            gyakran használnak Firefox, Opera és Chrome
+                            böngészőt. Ha csak egy géped van, megfontolhatod a
+                            "dual boot" készítését amellyel külön partíción
+                            futtathatsz Linux és Windows operációs rendszert
+                            ugyanazon a fizikai gépen. Az Ubuntu telepítővel
+                            egész egyszerűen beállítható. Lásd a{" "}
+                            <a
+                                href="https://help.ubuntu.com/community/WindowsDualBoot"
+                                target="_blank"
+                            >
+                                WindowsDualBoot
+                            </a>{" "}
+                            részt további segítségért.
+                        </li>
+                        <li>
+                            Egy pár rosszabb képességű mobil eszköz, így
+                            tesztelni tudod az olyan összetevők teljesítményét,
+                            mint az animációkat a kisebb képességű
+                            processzorokon.
+                        </li>
+                    </ul>
+                </Paragraph>
+
+                <Paragraph>
+                    A fő munkagépeden helyet kell taláni más speciális célú
+                    telepített eszközöknek, mint a akadálymentesítés ellenőrző
+                    eszközök, képernyő olvasók, emulátorok és virtuális gépek.
                 </Paragraph>
             </Article>
-            One option for carrying out browser tests is to do the testing
-            yourself. To do this, you will probably use a combination of actual
-            physical devices, and emulated environments (using either an
-            emulator or a virtual machine).
+            Your main work machine can also be a place to install other tools
+            for specific purposes, such as accessibility auditing tools, screen
+            readers, and emulators/virtual machines.
         </div>
     );
 }
