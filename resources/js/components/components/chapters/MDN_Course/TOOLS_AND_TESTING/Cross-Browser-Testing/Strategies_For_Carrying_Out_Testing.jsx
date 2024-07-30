@@ -591,10 +591,24 @@ export default function Strategies_For_Carrying_Out_Testing() {
                     telepített eszközöknek, mint a akadálymentesítés ellenőrző
                     eszközök, képernyő olvasók, emulátorok és virtuális gépek.
                 </Paragraph>
+
+                <Paragraph>
+                    Néhány nagyobb cégnek vannak eszköz laborjai amelyek nagy
+                    választékot tartalmaznak különböző készülékből és képessé
+                    teszik a fejlesztőket, hogy levadásszák a hibákat a nagyon
+                    különleges böngésző/készülék kombináció esetén. Kisebb cégek
+                    és egyének általában nem engedhetik meg maguknak a
+                    kifinomult laborokat, így kisebb laborokkal, emulátorokkal,
+                    virtuális gépekkel és fizetős tesztelő alkalmazásokkal
+                    dolgoznak.
+                </Paragraph>
             </Article>
-            Your main work machine can also be a place to install other tools
-            for specific purposes, such as accessibility auditing tools, screen
-            readers, and emulators/virtual machines.
+            Some larger companies have device labs that stock a very large
+            selection of different devices, enabling developers to hunt down
+            bugs on very specific browser/device combinations. Smaller companies
+            and individuals are generally not able to afford such a
+            sophisticated lab, so tend to make do with smaller labs, emulators,
+            virtual machines, and commercial testing apps.
         </div>
     );
 }
