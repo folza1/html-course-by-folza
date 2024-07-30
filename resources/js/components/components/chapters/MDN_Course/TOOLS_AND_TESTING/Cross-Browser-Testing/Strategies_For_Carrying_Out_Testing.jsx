@@ -476,9 +476,57 @@ export default function Strategies_For_Carrying_Out_Testing() {
                     megoldást.
                 </Paragraph>
 
-                <Paragraph>Ezek a teszt kritériumok hasznosak mert:</Paragraph>
+                <Paragraph>
+                    Ezek a teszt kritériumok hasznosak mert:
+                    <ul className="ml-2">
+                        <li>
+                            Ad neked egy néhány lépést, amelyeket követhetsz
+                            amikor a teszteket hajtod végre.
+                        </li>
+                        <li>
+                            Könnyen átváltoztathatók egy sor instrukcióvá a
+                            felhasználói csoportok számára, hogy kövessék a
+                            tesztek kivitelezésekor. Például: "próbáld meg
+                            aktiválni a gombot az egér használatával, aztán a
+                            billentyűzettel...". Erről bővebben olvashatsz majd
+                            lejjebb a "
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#user_testing"
+                                target="_blank"
+                            >
+                                Felhasználói tesztelés
+                            </a>
+                            " részben.
+                        </li>
+                        <li>
+                            Alapot adhat automatizált tesztek írásához. Könnyebb
+                            teszteket írni akkor, ha pontosan tudod mit akarsz
+                            tesztelni és mik a siker feltételei. Lásd a{" "}
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#selenium"
+                                target="_blank"
+                            >
+                                Selenium
+                            </a>{" "}
+                            részt, később a cikksorozatban.
+                        </li>
+                    </ul>
+                </Paragraph>
             </Article>
-            These test criteria are useful, because:
+            <Article>
+                <h1>Rakjuk össze mindezt egy teszt példában</h1>
+                <Paragraph>
+                    Az egyik lehetőség, hogy kivitelezzük a böngésző teszteket,
+                    ha magunk csináljuk azokat. Ha így döntünk, akkor
+                    valószínűleg használhatjuk hozzá a jelenlegi fizikai
+                    eszközünket és más emulált környezeteknek (emulátor vagy
+                    virtuális gép) a kombinációját.
+                </Paragraph>
+            </Article>
+            One option for carrying out browser tests is to do the testing
+            yourself. To do this, you will probably use a combination of actual
+            physical devices, and emulated environments (using either an
+            emulator or a virtual machine).
         </div>
     );
 }
