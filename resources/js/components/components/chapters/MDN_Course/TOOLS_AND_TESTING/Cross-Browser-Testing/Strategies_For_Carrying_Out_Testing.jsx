@@ -631,11 +631,44 @@ export default function Strategies_For_Carrying_Out_Testing() {
                         róla egy cikkben később ebben a kurzusban.
                     </Paragraph>
                 </Note>
+
+                <h2>Emulátorok</h2>
+
+                <Paragraph>
+                    Az emulátorok alapjában véve programok melyek futnak a
+                    számítógépeden és emulálnak egy készüléket vagy egy bizonyos
+                    készülék állapotot, lehetővé téve neked a tesztelést még
+                    kényelmesebb módon, mint fizikailag birtokolni egy bizonyos
+                    hardver/szoftver kombinációt.
+                </Paragraph>
+
+                <Paragraph>
+                    Egy emulátor lehet olyan egyszerű, mint egy készülék
+                    állapotának a tesztelése. Például, ha szeretnéd tesztelni
+                    gyorsan és durván a szélességet és a magasságot a responsive
+                    megjelenésedhez, használhatod a Firefox Responsive Design
+                    Mode-ot. A Safari-nak is van egy hasonló módja amelyet
+                    aktiválhatsz a Safari &gt; Preferences résznél, aztán nézd a
+                    Show Develop menüt és válaszd a Develop &gt; Enter
+                    Responsive Design Mode-ot. A Chrome-nak is van egy hasonló
+                    módja, amelyet aktiválhatsz a Device mode-nál (lásd a{" "}
+                    <a
+                        href="https://developer.chrome.com/docs/devtools/device-mode/"
+                        target="_blank"
+                    >
+                        Simulate Mobile Devices with Device Mode
+                    </a>
+                    ).
+                </Paragraph>
             </Article>
-            We also need to consider accessibility — there are a number of
-            useful tools you can install on your machine to facilitate
-            accessibility testing, but we'll cover those in the Handling common
-            accessibility problems article, later in the course.
+            An emulator might be as simple as testing a device condition. For
+            example, if you want to do some quick and dirty testing of your
+            width/height media queries for responsive design, you could use
+            Firefox's Responsive Design Mode. Safari has a similar mode too,
+            which can be enabled by going to Safari > Preferences, and checking
+            Show Develop menu, then choosing Develop > Enter Responsive Design
+            Mode. Chrome also has something similar: Device mode (see Simulate
+            Mobile Devices with Device Mode).
         </div>
     );
 }
