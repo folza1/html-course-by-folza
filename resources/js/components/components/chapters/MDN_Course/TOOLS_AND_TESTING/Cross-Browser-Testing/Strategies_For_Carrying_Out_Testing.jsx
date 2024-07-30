@@ -645,13 +645,13 @@ export default function Strategies_For_Carrying_Out_Testing() {
                 <Paragraph>
                     Egy emulátor lehet olyan egyszerű, mint egy készülék
                     állapotának a tesztelése. Például, ha szeretnéd tesztelni
-                    gyorsan és durván a szélességet és a magasságot a responsive
+                    gyorsan a szélességet és a magasságot a responsive
                     megjelenésedhez, használhatod a Firefox Responsive Design
                     Mode-ot. A Safari-nak is van egy hasonló módja amelyet
                     aktiválhatsz a Safari &gt; Preferences résznél, aztán nézd a
                     Show Develop menüt és válaszd a Develop &gt; Enter
                     Responsive Design Mode-ot. A Chrome-nak is van egy hasonló
-                    módja, amelyet aktiválhatsz a Device mode-nál (lásd a{" "}
+                    módja, amelyet aktiválhatsz a Device mode-ban (lásd a{" "}
                     <a
                         href="https://developer.chrome.com/docs/devtools/device-mode/"
                         target="_blank"
@@ -660,15 +660,90 @@ export default function Strategies_For_Carrying_Out_Testing() {
                     </a>
                     ).
                 </Paragraph>
+
+                <Paragraph>
+                    Legtöbbször azonban telepíteni kell valamilyen emulátort. A
+                    legnépszerűbb készülékek/böngészők, amelyekre teszteket
+                    akarsz a következők:
+                    <ul className="ml-2">
+                        <li>
+                            A hivatalos{" "}
+                            <a
+                                href="https://developer.android.com/studio"
+                                target="_blank"
+                            >
+                                Android Studio IDE
+                            </a>
+                            , amely Android alkalmazások fejlesztésére hivatott,
+                            egy kicsit túlzás weboldalak teszteléséhez Google
+                            Chrome-on vagy a régi beépített Android böngészőn,
+                            viszont egy{" "}
+                            <a
+                                href="https://developer.android.com/studio/run/emulator.html"
+                                target="_blank"
+                            >
+                                robosztus emulátort
+                            </a>{" "}
+                            tartalmaz. Ha szeretnél valami kevésbé komoly
+                            eszközt tesztelésre az{" "}
+                            <a href="https://www.andyroid.net/" target="_blank">
+                                Andy
+                            </a>{" "}
+                            egy jó választás lehet Windows-ra és Mac-re.
+                        </li>
+                        <li>
+                            Az Apple támogat egy alkalmazást a{" "}
+                            <a
+                                href="https://help.apple.com/simulator/mac/current/"
+                                target="_blank"
+                            >
+                                Simulator
+                            </a>
+                            -t, amely az{" "}
+                            <a
+                                href="https://developer.apple.com/xcode/"
+                                target="_blank"
+                            >
+                                XCode
+                            </a>{" "}
+                            fejlesztési környezeten működik és emulál
+                            iPad/iPhone/Apple Watch/Apple TV készülékeket.
+                            Tartalmazza a natív iOS Safari böngészőt. Azonban
+                            sajnos csak Mac-en fut.
+                        </li>
+                    </ul>
+                </Paragraph>
+
+                <Paragraph>
+                    Gyakran találhatsz szimulátorokat más mobil készülék
+                    környezetekhez is, mint például:
+                    <ul className="ml-2">
+                        <li>
+                            Emulálhatod az{" "}
+                            <a
+                                href="https://blogs.opera.com/news/"
+                                target="_blank"
+                            >
+                                Opera Mini
+                            </a>
+                            -t is ha úgy tartja kedved.
+                        </li>
+                    </ul>
+                </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        Sok emulátorhoz virtuális gép használata szükséges.
+                        Ebben az esetben, instrukciók gyakran vannak és/vagy a
+                        virtuális gép integrálva van az emulátor telepítőjében.
+                    </Paragraph>
+                </Note>
             </Article>
-            An emulator might be as simple as testing a device condition. For
-            example, if you want to do some quick and dirty testing of your
-            width/height media queries for responsive design, you could use
-            Firefox's Responsive Design Mode. Safari has a similar mode too,
-            which can be enabled by going to Safari > Preferences, and checking
-            Show Develop menu, then choosing Develop > Enter Responsive Design
-            Mode. Chrome also has something similar: Device mode (see Simulate
-            Mobile Devices with Device Mode).
+            Note: Many emulators actually require the use of a virtual machine
+            (see below); when this is the case, instructions are often provided,
+            and/or use of the virtual machine is incorporated into the installer
+            of the emulator.{" "}
         </div>
     );
 }
