@@ -706,7 +706,7 @@ export default function Strategies_For_Carrying_Out_Testing() {
                             >
                                 XCode
                             </a>{" "}
-                            fejlesztési környezeten működik és emulál
+                            fejlesztői környezeten felül működik és emulál
                             iPad/iPhone/Apple Watch/Apple TV készülékeket.
                             Tartalmazza a natív iOS Safari böngészőt. Azonban
                             sajnos csak Mac-en fut.
