@@ -602,13 +602,40 @@ export default function Strategies_For_Carrying_Out_Testing() {
                     virtuális gépekkel és fizetős tesztelő alkalmazásokkal
                     dolgoznak.
                 </Paragraph>
+
+                <Paragraph>
+                    Részletesebben foglalkozunk lejjebb a lehetőségekkel.
+                </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        Van néhány nyilvánosan elérhető készülék labor. Nézd meg
+                        az{" "}
+                        <a
+                            href="https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/"
+                            target="_blank"
+                        >
+                            Open Device Labs
+                        </a>{" "}
+                        részleteit.
+                    </Paragraph>
+                </Note>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        Amit még meg kell néznünk az a hozzáférhetőség
+                        fogyatékkal élők számára. Sok hasznos eszköz van amit
+                        telepíthetsz annak a tesztelésére, de fogunk is beszélni
+                        róla egy cikkben később ebben a kurzusban.
+                    </Paragraph>
+                </Note>
             </Article>
-            Some larger companies have device labs that stock a very large
-            selection of different devices, enabling developers to hunt down
-            bugs on very specific browser/device combinations. Smaller companies
-            and individuals are generally not able to afford such a
-            sophisticated lab, so tend to make do with smaller labs, emulators,
-            virtual machines, and commercial testing apps.
+            We also need to consider accessibility — there are a number of
+            useful tools you can install on your machine to facilitate
+            accessibility testing, but we'll cover those in the Handling common
+            accessibility problems article, later in the course.
         </div>
     );
 }
