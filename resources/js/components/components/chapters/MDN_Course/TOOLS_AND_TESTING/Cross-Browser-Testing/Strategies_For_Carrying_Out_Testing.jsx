@@ -5,6 +5,7 @@ import Note from "../../REACT/note/Note.jsx";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
 import analytics from "./img/1.analytics.png";
+import virtualBoxImage from "./img/2.virtualBoxImage.png";
 
 // import {} from "./cross_browser_testing_text.jsx";
 
@@ -739,11 +740,134 @@ export default function Strategies_For_Carrying_Out_Testing() {
                         virtuális gép integrálva van az emulátor telepítőjében.
                     </Paragraph>
                 </Note>
+
+                <h2>Virtuális gépek</h2>
+
+                <Paragraph>
+                    A virtuális gépek olyan alkalmazások, amelyek a személyi
+                    számítógépen futnak és lehetővé teszi, hogy emulálj egy
+                    egész operációs rendszert és mindegyik rekeszekbe van osztva
+                    a saját virtuális merevlemezén (gyakran egy nagy fájlként
+                    jelennek meg a host gép merevlemezén). Számos népszerű
+                    virtuális gép alkalmazás elérhető, mint a{" "}
+                    <a href="https://www.parallels.com/" target="_blank">
+                        Parallels
+                    </a>
+                    ,{" "}
+                    <a href="https://www.vmware.com/" target="_blank">
+                        VMWare
+                    </a>
+                    és a{" "}
+                    <a
+                        href="https://www.virtualbox.org/wiki/Downloads"
+                        target="_blank"
+                    >
+                        Virtual Box
+                    </a>
+                    . Mi személyesen a legutóbbit használjuk, mivel ingyenes.
+                </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        Nagy merevlemez tárhely szükséges a virtuális gepeken
+                        való emulálás futtatásához és minden egyes operációs
+                        rendszer amit emulálsz sok memóriát igényel. Ki kell
+                        választani a merevlemezen a foglalni kívánt területet
+                        minden telepítéskor. Lehet elég hozzá 10GB, de néhány
+                        esetben 50GB vagy több tárhely ajánlott, így az
+                        operációs rendszer megfelelően futhat a gépen. A jó
+                        választás lehet sok virtuális gép alkalmazásnál, hogy
+                        beállítunk egy{" "}
+                        <span className="bold">
+                            dinamikusan változtatható felhasználású
+                        </span>{" "}
+                        merevlemezt, amellyel a foglalt terület éppen nő vagy
+                        csökken a szükséges használattól függően.
+                    </Paragraph>
+                </Note>
+
+                <Paragraph>
+                    Hogy használd a Virtual Box-ot szükséged lesz ezekre:
+                    <ul className="ml-2">
+                        <li>
+                            Kellesz majd az emulálni kívánt operációs rendszer
+                            telepítő lemeze vagy egy ISO fájl az emulációhoz. A
+                            Virtual Box nem szolgáltatja hozzá a telepítőt. A
+                            legtöbb Windows típusú OS-ek kereskedelmi
+                            forgalomban kaphatóak, amelyek nem terjeszhetők
+                            szabadon.
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.virtualbox.org/wiki/Downloads"
+                                target="_blank"
+                            >
+                                Töltsd le a Virtual Box telepítőt
+                            </a>{" "}
+                            és telepítsd azt.
+                        </li>
+                        <li>
+                            Nyisd meg az alkalmazást és a következő nézet tárul
+                            majd eléd:
+                            <div className="image-container">
+                                <img
+                                    src={virtualBoxImage}
+                                    alt="Virtual Box Starter View"
+                                />
+                            </div>
+                        </li>
+                        <li>
+                            Hogy készítsünk egy virtuális gépet, meg kell nyomni
+                            a <span className="italic">New</span> gombot a
+                            bal-felső sarokban.
+                        </li>
+                        <li>
+                            Kövesd a lépéseket és töltsd ki a következő
+                            párbeszédpaneleket, ahogy neked megfelelő.
+                            <ol className="ml-2">
+                                <li>Adj nevet az új virtuális gépednek.</li>
+                                <li>
+                                    Válaszd ki milyen operációs rendszert és
+                                    verziót akarsz telepíteni rá.
+                                </li>
+                                <li>
+                                    Állítsd be mennyi RAM-ot akarsz hozzá (mint
+                                    például 2GB-ot vagy 2048MB-ot vagy valami
+                                    hasonlót).
+                                </li>
+                                <li>
+                                    Hozz létre virtuális merevlemezt (használd
+                                    az alapértelmezettet a{" "}
+                                    <span className="italic">
+                                        Create a virtual hard disk now
+                                    </span>
+                                    ,{" "}
+                                    <span className="italic">
+                                        VDI(virtual disk image)
+                                    </span>{" "}
+                                    és a{" "}
+                                    <span className="italic">
+                                        Dynamically allocated
+                                    </span>{" "}
+                                    párbeszédpanelekkel.
+                                </li>
+                                <li>
+                                    Válaszd ki a fájl helyét és a virtuális
+                                    merevlemez méretét (válassz egy értelmes
+                                    nevet neki és olyan helyet ami megfelel
+                                    neki, adj neki 50GB körüli méretet vagy
+                                    amilyet megfelelőnek tartasz speciálisabb
+                                    esetben).
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </Paragraph>
             </Article>
-            Note: Many emulators actually require the use of a virtual machine
-            (see below); when this is the case, instructions are often provided,
-            and/or use of the virtual machine is incorporated into the installer
-            of the emulator.{" "}
+            Choose the file location and size for the virtual hard disk (choose
+            a sensible name and location to keep it, and for the size specify
+            around 50GB, or as much as you are comfortable with specifying).
         </div>
     );
 }
