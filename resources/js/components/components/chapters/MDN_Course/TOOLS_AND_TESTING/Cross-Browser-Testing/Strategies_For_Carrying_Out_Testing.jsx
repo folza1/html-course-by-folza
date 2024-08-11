@@ -2,10 +2,12 @@ import React from "react";
 import Paragraph from "../../REACT/paragraph/Paragraph.jsx";
 import Article from "../../REACT/article/Article.jsx";
 import Note from "../../REACT/note/Note.jsx";
+import Warning from "../../REACT/note/Warning.jsx";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
 import analytics from "./img/1.analytics.png";
 import virtualBoxImage from "./img/2.virtualBoxImage.png";
+import installDisk from "./img/3.installDisk.png";
 
 // import {} from "./cross_browser_testing_text.jsx";
 
@@ -855,8 +857,8 @@ export default function Strategies_For_Carrying_Out_Testing() {
                                 <li>
                                     Válaszd ki a fájl helyét és a virtuális
                                     merevlemez méretét (válassz egy értelmes
-                                    nevet neki és olyan helyet ami megfelel
-                                    neki, adj neki 50GB körüli méretet vagy
+                                    nevet neki és olyan helyet, ami megfelel
+                                    neki, adj neki 50GB körüli méretet vagy,
                                     amilyet megfelelőnek tartasz speciálisabb
                                     esetben).
                                 </li>
@@ -864,10 +866,39 @@ export default function Strategies_For_Carrying_Out_Testing() {
                         </li>
                     </ul>
                 </Paragraph>
+
+                <Paragraph>
+                    Most ezek után egy új virtuális gépnek látszódnia kell a bal
+                    oldali menüben a Virtual Box felhasználói felület ablakban.
+                    Ha kétszer kattintasz rá megnyithatod és boot-olja a
+                    virtuális gépet, de még nincsen operációs rendszer (OS)
+                    telepítve rá. Ebben az esetben szükséged lesz kiválasztani
+                    egy telepítő lemezképet vagy lemezt és aztán futni fog az OS
+                    telepítő mint egy fizikai gépen.
+                </Paragraph>
+
+                <div className="image-container">
+                    <img src={installDisk} alt="Install From ISO or disk" />
+                </div>
+
+                <Warning>
+                    <div className="bold inline mr-1">Figyelmeztetés:</div>
+                    <Paragraph>
+                        A telepítéshez meg kell, hogy legyen az OS képe, amit a
+                        virtuális gépre szeretnél telepíteni. Ha telepítés
+                        közben meggondolod magad és visszavonod a telepítést,
+                        akkor a virtuális gép használhatatlan lesz, így törölnöd
+                        kell és újra el kell készítened. Nem nagy probléma, de
+                        bosszantó lehet.
+                    </Paragraph>
+                </Warning>
             </Article>
-            Choose the file location and size for the virtual hard disk (choose
-            a sensible name and location to keep it, and for the size specify
-            around 50GB, or as much as you are comfortable with specifying).
+            You need to make sure you have the operating system image you want
+            to install on the virtual machine available at this point, and
+            install it right away. If you cancel the process at this point, it
+            can render the virtual machine unusable, and make it so you need to
+            delete it and create it again. This is not fatal, but it is
+            annoying.
         </div>
     );
 }

@@ -41,6 +41,15 @@
 
 .note{
     margin: 1rem 0 1rem 0;
+    background-color: lightblue;
+    padding: 15px;
+    border-radius: 5px;
+}
+.warning{
+    margin: 1rem 0 1rem 0;
+    background-color: lightcoral;
+    padding: 15px;
+    border-radius: 5px;
 }
 .bold{
     font-weight: bold;
