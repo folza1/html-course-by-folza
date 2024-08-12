@@ -1092,10 +1092,57 @@ export default function Strategies_For_Carrying_Out_Testing() {
                     "tiszta" amennyire csak lehetséges. Például semmi nincsen rá
                     telepítve, ami hatással lenne a teszt eredményére.
                 </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        Másik hasznos lo-fi lehetőség, ha van hardver elérhető
+                        az oldalad tesztelése céljából, az alsó kategóriás
+                        telefonok vagy más készülékek használata. Ha az oldalad
+                        egyre nagyobb lesz és több effekt van rajta, nagyobb rá
+                        az esély, hogy az oldal belassul és így meg kell
+                        fontolnod a teljesítmény szempontjából is. Próbáld
+                        megoldani, hogy a funkció működjön az alsóbb kategóriás
+                        készülékeken és valószínűleg ugyanaz az élmény majd a
+                        felsőbb kategóriás készülékeken is tapasztalható lesz.
+                    </Paragraph>
+                </Note>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        Néhány szerver oldali fejlesztői környezet hasznos
+                        mechanizmusokat kínál, amelyekkel az oldaladon történő
+                        változtatásokat csak egy csoportra korlátozva
+                        alkalmazzák, így kínálva egy hasznos mechanizmust,
+                        amellyel külön fejlesztői szerver nélkül lehet
+                        felhasználói csoportra korlátozni egy összetevőt. Erre
+                        egy példa a{" "}
+                        <a
+                            href="https://github.com/jazzband/django-waffle"
+                            target="_blank"
+                        >
+                            Django Waffle Flags
+                        </a>
+                        .
+                    </Paragraph>
+                </Note>
             </Article>
-            These steps are designed to make sure that the browser you are
-            testing in is as "pure" as possible, i.e. there is nothing installed
-            that could affect the results of the tests.
+            <Article>
+                <h1>Összefoglalás</h1>
+                <Paragraph>
+                    Miután elolvastad ezt a cikket, most már jó elképzelésed
+                    lehet, hogyan lehet azonosítani a célközönséget/célböngészők
+                    listáját és aztán hatékonyan kivitelezni a cross-browser
+                    tesztelést azon a listán.
+                </Paragraph>
+
+                <Paragraph>
+                    A következő részben ráfordítjuk a figyelmünket az aktuális
+                    kód problémákra, amit a tesztjeid eddig lehet nem tártak
+                    fel, kezdve a HTML-el és CSS-el.
+                </Paragraph>
+            </Article>
         </div>
     );
 }
