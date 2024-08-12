@@ -1014,18 +1014,40 @@ export default function Strategies_For_Carrying_Out_Testing() {
                     lépésekre osztjuk és részletezzük a feltételeket amelyeket
                     követniük kell. Például a következő működhet egy látással
                     rendelkező felhasználónak:
+                    <ul className="ml-2">
+                        <li>
+                            Kattints a kérdőjeles gombra az egeret használva az
+                            asztali számítógépeden egy pár alkalommal. Frissítsd
+                            a böngésző ablakát.
+                        </li>
+                        <li>
+                            Válaszd ki és aktiváld a kérdőjeles gombot a
+                            billentyűzetet használva az asztali számítógépen
+                            néhány alkalommal.
+                        </li>
+                        <li>
+                            Koppints a kérdőjeles gombra néhányszor az
+                            érintőképernyős eszközödön.
+                        </li>
+                        <li>
+                            Nyomogasd a gombot, hogy látszódjon és eltűnjön a
+                            doboz. Működik mind a fenti esetekben is?
+                        </li>
+                        <li>Olvasható a szöveg?</li>
+                        <li>
+                            Simán jelenik meg és tűnik el az animált információs
+                            doboz?
+                        </li>
+                    </ul>
+                </Paragraph>
+                <Paragraph>
+                    Amikor teszteket futtatsz, ez is jó ötlet lehet:
+                    <ul className="ml-2">
+                        <li></li>
+                    </ul>
                 </Paragraph>
             </Article>
-            Generally, you'll get your users to look at the page or view
-            containing the new functionality on some kind of a development
-            server, so you are not putting the final site or change live until
-            it is finished. You should get them to follow some steps and report
-            the results they get. It is useful to provide a set of steps
-            (sometimes called a script) so that you get more reliable results
-            pertaining to what you were trying to test. We mentioned this in the
-            What are you going to test section above — it is easy to turn the
-            test criteria detailed there into steps to follow. For example, the
-            following would work for a sighted user:
+            When running tests, it can also be a good idea to:
         </div>
     );
 }
