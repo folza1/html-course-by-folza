@@ -939,13 +939,57 @@ export default function Strategies_For_Carrying_Out_Testing() {
                         termékhez, amit futtatsz a virtuális gépen.
                     </Paragraph>
                 </Note>
+
+                <h2>
+                    Automatizáció és kereskedelmi forgalomban kapható
+                    alkalmazások
+                </h2>
+
+                <Paragraph>
+                    Ahogyan volt említve az előző fejezetben, sok fejfájástól
+                    megszabadulhatsz a böngésző teszteléssel kapcsolatban, ha
+                    használsz valamilyen automatizáló rendszert. Beállíthatod a
+                    saját teszt automatizáló rendszered (a Selenium egy népszerű
+                    választás), amelyhez szükséges némi beálítás, de nagyon
+                    sokat lehet vele nyerni, ha egyszer már kidolgoztad a
+                    beállítást.
+                </Paragraph>
+
+                <Paragraph>
+                    Vannak eszközök pénzért is mint a{" "}
+                    <a href="https://saucelabs.com/" target="_blank">
+                        Sauce Labs
+                    </a>
+                    , a{" "}
+                    <a href="https://www.browserstack.com/" target="_blank">
+                        Browser Stack
+                    </a>{" "}
+                    és a{" "}
+                    <a href="https://www.lambdatest.com/" target="_blank">
+                        LambdaTest
+                    </a>
+                    , amelyekkel ugyanezt megteheted, viszont nem kell bajlódnod
+                    a beállítással, ha hajlandó vagy fizetni egy kis pénzt a
+                    tesztelésért.
+                </Paragraph>
+
+                <Paragraph>
+                    Egy másik alternatíva a no-code teszt automatizáló eszközök
+                    mint az{" "}
+                    <a href="https://www.endtest.io/" target="_blank">
+                        Endtest
+                    </a>
+                </Paragraph>
+
+                <Paragraph>
+                    Látni fogjuk, hogyan is kell használni az ilyen eszközöket
+                    később majd ebben a modulban.
+                </Paragraph>
             </Article>
-            Another good thing about virtual machines is that the virtual disk
-            images are fairly self-contained. If you are working on a team, you
-            can create one virtual disk image, then copy it and pass it around.
-            Just make sure you have the required licenses to run all those
-            copies of Windows or whatever else you are running if it is a
-            licensed product.
+            <Article>
+                <h1>Tesztelés felhasználókkal</h1>
+            </Article>
+            We will look at how to use such tools later on in the module.
         </div>
     );
 }
