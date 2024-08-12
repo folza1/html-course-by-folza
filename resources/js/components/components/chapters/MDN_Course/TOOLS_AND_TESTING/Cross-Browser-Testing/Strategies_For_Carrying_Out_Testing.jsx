@@ -8,6 +8,7 @@ import CodeDisplay from "../../components/CodeDisplay.jsx";
 import analytics from "./img/1.analytics.png";
 import virtualBoxImage from "./img/2.virtualBoxImage.png";
 import installDisk from "./img/3.installDisk.png";
+import virtualMachineRunning from "./img/4.virtual_machine_running.png";
 
 // import {} from "./cross_browser_testing_text.jsx";
 
@@ -892,13 +893,59 @@ export default function Strategies_For_Carrying_Out_Testing() {
                         bosszantó lehet.
                     </Paragraph>
                 </Warning>
+
+                <Paragraph>
+                    Miután a folyamat befejeződött, akkor már van egy virtuális
+                    géped, amelyen fut egy operációs rendszer és mindez látszik
+                    egy ablakban a host gépeden.
+                </Paragraph>
+
+                <div className="image-container">
+                    <img
+                        src={virtualMachineRunning}
+                        alt="Virtual Machine Running in Window"
+                    />
+                </div>
+
+                <Paragraph>
+                    Úgy kell kezelned ezt a virtuális operációs rendszer
+                    telepítést. mintha igazi telepítés lenne. Például
+                    telepíthetsz böngészőket a teszteléshez vagy antivírus-t,
+                    hogy megvédd a virtuális gépet a vírusoktól.
+                </Paragraph>
+
+                <Paragraph>
+                    Ha van több virtuális géped az nagyon hasznos, különösen a
+                    Windows IE/Edge teszteléshez a Windows-on. Nincs szükség
+                    arra, hogy több verzió legyen telepítve az alapértelmezett
+                    böngészőből egymás mellett, így lehet több virtuális gépet
+                    használsz majd a különböző tesztek kezelésére, ha szükséges.
+                    Például:
+                    <ul className="ml-2">
+                        <li>Windows 10 Edge 13-al</li>
+                        <li>Windows 10 Edge 14-al</li>
+                    </ul>
+                </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        Egy másik jó dolog a virtuális gépekkel kapcsolatban,
+                        hogy a virtuális lemez képek teljesen önállóak. Ha
+                        csapatban dolgozol, készíthetsz egy virtuális lemez
+                        képet róla, aztán másolva azt körbeadhatod. Csak
+                        biztosítsd azt, hogy megvannak a szükséges liszenszek,
+                        az összes Windows másolat futtatásához, vagy bármilyen
+                        termékhez, amit futtatsz a virtuális gépen.
+                    </Paragraph>
+                </Note>
             </Article>
-            You need to make sure you have the operating system image you want
-            to install on the virtual machine available at this point, and
-            install it right away. If you cancel the process at this point, it
-            can render the virtual machine unusable, and make it so you need to
-            delete it and create it again. This is not fatal, but it is
-            annoying.
+            Another good thing about virtual machines is that the virtual disk
+            images are fairly self-contained. If you are working on a team, you
+            can create one virtual disk image, then copy it and pass it around.
+            Just make sure you have the required licenses to run all those
+            copies of Windows or whatever else you are running if it is a
+            licensed product.
         </div>
     );
 }
