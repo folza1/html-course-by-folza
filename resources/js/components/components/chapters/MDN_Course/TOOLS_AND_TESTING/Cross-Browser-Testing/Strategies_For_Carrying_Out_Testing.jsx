@@ -1043,11 +1043,59 @@ export default function Strategies_For_Carrying_Out_Testing() {
                 <Paragraph>
                     Amikor teszteket futtatsz, ez is jó ötlet lehet:
                     <ul className="ml-2">
-                        <li></li>
+                        <li>
+                            Állíts be egy elkülönült böngésző profilt ahol
+                            tudsz, ahol a böngésző bővítmények és más dolgok ki
+                            vanak kapcsolva és ezen a profilon futtatod a
+                            teszteket (nézd meg a{" "}
+                            <a
+                                href="https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles"
+                                target="_blank"
+                            >
+                                Használd a Profil Menedzsert a Firefox profilok
+                                létrehozásához és törléséhez
+                            </a>{" "}
+                            vagy az{" "}
+                            <a
+                                href="https://support.google.com/chrome/answer/2364824"
+                                target="_blank"
+                            >
+                                Oszd meg a Chrome-ot másokkal és adj hozzá
+                                személyeket
+                            </a>{" "}
+                            például).
+                        </li>
+                        <li>
+                            Használd a böngésző privát módját amikor teszteket
+                            futtatsz, ahol lehetséges (például{" "}
+                            <a
+                                href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history"
+                                target="_blank"
+                            >
+                                Privát Böngészés
+                            </a>{" "}
+                            a Firefox-ban,{" "}
+                            <a
+                                href="https://support.google.com/chrome/answer/95464"
+                                target="_blank"
+                            >
+                                Inkognitó mód
+                            </a>{" "}
+                            a Chrome-ban) így akkor olyan dolgok, mint a sütik
+                            és az ideiglenes fájlok nincsenek mentve.
+                        </li>
                     </ul>
                 </Paragraph>
+
+                <Paragraph>
+                    Ezek a lépések biztosítják, hogy a böngésző amin tesztelsz
+                    "tiszta" amennyire csak lehetséges. Például semmi nincsen rá
+                    telepítve, ami hatással lenne a teszt eredményére.
+                </Paragraph>
             </Article>
-            When running tests, it can also be a good idea to:
+            These steps are designed to make sure that the browser you are
+            testing in is as "pure" as possible, i.e. there is nothing installed
+            that could affect the results of the tests.
         </div>
     );
 }
