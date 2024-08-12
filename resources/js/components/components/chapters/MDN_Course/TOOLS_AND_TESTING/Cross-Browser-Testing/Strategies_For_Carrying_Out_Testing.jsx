@@ -988,8 +988,44 @@ export default function Strategies_For_Carrying_Out_Testing() {
             </Article>
             <Article>
                 <h1>Tesztelés felhasználókkal</h1>
+
+                <Paragraph>
+                    Mielőtt tovább mennénk, azzal fejezzük be ezt a cikket, hogy
+                    beszélünk egy kicsit a felhasználókkal való tesztelésről. Ez
+                    jó választás lehet, ha felhasználói csoporttal akarod
+                    tesztelni az új összetevő funkcionalitását. Tartsd észben,
+                    hogy lehet lo-fi teszt vagy olyan kifinomult amennyire csak
+                    szeretnéd, de a csoport lehet a barátaid egy csoportja, vagy
+                    kollégák, fizetett vagy nem fizetett önkéntesek attól
+                    függően, hogy van-e pénzed a tesztre.
+                </Paragraph>
+
+                <Paragraph>
+                    Általánosságban, a felhasználóknak meg kell nézniük az
+                    oldalad vagy megnézni az új funkcionalitást például egy
+                    fejlesztői szerveren, így nem rakod ki a végső weboldalt
+                    vagy nem változtatod production-ra amíg nincsen rendesen
+                    letesztelve. Meg kell mondanod nekik, hogy kövessenek néhány
+                    lépést a teszt során és jegyezzék fel az eredményeket.
+                    Hasznos ha adsz nekik egy lépéssorozatot (gyakran
+                    szkript-nek vagy forgatókönyvnek nevezik) így még
+                    megbízhatóbb eredményt kapsz arra vonatkozóan mit is akarsz
+                    tesztelni. Említettük már egy korábbi részben, hogy, ha
+                    lépésekre osztjuk és részletezzük a feltételeket amelyeket
+                    követniük kell. Például a következő működhet egy látással
+                    rendelkező felhasználónak:
+                </Paragraph>
             </Article>
-            We will look at how to use such tools later on in the module.
+            Generally, you'll get your users to look at the page or view
+            containing the new functionality on some kind of a development
+            server, so you are not putting the final site or change live until
+            it is finished. You should get them to follow some steps and report
+            the results they get. It is useful to provide a set of steps
+            (sometimes called a script) so that you get more reliable results
+            pertaining to what you were trying to test. We mentioned this in the
+            What are you going to test section above — it is easy to turn the
+            test criteria detailed there into steps to follow. For example, the
+            following would work for a sighted user:
         </div>
     );
 }
