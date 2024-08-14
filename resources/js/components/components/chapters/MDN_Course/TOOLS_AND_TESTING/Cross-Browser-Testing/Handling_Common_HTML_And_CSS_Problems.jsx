@@ -86,7 +86,7 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
 
                 <Paragraph>
                     Haladjunk tovább, hogy láthassuk, hogyan csökkenthetjük a
-                    cross-browser hibákat amelyeket a HTML/CSS nyelvek
+                    cross-browser hibákat, amelyeket a HTML/CSS nyelvek
                     eredményeznek.
                 </Paragraph>
             </Article>
