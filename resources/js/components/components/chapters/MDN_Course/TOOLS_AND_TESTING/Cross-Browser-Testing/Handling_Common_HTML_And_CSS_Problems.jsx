@@ -90,8 +90,21 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     eredményeznek.
                 </Paragraph>
             </Article>
-            Let's go forth and look at how we can reduce cross browser errors
-            that result from HTML/CSS.
+            <Article>
+                <h1>Legelőször: oldjunk meg általános problémákat</h1>
+
+                <Paragraph>
+                    A sorozat első részében azt mondtuk, hogy a kezdéshez jó
+                    stratégia, ha egy pár modern böngészőn tesztelünk asztali
+                    gépen és mobilon, hogy megbizonyosodjunk a kód
+                    általánosságban működik-e, mielőtt tovább mennénk és a
+                    cross-browser problémákra koncentrálnánk.
+                </Paragraph>
+            </Article>
+            We said in the first article of this series that a good strategy to
+            begin with is to test in a couple of modern browsers on
+            desktop/mobile, to make sure your code is working generally, before
+            going on to concentrate on the cross browser issues.
         </div>
     );
 }
