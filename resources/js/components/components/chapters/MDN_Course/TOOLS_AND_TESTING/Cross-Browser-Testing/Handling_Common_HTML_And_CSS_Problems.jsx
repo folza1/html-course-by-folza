@@ -154,12 +154,13 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                         (namespacing) a CSS-t , például ha van egy kisalkalmazás
                         biztosítani azt, hogy elkülönült osztályai legyenek és
                         azután elkezdeni a szelektorokat alkalmazni amelyek
-                        kiválasztanak elemeket a kisalkalmazáson belül azon az
-                        osztályon belül, így a konfliktusok valószínűsége sokkal
-                        kisebb. Például{" "}
+                        kiválasztanak elemeket azon az osztályon belül, így a
+                        konfliktusok valószínűsége sokkal kisebb. Például{" "}
                         <BgLightgray>.audio-player ul a</BgLightgray>.
                     </Paragraph>
                 </Note>
+
+                <h2>Validáció</h2>
             </Article>
             One common problem with CSS and HTML arises when different CSS rules
             begin to conflict with one another. This can be especially
