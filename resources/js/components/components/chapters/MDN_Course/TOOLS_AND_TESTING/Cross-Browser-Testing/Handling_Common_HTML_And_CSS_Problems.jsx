@@ -62,8 +62,36 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     technikákat használni azok leküzdésére.
                 </Paragraph>
             </Article>
-            To be able to diagnose common HTML and CSS cross browser problems,
-            and use appropriate tools and techniques to fix them.
+            <Article>
+                <h1>A baj a HTML-el és a CSS-el</h1>
+
+                <Paragraph>
+                    Néhány baj a HTML-el és a CSS-el azon a tényen alapszik,
+                    hogy mind a két nyelv egészen egyszerű és a fejlesztők
+                    gyakran nem veszik komolyan abban az értelemben, hogy a kód
+                    jól kidolgozott legyen, hatékony és szemantikailag leírja a
+                    célját a funkcióknak az oldalon. A legrosszabb esetekben
+                    Javascript-et használnak az egész weboldal tartalmának és
+                    stílusának generálásához, amely hozzáférhetetlenné teszi az
+                    oldalaidat és kevésbé lesz jó a teljesítménye (a DOM elemek
+                    generálása drága mulatság). Más esetekben a legújabban
+                    kiadott összetevők nem támogatottak a böngészők között,
+                    amitől néhány összetevő és stílus nem működik néhány
+                    felhasználónak. A reszponzív megjelenéssel járó problémák is
+                    igen gyakoriak. Például egy weboldal jól néz ki egy asztali
+                    számítógépen, viszont rossz felhasználói élményt nyújt egy
+                    mobil készüléken, mert a tartalom túl kicsi az olvasáshoz
+                    vagy mert az oldal túl lassú, mert olyan animáció van rajta.
+                </Paragraph>
+
+                <Paragraph>
+                    Haladjunk tovább, hogy láthassuk, hogyan csökkenthetjük a
+                    cross-browser hibákat amelyeket a HTML/CSS nyelvek
+                    eredményeznek.
+                </Paragraph>
+            </Article>
+            Let's go forth and look at how we can reduce cross browser errors
+            that result from HTML/CSS.
         </div>
     );
 }
