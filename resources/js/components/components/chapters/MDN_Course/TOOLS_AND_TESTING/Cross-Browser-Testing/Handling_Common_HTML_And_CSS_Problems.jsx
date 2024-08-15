@@ -7,6 +7,7 @@ import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
 import w3c_validation from "./img/5.w3c_validation.png";
 import online_linter from "./img/6.online_linter.png";
+import css_inspector from "./img/7.css_inspector.png";
 
 // import {} from "./cross_browser_testing_text.jsx";
 
@@ -295,11 +296,22 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                         részt fentebb.
                     </Paragraph>
                 </Note>
+
+                <Paragraph>
+                    Egy példa a Firefox-ban a CSS inspector (ellenőrző), amely
+                    deklaráció nem jó áthúzással és figyelmeztető háromszöggel
+                    mutatja. Azonban a figyelmeztető háromszög kínál egy leíró
+                    hibaüzenetet:
+                </Paragraph>
+
+                <div className="image-container">
+                    <img src={css_inspector} alt="CSS Inspector in Firefox" />
+                </div>
             </Article>
-            HTML errors don't tend to show up so easily in dev tools, as the
-            browser will try to correct badly-formed markup automatically; the
-            W3C validator is the best way to find HTML errors — see Validation
-            above.
+            As an example, in Firefox the CSS inspector will show CSS
+            declarations that aren't applied crossed out, with a warning
+            triangle. Hovering the warning triangle will provide a descriptive
+            error message:
         </div>
     );
 }
