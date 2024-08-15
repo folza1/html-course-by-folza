@@ -6,6 +6,8 @@ import Warning from "../../REACT/note/Warning.jsx";
 import BgLightgray from "../../REACT/bg-lightgray/BgLightgray.jsx";
 import CodeDisplay from "../../components/CodeDisplay.jsx";
 import w3c_validation from "./img/5.w3c_validation.png";
+import online_linter from "./img/6.online_linter.png";
+
 // import {} from "./cross_browser_testing_text.jsx";
 
 export default function Handling_Common_HTML_And_CSS_Problems() {
@@ -221,15 +223,54 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     hibákat keresztekkel, amelyekre pedig az egérkurzort
                     helyezve megjelenítik a hibaüzenetet, amelyek informálnak
                     arról mi is a probléma. A Dirty Markup még azzal is el van
-                    látva, hogy javításokat is kínál a Clean gomb használatával.
+                    látva, hogy javításokat is kínál a{" "}
+                    <span className="italic">Clean</span> gomb használatával.
+                </Paragraph>
+
+                <div className="image-container">
+                    <img src={online_linter} alt="Online Linter Website" />
+                </div>
+
+                <Paragraph>
+                    Azonban nem túl kényelmes másolgatni és beillesztgetni a
+                    kódot sok alkalommal egy weboldalra hogy ellenőrizzük annak
+                    validáltságát. Amit igazán akarunk az egy linter amely
+                    beleillik a szabványos munkafolyamatainkba minimális
+                    munkával.
+                </Paragraph>
+
+                <Paragraph>
+                    Sok kódszerkesztőnek van linter plugin-ja. Például:
+                    <ul className="ml-2">
+                        <li>
+                            <a
+                                href="https://www.sublimelinter.com/en/master/"
+                                target="_blank"
+                            >
+                                SublimeLinter
+                            </a>{" "}
+                            a Sublime Text-hez
+                        </li>
+                        <li>
+                            <a
+                                href="https://sourceforge.net/projects/notepad-linter/"
+                                target="_blank"
+                            >
+                                Notepad++ linter
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://marketplace.visualstudio.com/search?target=vscode&category=Linters&sortBy=Installs"
+                                target="_blank"
+                            >
+                                VSCode linters
+                            </a>
+                        </li>
+                    </ul>
                 </Paragraph>
             </Article>
-            There are many online linter applications, such as Dirty Markup for
-            HTML, CSS, and JavaScript. These allows you to paste your code into
-            a window, and it will flag up any errors with crosses, which can
-            then be hovered to get an error message informing you what the
-            problem is. Dirty Markup also allows you to make fixes to your
-            markup using the Clean button.
+            Many code editors have linter plugins. For example, see:
         </div>
     );
 }
