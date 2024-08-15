@@ -269,8 +269,37 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                         </li>
                     </ul>
                 </Paragraph>
+
+                <h2>A bögésző fejlesztői eszközei</h2>
+
+                <Paragraph>
+                    A legtöbb modern böngészőben vannak beépített fejlesztői
+                    eszközök, olyan hasznos funkciókkal mint a hiba levadászó
+                    eszközök, főleg CSS-hez.
+                </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        A HTML hibák nem olyan könnyen mutatkoznak meg a
+                        fejlesztői eszközökkel, mivel a böngésző megpróbálja
+                        kijavítani a rosszul formázott kódot automatikusan. A
+                        W3C validátor a legjobb módja a HTML hibák
+                        megtalálásához. Lásd a{" "}
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#validation"
+                            target="_blank"
+                        >
+                            Validáció
+                        </a>{" "}
+                        részt fentebb.
+                    </Paragraph>
+                </Note>
             </Article>
-            Many code editors have linter plugins. For example, see:
+            HTML errors don't tend to show up so easily in dev tools, as the
+            browser will try to correct badly-formed markup automatically; the
+            W3C validator is the best way to find HTML errors — see Validation
+            above.
         </div>
     );
 }
