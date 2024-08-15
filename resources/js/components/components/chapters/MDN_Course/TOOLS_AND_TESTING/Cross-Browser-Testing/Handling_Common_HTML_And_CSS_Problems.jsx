@@ -307,11 +307,12 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                 <div className="image-container">
                     <img src={css_inspector} alt="CSS Inspector in Firefox" />
                 </div>
+
+                <Paragraph>
+                    Más böngészők hasonló fejlesztői eszközökkel rendelkeznek.
+                </Paragraph>
             </Article>
-            As an example, in Firefox the CSS inspector will show CSS
-            declarations that aren't applied crossed out, with a warning
-            triangle. Hovering the warning triangle will provide a descriptive
-            error message:
+            Other browser devtools have similar features.
         </div>
     );
 }
