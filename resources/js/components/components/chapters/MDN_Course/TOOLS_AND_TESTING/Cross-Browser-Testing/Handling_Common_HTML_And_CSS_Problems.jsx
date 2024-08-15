@@ -187,15 +187,49 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     hogy a property nevek helyesen vannak leírva, a property
                     értékek is helyesen vannak és érvényesek is legyenek arra,
                     amihez használod őket, nem hiányik egyik kapcsos zárójel sem
-                    és így tovább. A W3C-nek van egy CSS Validátora, amely
-                    ugyanúgy elérhető erre a célra.
+                    és így tovább. A W3C-nek van egy{" "}
+                    <a
+                        href="https://jigsaw.w3.org/css-validator/"
+                        target="_blank"
+                    >
+                        CSS Validátora
+                    </a>
+                    , amely ugyanúgy elérhető erre a célra.
+                </Paragraph>
+
+                <h2>Linter-ek</h2>
+
+                <Paragraph>
+                    Egy másik jó választás lehet az úgynevezett Linter
+                    alkalmazás, amely nem csak kimutatja a hibákat, hanem olyan
+                    figyelmeztetéseket is mutat, amelyek a rosszul alkalmazott
+                    CSS gyakorlatból erednek és még tud mást is ezek mellett. A
+                    linter-ek személyre szabhatók szigorúbb és lazább módon a
+                    hiba és figyelmeztetések közlése szempontjából.
+                </Paragraph>
+
+                <Paragraph>
+                    Sok online linter alkalmazás van, mint a{" "}
+                    <a
+                        href="https://www.10bestdesign.com/dirtymarkup/"
+                        target="_blank"
+                    >
+                        Dirty Markup
+                    </a>{" "}
+                    a HTML, CSS és Javascript számára. Ezek lehetővé teszik,
+                    hogy beilleszd a kódot egy ablakba és majd megjelölik a
+                    hibákat keresztekkel, amelyekre pedig az egérkurzort
+                    helyezve megjelenítik a hibaüzenetet, amelyek informálnak
+                    arról mi is a probléma. A Dirty Markup még azzal is el van
+                    látva, hogy javításokat is kínál a Clean gomb használatával.
                 </Paragraph>
             </Article>
-            CSS has a similar story — you need to check that your property names
-            are spelled correctly, property values are spelled correctly and are
-            valid for the properties they are used on, you are not missing any
-            curly braces, and so on. The W3C has a CSS Validator available too,
-            for this purpose.
+            There are many online linter applications, such as Dirty Markup for
+            HTML, CSS, and JavaScript. These allows you to paste your code into
+            a window, and it will flag up any errors with crosses, which can
+            then be hovered to get an error message informing you what the
+            problem is. Dirty Markup also allows you to make fixes to your
+            markup using the Clean button.
         </div>
     );
 }
