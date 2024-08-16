@@ -361,11 +361,18 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     </a>{" "}
                     részt lejjebb.
                 </Paragraph>
+
+                <h2>A HTML viselkedése hiba esetén (fallback behavior)</h2>
+
+                <Paragraph>
+                    Néhány probléma megoldható a HTML/CSS természetes működését
+                    kihasználva.
+                </Paragraph>
+
+                <Paragraph></Paragraph>
             </Article>
-            Once you've identified a list of technologies you will be using that
-            are not universally supported, it is a good idea to research what
-            browsers they are supported in, and what related techniques are
-            useful. See Finding help below.
+            Some problems can be solved by just taking advantage of the natural
+            way in which HTML/CSS work.
         </div>
     );
 }
