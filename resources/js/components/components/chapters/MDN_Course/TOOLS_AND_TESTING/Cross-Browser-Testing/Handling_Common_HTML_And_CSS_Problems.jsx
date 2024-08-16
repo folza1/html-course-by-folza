@@ -8,6 +8,7 @@ import CodeDisplay from "../../components/CodeDisplay.jsx";
 import w3c_validation from "./img/5.w3c_validation.png";
 import online_linter from "./img/6.online_linter.png";
 import css_inspector from "./img/7.css_inspector.png";
+import { fallback_behavior } from "./handling_common_HTML_and_CSS_problems_code_texts.jsx";
 
 // import {} from "./cross_browser_testing_text.jsx";
 
@@ -369,10 +370,51 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     kihasználva.
                 </Paragraph>
 
-                <Paragraph></Paragraph>
+                <Paragraph>
+                    Amely HTML elemeket nem tud felismerni a böngésző azokat
+                    anonymous inline elemekként kezeli (inline elemekként
+                    semmilyen szemantikus jelentéssel nem rendelkeznek,
+                    hasonlóan a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span"
+                        target="_blank"
+                    >
+                        &lt;span&gt;
+                    </a>{" "}
+                    elemhez). Hivatkozni tudsz rájuk a nevükkel és stilizálhatod
+                    őket a CSS-el például. Csak biztosnak kell lenned benne,
+                    hogy úgy viselkednek ahogyan azt te szeretnéd. Adhatsz nekik
+                    stílusokat, mint más elemekhez, beleértve a display
+                    tulajdonságot, ha kell akkor az{" "}
+                    <BgLightgray>inline</BgLightgray>-tól különbözőre is
+                    állíthatod.
+                </Paragraph>
+
+                <Paragraph>
+                    Komplexebb HTML elemeknél mint a &lt;video&gt;,
+                    &lt;audio&gt;, &lt;picture&gt;, &lt;object&gt;, és a
+                    &lt;canvas&gt; (és más összetevők mellett) vannak
+                    természetes mechanizmusok arra az esetre, ha az elemhez
+                    adott erőforrás nem támogatott. Adhatsz fallback tartalmat a
+                    nyitó és záró tag-ek közé és így a nem támogatott böngészők
+                    hatékonyan figyelmen kívül hagyják a külső elemet és a
+                    beágyazott tartalmat fogják futtatni.
+                </Paragraph>
+
+                <Paragraph>Például:</Paragraph>
+
+                <CodeDisplay code={fallback_behavior} />
+
+                <Paragraph>
+                    Ez a példa tartalmaz egy egyszerű linket, amely lehetővé
+                    teszi számodra, hogy letöltsd a videót, ha a HTML videó
+                    lejátszó nem működik, így legalább a felhasználónak van
+                    hozzáférése a videóhoz.
+                </Paragraph>
             </Article>
-            Some problems can be solved by just taking advantage of the natural
-            way in which HTML/CSS work.
+            This example includes a simple link allowing you to download the
+            video if even the HTML video player doesn't work, so at least the
+            user can still access the video.
         </div>
     );
 }
