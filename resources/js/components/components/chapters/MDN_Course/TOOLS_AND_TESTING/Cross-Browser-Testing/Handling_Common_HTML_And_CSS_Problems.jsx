@@ -312,7 +312,60 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     Más böngészők hasonló fejlesztői eszközökkel rendelkeznek.
                 </Paragraph>
             </Article>
-            Other browser devtools have similar features.
+            <Article>
+                <h1>Gyakori cross-browser problémák</h1>
+
+                <Paragraph>
+                    Most pedig nézzünk meg néhányat a leggyakoribb cross-browser
+                    HTML és CSS problémák közül. A fő terület a modern funkciók
+                    támogatásának hiánya és a megjelenés elrendezésbeli
+                    problémái.
+                </Paragraph>
+
+                <h2>
+                    Böngészők amelyek nem támogatnak modern öszzetevőket,
+                    funkciókat
+                </h2>
+
+                <Paragraph>
+                    Ez egy gyakori probléma, különösen mikor régi böngészőket
+                    kell támogatnod vagy olyan új funkciókat használsz, amelyek
+                    még nem minden böngészőben vannak támogatva. Általánosságban
+                    a legtöbb főbb HTML és CSS funkcionalitás (mint az alap HTML
+                    elemek, CSS alapszínek és szövegstílusok) működik az összes
+                    böngészőn, amelyet támogatni akarsz. Több probléma akkor
+                    kerül felszínre amikor elkezdesz újabb HTML, CSS és API
+                    funkciókat használni. Az MDN minden dokumentált funkció
+                    számára mutat böngésző kompatibilitási adatot. Például nézd
+                    meg a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/:has#browser_compatibility"
+                        target="_blank"
+                    >
+                        böngésző támogatási táblát a{" "}
+                        <BgLightgray>:has()</BgLightgray>
+                    </a>{" "}
+                    pszeudó-osztályhoz.
+                </Paragraph>
+
+                <Paragraph>
+                    Miután azonosítottad a technológiák listáját, amelyeket
+                    használni fogsz és nem univerzálisan támogatott, jó ötlet
+                    kutatást végezni, hogy milyen böngészők vannak támogatva és
+                    milyen technikák hasznosak hozzá. Lásd a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#finding_help"
+                        target="_blank"
+                    >
+                        Finding help
+                    </a>{" "}
+                    részt lejjebb.
+                </Paragraph>
+            </Article>
+            Once you've identified a list of technologies you will be using that
+            are not universally supported, it is a good idea to research what
+            browsers they are supported in, and what related techniques are
+            useful. See Finding help below.
         </div>
     );
 }
