@@ -8,7 +8,11 @@ import CodeDisplay from "../../components/CodeDisplay.jsx";
 import w3c_validation from "./img/5.w3c_validation.png";
 import online_linter from "./img/6.online_linter.png";
 import css_inspector from "./img/7.css_inspector.png";
-import { fallback_behavior } from "./handling_common_HTML_and_CSS_problems_code_texts.jsx";
+import input_output from "./img/8.input_output.png";
+import {
+    fallback_behavior,
+    form_input,
+} from "./handling_common_HTML_and_CSS_problems_code_texts.jsx";
 
 // import {} from "./cross_browser_testing_text.jsx";
 
@@ -411,10 +415,45 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     lejátszó nem működik, így legalább a felhasználónak van
                     hozzáférése a videóhoz.
                 </Paragraph>
+
+                <Paragraph>
+                    Egy másik példa rá a form elemek. Amikor új{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"
+                        target="_blank"
+                    >
+                        &lt;input&gt;
+                    </a>{" "}
+                    típusok voltak bemutatva az input formokba, mint az idő, a
+                    dátumok, színek, számok, stb., ha a böngésző nem támogatta
+                    az új funkciót a böngésző alapértelmezetten{" "}
+                    <BgLightgray>type="text"</BgLightgray>-et használt. Új input
+                    típusok lettek kitalálva, amelyek nagyon hasznosak,
+                    különösen a mobil platform-okon, ahol a könnyű adatbevitel
+                    nagyon fontos a felhasználói élmény szempontjából. A
+                    platformok különböző UI kódrészleteket kínálnak az input
+                    típusától függően, mint a naptár widget a dátumok
+                    beviteléséhez. Ha egy böngésző nem támogat egy beviteli
+                    típust, a felhasználó továbbra is megadhatja a szükséges
+                    adatokat.
+                </Paragraph>
+
+                <Paragraph>
+                    A következő példa mutatja a dátum és idő inputokat:
+                </Paragraph>
+
+                <CodeDisplay code={form_input} />
+
+                <Paragraph>A kód a következő output-ot produkálja:</Paragraph>
+
+                <div className="image-container">
+                    <img
+                        src={input_output}
+                        alt="Date and time input field output"
+                    />
+                </div>
             </Article>
-            This example includes a simple link allowing you to download the
-            video if even the HTML video player doesn't work, so at least the
-            user can still access the video.
+            The following example shows date and time inputs:
         </div>
     );
 }

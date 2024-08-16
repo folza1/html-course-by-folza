@@ -11,3 +11,14 @@ export const fallback_behavior = `<video id="video" controls preload="metadata" 
   </p>
 </video>
 `;
+export const form_input = `<form>
+  <div>
+    <label for="date">Enter a date:</label>
+    <input id="date" type="date" />
+  </div>
+  <div>
+    <label for="time">Enter a time:</label>
+    <input id="time" type="time" />
+  </div>
+</form>
+`;
