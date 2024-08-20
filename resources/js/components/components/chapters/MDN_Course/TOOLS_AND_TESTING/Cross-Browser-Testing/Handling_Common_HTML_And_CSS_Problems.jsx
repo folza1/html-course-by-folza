@@ -587,15 +587,55 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                         alt="Button With Wrong Background"
                     />
                 </div>
+
+                <Paragraph>
+                    Hogy rendezzük ezt a hibát, adtunk egy második{" "}
+                    <BgLightgray>background-color</BgLightgray> utasítást, amely
+                    ugyancsak egy hexadecimális színre utal. Ez igazán régi
+                    böngészőkben is támogatott és fallback-ként (védőhálóként)
+                    működik, ha a csúcsmodern összetevők nem működnének. Ami
+                    történik az az, hogy mikor a böngésző meglátogatja először
+                    az oldalt akkor az első{" "}
+                    <BgLightgray>background-color</BgLightgray> lesz alkalmazva,
+                    amikor a második <BgLightgray>background-color</BgLightgray>{" "}
+                    (háttérszín) deklarációt kapja, akkor felülírja a kezdeti
+                    értéket a második értékkel, ha támogatja az RGB színeket. Ha
+                    nem támogatja, akkor csak figyelmen kívül hagyja az egész
+                    utasítást és tobábbmegy rajta.
+                </Paragraph>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        Ugyanez igaz más CSS funkciókra, mint a{" "}
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries"
+                            target="_blank"
+                        >
+                            media queries
+                        </a>
+                        , a{" "}
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"
+                            target="_blank"
+                        >
+                            @font-face
+                        </a>{" "}
+                        és{" "}
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports"
+                            target="_blank"
+                        >
+                            @supports
+                        </a>{" "}
+                        blokkok esetében. Ha nem támogatottak, a böngésző csak
+                        egyszerűen figyelmen kívül hagyja.
+                    </Paragraph>
+                </Note>
             </Article>
-            Here we are providing an RGB background-color that changes opacity
-            on hover to give the user a hint that the button is interactive, and
-            some semi-transparent inset box-shadow shades to give the button a
-            bit of texture and depth. While now fully supported, RGB colors and
-            box shadows haven't been around forever; starting in IE9. Browsers
-            that didn't support RGB colors would ignore the declaration meaning
-            in old browsers the background just wouldn't show up at all so the
-            text would be unreadable, no good at all!
+            The same is true for other CSS features like media queries,
+            @font-face and @supports blocks — if they are not supported, the
+            browser just ignores them.
         </div>
     );
 }
