@@ -632,6 +632,8 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                         egyszerűen figyelmen kívül hagyja.
                     </Paragraph>
                 </Note>
+
+                <h2>Selector támogatás</h2>
             </Article>
             The same is true for other CSS features like media queries,
             @font-face and @supports blocks — if they are not supported, the
