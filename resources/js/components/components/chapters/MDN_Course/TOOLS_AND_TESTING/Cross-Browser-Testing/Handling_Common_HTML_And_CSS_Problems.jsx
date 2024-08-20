@@ -10,6 +10,7 @@ import online_linter from "./img/6.online_linter.png";
 import css_inspector from "./img/7.css_inspector.png";
 import input_output from "./img/8.input_output.png";
 import css_fallback from "./img/9.css_fallback.png";
+import button_back_wrong from "./img/10.button_back_wrong.png";
 import {
     fallback_behavior,
     form_input,
@@ -541,9 +542,60 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                 </Paragraph>
 
                 <CodeDisplay code={css_fallback_behavior} />
+
+                <Paragraph>
+                    Itt mutatunk egy{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb"
+                        target="_blank"
+                    >
+                        RGB
+                    </a>{" "}
+                    <BgLightgray>
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"
+                            target="_blank"
+                        >
+                            background-color
+                        </a>
+                    </BgLightgray>{" "}
+                    (háttérszín), amely megváltoztatja az opacitását a hover
+                    eseményre, adva a felhasználónak egy segítséget, hogy
+                    rájöjjön a gomb interaktív, (azaz bizonyos akcióra
+                    megváltozik), és egy kis félig látszódó inset{" "}
+                    <BgLightgray>
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow"
+                            target="_blank"
+                        >
+                            box-shadow
+                        </a>
+                    </BgLightgray>
+                    árnyékot, hogy adjon a doboznak egy kis textúrát és
+                    mélységet. Bár most teljesen támogatottak, az RGB színek és
+                    a doboz árnyékok (box-shadow) nem mindig voltak azok. Csak
+                    az Internet Explorer 9-től kezdődően. A böngészők, melyek
+                    nem támogatták az RGB színeket figyelmen kívül hagyták a
+                    deklarációt (program utasítást), ami annyit tett a régebbi
+                    böngészőkben, hogy a háttérszín nem mutatkozott meg és így a
+                    szöveg nem volt olvasható, mindenesetre nem volt jó!
+                </Paragraph>
+
+                <div className="image-container">
+                    <img
+                        src={button_back_wrong}
+                        alt="Button With Wrong Background"
+                    />
+                </div>
             </Article>
-            The button has a number of declarations that style, but the two we
-            are most interested in are as follows:
+            Here we are providing an RGB background-color that changes opacity
+            on hover to give the user a hint that the button is interactive, and
+            some semi-transparent inset box-shadow shades to give the button a
+            bit of texture and depth. While now fully supported, RGB colors and
+            box shadows haven't been around forever; starting in IE9. Browsers
+            that didn't support RGB colors would ignore the declaration meaning
+            in old browsers the background just wouldn't show up at all so the
+            text would be unreadable, no good at all!
         </div>
     );
 }
