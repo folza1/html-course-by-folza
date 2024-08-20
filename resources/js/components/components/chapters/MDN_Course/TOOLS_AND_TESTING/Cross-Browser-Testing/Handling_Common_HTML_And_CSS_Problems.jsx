@@ -9,9 +9,11 @@ import w3c_validation from "./img/5.w3c_validation.png";
 import online_linter from "./img/6.online_linter.png";
 import css_inspector from "./img/7.css_inspector.png";
 import input_output from "./img/8.input_output.png";
+import css_fallback from "./img/9.css_fallback.png";
 import {
     fallback_behavior,
     form_input,
+    css_fallback_behavior,
 } from "./handling_common_HTML_and_CSS_problems_code_texts.jsx";
 
 // import {} from "./cross_browser_testing_text.jsx";
@@ -452,8 +454,96 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                         alt="Date and time input field output"
                     />
                 </div>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        Láthatsz egy élő futó példát erről, mint{" "}
+                        <a
+                            href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html"
+                            target="_blank"
+                        >
+                            forms-test.html
+                        </a>
+                        -t a GitHub-on (
+                        <a
+                            href="https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html"
+                            target="_blank"
+                        >
+                            láthatod a forráskódot is itt
+                        </a>
+                        ).
+                    </Paragraph>
+                </Note>
+
+                <Paragraph>
+                    Ha megnézed a példát, látni fogsz egy UI (user interface,
+                    felhasználói interface) összetevőt működésben, amivel
+                    megpróbálhatsz adatot bevinni (data input). Olyan
+                    készülékek, amelyek dinamikus billentyűzettel vannak
+                    ellátva, más típusok esetén más billentyűzet lesz
+                    megjelenítve. A nem támogatott böngészőknél az input-ok
+                    olyanok lesznek mint a normál szöveges input mezők, ami
+                    annyit jelent, hogy a felhasználó még így is be tud vinni
+                    helyes információt. Például, ha színről van szó beírja a
+                    színkódot.
+                </Paragraph>
+
+                <h2>
+                    CSS fallback behavior (hiba esetén lefutó programok,
+                    nevezhetjük védőhálónak is, ha úgy tetszik)
+                </h2>
+
+                <Paragraph>
+                    A CSS vitathatóan jobb a fallback-ekben mint a HTML. Ha a
+                    böngésző találkozik egy deklarációt vagy szabályt, amit nem
+                    ért, akkor egyszerűen teljesen kihagyja anélkül, hogy
+                    alkalmazná azt vagy hibát jelezne. Ez elég frusztráló lehet
+                    neked és a felhasználóidnak, ha egy ilyen hiba átcsúszik a
+                    produkciós kódra, de legalább nem jelenti azt, hogy az egész
+                    oldal leáll a hiba miatt és ha okosan megoldod még az
+                    előnyödre is válhat.
+                </Paragraph>
+
+                <Paragraph>
+                    Nézzünk egy példát. Egy egyszerű doboz CSS-el stílusozva,
+                    amelynek van néhány stílusa különböző CSS funkciók által:
+                </Paragraph>
+
+                <div className="image-container">
+                    <img src={css_fallback} alt="Box With Style For Fallback" />
+                </div>
+
+                <Note>
+                    <div className="bold inline mr-1">Megjegyzés:</div>
+                    <Paragraph>
+                        Láthatod ezt a példát élőben a GitHub-on, mint{" "}
+                        <a
+                            href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html"
+                            target="_blank"
+                        >
+                            button-with-fallback.html
+                        </a>{" "}
+                        (
+                        <a
+                            href="https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html"
+                            target="_blank"
+                        >
+                            itt van hozzá a forráskód is
+                        </a>
+                        ).
+                    </Paragraph>
+                </Note>
+
+                <Paragraph>
+                    A gombnak van számos deklarációja, ami stílust eredményez,
+                    de a két legérdekesebb a következő:
+                </Paragraph>
+
+                <CodeDisplay code={css_fallback_behavior} />
             </Article>
-            The following example shows date and time inputs:
+            The button has a number of declarations that style, but the two we
+            are most interested in are as follows:
         </div>
     );
 }

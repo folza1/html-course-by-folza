@@ -22,3 +22,24 @@ export const form_input = `<form>
   </div>
 </form>
 `;
+
+export const css_fallback_behavior = `button {
+  /* … */
+
+  background-color: #ff0000;
+  background-color: rgb(255 0 0 / 100%);
+  box-shadow:
+    inset 1px 1px 3px rgb(255 255 255 / 40%),
+    inset -1px -1px 3px rgb(0 0 0 / 40%);
+}
+
+button:hover {
+  background-color: rgb(255 0 0 / 50%);
+}
+
+button:active {
+  box-shadow:
+    inset 1px 1px 3px rgb(0 0 0 / 40%),
+    inset -1px -1px 3px rgb(255 255 255 / 40%);
+}
+`;
