@@ -634,10 +634,84 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                 </Note>
 
                 <h2>Selector támogatás</h2>
+
+                <Paragraph>
+                    Természetesen egyik CSS összetevő sem alkalmazható, ha nem
+                    használod helyesen a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors"
+                        target="_blank"
+                    >
+                        szelektorokat (selectors)
+                    </a>{" "}
+                    az elem kiválasztásához, amit stilizálni szeretnél.
+                </Paragraph>
+
+                <Paragraph>
+                    Egy vesszővel elválasztott szelektor listánál, ha egy
+                    szelektort helytelenül írsz, nem fog egyezni valamelyik
+                    elemmel. Ha azonban a szelektor érvénytelen az egész
+                    szelektor lista figyelmen kívül van hagyva az egész stílus
+                    blokkal együtt. Ezért csak alkalmazz egy{" "}
+                    <BgLightgray>:-moz-</BgLightgray> prefixes pszeudo osztályt
+                    vagy pszeudo elemet egy{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list"
+                        target="_blank"
+                    >
+                        megbocsátó szelektor listában
+                    </a>{" "}
+                    (ahol el lehet helyezni olyan elemet, amely nem létezik),
+                    mint a <BgLightgray>:where(::-moz-thumb)</BgLightgray>. Ne
+                    használd a <BgLightgray>:-moz-</BgLightgray> prefixes
+                    pszeudo osztályt vagy pszeudo elemet egy vesszővel
+                    elválasztott szelektor csoporton belül az{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/:is"
+                        target="_blank"
+                    >
+                        :is()
+                    </a>{" "}
+                    vagy a
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/:where"
+                        target="_blank"
+                    >
+                        :where()
+                    </a>{" "}
+                    megbocsátó szelektor listán kívül mert minden Firefox-tól
+                    eltérő böngésző figyelmen kívül fogja hagyni az egész kód
+                    blokkot. Jegyezd fel, hogy mind a{" "}
+                    <BgLightgray>:is()</BgLightgray> és a
+                    <BgLightgray>:where()</BgLightgray> is elhelyezhető
+                    paraméterként más szelektor listákban mint a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
+                        target="_blank"
+                    >
+                        :has()
+                    </a>{" "}
+                    és{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/:not"
+                        target="_blank"
+                    >
+                        :not()
+                    </a>
+                    .
+                </Paragraph>
             </Article>
-            The same is true for other CSS features like media queries,
-            @font-face and @supports blocks — if they are not supported, the
-            browser just ignores them.
+            In a comma-separated list of selectors, if you just write a selector
+            incorrectly, it may not match any element. If, however, a selector
+            is invalid, the entire list of selectors is ignored, along with the
+            entire style block. For this reason, only include a :-moz- prefixed
+            pseudo class or pseudo-element in a forgiving selector list, such as
+            :where(::-moz-thumb). Don't include a :-moz- prefixed pseudo class
+            or pseudo-element within a comma-separated group of selectors
+            outside of a :is() or :where() forgiving selector list as all
+            browsers other than Firefox will ignore the entire block. Note that
+            both :is() and :where() can be passed as parameters in other
+            selector lists, including :has() and :not().
         </div>
     );
 }
