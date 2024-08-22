@@ -740,14 +740,44 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
 
                 <h2>CSS prefixek kezelése</h2>
 
+                <Paragraph>
+                    Másik fajta probléma halmaz a CSS prefix-ekkel jön. Ezek a
+                    mechanizmusok eredetileg arra voltak használva, hogy
+                    lehetővé tegyék a böngésző gyártóknak, hogy megvalósítsák a
+                    saját CSS vagy JavaScript összetevők verzióit, amíg a
+                    technológia kísérleti állapotban van, így játszhatnak velük
+                    és elkészíthetik jóra azokat más böngésző megvalósítással
+                    való konfliktus nélkül vagy létrehozhatnak végső prefix
+                    nélküli megvalósításokat.
+                </Paragraph>
+
+                <Paragraph>
+                    Például a Firefox használja a{" "}
+                    <BgLightgray>-moz-</BgLightgray> prefixet, a
+                    Chrome/Edge/Opera/Safari használja a{" "}
+                    <BhLightgray>-webkit-</BhLightgray> prefixet. Más
+                    prefix-ekkel is találkozhatsz régi kódnál, amely
+                    biztonságosan eltávolítható. Ilyen az{" "}
+                    <BgLightgray>-ms-</BgLightgray>, amely az Internet
+                    Explorer-hez és a korábbi Edge verziókhoz volt használva.
+                    Volt még az <BgLightgray>-o</BgLightgray> prefix, amely
+                    eredetileg az Opera verziókhoz volt használva.
+                </Paragraph>
+
                 <Paragraph></Paragraph>
             </Article>
-            Another set of problems comes with CSS prefixes — these are a
-            mechanism originally used to allow browser vendors to implement
-            their own version of a CSS (or JavaScript) feature while the
-            technology is in an experimental state, so they can play with it and
-            get it right without conflicting with other browser's
-            implementations, or the final unprefixed implementations.
+            Prefixed features were never supposed to be used in production
+            websites — they are subject to change or removal without warning,
+            may cause performance issues in old browser versions that require
+            them, and have been the cause of cross-browser issues. This is
+            particularly a problem, for example, when developers decide to use
+            only the -webkit- version of a property, which implied that the site
+            won't work in other browsers. This actually happened so much that
+            other browser vendors implemented -webkit- prefixed versions of
+            several CSS properties. While browsers still support some prefixed
+            property names, property values, and pseudo classes, now
+            experimental features are put behind flags so that web developers
+            can test them during development.
         </div>
     );
 }
