@@ -43,3 +43,6 @@ button:active {
     inset -1px -1px 3px rgb(255 255 255 / 40%);
 }
 `;
+
+export const form_input_selector = `form > #date
+`;

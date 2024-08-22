@@ -11,10 +11,12 @@ import css_inspector from "./img/7.css_inspector.png";
 import input_output from "./img/8.input_output.png";
 import css_fallback from "./img/9.css_fallback.png";
 import button_back_wrong from "./img/10.button_back_wrong.png";
+import breadcrumb_trail from "./img/11.breadcrumb_trail.png";
 import {
     fallback_behavior,
     form_input,
     css_fallback_behavior,
+    form_input_selector,
 } from "./handling_common_HTML_and_CSS_problems_code_texts.jsx";
 
 // import {} from "./cross_browser_testing_text.jsx";
@@ -700,18 +702,52 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     </a>
                     .
                 </Paragraph>
+
+                <Paragraph>
+                    Úgy találtuk, hogy hasznos vizsgálni az elemet amelyet
+                    stilizálni próbálsz mégpedig a böngésző fejlesztői
+                    eszközeivel, aztán megnézhetjük a DOM fa morzsa menüjében
+                    (breadcrumb trail), amely DOM vizsgálók kínálnak egy nézetet
+                    a szelektorodhoz, ha van értelme összehasonlítani azt.
+                </Paragraph>
+
+                <Paragraph>
+                    Például a Firefox dev toolsban ezt a fajta output-ot kapod a
+                    DOM vizsgáló alján:
+                </Paragraph>
+
+                <div className="image-container">
+                    <img
+                        src={breadcrumb_trail}
+                        alt="DOM Tree Breadcrumb Trail"
+                    />
+                </div>
+
+                <Paragraph>
+                    Például ha szeretted volna használni ezt a szelektort,
+                    látnod kellene, hogy nem megfelelően választotta volna ki az
+                    input elemet:
+                </Paragraph>
+
+                <CodeDisplay code={form_input_selector} />
+
+                <Paragraph>
+                    (A <BgLightgray>date</BgLightgray> form input nem egy
+                    közvetlen gyermeke a <BgLightgray>&lt;form&gt;</BgLightgray>
+                    -nak. Jobb lenne ha általános leszármazott szelektort
+                    használnál a gyermek szelektor helyett).
+                </Paragraph>
+
+                <h2>CSS prefixek kezelése</h2>
+
+                <Paragraph></Paragraph>
             </Article>
-            In a comma-separated list of selectors, if you just write a selector
-            incorrectly, it may not match any element. If, however, a selector
-            is invalid, the entire list of selectors is ignored, along with the
-            entire style block. For this reason, only include a :-moz- prefixed
-            pseudo class or pseudo-element in a forgiving selector list, such as
-            :where(::-moz-thumb). Don't include a :-moz- prefixed pseudo class
-            or pseudo-element within a comma-separated group of selectors
-            outside of a :is() or :where() forgiving selector list as all
-            browsers other than Firefox will ignore the entire block. Note that
-            both :is() and :where() can be passed as parameters in other
-            selector lists, including :has() and :not().
+            Another set of problems comes with CSS prefixes — these are a
+            mechanism originally used to allow browser vendors to implement
+            their own version of a CSS (or JavaScript) feature while the
+            technology is in an experimental state, so they can play with it and
+            get it right without conflicting with other browser's
+            implementations, or the final unprefixed implementations.
         </div>
     );
 }
