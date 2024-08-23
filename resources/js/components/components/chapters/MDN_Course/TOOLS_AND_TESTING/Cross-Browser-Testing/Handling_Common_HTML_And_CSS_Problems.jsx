@@ -845,10 +845,44 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                         </li>
                     </ul>
                 </Paragraph>
+
+                <Paragraph>
+                    Amint elkezded gépelni a property név értékét a második pont
+                    után (jegyezd fel, hogy a JavaScript-ben a CSS property
+                    nevek{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Glossary/Camel_case"
+                        target="_blank"
+                    >
+                        lowerCamelCase
+                    </a>{" "}
+                    (kisbetűvel kezdődik és onnantól minden szó első betűje
+                    nagybetűvel van) konvenció alapján vannak írva nem pedig{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Glossary/Kebab_case"
+                        target="_blank"
+                    >
+                        kebab-case
+                    </a>{" "}
+                    (kötőjellel elválasztva) módon), a JavaScript konzolnak el
+                    kellene kezdenie automatikusan kiegészíteni a property-k
+                    neveit, amelyek léteznek a böngészőben és megegyeznek azzal
+                    amit elkezdtél írni. Ez hasznos ahhoz, hogy kitaláld milyen
+                    property-k vannak alkalmazva a böngészőben.
+                </Paragraph>
+
+                <Paragraph>
+                    Ha szükséged van modern összetevőkre az oldaladon, akkor
+                    fontold meg a @supports használatát, amely lehetővé teszi
+                    neked, hogy végrehajts natív funkció észlelő teszteket és
+                    beágyazd a prefix-eset vagy az új összetevőt a @supports
+                    blokkon belül.
+                </Paragraph>
             </Article>
-            Now try to set a new value for the CSS property you are interested
-            in on that element; you can do this using the style property of the
-            element, for example try typing these into the JavaScript console:{" "}
+            If you do need to include modern features, test for feature support
+            using @supports, which allows you to implement native feature
+            detection tests, and nest the prefixed or new feature within the
+            @supports block.
         </div>
     );
 }
