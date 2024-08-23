@@ -46,3 +46,14 @@ button:active {
 
 export const form_input_selector = `form > #date
 `;
+export const prefixes = `.masked {
+  -webkit-mask-image: url(MDN.svg);
+  mask-image: url(MDN.svg);
+  -webkit-mask-size: 50%;
+  mask-size: 50%;
+}
+`;
+export const logo_reference = `const test = document.getElementById("mdn-docs-logo");
+`;
+export const logo_ref_style = `test.style.transform = "rotate(90deg)";
+`;

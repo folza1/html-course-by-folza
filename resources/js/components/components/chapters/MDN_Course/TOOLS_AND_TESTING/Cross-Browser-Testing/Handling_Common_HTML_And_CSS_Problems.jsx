@@ -17,6 +17,9 @@ import {
     form_input,
     css_fallback_behavior,
     form_input_selector,
+    prefixes,
+    logo_reference,
+    logo_ref_style,
 } from "./handling_common_HTML_and_CSS_problems_code_texts.jsx";
 
 // import {} from "./cross_browser_testing_text.jsx";
@@ -755,7 +758,7 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     Például a Firefox használja a{" "}
                     <BgLightgray>-moz-</BgLightgray> prefixet, a
                     Chrome/Edge/Opera/Safari használja a{" "}
-                    <BhLightgray>-webkit-</BhLightgray> prefixet. Más
+                    <BgLightgray>-webkit-</BgLightgray> prefixet. Más
                     prefix-ekkel is találkozhatsz régi kódnál, amely
                     biztonságosan eltávolítható. Ilyen az{" "}
                     <BgLightgray>-ms-</BgLightgray>, amely az Internet
@@ -764,20 +767,88 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     eredetileg az Opera verziókhoz volt használva.
                 </Paragraph>
 
-                <Paragraph></Paragraph>
+                <Paragraph>
+                    Prefix-elt összetevőket soha nem volt jó használni
+                    produkciós környezetben, mivel változtatás és eltávolítás
+                    tárgyai lehetnek figyelmeztetés nélkül, amely
+                    teljesítménybeli problémákat okozhat régi böngésző
+                    verziókban, amelyekben szükség van rájuk és cross-browser
+                    problémák okai lehetnek. Ez különösen probléma például,
+                    mikor a fejlesztők eldöntik, hogy csak a{" "}
+                    <BgLightgray>-webkit-</BgLightgray> verzióját használják egy
+                    property-nek (tulajdonságnak), amely azt jelenti, hogy az
+                    oldal nem fog működni más böngészőkön. Ez történt akkor is,
+                    amikor olyan sok más böngésző gyártó megvalósította a{" "}
+                    <BgLightgray>-webkit-</BgLightgray> prefix-es verziókat
+                    számos CSS property-nél. Bár a böngészők még mindig
+                    támogatnak néhány prefix-es property nevet, property értéket
+                    és pszeudo osztályokat, most a kísérleti összetevők
+                    speciális módon használhatók, így a webfejlesztők
+                    tesztelhetik őket a fejlesztés során.
+                </Paragraph>
+
+                <Paragraph>
+                    Ha prefix-et használsz, légy biztos benne, hogy szükség van
+                    rá, hogy a property egy a néhány fentmaradt prefix-elt
+                    funkció közül. Megnézheted, hogy milyen böngészőknek
+                    szükségesek a prefixek az MDN referencia oldalán és olyan
+                    oldalakon mint a{" "}
+                    <a href="https://caniuse.com/" target="_blank">
+                        caniuse.com
+                    </a>
+                    . Ha nem vagy biztos benne, kitalálhatod egy kis
+                    teszteléssel közvetlenül a böngészőkben. Helyezd el a
+                    szabványos nem prefix-es verziót a prefix-es stílus
+                    deklaráció után. Figyelmen kívül lesz hagyva, ha nem
+                    támogatott és használva lesz támogatottság esetén.
+                </Paragraph>
+
+                <CodeDisplay code={prefixes} />
+
+                <Paragraph>
+                    Próbáld ki ezt az egyszerű példát:
+                    <ul className="ml-2">
+                        <li>
+                            Használd ezt az oldalt vagy más oldalt, amelynek van
+                            kiemelkedő heading (fejléc) vagy más blokk szintű
+                            eleme.
+                        </li>
+                        <li>
+                            Klikkelj jobb gombbal a kérdéses elemre és válaszd
+                            ki az Inspect/Inspect element (Vizsgálat/Elem
+                            vizsgálata) részt (vagy hasonló opciót a
+                            böngésződtől függően). Ezzel megnyithatod a dev
+                            tools-t (fejlesztői eszközöket) a böngésződben és a
+                            kiválasztott elem ki lesz emelve a DOM inspector-ban
+                            (vizsgálóban).
+                        </li>
+                        <li>
+                            Nézz egy összetevőt amelyet kiválaszthatsz. Például
+                            a cikk írásakor ennek az oldalnak van egy logo-ja
+                            <BgLightgray>mdn-docs-logo</BgLightgray> ID-vel
+                            (azonosítóval). Szóval az MDN fejlécében vagy egy
+                            ilyen ID-vel ellátott kép. Ha az inspector-ban
+                            lefuttatjuk a következő kódokat a konzolban, akkor
+                            elfordul a kép 90 fokkal.
+                        </li>
+                        <li>
+                            Eltároljuk a <BgLightgray>test</BgLightgray>{" "}
+                            konstansban az ezzel az ID-vel ellátott elemet:
+                            <CodeDisplay code={logo_reference} />
+                        </li>
+                        <li>
+                            Most pedig adjunk egy új értéket a CSS property-nek
+                            a kiválasztott elemmel kapcsolatban. Ezt megteheted
+                            az elem style property-jének a használatával.
+                            Például írd be a következő JavaScript-et a konzolba:
+                            <CodeDisplay code={logo_ref_style} />
+                        </li>
+                    </ul>
+                </Paragraph>
             </Article>
-            Prefixed features were never supposed to be used in production
-            websites — they are subject to change or removal without warning,
-            may cause performance issues in old browser versions that require
-            them, and have been the cause of cross-browser issues. This is
-            particularly a problem, for example, when developers decide to use
-            only the -webkit- version of a property, which implied that the site
-            won't work in other browsers. This actually happened so much that
-            other browser vendors implemented -webkit- prefixed versions of
-            several CSS properties. While browsers still support some prefixed
-            property names, property values, and pseudo classes, now
-            experimental features are put behind flags so that web developers
-            can test them during development.
+            Now try to set a new value for the CSS property you are interested
+            in on that element; you can do this using the style property of the
+            element, for example try typing these into the JavaScript console:{" "}
         </div>
     );
 }
