@@ -975,16 +975,73 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                     attribútumát.
                 </Paragraph>
             </Article>
-            Resolution is a big issue too — for example, mobile devices are less
-            likely to need big heavy images than desktop computers, and are more
-            likely to have slower internet connections and possibly even
-            expensive data plans that make wasted bandwidth more of a problem.
-            In addition, different devices can have a range of different
-            resolutions, meaning that smaller images could appear pixelated.
-            There are a number of techniques that allow you to work around such
-            problems, from media queries to more complex responsive image
-            techniques, including &lt;picture&gt; and the &lt;img&gt; element's
-            srcset and sizes attributes.
+            <Article>
+                <h1>Itt találhatsz segítséget</h1>
+
+                <Paragraph>
+                    Van sok más probléma, amellyel találkozhatsz a HTML-el és
+                    CSS-el kapcsolatban, viszont, ha megtanulod, hogyan
+                    találhatsz válaszokat a kérdéseidre az felbecsülhetetlen.
+                </Paragraph>
+
+                <Paragraph>
+                    A legjobb források a támogatói infomrációkhoz a Mozilla
+                    Developer Network, a{" "}
+                    <a href="https://stackoverflow.com/" target="_blank">
+                        stackoverflow.com
+                    </a>{" "}
+                    és a{" "}
+                    <a href="https://caniuse.com/" target="_blank">
+                        caniuse.com
+                    </a>
+                    .
+                </Paragraph>
+
+                <Paragraph>
+                    A Mozilla Developer Network (MDN) használatához, a legtöbb
+                    ember csinál egy keresést egy keresőmotoron a
+                    technológiáról, amelyről megpróbál információt szerezni,
+                    plusz az "mdn" kifejezés. Például az "mdn HTML video". Az
+                    MDN számos hasznos tartalom típust tartalmaz:
+                    <ul className="ml-2">
+                        <li>
+                            Referencia anyag a böngésző támogatói információval
+                            a kliens oldali web technológiákhoz, például a{" "}
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video"
+                                target="_blank"
+                            >
+                                &lt;video&gt; referencia oldal
+                            </a>
+                            .
+                        </li>
+                        <li>
+                            Más támogatói referencia anyag, mint például az{" "}
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats"
+                                target="_blank"
+                            >
+                                Útmutató a média típusokhoz és formátumokhoz a
+                                web-en
+                            </a>
+                            .
+                        </li>
+                        <li>
+                            Hasznos oktatóanyagok amelyek megoldanak különleges
+                            problémákat, például a{" "}
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player"
+                                target="_blank"
+                            >
+                                Cross-browser videó lejátszó készítése
+                            </a>
+                            .
+                        </li>
+                    </ul>
+                </Paragraph>
+            </Article>
+            Useful tutorials that solve specific problems, for example, Creating
+            a cross-browser video player.
         </div>
     );
 }
