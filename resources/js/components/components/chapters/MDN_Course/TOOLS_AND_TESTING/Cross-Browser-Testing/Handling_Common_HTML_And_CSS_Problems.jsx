@@ -873,16 +873,118 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
 
                 <Paragraph>
                     Ha szükséged van modern összetevőkre az oldaladon, akkor
-                    fontold meg a @supports használatát, amely lehetővé teszi
-                    neked, hogy végrehajts natív funkció észlelő teszteket és
-                    beágyazd a prefix-eset vagy az új összetevőt a @supports
-                    blokkon belül.
+                    fontold meg a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports"
+                        target="_blank"
+                    >
+                        @supports
+                    </a>{" "}
+                    használatát, amely lehetővé teszi neked, hogy végrehajts
+                    natív funkció észlelő teszteket és beágyazd a prefix-es vagy
+                    az új összetevőt a @supports blokkon belül.
+                </Paragraph>
+
+                <h2>Reszponzív megjelenés problémái</h2>
+
+                <Paragraph>
+                    A reszponzív megjelenés egy gyakorlat, amivel web
+                    elrendezéseket készítünk amelyek változnak, hogy
+                    illeszkedjenek a különböző készülék forma faktoraihoz.
+                    Például különböző kijelző szélességek lehetnek, elrendezések
+                    (portré vagy tájkép), vagy felbontás. Az asztali elrendezés
+                    például borzasztóan néz ki mikor egy mobil eszközről van
+                    megnézve, így szükséged van készíteni egy megfelelő mobil
+                    elrendezést a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries"
+                        target="_blank"
+                    >
+                        media queries
+                    </a>{" "}
+                    használatával és biztosítani azt, hogy helyesen van
+                    alkalmazva a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag"
+                        target="_blank"
+                    >
+                        viewport
+                    </a>{" "}
+                    használata. Részletes gyakorlatokat találhatsz a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
+                        target="_blank"
+                    >
+                        reszponzív megjelenés témában az útmutatónkban
+                    </a>
+                    .
+                </Paragraph>
+
+                <Paragraph>
+                    A felbontás is egy nagy probléma. Például a mobil készülékek
+                    számára kevésbé szükségesek a nagyon nagy képek, nem úgy
+                    mint az asztali számítógépek esetében és valószínűbb, hogy
+                    lassabb internet kapcsolatot használnak és lehetséges még,
+                    hogy drága adatcsomagjuk van, amely esetében az elpazarolt
+                    sávszélesség problémásabb. Plusz még, a különböző
+                    készülékeknek különböző felbontása van, ami azt jelenti,
+                    hogy a kisebb képek lehet pixelesnek látszódnak. Van számos
+                    technika, amely lehetővé teszi, hogy dolgozz ezeken a
+                    problémákon, a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design#media_queries"
+                        target="_blank"
+                    >
+                        media queries
+                    </a>
+                    -től kezdve a komplexebb{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes"
+                        target="_blank"
+                    >
+                        reszponzív kép technikákig
+                    </a>
+                    , beleértve a{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture"
+                        target="_blank"
+                    >
+                        &lt;picture&gt;
+                    </a>{" "}
+                    és az{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img"
+                        target="_blank"
+                    >
+                        &lt;img&gt;
+                    </a>{" "}
+                    elemek{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#srcset"
+                        target="_blank"
+                    >
+                        srcset
+                    </a>{" "}
+                    és{" "}
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#sizes"
+                        target="_blank"
+                    >
+                        sizes
+                    </a>{" "}
+                    attribútumát.
                 </Paragraph>
             </Article>
-            If you do need to include modern features, test for feature support
-            using @supports, which allows you to implement native feature
-            detection tests, and nest the prefixed or new feature within the
-            @supports block.
+            Resolution is a big issue too — for example, mobile devices are less
+            likely to need big heavy images than desktop computers, and are more
+            likely to have slower internet connections and possibly even
+            expensive data plans that make wasted bandwidth more of a problem.
+            In addition, different devices can have a range of different
+            resolutions, meaning that smaller images could appear pixelated.
+            There are a number of techniques that allow you to work around such
+            problems, from media queries to more complex responsive image
+            techniques, including &lt;picture&gt; and the &lt;img&gt; element's
+            srcset and sizes attributes.
         </div>
     );
 }
