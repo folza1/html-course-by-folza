@@ -1039,9 +1039,54 @@ export default function Handling_Common_HTML_And_CSS_Problems() {
                         </li>
                     </ul>
                 </Paragraph>
+
+                <Paragraph>
+                    A caniuse.com információt kínál néhány hasznos külső forrás
+                    linkjei mellett. Például nézd meg a{" "}
+                    <a href="https://caniuse.com/#search=video" target="_blank">
+                        https://caniuse.com/#search=video
+                    </a>{" "}
+                    (csak bele kell írni a szövegdobozba a funkciót amire
+                    keresni akarsz)
+                </Paragraph>
+
+                <Paragraph>
+                    A stackoverflow.com (SO) az egy fórum oldal, ahol kérdéseket
+                    tehetsz fel és vannak fejlesztők akik megosztják a
+                    megoldásukat, megnézhetsz korábbi posztokat és segíthetsz
+                    más fejlesztőknek. Tanácsolni szokták, hogy nézd meg, hogy
+                    van-e már válasz a kérdésedre mielőtt új kérdést teszel fel.
+                    Például mi rákerestünk az "autofocus kikapcsolása témában" a
+                    SO oldalán és nagyon gyorsan feljött az{" "}
+                    <a
+                        href="https://stackoverflow.com/questions/63267581/disable-showmodal-auto-focusing-using-html-attributes"
+                        target="_blank"
+                    >
+                        Autofocus kikapcsolása HTML attribútum használatával
+                    </a>{" "}
+                    válasz.
+                </Paragraph>
+
+                <Paragraph>
+                    Emellett próbálj meg választ találni a kedvenc keresőmotorod
+                    használatával a problémádra. Gyakran hasznos, hogy egy
+                    bizonyos hibaüzenetre keresel rá, ha van olyan. Más
+                    fejlesztők valószínűleg már találkoztak hasonló problémával.
+                </Paragraph>
             </Article>
-            Useful tutorials that solve specific problems, for example, Creating
-            a cross-browser video player.
+            <Article>
+                <h1>Összefoglalás</h1>
+
+                <Paragraph>
+                    Most már vannak ismereteid a cross browser HTML és CSS
+                    problémák fő típusairól, amelyekkel találkozni fogsz a
+                    webfejlesztés során és, hogy, hogyan javítsd ki őket arról
+                    is.
+                </Paragraph>
+            </Article>
+            Now you should be familiar with the main types of cross browser HTML
+            and CSS problems that you'll meet in web development, and how to go
+            about fixing them.
         </div>
     );
 }
