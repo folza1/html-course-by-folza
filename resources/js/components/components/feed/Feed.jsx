@@ -12,11 +12,13 @@ import Cross_Browser_Testing from "../chapters/MDN_Course/TOOLS_AND_TESTING/Cros
 import Introduction_To_Cross_Browser_Testing from "../chapters/MDN_Course/TOOLS_AND_TESTING/Cross-Browser-Testing/Introduction_To_Cross_Browser_Testing.jsx";
 import Strategies_For_Carrying_Out_Testing from "../chapters/MDN_Course/TOOLS_AND_TESTING/Cross-Browser-Testing/Strategies_For_Carrying_Out_Testing.jsx";
 import Handling_Common_HTML_And_CSS_Problems from "../chapters/MDN_Course/TOOLS_AND_TESTING/Cross-Browser-Testing/Handling_Common_HTML_And_CSS_Problems.jsx";
+import Handling_Common_Javascript_Problems from "../chapters/MDN_Course/TOOLS_AND_TESTING/Cross-Browser-Testing/Handling_Common_Javascript_Problems.jsx";
 
 export default function Feed() {
     return (
         <div className="feed">
-            <Handling_Common_HTML_And_CSS_Problems />
+            <Handling_Common_Javascript_Problems />
+            {/* <Handling_Common_HTML_And_CSS_Problems /> */}
             {/* <Strategies_For_Carrying_Out_Testing /> */}
             {/* <Introduction_To_Cross_Browser_Testing /> */}
             {/* <Cross_Browser_Testing /> */}
